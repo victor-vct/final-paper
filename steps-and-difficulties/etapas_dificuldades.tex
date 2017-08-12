@@ -1,0 +1,60 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref} % criar hyperlinks
+\usepackage{listings} % utilizado para dar highlight em código
+\usepackage{xcolor}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green},
+  commentstyle=\itshape\color{purple},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\title{Etapas e dificuldades}
+\author{Victor Vieira}
+\author{Arthur Cicuto}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Módulo do Ônibus}
+
+\subsection{Hardware}
+
+HM-10 - Bluetooth 4.0 BLE module
+
+\subsection{Configuração}
+
+Comandos AT.
+
+Descrever aqui as etapas.
+
+Código para configurar um arduino
+
+\lstinputlisting[style=customc]{codes/arduino-code.ino}
+
+\subsection{Referências}
+
+\href{ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf}{Datasheet}
+
+\section{Módulo do ponto de ônibus}
+
+teste
+
+\section{Aplicativo}
+
+teste
+
+\end{document}
