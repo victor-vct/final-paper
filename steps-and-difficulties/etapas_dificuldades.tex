@@ -35,7 +35,7 @@ Arthur Cicuto Pires}
 
 \maketitle
 
-\section{Módulo do Ônibus}
+\section{Módulo do Ponto de Ônibus}
 
 \subsection{Hardware}
 
@@ -89,13 +89,127 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 \\
 \href{https://github.com/metractive/beacon-study}{Repositório da Metractive - Como construir Beacons}
 
-\section{Módulo do ponto de ônibus}
+\section{Módulo do Ônibus}
 
-teste
+\subsection{Hardware}
+
+\begin{itemize}
+\item Intel Edison
+\item Raspberry Pi 3
+\item Tela LCD 7" (em breve)
+\item NEO u-blox 6 GPS Modules
+\end{itemize}
+
+\subsubsection{Intel Edison}
+
+\includegraphics[width=10cm, center]{images/intel-edison-arduino-kit}
+
+Inicialmente foi adotado o Intel Edison com placa de expansão arduino. Foi escolhido devido a fácil acesso a um exemplar e ótimo hardware. Ele conta com WiFi, Bluetooth, portas I/O, processador Intel Atom de 500 MHz, 1GB de memória RAM DDR3 e 4GB eMMC. \\
+Sua utilização foi fácil e não obtivemos nenhuma dificuldade em instalar o sistema que escolhemos.
+
+
+Problemas encontrados em adotar como solução:
+\\
+
+\textbf{Preço}
+
+Embora tenha um ótimo hardware e uma empresa séria por trás da sua construção, o preço, em 07/2017, que gira em torno de R\$ 600,00, não justifica sua adoção como a melhor solução para o projeto já que existe alternativas com preços melhores e bom desempenho.
+\\
+
+\textbf{Ausência de controlador gráfico}
+
+Uma das features do projeto é emitir alertas visuais para o motorista por meio de telas LCDs. A placa Intel Edison só nos permite fazer alertas visuais utilizando LEDs e afins. 
+\\
+
+\textbf{Descontinuidade da placa pela Intel}
+
+em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas placas que fabrica. O Intel Edison foi uma delas.
+
+\subsubsection{Raspberry Pi 3}
+
+\includegraphics[width=10cm, center]{images/raspberry-pi}
+
+Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema e a placa vem com saída HDMI permitindo utilizar telas LCD para fazer os alertas visuais.
+Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações:
+
+\begin{itemize}
+\item Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
+\item 1GB RAM
+\item BCM43438 wireless LAN and Bluetooth Low Energy (BLE) on board
+\item 40-pin extended GPIO
+\item 4 USB 2 ports
+\item 4 Pole stereo output and composite video port
+\item Full size HDMI
+\item CSI camera port for connecting a Raspberry Pi camera
+\item DSI display port for connecting a Raspberry Pi touchscreen display
+\item Micro SD port for loading your operating system and storing data
+\item Upgraded switched Micro USB power source up to 2.5A
+\end{itemize}
+
+Embora ele tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
+
+\subsubsection{NEO u-blox 6 GPS Modules}
+
+\includegraphics[width=10cm, center]{images/neo-6m}
+
+Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível. 
+
+\textbf{Localização}
+
+Uma característica desse módulo é trabalhar com GPS, fazendo comunicação direta com no mínimo 3 satélites para triangular sua posição com mais precisão. Alguns módulos disponíveis no mercado trabalham com A-GPS, que usam torres de telefonia móvel para conhecer sua posição.
+O uso do GPS trás maior precisão, porém demora mais para estabelecer conexão com satélites. O A-GPS fornece a localização com menor tempo, porém com menor precisão e a um custo mais alto.
+
+\textbf{Comunicação}
+
+O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitter), o que permite fácil comunicação com as placas utilizadas para testes.
+
+\textbf{Preço}
+
+Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
+
+
+\subsection{Software}
+
+\subsubsection{Sistema Operacional}
+
+\textbf{Android Things}
+Em 2016 o Google anunciou o Android Things, uma versão do Android voltada para IoT (Internet of Things). Ele é, atualmente, uma versão do Android Marshmallow reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, e a variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como o recurso LocationManager. \textbf{[Detalhar mais essa parte]}
+
+\subsubsection{IDE}
+
+Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
+
+\subsubsection{Linguagem}
+
+O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
+Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
+
+\subsection{Referências}
+
+%links do intel edison
+\href{https://software.intel.com/en-us/iot/hardware/edison}{Site Oficial Intel Edison}\\
+\href{http://download.intel.com/support/edison/sb/edisonmodule_hg_331189004.pdf}{Datasheet Intel Edison}\\
+\href{https://www.embarcados.com.br/placas-intel-edison-galileo-e-joule-serao-descontinuadas/}{Anúncio do fim da produção do Intel Edison}\\
+%links do raspberry pi
+\href{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}{Site Oficial Raspberry Pi}\\
+\href{https://www.raspberrypi.org/documentation/hardware/computemodule/RPI-CM-DATASHEET-V1_0.pdf}{Datasheet Raspberry Pi 3}\\
+%links do módulo GPS
+\href{https://www.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf}{Datasheet NEO u-blox 6 GPS Modules}\\
+%android things
+\href{https://developer.android.com/things/index.html}{Site Oficial Android Things}\\
+\href{https://developer.android.com/things/hardware/edison.html}{Configuração do Android Things no Intel Edison}\\
+\href{https://developer.android.com/things/hardware/raspberrypi.html}{Configuração do Android Things no Raspberry Pi 3}\\
 
 \section{Aplicativo}
 
-teste
+\subsubsection{IDE}
+
+Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
+
+\subsubsection{Linguagem}
+
+O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
+Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
 \section{Web service}
 

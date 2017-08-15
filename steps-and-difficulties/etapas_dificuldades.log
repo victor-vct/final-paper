@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.6)  14 AUG 2017 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.6)  15 AUG 2017 15:51
 entering extended mode
 **./etapas_dificuldades.tex
 (etapas_dificuldades.tex
@@ -676,7 +676,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 40.
 
-<images/arduino-hm10.jpg, id=35, 350.108pt x 226.446pt>
+<images/arduino-hm10.jpg, id=79, 350.108pt x 226.446pt>
 File: images/arduino-hm10.jpg Graphic file (type jpg)
 
 <use images/arduino-hm10.jpg>
@@ -740,40 +740,142 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 92.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 94.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+(babel)             in language  on input line 103.
+ <images/intel-edison-arduino-kit.png, id=230, 481.8pt x 278.03876pt>
+File: images/intel-edison-arduino-kit.png Graphic file (type png)
+
+<use images/intel-edison-arduino-kit.png>
+Package pdftex.def Info: images/intel-edison-arduino-kit.png used on input line
+ 105.
+(pdftex.def)             Requested size: 284.52756pt x 164.19841pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
+
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+(babel)             in language  on input line 118.
+[5 <./images/intel-edison-arduino-kit.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+<images/raspberry-pi.jpg, id=237, 1027.84pt x 1027.84pt>
+File: images/raspberry-pi.jpg Graphic file (type jpg)
+
+<use images/raspberry-pi.jpg>
+Package pdftex.def Info: images/raspberry-pi.jpg used on input line 130.
+(pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 138.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 138.
+ [6 <./images/raspberry-pi.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 151.
+
+<images/neo-6m.jpg, id=242, 426.59375pt x 426.59375pt>
+File: images/neo-6m.jpg Graphic file (type jpg)
+ <use images/neo-6m.jpg>
+Package pdftex.def Info: images/neo-6m.jpg used on input line 153.
+(pdftex.def)             Requested size: 284.52756pt x 284.54701pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+
+[7]
+Overfull \hbox (2.1614pt too wide) in paragraph at lines 164--165
+[]\OT1/cmr/m/n/12 O modulo re-al-iza co-mu-nicac~ao UART (Uni-ver-sal Asyn-ch
+ronous Re-ceiver/-
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 171.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 173.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 177.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 177.
+[8 <./images/neo-6m.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 178.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 187.
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--202
+
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 203.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 205.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 208.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 208.
+[9]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 209.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 214.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 218.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 218.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (etapas_dificuldades.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
-Package rerunfilecheck Info: File `etapas_dificuldades.out' has not changed.
-(rerunfilecheck)             Checksum: 64E2A8DCC6032F7F049D8B44A9355AD0;458.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+
+
+Package rerunfilecheck Warning: File `etapas_dificuldades.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `etapas_dificuldades.out':
+(rerunfilecheck)             Before: 4220806FCF7B18E1919B2A9728418A87;1210
+(rerunfilecheck)             After:  553A40A518A913F190ABDA27710F7713;1210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 8964 strings out of 495180
- 126601 string characters out of 3180391
- 354920 words of memory out of 3000000
- 12011 multiletter control sequences out of 15000+200000
- 6656 words of font info for 25 fonts, out of 3000000 for 9000
+ 9015 strings out of 495180
+ 127565 string characters out of 3180391
+ 354961 words of memory out of 3000000
+ 12043 multiletter control sequences out of 15000+200000
+ 6963 words of font info for 26 fonts, out of 3000000 for 9000
  36 hyphenation exceptions out of 8191
- 46i,6n,98p,247b,2029s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,98p,480b,2029s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on etapas_dificuldades.pdf (5 pages, 366559 bytes).
+Output written on etapas_dificuldades.pdf (10 pages, 928908 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 154 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
