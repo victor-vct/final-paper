@@ -1,0 +1,4 @@
+steps-and-difficulties/*.log
+steps-and-difficulties/*.out
+steps-and-difficulties/*.aux
+steps-and-difficulties/*.synctex.gz
