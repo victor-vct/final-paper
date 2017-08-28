@@ -249,7 +249,7 @@ Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migrar
 
 \includegraphics[width=10cm, center]{images/brick_diagram_beacon}
 
-Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
+Para desenvolvimento do software, foi adotado o padrão \textit{Clean Architecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
 
 \begin{description}
 
@@ -257,9 +257,13 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 
 \item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em cache ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
+\item[Service] Provê serviços para qualquer camada. No caso do aplicativo, a implementação do serviço de voz fica neste pacote e é injeta pelo pacote de Injeção de Dependências.
+
 \item[Domain] Esta camada encapsula toda regra de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, é feito por esta camada.
 
 \item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações deles para a camada Domain ou Data para que seja possa exibir os dados.
+
+\item[DI] Este projeto utiliza o padrão de arquitetura \textit{Injeção de Dependências}. Esta camada provê todas dependências, fazendo a implementação mais limpas nas outras classes, já que não precisam saber como instanciar uma classe, apenas usam.
  
 \end{description}
 
