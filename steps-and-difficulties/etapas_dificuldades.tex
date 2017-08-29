@@ -344,12 +344,76 @@ Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciad
 
 \subsection{Arquitetura}
 
+O \textit{web service} foi desenvolvido em uma mistura das arquiteturas REST e MVC, seguindo o seguinte esquema: 
+\\
+\\
+\includegraphics[width=5cm, center]{images/brick_diagram_framework_webservice}
 
-\subsection{Dificuldades}
+\subsubsection{Node}
+
+Responsável pela parte lógica do servidor. Ele engloba as configurações do servidor e da conexão de banco de dados, além dos controllers e os models utilizados.
+\\
+\\
+\includegraphics[width=5cm, center]{images/brick_diagram_node}
+
+\subsubsection{App}
+
+Possui as classes do padrão MVC do lado do servidor sendo separado em:
+\\
+\\
+\includegraphics[width=5cm, center]{images/brick_diagram_node_app}
+
+\begin{description}
+
+\item[Model] Encarregado da validação dos dados das collections. Organizam os \textit{schemas} responsáveis por dizer qual o tipo de dado que as informações devem ser para serem inseridas corretamente no mongo.
+
+\item[Routes] Possui o roteamento dos \textit{endpoints}, redirecionando para os controllers referentes ao caminho desejado.
+
+\item[Controllers] Possui funções que realizam os processos necessários para o correto funcionamento do servidor.
+
+\end{description}
+
+\subsubsection{Config}
+
+Possui os arquivos de configuração de conexão com o servidor e com o banco de dados.
+
+\subsubsection{Angular}
+
+Responsável pela aplicação do lado do cliente, englobando as \textit{views} e os \textit{controllers} necessários para auxiliar no desenvolvimento dos \textit{endpoints}.
+\\
+\\
+\includegraphics[width=5cm, center]{images/brick_diagram_angular}
+
+\subsubsection{Partials}
+
+Responsável pelo que o cliente verá em seu navegador de internet, dependendo do \textit{link} a ser acessado.
+
+\subsubsection{JS}
+
+Possui a lógica responsável pelo comportamento das \textit{views}, além dos arquivos de roteamento indicando qual \textit{Controller} deve ser utilizado em determinado URI.
+\\
+\\
+\includegraphics[width=5cm, center]{images/brick_diagram_angular_js}
+
+\begin{description}
+\item[Controllers] Possui as funções que indicam qual comportamento será realizado na página acessada. 
+
+\item[Services] Possui os arquivos que geram as rotas necessárias para os \textit{Controllers}, facilitando a manutenção do código, já que se for necessário alterar quais parâmetros um \textit{Controller} necessita, basta alterar no \textit{Service} utilizado.
+
+\end{description}
+
+\subsubsection{Mongo}
+
+Responsável pelo gerenciamento dos dados utilizados pelas funções do \textit{web service}. Possui as \textit{collections} com seus \textit{documents}, realizando as funções de CRUD necessárias.
+
+\subsection{Etapas e dificuldades}
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
-Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
-
+Inicialmente, foi criado um servidor Node local para o começo do desenvolvimento do \textit{web service}.
+Instalados os módulos necessários, foram criados os arquivos de configuração de conexão com o servidor e com o banco de dados.
+Para auxiliar na validação e definição da tipagem dos dados das \textit{collections} do Mongo, foi utilizado o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB. Ao criar um arquivo com os \textit{schemas} necessários, surgiu o primeiro problema, apenas uma das collections estava sendo criada. 
+Para resolvê-lo, foi preciso uma solução bem simples, criar arquivos separados para cada \textit{schema} do banco.
+Após isso, teve início o desenvolvimento dos endpoints e algumas interfaces para facilitar a adição de alguns \textit{documents}. Nessa etapa surgiram muitos erros sintáticos, facilmente resolvidos.
 
 \subsection{Referências}
 
