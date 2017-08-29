@@ -41,6 +41,32 @@ Arthur Cicuto Pires}
 
 \maketitle
 
+\section{Protocolos de Comunicação}
+
+\includegraphics[width=10cm, center]{images/diagram_protocols}
+
+\subsection{HTTP}
+
+\textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
+
+Para o cenário deste projeto, tanto o aplicativo quanto o módulo do ônibus estão em cenários não favoráveis para o trafego de informação em grande escala, tendo em vista a baixa qualidade das redes 3G/4G dos smartphones e das redes WiFi que possuem nos ônibus.
+
+\subsection{Push Notification}
+
+\textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
+
+Neste projeto temos duas situações que a tecnologia é conveniente: primeiro, existe a necessidade de avisar o motorista que é necessário, em um dado momento, parar no próximo ponto para um deficiente visual. Segundo, precisamos avisar ao deficiente visual que seu ônibus já chegou e ele pode se dirigir a ele.
+
+Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e não temos uma conexão aberta constantemente como eles. Fazendo o serviço de \textit{Push Notification} ser a melhor escolha.
+
+Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
+
+\subsection{Bluetooth Low Energy}
+
+O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
+
+Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
+
 \section{Módulo do Ponto de Ônibus}
 
 \subsection{Hardware}
@@ -228,6 +254,7 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 
 \subsubsection{Telas}
 
+
 \includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
 \\
 \\
@@ -249,7 +276,7 @@ Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migrar
 
 \includegraphics[width=10cm, center]{images/brick_diagram_beacon}
 
-Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
+Para desenvolvimento do software, foi adotado o padrão \textit{Clean Architecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
 
 \begin{description}
 
@@ -257,11 +284,22 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 
 \item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em cache ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
+\item[Service] Provê serviços para qualquer camada. No caso do aplicativo, a implementação do serviço de voz fica neste pacote e é injeta pelo pacote de Injeção de Dependências.
+
 \item[Domain] Esta camada encapsula toda regra de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, é feito por esta camada.
 
 \item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações deles para a camada Domain ou Data para que seja possa exibir os dados.
+
+\item[DI] Este projeto utiliza o padrão de arquitetura \textit{Injeção de Dependências}. Esta camada provê todas dependências, fazendo a implementação mais limpas nas outras classes, já que não precisam saber como instânciar uma classe, apenas usam.
  
 \end{description}
+
+\subsection{Áudio Descrição}
+
+Uma das funcionalidades do aplicativo é descrição da tela que o deficiente está. O \textit{TalkBack} fala para o usuário em qual componente ele está tocando, porém, não descreve em qual tela ele acabou de entrar. 
+A implementação por áudio descrição foi simples com uso da API nativa \textit{TextToSpeech}, onde podemos passar textos personalizados e o serviço se encarrega de sintetizar a voz.
+
+O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de implementação, fazendo ela na camada de serviço e configurando a instanciação no padrão \textit{Singleton} para que todos que vão utilizar (nesse caso são os \textit{presenters}), apenas solicitem a instância sendo passada por construtor.
 
 \section{\itshape Web service}
 
