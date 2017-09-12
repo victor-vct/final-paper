@@ -249,17 +249,17 @@ Colocar o resumo aqui.
 % ----------------------------------------------------------
 \textual
 
-\section{Protocolos de Comunicação}
+\chapter*{Protocolos de Comunicação}
 
 \includegraphics[width=10cm, center]{images/diagram_protocols}
 
-\subsection{HTTP}
+\section*{HTTP}
 
 \textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
 
 Para o cenário deste projeto, tanto o aplicativo quanto o módulo do ônibus estão em cenários não favoráveis para o trafego de informação em grande escala, tendo em vista a baixa qualidade das redes 3G/4G dos smartphones e das redes WiFi que possuem nos ônibus.
 
-\subsection{Push Notification}
+\section{Push Notification}
 
 \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
 
@@ -269,15 +269,15 @@ Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e nã
 
 Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
 
-\subsection{Bluetooth Low Energy}
+\section{Bluetooth Low Energy}
 
 O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
 
 Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
 
-\section{Módulo do Ponto de Ônibus}
+\chapter*{Módulo do Ponto de Ônibus}
 
-\subsection{Hardware}
+\section{Hardware}
 
 \begin{enumerate}
 \item HM-10 - Bluetooth 4.0 BLE module
@@ -288,13 +288,13 @@ Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A li
 
 \includegraphics[width=10cm, center]{images/arduino-hm10}
 
-\subsection{Software}
+\section{Software}
 
 \begin{itemize}
 \item Arduino IDE 1.8.3 ou superior. 
 \end{itemize}
 
-\subsection{Configuração}
+\section{Configuração}
 
 Conecte o arduino Uno ao computador e compile o código abaixo utilizando a IDE do arduino.
 
@@ -321,7 +321,7 @@ Obs: Quanto menor o tempo de envio, maior a economia de energia.
 
 Após configurado, pode ser ligado em uma bateria 3v para utilização.
 
-\subsection{Referências}
+\section{Referências}
 
 \href{ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf}{HM-10 Bluetooth 4.0 BLE module Datasheet}
 \\
@@ -329,9 +329,9 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 \\
 \href{https://github.com/metractive/beacon-study}{Repositório da Metractive - Como construir Beacons}
 
-\section{Módulo do Ônibus}
+\chapter*{Módulo do Ônibus}
 
-\subsection{Hardware}
+\section{Hardware}
 
 \begin{itemize}
 \item Intel Edison
@@ -340,7 +340,7 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 \item NEO u-blox 6 GPS Modules
 \end{itemize}
 
-\subsubsection{Intel Edison}
+\subsection{Intel Edison}
 
 \includegraphics[width=10cm, center]{images/intel-edison-arduino-kit}
 
@@ -365,7 +365,7 @@ Uma das features do projeto é emitir alertas visuais para o motorista por meio 
 
 em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas placas que fabrica. O Intel Edison foi uma delas.
 
-\subsubsection{Raspberry Pi 3}
+\subsection{Raspberry Pi 3}
 
 \includegraphics[width=10cm, center]{images/raspberry-pi}
 
@@ -388,7 +388,7 @@ Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edis
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
 
-\subsubsection{Módulo NEO u-blox 6 GPS}
+\subsection{Módulo NEO u-blox 6 GPS}
 
 \includegraphics[width=10cm, center]{images/neo-6m}
 
@@ -408,23 +408,23 @@ O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitte
 Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
 
 
-\subsection{Software}
+\section{Software}
 
-\subsubsection{Sistema Operacional}
+\subsection{Sistema Operacional}
 
 \textbf{Android Things}
 Em 2016 o Google anunciou o Android Things, uma versão do Android voltada para IoT (Internet of Things). Ele é, atualmente, uma versão do Android Marshmallow reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, e a variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como o recurso LocationManager. \textbf{[Detalhar mais essa parte]}
 
-\subsubsection{IDE}
+\subsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
 
-\subsubsection{Linguagem}
+\subsection{Linguagem}
 
 O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
 Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
-\subsubsection{Arquitetura}
+\subsection{Arquitetura}
 
 \includegraphics[width=10cm, center]{images/brick_diagram_bus_tracker}
 
@@ -442,7 +442,7 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
  
 \end{description}
 
-\subsection{Referências}
+\section{Referências}
 
 %links do intel edison
 \href{https://software.intel.com/en-us/iot/hardware/edison}{Site Oficial Intel Edison}\\
@@ -458,9 +458,9 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \href{https://developer.android.com/things/hardware/edison.html}{Configuração do Android Things no Intel Edison}\\
 \href{https://developer.android.com/things/hardware/raspberrypi.html}{Configuração do Android Things no Raspberry Pi 3}\\
 
-\section{Aplicativo}
+\chapter*{Aplicativo}
 
-\subsubsection{Telas}
+\section{Telas}
 
 
 \includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
@@ -471,16 +471,16 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \\
 \includegraphics[width=5cm, center]{images/beacon_detail_bus}
 
-\subsubsection{IDE}
+\section{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
 
-\subsubsection{Linguagem}
+\section{Linguagem}
 
 O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
 Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
-\subsubsection{Arquitetura}
+\section{Arquitetura}
 
 \includegraphics[width=10cm, center]{images/brick_diagram_beacon}
 
@@ -502,32 +502,32 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Architectu
  
 \end{description}
 
-\subsection{Áudio Descrição}
+\section{Áudio Descrição}
 
 Uma das funcionalidades do aplicativo é descrição da tela que o deficiente está. O \textit{TalkBack} fala para o usuário em qual componente ele está tocando, porém, não descreve em qual tela ele acabou de entrar. 
 A implementação por áudio descrição foi simples com uso da API nativa \textit{TextToSpeech}, onde podemos passar textos personalizados e o serviço se encarrega de sintetizar a voz.
 
 O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de implementação, fazendo ela na camada de serviço e configurando a instanciação no padrão \textit{Singleton} para que todos que vão utilizar (nesse caso são os \textit{presenters}), apenas solicitem a instância sendo passada por construtor.
 
-\section{\itshape Web service}
+\chapter*{Web service}
 
-\subsection{Linguagem}
+\section{Linguagem}
 
 Para o desenvolvimento do \textit{web service} foi escolhida a utilização da pilha MEAN, que engloba quatro tecnologias para desenvolvimento \textit{web} que possuem como base a linguagem JavaScript.
 
 
-\subsubsection{JavaScript}
+\subsection{JavaScript}
 
 JavaScript é uma linguagem de programação \textit{client-side}, utilizada para manipular os comportamentos de uma página, controlando o HTML e o CSS. Outra característica dela, é que ela é uma linguagem orientada à eventos.
 Para explicar melhor o que são eventos, é importante citar que uma página HTML utiliza tags para representar seus elementos, podendo conter menus, botões e formulários em seu corpo. Cada elemento possui alguns atributos, sendo alguns desses atributos de eventos, como por exemplo o \textit{onClick} que realiza alguma função caso o elemento referente seja clicado pelo usuário.
 Tais funções podem ser desenvolvidas em JavaScript, entrando aqui para dizer qual comportamento a página terá ao disparo do evento.\\
 
-\subsection{\itshape MEAN stack}
+\section{MEAN stack}
 
 A pilha \textit{MEAN} é um conjunto de \textit{frameworks} desenvolvidos em JavaScript, que englobam os lados do cliente, do servidor e do banco de dados. Por possuírem a mesma linguagem como base, os elementos dessa pilha contam com uma maior produtividade no desenvolvimento. MEAN é um acrônimo para MongoDB, Express, Angular e Node.
 
 
-\subsubsection{MongoDB}
+\subsection{MongoDB}
 
 É um banco de dados não relacional com uma escalabilidade muito boa. Ele utiliza conceitos de \textit{collections} e \textit{documents} em sua construção. 
 As \textit{collections} são equivalentes aos bancos de um ambiente que utiliza o SQL. Já os \textit{documents}, se equivalem aos registros de cada banco.
@@ -535,95 +535,28 @@ Os dados são guardados em arquivos similares aos de formato JSON (\textit{JavaS
 Outro item importante sobre o MongoDB é o fato de ser schemaless, tornando-o bem flexível em relação a inclusão de dados diferentes em uma mesma \textit{collection}, fazendo com que a validação de dados fique nas mãos dos desenvolvedores.
 
 
-\subsubsection{Express}
+\subsection{Express}
 
 É um framework que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers, models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de configuração do servidor.
 
 
-\subsubsection{Angular}
+\subsection{Angular}
 
 Framework utilizado no lado do cliente. Possui um conjunto adicional de atributos para as páginas HTML, passando parte do processamento dos dados da página para o lado do cliente. Isso possibilita a criação de interfaces dinâmicas e assíncronas além de diminuir a carga de processamento do servidor.
 
 
-\subsubsection{Node}
+\subsection{Node}
 
 Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciador de pacotes npm para organizar as bibliotecas utilizadas pela sua aplicação. É ele que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação.
 
 
-\subsection{Arquitetura}
-
-O \textit{web service} foi desenvolvido em uma mistura das arquiteturas REST e MVC, seguindo o seguinte esquema: 
-\\
-\\
-\includegraphics[width=5cm, center]{images/brick_diagram_framework_webservice}
-
-\subsubsection{Node}
-
-Responsável pela parte lógica do servidor. Ele engloba as configurações do servidor e da conexão de banco de dados, além dos controllers e os models utilizados.
-\\
-\\
-\includegraphics[width=5cm, center]{images/brick_diagram_node}
-
-\subsubsection{App}
-
-Possui as classes do padrão MVC do lado do servidor sendo separado em:
-\\
-\\
-\includegraphics[width=5cm, center]{images/brick_diagram_node_app}
-
-\begin{description}
-
-\item[Model] Encarregado da validação dos dados das collections. Organizam os \textit{schemas} responsáveis por dizer qual o tipo de dado que as informações devem ser para serem inseridas corretamente no mongo.
-
-\item[Routes] Possui o roteamento dos \textit{endpoints}, redirecionando para os controllers referentes ao caminho desejado.
-
-\item[Controllers] Possui funções que realizam os processos necessários para o correto funcionamento do servidor.
-
-\end{description}
-
-\subsubsection{Config}
-
-Possui os arquivos de configuração de conexão com o servidor e com o banco de dados.
-
-\subsubsection{Angular}
-
-Responsável pela aplicação do lado do cliente, englobando as \textit{views} e os \textit{controllers} necessários para auxiliar no desenvolvimento dos \textit{endpoints}.
-\\
-\\
-\includegraphics[width=5cm, center]{images/brick_diagram_angular}
-
-\subsubsection{Partials}
-
-Responsável pelo que o cliente verá em seu navegador de internet, dependendo do \textit{link} a ser acessado.
-
-\subsubsection{JS}
-
-Possui a lógica responsável pelo comportamento das \textit{views}, além dos arquivos de roteamento indicando qual \textit{Controller} deve ser utilizado em determinado URI.
-\\
-\\
-\includegraphics[width=5cm, center]{images/brick_diagram_angular_js}
-
-\begin{description}
-\item[Controllers] Possui as funções que indicam qual comportamento será realizado na página acessada. 
-
-\item[Services] Possui os arquivos que geram as rotas necessárias para os \textit{Controllers}, facilitando a manutenção do código, já que se for necessário alterar quais parâmetros um \textit{Controller} necessita, basta alterar no \textit{Service} utilizado.
-
-\end{description}
-
-\subsubsection{Mongo}
-
-Responsável pelo gerenciamento dos dados utilizados pelas funções do \textit{web service}. Possui as \textit{collections} com seus \textit{documents}, realizando as funções de CRUD necessárias.
-
-\subsection{Etapas e dificuldades}
+\section{Dificuldades}
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
-Inicialmente, foi criado um servidor Node local para o começo do desenvolvimento do \textit{web service}.
-Instalados os módulos necessários, foram criados os arquivos de configuração de conexão com o servidor e com o banco de dados.
-Para auxiliar na validação e definição da tipagem dos dados das \textit{collections} do Mongo, foi utilizado o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB. Ao criar um arquivo com os \textit{schemas} necessários, surgiu o primeiro problema, apenas uma das collections estava sendo criada. 
-Para resolvê-lo, foi preciso uma solução bem simples, criar arquivos separados para cada \textit{schema} do banco.
-Após isso, teve início o desenvolvimento dos endpoints e algumas interfaces para facilitar a adição de alguns \textit{documents}. Nessa etapa surgiram muitos erros sintáticos, facilmente resolvidos.
+Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
 
-\subsection{Referências}
+
+\section{Referências}
 
 %links do HTML
 \href{https://www.w3schools.com/tags/ref_eventattributes.asp}{Atributos de eventos}\\
