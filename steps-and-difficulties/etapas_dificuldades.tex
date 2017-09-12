@@ -227,6 +227,8 @@ Colocar o resumo aqui.
 
 % ---
 
+\listoffigures
+
 \begin{siglas} 
 \item[CUFSA] Centro Universitário Fundação Santo André
 \end{siglas}
@@ -249,7 +251,12 @@ Colocar o resumo aqui.
 
 \chapter*{Protocolos de Comunicação}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/diagram_protocols}
+\caption{Protocolos de comunicação utilizados.}
+\label{Rotulo}
+\end{figure}
 
 \section{HTTP}
 
@@ -284,7 +291,13 @@ Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a 
 
 Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A ligação deve seguir o diagrama abaixo.
 
+
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/arduino-hm10}
+\caption{Módulo Bluetooth HM10.}
+\label{Rotulo}
+\end{figure}
 
 \section{Software}
 
@@ -340,7 +353,12 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 
 \subsection{Intel Edison}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/intel-edison-arduino-kit}
+\caption{Intel Edison.}
+\label{Rotulo}
+\end{figure}
 
 Inicialmente foi adotado o Intel Edison com placa de expansão arduino. Foi escolhido devido a fácil acesso a um exemplar e ótimo hardware. Ele conta com WiFi, Bluetooth, portas I/O, processador Intel Atom de 500 MHz, 1GB de memória RAM DDR3 e 4GB eMMC. \\
 Sua utilização foi fácil e não obtivemos nenhuma dificuldade em instalar o sistema que escolhemos.
@@ -365,7 +383,12 @@ em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas pla
 
 \subsection{Raspberry Pi 3}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/raspberry-pi}
+\caption{Raspberry 3.}
+\label{Rotulo}
+\end{figure}
 
 Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema e a placa vem com saída HDMI permitindo utilizar telas LCD para fazer os alertas visuais.
 Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações:
@@ -388,7 +411,12 @@ Embora tenha um hardware com especificações superiores ao Intel Edison, não h
 
 \subsection{Módulo NEO u-blox 6 GPS}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/neo-6m}
+\caption{Módulo NEO u-blox 6 GPS.}
+\label{Rotulo}
+\end{figure}
 
 Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível. 
 
@@ -424,7 +452,12 @@ Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migrar
 
 \subsection{Arquitetura}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/brick_diagram_bus_tracker}
+\caption{Diagrama de bloco do módulo do ônibus.}
+\label{Rotulo}
+\end{figure}
 
 Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
 
@@ -461,13 +494,26 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \section{Telas}
 
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
-\\
-\\
+\caption{Tela de busca por um ponto de ônibus do aplicativo móvel.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
 \includegraphics[width=5cm, center]{images/beacon_list_bus}
-\\
-\\
+\caption{Tela com lista de ônibus disponíveis do aplicativo móvel.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
 \includegraphics[width=5cm, center]{images/beacon_detail_bus}
+\caption{Tela com detalhes do ônibus do aplicativo móvel.}
+\label{Rotulo}
+\end{figure}
 
 \section{IDE}
 
@@ -480,7 +526,12 @@ Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migrar
 
 \section{Arquitetura}
 
+\begin{figure}[!h]
+\centering
 \includegraphics[width=10cm, center]{images/brick_diagram_beacon}
+\caption{Diagrama de blocos do aplicativo móvel.}
+\label{Rotulo}
+\end{figure}
 
 Para desenvolvimento do software, foi adotado o padrão \textit{Clean Architecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
 
