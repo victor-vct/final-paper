@@ -86,7 +86,7 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{Sistema de acompanhamento de transporte público para deficientes visuais }
-\autor{Victor Vieira Paulino \and Arthur Cicuto Pires}
+\autor{Arthur Cicuto Pires\\Victor Vieira Paulino}
 \local{Santo André}
 \data{2017}
 
@@ -177,9 +177,9 @@
 \imprimirfolhaderosto
 % ---
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% ----------------------------------------------------------
 %Início da folha de aprovação 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% ----------------------------------------------------------
 \begin{folhadeaprovacao} 
 \begin{center} 
 {\ABNTEXchapterfont\large\textsc{\imprimirautor}}
@@ -194,15 +194,13 @@
 \end{minipage} 
 \vspace{1cm} 
 \\Trabalho aprovado. \imprimirlocal, \imprimirdata: 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 %Assinaturas 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 \assinatura{\imprimirorientador \\CUFSA} 
 \assinatura{Richard Dedekind\\ Universidade de Jena} 
 \assinatura{Georg Cantor \\ Universidade de Halle} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 \begin{center} 
 \vfill 
 {\large\imprimirlocal} 
@@ -210,9 +208,9 @@
 {\large\imprimirdata} 
 \end{center} 
 \end{folhadeaprovacao} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% ----------------------------------------------------------
 %Fim da folha de aprovação 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% ----------------------------------------------------------
 
 % ---
 % RESUMOS
@@ -253,7 +251,7 @@ Colocar o resumo aqui.
 
 \includegraphics[width=10cm, center]{images/diagram_protocols}
 
-\section*{HTTP}
+\section{HTTP}
 
 \textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
 

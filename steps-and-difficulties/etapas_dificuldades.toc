@@ -3,37 +3,38 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{\numberline {0.1}Push Notification}{7}{section.0.1}
-\contentsline {section}{\numberline {0.2}Bluetooth Low Energy}{8}{section.0.2}
+\contentsline {section}{\numberline {0.1}HTTP}{7}{section.0.1}
+\contentsline {section}{\numberline {0.2}Push Notification}{7}{section.0.2}
+\contentsline {section}{\numberline {0.3}Bluetooth Low Energy}{8}{section.0.3}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{\numberline {0.3}Hardware}{9}{section.0.3}
-\contentsline {section}{\numberline {0.4}Software}{9}{section.0.4}
-\contentsline {section}{\numberline {0.5}Configuração}{9}{section.0.5}
-\contentsline {section}{\numberline {0.6}Referências}{13}{section.0.6}
+\contentsline {section}{\numberline {0.4}Hardware}{9}{section.0.4}
+\contentsline {section}{\numberline {0.5}Software}{9}{section.0.5}
+\contentsline {section}{\numberline {0.6}Configuração}{9}{section.0.6}
+\contentsline {section}{\numberline {0.7}Referências}{13}{section.0.7}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{\numberline {0.7}Hardware}{14}{section.0.7}
-\contentsline {subsection}{\numberline {0.7.1}Intel Edison}{14}{subsection.0.7.1}
-\contentsline {subsection}{\numberline {0.7.2}Raspberry Pi 3}{15}{subsection.0.7.2}
-\contentsline {subsection}{\numberline {0.7.3}Módulo NEO u-blox 6 GPS}{17}{subsection.0.7.3}
-\contentsline {section}{\numberline {0.8}Software}{18}{section.0.8}
-\contentsline {subsection}{\numberline {0.8.1}Sistema Operacional}{18}{subsection.0.8.1}
-\contentsline {subsection}{\numberline {0.8.2}IDE}{18}{subsection.0.8.2}
-\contentsline {subsection}{\numberline {0.8.3}Linguagem}{18}{subsection.0.8.3}
-\contentsline {subsection}{\numberline {0.8.4}Arquitetura}{19}{subsection.0.8.4}
-\contentsline {section}{\numberline {0.9}Referências}{20}{section.0.9}
+\contentsline {section}{\numberline {0.8}Hardware}{14}{section.0.8}
+\contentsline {subsection}{\numberline {0.8.1}Intel Edison}{14}{subsection.0.8.1}
+\contentsline {subsection}{\numberline {0.8.2}Raspberry Pi 3}{15}{subsection.0.8.2}
+\contentsline {subsection}{\numberline {0.8.3}Módulo NEO u-blox 6 GPS}{17}{subsection.0.8.3}
+\contentsline {section}{\numberline {0.9}Software}{18}{section.0.9}
+\contentsline {subsection}{\numberline {0.9.1}Sistema Operacional}{18}{subsection.0.9.1}
+\contentsline {subsection}{\numberline {0.9.2}IDE}{18}{subsection.0.9.2}
+\contentsline {subsection}{\numberline {0.9.3}Linguagem}{18}{subsection.0.9.3}
+\contentsline {subsection}{\numberline {0.9.4}Arquitetura}{19}{subsection.0.9.4}
+\contentsline {section}{\numberline {0.10}Referências}{20}{section.0.10}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{\numberline {0.10}Telas}{21}{section.0.10}
-\contentsline {section}{\numberline {0.11}IDE}{22}{section.0.11}
-\contentsline {section}{\numberline {0.12}Linguagem}{22}{section.0.12}
-\contentsline {section}{\numberline {0.13}Arquitetura}{23}{section.0.13}
-\contentsline {section}{\numberline {0.14}Áudio Descrição}{24}{section.0.14}
+\contentsline {section}{\numberline {0.11}Telas}{21}{section.0.11}
+\contentsline {section}{\numberline {0.12}IDE}{22}{section.0.12}
+\contentsline {section}{\numberline {0.13}Linguagem}{22}{section.0.13}
+\contentsline {section}{\numberline {0.14}Arquitetura}{23}{section.0.14}
+\contentsline {section}{\numberline {0.15}Áudio Descrição}{24}{section.0.15}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{\numberline {0.15}Linguagem}{25}{section.0.15}
-\contentsline {subsection}{\numberline {0.15.1}JavaScript}{25}{subsection.0.15.1}
-\contentsline {section}{\numberline {0.16}MEAN stack}{25}{section.0.16}
-\contentsline {subsection}{\numberline {0.16.1}MongoDB}{25}{subsection.0.16.1}
-\contentsline {subsection}{\numberline {0.16.2}Express}{26}{subsection.0.16.2}
-\contentsline {subsection}{\numberline {0.16.3}Angular}{26}{subsection.0.16.3}
-\contentsline {subsection}{\numberline {0.16.4}Node}{26}{subsection.0.16.4}
-\contentsline {section}{\numberline {0.17}Dificuldades}{26}{section.0.17}
-\contentsline {section}{\numberline {0.18}Referências}{27}{section.0.18}
+\contentsline {section}{\numberline {0.16}Linguagem}{25}{section.0.16}
+\contentsline {subsection}{\numberline {0.16.1}JavaScript}{25}{subsection.0.16.1}
+\contentsline {section}{\numberline {0.17}MEAN stack}{25}{section.0.17}
+\contentsline {subsection}{\numberline {0.17.1}MongoDB}{25}{subsection.0.17.1}
+\contentsline {subsection}{\numberline {0.17.2}Express}{26}{subsection.0.17.2}
+\contentsline {subsection}{\numberline {0.17.3}Angular}{26}{subsection.0.17.3}
+\contentsline {subsection}{\numberline {0.17.4}Node}{26}{subsection.0.17.4}
+\contentsline {section}{\numberline {0.18}Dificuldades}{26}{section.0.18}
+\contentsline {section}{\numberline {0.19}Referências}{27}{section.0.19}
