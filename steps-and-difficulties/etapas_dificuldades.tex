@@ -8,7 +8,7 @@
 % ---
 % Pacotes básicos 
 % ---
-%\usepackage{fontspec}
+\usepackage{fontspec}
 
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage[T1]{fontenc}
@@ -16,7 +16,8 @@
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
-\usepackage{multicol}			% multiplas colunas no texto
+\usepackage{multicol}			% multiplas colunas no texto 
+\usepackage{booktabs}
 % ---
 
 % ---
@@ -140,8 +141,23 @@
 % ---
 % compila o indice
 % ---
-\makeindex
+%\makeindex
 % ---
+
+\newcommand*{\BeginNoToc}{%
+  \addtocontents{toc}{%
+    \edef\protect\SavedTocDepth{\protect\the\protect\value{tocdepth}}%
+  }%
+  \addtocontents{toc}{%
+    \protect\setcounter{tocdepth}{-10}%
+  }%
+}
+\newcommand*{\EndNoToc}{%
+  \addtocontents{toc}{%
+    \protect\setcounter{tocdepth}{\protect\SavedTocDepth}%
+  }%
+}
+
 
 % ----
 % Início do documento
@@ -198,8 +214,8 @@
 %Assinaturas 
 
 \assinatura{\imprimirorientador \\CUFSA} 
-\assinatura{Richard Dedekind\\ Universidade de Jena} 
-\assinatura{Georg Cantor \\ Universidade de Halle} 
+\assinatura{Nome 1\\ CUFSA} 
+\assinatura{Nome 2 \\ CUFSA} 
 
 \begin{center} 
 \vfill 
@@ -211,6 +227,10 @@
 % ----------------------------------------------------------
 %Fim da folha de aprovação 
 % ----------------------------------------------------------
+
+\begin{agradecimentos} 
+Agradecimentos aqui
+\end{agradecimentos} 
 
 % ---
 % RESUMOS
@@ -225,31 +245,335 @@ Colocar o resumo aqui.
  \textbf{Palavras-chave}: Acessibilidade, deficientes visuais, transporte público, aplicativo mobile
 \end{resumo}
 
-% ---
+\begin{resumo}[Abstract] 
+\begin{otherlanguage*}{english}
+Abstract here.
+\vspace{\onelineskip} 
+\noindent \textbf{Keywords}: Acessibility, smartphone, bus, application. 
+\end{otherlanguage*} 
+\end{resumo} 
 
+\BeginNoToc
+% ---
+% inserir o sumario
+% ---
+\tableofcontents
+% ---
+\newpage
+% ---
 \listoffigures
+\EndNoToc
 
 \begin{siglas} 
 \item[CUFSA] Centro Universitário Fundação Santo André
 \end{siglas}
-
-
-% ---
-% inserir o sumario
-% ---
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage
-% ---
-
-
+\EndNoToc
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
 
-\chapter*{Protocolos de Comunicação}
+\chapter{Introdução}
+
+\section{Referências do Sistema}
+
+	Smartphones tem se tornado cada vez mais presentes na vida das pessoas. Uma pesquisa realizada pelo FGV-SP em 2016 [MEIRELLES, 2016] demonstrou que o número de aparelhos chegou a 168 milhões só no Brasil. Com sua facilidade de acesso, surgem inúmeras soluções que resolvem problemas do dia-a-dia dos usuários.
+
+	Dentre essas soluções, aplicações para smartphones que ajudam na mobilidade são cada vez mais comuns. Os aplicativos CittaMobi [VIEIRA, 2015] e Moovit [GOMES, 2015] vieram para mostrar que a tecnologia embarcada nos aparelhos podem ajudar a prever quanto tempo falta para o ônibus chegar em um ponto de parada, em tempo real. Eles capturam a geolocalização do usuário para saber qual ponto de ônibus eles estão próximos, possibilitando o usuário dizer de forma mais rápida qual seu ponto. Informando ao aplicativo qual seu ponto, eles podem selecionar um ônibus que passa no ponto selecionado, para saber quanto tempo resta para o veículo chegar.
+
+Isso ajuda os usuários a se programar melhor, possibilitando a pessoa sair em um horário mais oportuno ou deixando ela mais tranquila sabendo que em breve seu ônibus chegará.
+
+\section{Descrição Geral}
+
+Este trabalho visa facilitar a vida de deficientes visuais que utilizam ônibus como meio de transporte. O aplicativo proposto irá possibilitar ao deficiente visual saber quanto tempo falta para seu ônibus chegar, enquanto o sistema se encarrega de avisar o motorista do ônibus qual o próximo ponto onde terá um deficiente visual esperando por aquele ônibus.
+
+Sistemas operacionais de smartphone, como Android e iOS, possuem ferramentas nativas que adaptam o uso de aplicativos para pessoas com deficiências, possibilitando a utilização do aparelho sem grandes dificuldades, mas, nem sempre, criam boas experiências de uso. 
+
+O Android possui a ferramenta Talkback, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita o Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudios descrições mais detalhadas sobre o significado de uma tela.
+
+Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes já disponíveis, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
+
+Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS.
+
+Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, nosso aplicativo sabe em qual ponto o cego está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
+
+\section{Restrições de projeto}
+
+\begin{itemize}
+\item O smartphone deve ter o sistema operacional Android 4.1 (API Level 16) ou posterior instalado;
+\item O smartphone deve possuir Bluetooth 4.0 LE ou superior;
+\item O smartphone deve estar com a função Talkback ativada;
+\item O ônibus deve prover sinal de rede Wi-Fi para que o módulo do ônibus possa se comunicar.
+\end{itemize}
+
+\chapter{Descrição da Informação}
+
+\section{Visão Geral}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/geral-vision-com.png}
+\caption{Visão geral da comunicação dos componentes.}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[Módulo da parada de ônibus] Emite informações de identificação da parada.
+
+\item[Aplicativo] Reconhece o ponto de ônibus e solicita informações da API.
+
+\item[API] Intermediário entre o aplicativo e o módulo do ônibus.
+
+\item[Módulo do Ônibus] Mantém constante comunicação com o API enviando dados de geolocalização. Recebe também informação se deve alertar o motorista sobre deficiente visual na próxima parada.
+\end{description}
+
+\newpage
+
+\section{Representação do Fluxo da Informação}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/data-flux.png}
+\caption{Diagrama de fluxo de dados.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/database-api.png}
+\caption{Diagrama de banco de dados.}
+\label{Rotulo}
+\end{figure}
+
+\newpage
+
+\section{Interfaces com Sistema}
+
+\subsection{Busca por um ponto próximo}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-1-buscando-beacon.PNG}
+\caption{Tela do aplicativo ao buscar por um ponto de ônibus próximo.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{@{}|c|c|c|c|c|@{}}
+\hline
+Número & 
+Nome & 
+Descrição & 
+Requisitos & 
+Grupo\\ \hline
+1 & \begin{tabular}[c]{@{}c@{}}Símbolo da busca \\ do ponto de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que o aplicativo \\ está procurando um \\ ponto de ônibus\end{tabular}                  & -                     & Imagem e texto \\ \hline
+2 & Áudio sobre busca & \begin{tabular}[c]{@{}c@{}}Indica ao usuário que \\ está sendo feito uma \\ busca por algum \\ ponto próximo\end{tabular} & Função Talkback ativa & Áudio\\ \hline
+\end{tabular}
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus próximo.}
+\label{Rotulo}
+\end{table}
+
+\newpage
+
+\subsection{Busca por um ponto na API}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-2-buscando-ponto.PNG}
+\caption{Tela do aplicativo ao buscar por um ponto de ônibus na API.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{@{}|c|c|c|c|c|@{}}
+\hline
+Número & 
+Nome & 
+Descrição & 
+Requisitos & 
+Grupo\\ \hline
+1 & \begin{tabular}[c]{@{}c@{}}Símbolo da busca \\ das linhas de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que o \\ aplicativo \\ procura as\\linhas de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}O sistema deve ter\\detectado um ponto\\de ônibus\end{tabular} & Imagem e texto \\ \hline
+2 & Áudio sobre busca & \begin{tabular}[c]{@{}c@{}}Indica ao usuário\\ que está sendo \\feito uma busca\\ dos ônibus disponíveis\end{tabular} & Função Talkback ativa & Áudio\\ \hline
+\end{tabular}
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
+\label{Rotulo}
+\end{table}
+
+\newpage
+
+\subsection{Lista de ônibus disponíveis}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-3-lista-de-onibus.PNG}
+\caption{Tela do aplicativo com ônibus disponíveis.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{@{}|c|c|c|c|c|@{}}
+\hline
+Número & 
+Nome & 
+Descrição & 
+Requisitos & 
+Grupo\\ \hline
+1 & Lista de linhas & \begin{tabular}[c]{@{}c@{}}Lista de linhas\\ que o usuário\\ pode escolher\end{tabular} & \begin{tabular}[c]{@{}c@{}}Ter recebido uma\\ lista da API\end{tabular} & Botão \\ \hline
+2 & \begin{tabular}[c]{@{}c@{}}Áudio sobre escolha\\ de um item\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que a lista\\ de ônibus já está\\ disponível\end{tabular} & Função Talkback ativa & Áudio\\ \hline
+\end{tabular}
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
+\label{Rotulo}
+\end{table}
+
+\newpage
+
+\subsection{Detalhes do ônibus}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-4-informacoes-do-onibus.PNG}
+\caption{Tela do aplicativo com detalhes de um ônibus.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{@{}|c|c|c|c|c|@{}}
+\hline
+Número                  & Nome                                  & Descrição                                                                                                                                     & Requisitos                                                                              & Grupo                      \\ \hline
+\multicolumn{1}{|c|}{1} & \multicolumn{1}{c|}{Linha X1}         & \multicolumn{1}{c|}{Mostra a linha selecionada}                                                                                               & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Texto} \\ \hline
+\multicolumn{1}{|c|}{2} & \multicolumn{1}{c|}{Origem}           & \multicolumn{1}{c|}{Exibe o ponto inicial da linha}                                                                                           & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Texto} \\ \hline
+\multicolumn{1}{|c|}{3} & \multicolumn{1}{c|}{Destino}          & \multicolumn{1}{c|}{Exibe o ponto final da linha}                                                                                             & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Texto} \\ \hline
+\multicolumn{1}{|c|}{4} & \multicolumn{1}{c|}{Chegada em}       & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Exibe a previsão de\\  chegada da linha\end{tabular}}                                          & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Texto} \\ \hline
+\multicolumn{1}{|c|}{5} & \multicolumn{1}{c|}{Voltar}           & \multicolumn{1}{c|}{Volta para a seleção de linhas}                                                                                           & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão\\  da API\end{tabular}} & \multicolumn{1}{c|}{Botão} \\ \hline
+\multicolumn{1}{|c|}{6} & \multicolumn{1}{c|}{Solicitar ônibus} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Solicita que o ônibus\\  pare no seu\\  ponto e acionar o \\ acompanhamento dele\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Botão} \\ \hline
+7                       & Áudio sobre previsão                  & \begin{tabular}[c]{@{}c@{}}Alerta ao usuário a\\  previsão do ônibus\end{tabular}                                                             & \begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}                      & Áudio                      \\ \hline
+\end{tabular}
+\caption{Descrição dos elementos da tela de detalhes do ônibus.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\subsection{Detalhes do ônibus}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-5-acompanhamento-do-onibus.PNG}
+\caption{Tela do aplicativo sobre a solicitação de um ônibus.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\ \hline
+1      & \begin{tabular}[c]{@{}c@{}}Informação \\ de previsão\end{tabular}       & \begin{tabular}[c]{@{}c@{}}O sistema irá \\ informar o \\ usuário até a \\ chegada do ônibus\end{tabular}              & \begin{tabular}[c]{@{}c@{}}Ter selecionado botão \\ Solicitar ônibus\end{tabular}                                                       & Texto \\ \hline
+2      & Favoritar                                                               & \begin{tabular}[c]{@{}c@{}}Adiciona ônibus\\ como favorito\end{tabular}                                                & \begin{tabular}[c]{@{}c@{}}O ônibus não pode \\ estar cadastrado \\ como favorito. \\ Caso esteja o \\ botão não é exibido\end{tabular} & Botão \\ \hline
+3      & Cancelar                                                                & \begin{tabular}[c]{@{}c@{}}Cancela o acompanhamento \\ do ônibus e solicita \\ que não pare mais no ponto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Ter selecionado botão\\  Solicitar ônibus\end{tabular}                                                       & Botão \\ \hline
+4      & \begin{tabular}[c]{@{}c@{}}Áudio sobre o \\ acompanhamento\end{tabular} & \begin{tabular}[c]{@{}c@{}}Informa ao usuário \\ que está sendo \\ feito o acompanhamento \\ do ônibus\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Ter escolhido acompanhar \\ um ônibus.\\ Função Talkback ativa\end{tabular}                                  & Áudio \\ \hline
+\end{tabular}
+\caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\section{Descrição Funcional}
+
+\subsection{Divisão Funcional}
+
+\subsubsection{Aplicativo para dispositivo móvel}
+
+Aplicativo que irá interagir com o deficiente visual. Sua função é verificar qual Beacon está mais próximo para que a API possa saber sua localização, podendo listar, via interface gráfica e áudio, para o usuário, quais linhas passam no ponto de parada que ele está.
+
+\subsubsection{API}
+
+Sistema que recebe informações do aplicativo e do módulo do ônibus. Tem como objetivo acessar os dados gravados no banco de dados para que possa prover informações de previsão ao aplicativo. Também é responsável por verificar se o módulo do ônibus deve alertar a presença de um usuário no próximo ponto. Além de calcular a previsão de um ônibus até o ponto de parada selecionado.
+
+\subsubsection{Módulo do ponto de ônibus}
+
+Dispositivo localizado em um determinado ponto de parada de ônibus. Emite constantemente um sinal ID para a identificação do ponto que ele se refere.
+
+\subsubsection{Módulo do ônibus}
+
+Dispositivo instalado no ônibus. Mantém comunicação constante com a API para informar sua geolocalização. Verifica ao mesmo tempo a necessidade de alertar o motorista se existe um deficiente visual aguardando no próximo ponto de parada.
+
+\newpage
+
+\section{Descrição funcional}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=6cm, center]{images/use-case-diagram.png}
+\caption{Diagrama de caso de uso.}
+\label{Rotulo}
+\end{figure}
+
+\subsection{Narrativas: Casos de Uso}
+
+Solicitar horário do próximo ônibus da linha e sentido escolhido: Este caso de uso acontece quando um usuário solicita qual será a previsão de horário do próximo ônibus, de uma linha e sentido que ele poderá escolher de acordo com o seu ponto de ônibus.
+
+Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso de uso “Solicitar horário do próximo ônibus da linha e sentido escolhido”, onde depois de escolher uma linha e sentido ele poderá solicitar a parada do próximo ônibus escolhido.
+
+\newpage
+
+\subsection{Diagramas de apoio para compreensão funcional}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Identificação:} UC001}                                                                 \\ \hline
+\multicolumn{2}{|l|}{\textbf{Nome:} Solicitar horário do próximo ônibus}                                            \\ \hline
+\multicolumn{2}{|l|}{\textbf{Atores:} Usuário}                                                                      \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pré-condições:} O aplicativo precisa ter lido o ID do módulo do ponto de ônibus}       \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pós-condições:} Retorno do horário do próximo ônibus e da solicitação de parada}       \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo de eventos}}                                                           \\ \hline
+\textbf{Ator}                       & \textbf{Sistema}                                                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}1. Usuário chega ao ponto de ônibus\end{tabular} & \begin{tabular}[c]{@{}l@{}}2. Sistema lê o ID do ponto de ônibus \\e retorna uma lista de linhas\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3. Usuário escolhe uma linha\end{tabular}        & \begin{tabular}[c]{@{}l@{}}4. Informar constantemente \\o horário do ônibus\end{tabular}                      \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo alternativo}}                                                          \\ \hline
+\multicolumn{2}{|l|}{Não possui fluxo alternativo}                                                        \\ \hline
+\end{tabular}
+\caption{Tabela com caso de uso UC001.}
+\label{Rótulo}
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Identificação:} UC002}                                                                                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\textbf{Nome:} Solicitar parada do ônibus escolhido}                                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{\textbf{Atores:} Usuário}                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pré-condições:} O usuário precisa ter solicitado o ônibus de uma linha}                                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pós-condições:} Confirmação de parada}                                                                                                                                                    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo de eventos}}                                                                                                                                                                       \\ \hline
+\textbf{Ator}                                                                                              & \textbf{Sistema} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1. Usuário confirma solicitação \\ de parada no seu ponto\end{tabular} & \begin{tabular}[c]{@{}l@{}}2. Sistema retorna tela de seleção\\  de ponto de ônibus destino\end{tabular} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Fluxo alternativo}}                                                                                                                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}1.a 1. Usuário cancela \\ solicitação de parada\end{tabular}           & 2. Sistema retorna cancela operação                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}3.a 1. Usuário cancela\\  escolha de ponto de ônibus\end{tabular}      & 2. Sistema retorna cancela operação                                                                      \\ \hline
+\end{tabular}
+\caption{Tabela com caso de uso UC002.}
+\label{Rótulo}
+\end{table}
+\egroup
+
+\chapter{Desenvolvimento}
+
+\section{Protocolos de Comunicação}
 
 \begin{figure}[!h]
 \centering
@@ -258,13 +582,13 @@ Colocar o resumo aqui.
 \label{Rotulo}
 \end{figure}
 
-\section{HTTP}
+\subsection{HTTP}
 
 \textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
 
 Para o cenário deste projeto, tanto o aplicativo quanto o módulo do ônibus estão em cenários não favoráveis para o trafego de informação em grande escala, tendo em vista a baixa qualidade das redes 3G/4G dos smartphones e das redes WiFi que possuem nos ônibus.
 
-\section{Push Notification}
+\subsection{Push Notification}
 
 \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
 
@@ -274,15 +598,15 @@ Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e nã
 
 Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
 
-\section{Bluetooth Low Energy}
+\subsection{Bluetooth Low Energy}
 
 O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
 
 Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
 
-\chapter*{Módulo do Ponto de Ônibus}
+\section{Módulo do Ponto de Ônibus}
 
-\section{Hardware}
+\subsection{Hardware}
 
 \begin{enumerate}
 \item HM-10 - Bluetooth 4.0 BLE module
@@ -299,13 +623,13 @@ Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A li
 \label{Rotulo}
 \end{figure}
 
-\section{Software}
+\subsection{Software}
 
 \begin{itemize}
 \item Arduino IDE 1.8.3 ou superior. 
 \end{itemize}
 
-\section{Configuração}
+\subsection{Configuração}
 
 Conecte o arduino Uno ao computador e compile o código abaixo utilizando a IDE do arduino.
 
@@ -332,7 +656,7 @@ Obs: Quanto menor o tempo de envio, maior a economia de energia.
 
 Após configurado, pode ser ligado em uma bateria 3v para utilização.
 
-\section{Referências}
+\subsection{Referências}
 
 \href{ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf}{HM-10 Bluetooth 4.0 BLE module Datasheet}
 \\
@@ -340,9 +664,9 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 \\
 \href{https://github.com/metractive/beacon-study}{Repositório da Metractive - Como construir Beacons}
 
-\chapter*{Módulo do Ônibus}
+\section{Módulo do Ônibus}
 
-\section{Hardware}
+\subsection{Hardware}
 
 \begin{itemize}
 \item Intel Edison
@@ -351,7 +675,7 @@ Após configurado, pode ser ligado em uma bateria 3v para utilização.
 \item NEO u-blox 6 GPS Modules
 \end{itemize}
 
-\subsection{Intel Edison}
+\subsubsection{Intel Edison}
 
 \begin{figure}[!h]
 \centering
@@ -381,7 +705,7 @@ Uma das features do projeto é emitir alertas visuais para o motorista por meio 
 
 em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas placas que fabrica. O Intel Edison foi uma delas.
 
-\subsection{Raspberry Pi 3}
+\subsubsection{Raspberry Pi 3}
 
 \begin{figure}[!h]
 \centering
@@ -409,7 +733,7 @@ Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edis
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
 
-\subsection{Módulo NEO u-blox 6 GPS}
+\subsubsection{Módulo NEO u-blox 6 GPS}
 
 \begin{figure}[!h]
 \centering
@@ -434,23 +758,23 @@ O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitte
 Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
 
 
-\section{Software}
+\subsection{Software}
 
-\subsection{Sistema Operacional}
+\subsubsection{Sistema Operacional}
 
 \textbf{Android Things}
 Em 2016 o Google anunciou o Android Things, uma versão do Android voltada para IoT (Internet of Things). Ele é, atualmente, uma versão do Android Marshmallow reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, e a variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como o recurso LocationManager. \textbf{[Detalhar mais essa parte]}
 
-\subsection{IDE}
+\subsubsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
 
-\subsection{Linguagem}
+\subsubsection{Linguagem}
 
 O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
 Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
-\subsection{Arquitetura}
+\subsubsection{Arquitetura}
 
 \begin{figure}[!h]
 \centering
@@ -473,7 +797,7 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
  
 \end{description}
 
-\section{Referências}
+\subsection{Referências}
 
 %links do intel edison
 \href{https://software.intel.com/en-us/iot/hardware/edison}{Site Oficial Intel Edison}\\
@@ -489,9 +813,9 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \href{https://developer.android.com/things/hardware/edison.html}{Configuração do Android Things no Intel Edison}\\
 \href{https://developer.android.com/things/hardware/raspberrypi.html}{Configuração do Android Things no Raspberry Pi 3}\\
 
-\chapter*{Aplicativo}
+\section{Aplicativo}
 
-\section{Telas}
+\subsection{Telas}
 
 
 \begin{figure}[!h]
@@ -515,16 +839,16 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \label{Rotulo}
 \end{figure}
 
-\section{IDE}
+\subsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
 
-\section{Linguagem}
+\subsection{Linguagem}
 
 O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
 Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
-\section{Arquitetura}
+\subsection{Arquitetura}
 
 \begin{figure}[!h]
 \centering
@@ -551,32 +875,32 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Architectu
  
 \end{description}
 
-\section{Áudio Descrição}
+\subsection{Áudio Descrição}
 
 Uma das funcionalidades do aplicativo é descrição da tela que o deficiente está. O \textit{TalkBack} fala para o usuário em qual componente ele está tocando, porém, não descreve em qual tela ele acabou de entrar. 
 A implementação por áudio descrição foi simples com uso da API nativa \textit{TextToSpeech}, onde podemos passar textos personalizados e o serviço se encarrega de sintetizar a voz.
 
 O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de implementação, fazendo ela na camada de serviço e configurando a instanciação no padrão \textit{Singleton} para que todos que vão utilizar (nesse caso são os \textit{presenters}), apenas solicitem a instância sendo passada por construtor.
 
-\chapter*{Web service}
+\chapter{Web service}
 
-\section{Linguagem}
+\subsection{Linguagem}
 
 Para o desenvolvimento do \textit{web service} foi escolhida a utilização da pilha MEAN, que engloba quatro tecnologias para desenvolvimento \textit{web} que possuem como base a linguagem JavaScript.
 
 
-\subsection{JavaScript}
+\subsubsection{JavaScript}
 
 JavaScript é uma linguagem de programação \textit{client-side}, utilizada para manipular os comportamentos de uma página, controlando o HTML e o CSS. Outra característica dela, é que ela é uma linguagem orientada à eventos.
 Para explicar melhor o que são eventos, é importante citar que uma página HTML utiliza tags para representar seus elementos, podendo conter menus, botões e formulários em seu corpo. Cada elemento possui alguns atributos, sendo alguns desses atributos de eventos, como por exemplo o \textit{onClick} que realiza alguma função caso o elemento referente seja clicado pelo usuário.
 Tais funções podem ser desenvolvidas em JavaScript, entrando aqui para dizer qual comportamento a página terá ao disparo do evento.\\
 
-\section{MEAN stack}
+\subsection{MEAN stack}
 
 A pilha \textit{MEAN} é um conjunto de \textit{frameworks} desenvolvidos em JavaScript, que englobam os lados do cliente, do servidor e do banco de dados. Por possuírem a mesma linguagem como base, os elementos dessa pilha contam com uma maior produtividade no desenvolvimento. MEAN é um acrônimo para MongoDB, Express, Angular e Node.
 
 
-\subsection{MongoDB}
+\subsubsection{MongoDB}
 
 É um banco de dados não relacional com uma escalabilidade muito boa. Ele utiliza conceitos de \textit{collections} e \textit{documents} em sua construção. 
 As \textit{collections} são equivalentes aos bancos de um ambiente que utiliza o SQL. Já os \textit{documents}, se equivalem aos registros de cada banco.
@@ -584,28 +908,28 @@ Os dados são guardados em arquivos similares aos de formato JSON (\textit{JavaS
 Outro item importante sobre o MongoDB é o fato de ser schemaless, tornando-o bem flexível em relação a inclusão de dados diferentes em uma mesma \textit{collection}, fazendo com que a validação de dados fique nas mãos dos desenvolvedores.
 
 
-\subsection{Express}
+\subsubsection{Express}
 
 É um framework que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers, models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de configuração do servidor.
 
 
-\subsection{Angular}
+\subsubsection{Angular}
 
 Framework utilizado no lado do cliente. Possui um conjunto adicional de atributos para as páginas HTML, passando parte do processamento dos dados da página para o lado do cliente. Isso possibilita a criação de interfaces dinâmicas e assíncronas além de diminuir a carga de processamento do servidor.
 
 
-\subsection{Node}
+\subsubsection{Node}
 
 Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciador de pacotes npm para organizar as bibliotecas utilizadas pela sua aplicação. É ele que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação.
 
 
-\section{Dificuldades}
+\subsection{Dificuldades}
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
 Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
 
 
-\section{Referências}
+\subsection{Referências}
 
 %links do HTML
 \href{https://www.w3schools.com/tags/ref_eventattributes.asp}{Atributos de eventos}\\
