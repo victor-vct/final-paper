@@ -257,7 +257,7 @@ Abstract here.
 % ---
 % inserir o sumario
 % ---
-\tableofcontents
+\tableofcontents*
 % ---
 \newpage
 % ---
@@ -797,7 +797,12 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
  
 \end{description}
 
-\subsection{Referências}
+\subsubsection{Animações}
+
+O sistema operacional provê uma \textit{API} para animações que herdou da versão do \textit{Android} de smartphone. Foi utilizado algumas animações para melhorar a experiência de uso dos motoristas com o módulo. Porém, por utilizar placas de baixo custo, no caso deste trabalho o \textit{Raspberry Pi 3}, é visível a baixa qualidade de transições.
+O \textit{Raspberry Pi 3} entrega 10 a 15 FPS, enquanto o aconselhável para ter uma boa fluidez é 30 FPS.
+
+\subsubsection{Referências}
 
 %links do intel edison
 \href{https://software.intel.com/en-us/iot/hardware/edison}{Site Oficial Intel Edison}\\
@@ -813,31 +818,34 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 \href{https://developer.android.com/things/hardware/edison.html}{Configuração do Android Things no Intel Edison}\\
 \href{https://developer.android.com/things/hardware/raspberrypi.html}{Configuração do Android Things no Raspberry Pi 3}\\
 
+\newpage
+
 \section{Aplicativo}
 
 \subsection{Telas}
 
-
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
 \caption{Tela de busca por um ponto de ônibus do aplicativo móvel.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_list_bus}
 \caption{Tela com lista de ônibus disponíveis do aplicativo móvel.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_detail_bus}
 \caption{Tela com detalhes do ônibus do aplicativo móvel.}
 \label{Rotulo}
 \end{figure}
+
+\newpage
 
 \subsection{IDE}
 
@@ -848,9 +856,11 @@ Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela Int
 O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
 Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
+\newpage
+
 \subsection{Arquitetura}
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=10cm, center]{images/brick_diagram_beacon}
 \caption{Diagrama de blocos do aplicativo móvel.}
@@ -882,7 +892,12 @@ A implementação por áudio descrição foi simples com uso da API nativa \text
 
 O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de implementação, fazendo ela na camada de serviço e configurando a instanciação no padrão \textit{Singleton} para que todos que vão utilizar (nesse caso são os \textit{presenters}), apenas solicitem a instância sendo passada por construtor.
 
-\chapter{Web service}
+\subsection{Usabilidade}
+
+É uma boa prática no desenvolvimento de softwares, sempre confirmar se o usuário tem certeza que deseja executar alguma alteração que possa ter algum impacto no sistema ou em funcionalidades. Inicialmente foi pensado em usar um \textit{dialog} para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento.
+Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Favoritar botão, para acionar toque duas vezes"}. Este texto já faz o usuário se assegurar da sua ação, fazendo a prática de colocar um \textit{dialog} ser algo desnecessário que só faz o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.} 
+
+\section{Web service}
 
 \subsection{Linguagem}
 

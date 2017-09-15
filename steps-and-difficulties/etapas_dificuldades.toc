@@ -4,9 +4,8 @@
 \edef \SavedTocDepth {\the \value {tocdepth}}
 \setcounter {tocdepth}{-10}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Sum\'ario}{6}{section*.7}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Lista de ilustra\c {c}\~{o}es}{8}{section*.8}
+\contentsline {chapter}{Lista de ilustra\c {c}\~{o}es}{8}{section*.7}
 \setcounter {tocdepth}{\SavedTocDepth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setcounter {tocdepth}{\SavedTocDepth }
@@ -55,21 +54,22 @@
 \contentsline {subsubsection}{\numberline {3.3.2.2}IDE}{32}{subsubsection.3.3.2.2}
 \contentsline {subsubsection}{\numberline {3.3.2.3}Linguagem}{32}{subsubsection.3.3.2.3}
 \contentsline {subsubsection}{\numberline {3.3.2.4}Arquitetura}{32}{subsubsection.3.3.2.4}
-\contentsline {subsection}{\numberline {3.3.3}Referências}{33}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Aplicativo}{34}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Telas}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}IDE}{34}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Linguagem}{34}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Arquitetura}{36}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Áudio Descrição}{37}{subsection.3.4.5}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Web service}}{38}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.1}Linguagem}{38}{subsection.4.0.1}
-\contentsline {subsubsection}{\numberline {4.0.1.1}JavaScript}{38}{subsubsection.4.0.1.1}
-\contentsline {subsection}{\numberline {4.0.2}MEAN stack}{38}{subsection.4.0.2}
-\contentsline {subsubsection}{\numberline {4.0.2.1}MongoDB}{38}{subsubsection.4.0.2.1}
-\contentsline {subsubsection}{\numberline {4.0.2.2}Express}{39}{subsubsection.4.0.2.2}
-\contentsline {subsubsection}{\numberline {4.0.2.3}Angular}{39}{subsubsection.4.0.2.3}
-\contentsline {subsubsection}{\numberline {4.0.2.4}Node}{39}{subsubsection.4.0.2.4}
-\contentsline {subsection}{\numberline {4.0.3}Dificuldades}{39}{subsection.4.0.3}
-\contentsline {subsection}{\numberline {4.0.4}Referências}{39}{subsection.4.0.4}
+\contentsline {subsubsection}{\numberline {3.3.2.5}Animações}{33}{subsubsection.3.3.2.5}
+\contentsline {subsubsection}{\numberline {3.3.2.6}Referências}{34}{subsubsection.3.3.2.6}
+\contentsline {section}{\numberline {3.4}Aplicativo}{35}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Telas}{35}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}IDE}{36}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Linguagem}{36}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Arquitetura}{37}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Áudio Descrição}{38}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Usabilidade}{38}{subsection.3.4.6}
+\contentsline {section}{\numberline {3.5}Web service}{39}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Linguagem}{39}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}JavaScript}{39}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}MEAN stack}{39}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}MongoDB}{39}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Express}{40}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Angular}{40}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.4}Node}{40}{subsubsection.3.5.2.4}
+\contentsline {subsection}{\numberline {3.5.3}Dificuldades}{40}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Referências}{40}{subsection.3.5.4}
