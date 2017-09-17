@@ -799,8 +799,11 @@ Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtectur
 
 \subsubsection{Animações}
 
-O sistema operacional provê uma \textit{API} para animações que herdou da versão do \textit{Android} de smartphone. Foi utilizado algumas animações para melhorar a experiência de uso dos motoristas com o módulo. Porém, por utilizar placas de baixo custo, no caso deste trabalho o \textit{Raspberry Pi 3} com GPU \textit{Broadcom VideoCore IV}, é visível a baixa qualidade de transições.
-O \textit{Raspberry Pi 3} entrega 10 a 15 FPS, enquanto o aconselhável para ter uma boa fluidez é 30 FPS.
+Um dos tópicos mais presentes sobre melhorar experiência do usuário em sistemas, são as animações. Elas deixam o uso mais fluído e agradável para o usuário. [pesquisar na literatura e colocar aqui]\\
+
+O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de smartphones. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.\\
+
+[PESQUISAR MELHOR SOBRE QUALIDADES ALCANÇADAS DE FPS)
 
 \subsubsection{Referências}
 
@@ -942,15 +945,6 @@ Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciad
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
 Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
-
-
-\subsection{Hospedagem}
-
-Tendo em vista a necessidade de manter o servidor disponível a qualquer momento, foi decidido utilizar um serviço de hospedagem.
-O serviço de hospedagem de sites, funciona de modo a garantir que seu site esteja acessível para o mundo em qualquer momento. As empresas existentes apresentam um período gratuito que varia de uma para outra. Dentre elas, existem a Locaweb, a GoDaddy, a Umbler e a Openshift.
-As duas primeiras não foram escolhidas pela dificuldade de descobrir como subir um servidor Node nelas. A Openshift, durante o tempo de busca de informações sobre hospedadores de páginas, estava em um período no qual não estava aceitando todas as requisições para hospedagem nele.
-Foi escolhido o serviço da Umbler devido a facilidade de criar um domínio com as tecnologias necessárias para o funcionamento do \textit{web service}. Em apenas cinco minutos após a criação de uma conta nele, foi realizado as configurações iniciais do servidor com banco de dados. Após selecionar o Node.js como plataforma e definir o tamanho do banco MongoDB, bastou subir os arquivos para a Umbler através do Git. Até essa parte, possui um tutorial no site da Umbler explicando as alterações necessárias para que o servidor, inicialmente presente no \textit{localhost}, funcione nele.
-Ao terminar o envio dos arquivos, o próprio hospedador se encarrega de realizar o \textit{deploy} do site, podendo acompanhar o andamento do processo em um painel de gerenciamento próprio para cada domínio cadastrado em sua conta.
 
 
 \subsection{Referências}
