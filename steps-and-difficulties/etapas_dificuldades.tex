@@ -944,6 +944,15 @@ Apesar de conter conceitos simples de aprender, devido à grande quantidade de m
 Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
 
 
+\subsection{Hospedagem}
+
+Tendo em vista a necessidade de manter o servidor disponível a qualquer momento, foi decidido utilizar um serviço de hospedagem.
+O serviço de hospedagem de sites, funciona de modo a garantir que seu site esteja acessível para o mundo em qualquer momento. As empresas existentes apresentam um período gratuito que varia de uma para outra. Dentre elas, existem a Locaweb, a GoDaddy, a Umbler e a Openshift.
+As duas primeiras não foram escolhidas pela dificuldade de descobrir como subir um servidor Node nelas. A Openshift, durante o tempo de busca de informações sobre hospedadores de páginas, estava em um período no qual não estava aceitando todas as requisições para hospedagem nele.
+Foi escolhido o serviço da Umbler devido a facilidade de criar um domínio com as tecnologias necessárias para o funcionamento do \textit{web service}. Em apenas cinco minutos após a criação de uma conta nele, foi realizado as configurações iniciais do servidor com banco de dados. Após selecionar o Node.js como plataforma e definir o tamanho do banco MongoDB, bastou subir os arquivos para a Umbler através do Git. Até essa parte, possui um tutorial no site da Umbler explicando as alterações necessárias para que o servidor, inicialmente presente no \textit{localhost}, funcione nele.
+Ao terminar o envio dos arquivos, o próprio hospedador se encarrega de realizar o \textit{deploy} do site, podendo acompanhar o andamento do processo em um painel de gerenciamento próprio para cada domínio cadastrado em sua conta.
+
+
 \subsection{Referências}
 
 %links do HTML
