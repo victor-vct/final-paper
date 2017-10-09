@@ -307,9 +307,116 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 \item O ônibus deve prover sinal de rede Wi-Fi para que o módulo do ônibus possa se comunicar.
 \end{itemize}
 
-\chapter{Descrição da Informação}
+\chapter{Tecnologias Utilizadas}
 
-\section{Visão Geral}
+\section{Protocolos de Comunicação}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/diagram_protocols}
+\caption{Protocolos de comunicação utilizados.}
+\label{Rotulo}
+\end{figure}
+
+\subsection{HTTP}
+
+\textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
+
+Para o cenário deste projeto, tanto o aplicativo quanto o módulo do ônibus estão em cenários não favoráveis para o trafego de informação em grande escala, tendo em vista a baixa qualidade das redes 3G/4G dos smartphones e das redes WiFi que possuem nos ônibus.
+
+\subsection{Push Notification}
+
+\textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
+
+Neste projeto temos duas situações que a tecnologia é conveniente: primeiro, existe a necessidade de avisar o motorista que é necessário, em um dado momento, parar no próximo ponto para um deficiente visual. Segundo, precisamos avisar ao deficiente visual que seu ônibus já chegou e ele pode se dirigir a ele.
+
+Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e não temos uma conexão aberta constantemente como eles. Fazendo o serviço de \textit{Push Notification} ser a melhor escolha.
+
+Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
+
+\subsection{Bluetooth Low Energy}
+
+O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
+
+Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
+
+\section{Hardware}
+
+\subsection{Raspiberry Pi 3}
+
+\subsection{HM-10}
+
+
+\subsection{NEO 6M}
+
+\section{Software}
+
+\subsection{Sistemas Operacionais}
+
+\subsubsection{Android}
+
+\subsubsection{Android Things}
+
+\subsubsection{Linguagem de Programação}
+
+\subsection{Backend}
+
+\subsubsection{Linguagem}
+
+Para o desenvolvimento do \textit{web service} foi escolhida a utilização da pilha MEAN, que engloba quatro tecnologias para desenvolvimento \textit{web} que possuem como base a linguagem JavaScript.
+
+\subsubsubsection{JavaScript}
+
+JavaScript é uma linguagem de programação \textit{client-side}, utilizada para manipular os comportamentos de uma página, controlando o HTML e o CSS. Outra característica dela, é que ela é uma linguagem orientada à eventos.
+Para explicar melhor o que são eventos, é importante citar que uma página HTML utiliza tags para representar seus elementos, podendo conter menus, botões e formulários em seu corpo. Cada elemento possui alguns atributos, sendo alguns desses atributos de eventos, como por exemplo o \textit{onClick} que realiza alguma função caso o elemento referente seja clicado pelo usuário.
+Tais funções podem ser desenvolvidas em JavaScript, entrando aqui para dizer qual comportamento a página terá ao disparo do evento.\\
+
+\subsubsection{MEAN stack}
+
+A pilha \textit{MEAN} é um conjunto de \textit{frameworks} desenvolvidos em JavaScript, que englobam os lados do cliente, do servidor e do banco de dados. Por possuírem a mesma linguagem como base, os elementos dessa pilha contam com uma maior produtividade no desenvolvimento. MEAN é um acrônimo para MongoDB, Express, Angular e Node.
+
+
+\subsubsection{MongoDB}
+
+É um banco de dados não relacional com uma escalabilidade muito boa. Ele utiliza conceitos de \textit{collections} e \textit{documents} em sua construção. 
+As \textit{collections} são equivalentes aos bancos de um ambiente que utiliza o SQL. Já os \textit{documents}, se equivalem aos registros de cada banco.
+Os dados são guardados em arquivos similares aos de formato JSON (\textit{JavaScript Object Notation}).
+Outro item importante sobre o MongoDB é o fato de ser schemaless, tornando-o bem flexível em relação a inclusão de dados diferentes em uma mesma \textit{collection}, fazendo com que a validação de dados fique nas mãos dos desenvolvedores.
+
+
+\subsubsection{Express}
+
+É um framework que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers, models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de configuração do servidor.
+
+
+\subsubsection{Angular}
+
+Framework utilizado no lado do cliente. Possui um conjunto adicional de atributos para as páginas HTML, passando parte do processamento dos dados da página para o lado do cliente. Isso possibilita a criação de interfaces dinâmicas e assíncronas além de diminuir a carga de processamento do servidor.
+
+
+\subsubsection{Node}
+
+Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciador de pacotes npm para organizar as bibliotecas utilizadas pela sua aplicação. É ele que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação.
+
+
+\subsection{Referências}
+
+%links do HTML
+\href{https://www.w3schools.com/tags/ref_eventattributes.asp}{Atributos de eventos}\\
+%links do javascript
+\href{http://tableless.github.io/iniciantes/manual/js/}{Guia introdutório sobre JavaScript}\\
+
+%links do MEAN stack
+ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB, Express, Angular e Node. ed. Casa do Código, 2016.\\
+%links do push notifications
+
+Falar sobre o MEAN stack e sobre as dificuldades que estou encontrando sobre como trabalhar com cada tecnologia da pilha.
+
+\chapter{Desenvolvimento}
+
+\section{Descrição da Informação}
+
+\subsection{Visão Geral}
 
 \begin{figure}[!h]
 \centering
@@ -319,18 +426,18 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 \end{figure}
 
 \begin{description}
-\item[Módulo da parada de ônibus] Emite informações de identificação da parada.
+\item[Módulo da parada de ônibus:] Emite informações de identificação da parada.
 
-\item[Aplicativo] Reconhece o ponto de ônibus e solicita informações da API.
+\item[Aplicativo:] Reconhece o ponto de ônibus e solicita informações da API.
 
-\item[API] Intermediário entre o aplicativo e o módulo do ônibus.
+\item[API:] Intermediário entre o aplicativo e o módulo do ônibus.
 
-\item[Módulo do Ônibus] Mantém constante comunicação com o API enviando dados de geolocalização. Recebe também informação se deve alertar o motorista sobre deficiente visual na próxima parada.
+\item[Módulo do Ônibus:] Mantém constante comunicação com o API enviando dados de geolocalização. Recebe também informação se deve alertar o motorista sobre deficiente visual na próxima parada.
 \end{description}
 
 \newpage
 
-\section{Representação do Fluxo da Informação}
+\subsection{Representação do Fluxo da Informação}
 
 \begin{figure}[!h]
 \centering
@@ -348,9 +455,9 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \newpage
 
-\section{Interfaces com Sistema}
+\subsection{Interfaces com Sistema}
 
-\subsection{Busca por um ponto próximo}
+\subsubsection{Busca por um ponto próximo}
 
 \begin{figure}[!h]
 \centering
@@ -377,7 +484,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsection{Busca por um ponto na API}
+\subsubsection{Busca por um ponto na API}
 
 \begin{figure}[!h]
 \centering
@@ -404,7 +511,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsection{Lista de ônibus disponíveis}
+\subsubsection{Lista de ônibus disponíveis}
 
 \begin{figure}[!h]
 \centering
@@ -431,7 +538,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsection{Detalhes do ônibus}
+\subsubsection{Detalhes do ônibus}
 
 \begin{figure}[!h]
 \centering
@@ -459,7 +566,7 @@ Número                  & Nome                                  & Descrição  
 
 \newpage
 
-\subsection{Detalhes do ônibus}
+\subsubsection{Detalhes do ônibus}
 
 \begin{figure}[!h]
 \centering
@@ -484,9 +591,7 @@ Número & Nome                                                                  
 
 \newpage
 
-\section{Descrição Funcional}
-
-\subsection{Divisão Funcional}
+\subsection{Descrição Funcional}
 
 \subsubsection{Aplicativo para dispositivo móvel}
 
@@ -506,7 +611,7 @@ Dispositivo instalado no ônibus. Mantém comunicação constante com a API para
 
 \newpage
 
-\section{Descrição funcional}
+\subsection{Casos de Uso}
 
 \begin{figure}[!h]
 \centering
@@ -515,7 +620,7 @@ Dispositivo instalado no ônibus. Mantém comunicação constante com a API para
 \label{Rotulo}
 \end{figure}
 
-\subsection{Narrativas: Casos de Uso}
+\subsubsection{Narrativas: Casos de Uso}
 
 Solicitar horário do próximo ônibus da linha e sentido escolhido: Este caso de uso acontece quando um usuário solicita qual será a previsão de horário do próximo ônibus, de uma linha e sentido que ele poderá escolher de acordo com o seu ponto de ônibus.
 
@@ -523,7 +628,7 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 
 \newpage
 
-\subsection{Diagramas de apoio para compreensão funcional}
+\subsubsection{Diagramas de apoio para compreensão funcional}
 
 \bgroup
 \def\arraystretch{1.5}
@@ -571,39 +676,6 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 \end{table}
 \egroup
 
-\chapter{Desenvolvimento}
-
-\section{Protocolos de Comunicação}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=10cm, center]{images/diagram_protocols}
-\caption{Protocolos de comunicação utilizados.}
-\label{Rotulo}
-\end{figure}
-
-\subsection{HTTP}
-
-\textit{Hypertext Transfer Protocol} é um protocolo baseado em requisições. Quando um cliente necessita de uma informação, ele solicita para o servidor que retorna uma resposta. Sua especificação permite requisições do tipo \textit{GET, POST, DELETE}, dentre outros. Sua principal vantagem é não haver uma conexão aberta a todo momento para trafegar mensagens, permitindo que conexões e informações trafeguem apenas quando necessário. O formato para trafego das informações neste trabalho, por meio deste protocolo é a notação \textit{JSON}.
-
-Para o cenário deste projeto, tanto o aplicativo quanto o módulo do ônibus estão em cenários não favoráveis para o trafego de informação em grande escala, tendo em vista a baixa qualidade das redes 3G/4G dos smartphones e das redes WiFi que possuem nos ônibus.
-
-\subsection{Push Notification}
-
-\textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
-
-Neste projeto temos duas situações que a tecnologia é conveniente: primeiro, existe a necessidade de avisar o motorista que é necessário, em um dado momento, parar no próximo ponto para um deficiente visual. Segundo, precisamos avisar ao deficiente visual que seu ônibus já chegou e ele pode se dirigir a ele.
-
-Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e não temos uma conexão aberta constantemente como eles. Fazendo o serviço de \textit{Push Notification} ser a melhor escolha.
-
-Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
-
-\subsection{Bluetooth Low Energy}
-
-O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
-
-Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
-
 \section{Módulo do Ponto de Ônibus}
 
 \subsection{Hardware}
@@ -633,7 +705,7 @@ Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A li
 
 Conecte o arduino Uno ao computador e compile o código abaixo utilizando a IDE do arduino.
 
-\lstinputlisting[style=customc]{codes/arduino-code.ino}
+%\lstinputlisting[style=customc]{codes/arduino-code.ino}
 
 Após compilador, utilizando o Serial Monitor da IDE, execute os comandos AT na seguinte ordem:
 
@@ -897,49 +969,20 @@ O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de i
 
 \subsection{Usabilidade}
 
-É uma boa prática no desenvolvimento de softwares, sempre confirmar se o usuário tem certeza que deseja executar alguma alteração que possa ter algum impacto no sistema ou em funcionalidades. Inicialmente foi pensado em usar um \textit{dialog} para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento.
-Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Favoritar botão, para acionar toque duas vezes"}. Este texto já faz o usuário se assegurar da sua ação, fazendo a prática de colocar um \textit{dialog} ser algo desnecessário que só faz o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.} 
+É uma boa prática no desenvolvimento de softwares, sempre confirmar se o usuário tem certeza que deseja executar alguma alteração que possa ter algum impacto no sistema ou em alguma funcionalidade, normalmente lançando alertas para garantir que o usuário não clicou sem querer em algum determinado botão, por exemplo. 
+
+Inicialmente foi pensado em usar um \textit{dialog} para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento. Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Adicionar aos favoritos. Botão, para acionar toque duas vezes"}. Esse texto já faz o usuário se assegurar da sua ação, tornando a prática de lançar um alerta ser algo desnecessário, fazendo o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.}
+
+Com base nessas observações, não foi implementado \textit{dialogs} de confirmação. Deixando a responsabilidade de afirmar as ações do usuário para o \textit{Talkback} fazer. Embora seja uma pequena ação, tem grande impacto na usabilidade do aplicativo por parte do usuário final, que são os deficientes visuais.
+
+O sistema operacional Android permite que aplicativos implementem variações da tela de acordo com a orientação do dispositivo, retrato ou paisagem. Isso permite que o layout do aplicativo se adapte a nova disposição de espaço.
+
+Pensando no usuário final, para saber onde está cada elemento, ele precisa deslizar o dedo pela tela para conhecer a localização de cada um. Se ao rotacionar o aparelho, a disposição dos elementos mudar, o usuário precisa verificar novamente onde está cada um.
+
+Como este trabalho desenvolve um aplicativo com poucos elementos na tela para simplificar o uso por deficientes visuais, foi bloqueado a mudança de tela ao rotacionar o aparelho. Isso garante um melhor conforto ao usar o aplicativo.
+
 
 \section{Web service}
-
-\subsection{Linguagem}
-
-Para o desenvolvimento do \textit{web service} foi escolhida a utilização da pilha MEAN, que engloba quatro tecnologias para desenvolvimento \textit{web} que possuem como base a linguagem JavaScript.
-
-
-\subsubsection{JavaScript}
-
-JavaScript é uma linguagem de programação \textit{client-side}, utilizada para manipular os comportamentos de uma página, controlando o HTML e o CSS. Outra característica dela, é que ela é uma linguagem orientada à eventos.
-Para explicar melhor o que são eventos, é importante citar que uma página HTML utiliza tags para representar seus elementos, podendo conter menus, botões e formulários em seu corpo. Cada elemento possui alguns atributos, sendo alguns desses atributos de eventos, como por exemplo o \textit{onClick} que realiza alguma função caso o elemento referente seja clicado pelo usuário.
-Tais funções podem ser desenvolvidas em JavaScript, entrando aqui para dizer qual comportamento a página terá ao disparo do evento.\\
-
-\subsection{MEAN stack}
-
-A pilha \textit{MEAN} é um conjunto de \textit{frameworks} desenvolvidos em JavaScript, que englobam os lados do cliente, do servidor e do banco de dados. Por possuírem a mesma linguagem como base, os elementos dessa pilha contam com uma maior produtividade no desenvolvimento. MEAN é um acrônimo para MongoDB, Express, Angular e Node.
-
-
-\subsubsection{MongoDB}
-
-É um banco de dados não relacional com uma escalabilidade muito boa. Ele utiliza conceitos de \textit{collections} e \textit{documents} em sua construção. 
-As \textit{collections} são equivalentes aos bancos de um ambiente que utiliza o SQL. Já os \textit{documents}, se equivalem aos registros de cada banco.
-Os dados são guardados em arquivos similares aos de formato JSON (\textit{JavaScript Object Notation}).
-Outro item importante sobre o MongoDB é o fato de ser schemaless, tornando-o bem flexível em relação a inclusão de dados diferentes em uma mesma \textit{collection}, fazendo com que a validação de dados fique nas mãos dos desenvolvedores.
-
-
-\subsubsection{Express}
-
-É um framework que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers, models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de configuração do servidor.
-
-
-\subsubsection{Angular}
-
-Framework utilizado no lado do cliente. Possui um conjunto adicional de atributos para as páginas HTML, passando parte do processamento dos dados da página para o lado do cliente. Isso possibilita a criação de interfaces dinâmicas e assíncronas além de diminuir a carga de processamento do servidor.
-
-
-\subsubsection{Node}
-
-Plataforma principal para o funcionamento da pilha MEAN. Ele utiliza o gerenciador de pacotes npm para organizar as bibliotecas utilizadas pela sua aplicação. É ele que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação.
-
 
 \subsection{Dificuldades}
 
@@ -947,17 +990,5 @@ Apesar de conter conceitos simples de aprender, devido à grande quantidade de m
 Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
 
 
-\subsection{Referências}
-
-%links do HTML
-\href{https://www.w3schools.com/tags/ref_eventattributes.asp}{Atributos de eventos}\\
-%links do javascript
-\href{http://tableless.github.io/iniciantes/manual/js/}{Guia introdutório sobre JavaScript}\\
-
-%links do MEAN stack
-ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB, Express, Angular e Node. ed. Casa do Código, 2016.\\
-%links do push notifications
-
-Falar sobre o MEAN stack e sobre as dificuldades que estou encontrando sobre como trabalhar com cada tecnologia da pilha.
 
 \end{document}

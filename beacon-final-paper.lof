@@ -1,20 +1,20 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Visão geral da comunicação dos componentes.}}{11}{figure.2.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de fluxo de dados.}}{12}{figure.2.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de banco de dados.}}{12}{figure.2.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{13}{figure.2.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{14}{figure.2.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{15}{figure.2.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{16}{figure.2.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{17}{figure.2.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de caso de uso.}}{19}{figure.2.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Protocolos de comunicação utilizados.}}{21}{figure.3.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Módulo Bluetooth HM10.}}{23}{figure.3.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Intel Edison.}}{27}{figure.3.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Raspberry 3.}}{29}{figure.3.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Módulo NEO u-blox 6 GPS.}}{30}{figure.3.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{32}{figure.3.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Tela de busca por um ponto de ônibus do aplicativo móvel.}}{34}{figure.3.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Tela com lista de ônibus disponíveis do aplicativo móvel.}}{34}{figure.3.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Tela com detalhes do ônibus do aplicativo móvel.}}{35}{figure.3.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{36}{figure.3.19}
+\contentsline {figure}{\numberline {1}{\ignorespaces Protocolos de comunicação utilizados.}}{13}{figure.2.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Visão geral da comunicação dos componentes.}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de fluxo de dados.}}{19}{figure.3.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de banco de dados.}}{19}{figure.3.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{20}{figure.3.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{21}{figure.3.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{22}{figure.3.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{23}{figure.3.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{24}{figure.3.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de caso de uso.}}{26}{figure.3.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Módulo Bluetooth HM10.}}{28}{figure.3.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Intel Edison.}}{30}{figure.3.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Raspberry 3.}}{31}{figure.3.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Módulo NEO u-blox 6 GPS.}}{32}{figure.3.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{34}{figure.3.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Tela de busca por um ponto de ônibus do aplicativo móvel.}}{36}{figure.3.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Tela com lista de ônibus disponíveis do aplicativo móvel.}}{36}{figure.3.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela com detalhes do ônibus do aplicativo móvel.}}{37}{figure.3.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{38}{figure.3.19}
