@@ -984,6 +984,81 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 
 \section{Web service}
 
+\subsection{Localização do ônibus}
+
+Ter conhecimento da posição do ônibus se faz necessário para realizar a previsão de chegada em um ponto de parada. Neste trabalho, sempre que o \textit{Web Service} recebe as coordenadas geográficas do ônibus, elas são corrigidas para um ponto válido da rota que este está fazendo.
+
+Quando o \textit{Web Service} recupera as informações da rota do veículo, ele obtém todos os pontos referentes a ela, onde cada um tem informações de latitude, longitude e se este é um ponto de parada. Então é verificado qual ponto está mais próximo a localização recebida, o mais próximo é associado ao ônibus.
+
+O cálculo de distância é feito a partir da seguinte fórmula:
+
+FORMULA AQUI
+
+Para otimizar a busca pelo ponto mais apto, é feito uma busca binária, que tem complexidade \textit{O(log n)}, o que reduz o tempo de busca caso fosse usar a busca sequencial, que possui complexidade \textit{O(n)}. 
+
+\subsubsection{Busca Binária}
+
+\textit{"Binary search is to algorithms
+what a wheel is to mechanics:
+It is simple, elegant, and immensely important."}
+— Udi Manber, Introduction to Algorithms
+
+
+Primeiro é calculado a distância entre a localização recebida do ônibus e o primeiro ponto da rota. 
+Em seguida, calculamos a distância entre a localização recebida e o ultimo ponto da rota. Com isso temos a distânciaInicio e distânciaFim. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/distanciainicio-distanciafim.png}
+\caption{Representação da busca binária.}
+\label{Rotulo}
+\end{figure}
+
+Um terceiro cálculo é feito, a distância entre a localização recebida e o ponto do meio da rota.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/distanciainicio-distanciafim-distanciomeio.png}
+\caption{Representação da busca binária.}
+\label{Rotulo}
+\end{figure}
+
+O algoritmo então verifica qual metade é mais apta, baseando-se nas distâncias mais curtas. Se distânciaFim é maior que distânciaInicio, é feito uma recursividade assumindo distânciaMeio como fim.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/nova-distancia.png}
+\caption{Representação da busca binária.}
+\label{Rotulo}
+\end{figure}
+
+Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, então o ponto mais próximo assume o posto de mais apto e é associado ao ônibus.
+
+\subsection{Previsão de chegada}
+
+Para calcular a previsão de chegada de um ônibus, precisamos saber a ultima localização conhecida dele e o ponto de parada escolhido. Com essas duas informações podemos recuperar todos dados necessários para o cálculo.
+
+Primeiro é recuperado todos os dados da rota que o ônibus está fazendo. Cada rota possui N pontos associados a ela, onde cada um tem a informação de latitude e longitude, e se este é um ponto de parada. Sabendo em qual ponto da rota o ônibus está e qual ponto de parada o usuário se encontra, podemos pegar todos os pontos que estão entre eles e calcular a distância. 
+
+A partir dela somamos a distância dentre todos esses pontos, com isso dividimos pela velocidade da pista e sabemos quanto tempo aproximado falta para o ônibus chegar na parada.
+
+FORMULA T = S/V
+
+
+\subsection{Alertar motorista sobre parar}
+
+O \textit{Android Things} não suporta serviço de \textit{push notification}. Para enviar mensagens instantâneas ao módulo foi utilizado o \textit{Realtime Database}, do \textit{Firebase}, que permite observar um nó. Sempre que existe uma alteração deste, quem está observando é notificado.
+
+IMAGEM DO FIREBASE AQUI
+
+Quando um módulo do ônibus é conectado a internet, ele cria um nó com seu ID na base de dados e um nó filho intitulado \textit{needsstop}, e passa a observá-lo. Quando o valor do nó filho é alterado, o módulo então dispara uma notificação para o motorista sobre a necessidade de parar no próximo ponto de ônibus.
+
+O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como visto na seção \textit{Localização do Ônibus}, é feito uma varredura para descobrir o ponto da rota que o ônibus se encontra. Em seguida também é verificado qual o próximo ponto que ele vai passar. Caso o próximo ponto esteja na lista de requisições de parada, é então alterado o valor do nó filho para que aquele módulo alerte o motorista.
+
+\subsection{Alertar usuário que ônibus chegou}
+
+Quando o motorista chega na parada, ele pressiona um botão para anunciar sua chegada. Quando \textit{Web Service} recebe esse alerta por meio de uma requisição \textit{HTTP}, ele verifica quais usuários estão aguardando aquele ônibus, então é disparado uma \textit{push notification}, por meio do \textit{Firebase}, avisando que o ônibus que ele aguarda está parado.
+
 \subsection{Dificuldades}
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
