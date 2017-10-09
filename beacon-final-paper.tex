@@ -18,6 +18,7 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{multicol}			% multiplas colunas no texto 
 \usepackage{booktabs}
+
 % ---
 
 % ---
@@ -340,14 +341,77 @@ O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0
 
 Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
 
+\newpage
+
 \section{Hardware}
 
 \subsection{Raspiberry Pi 3}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/raspberry-pi}
+\caption{Raspberry 3.}
+\label{Rotulo}
+\end{figure}
+
+"A Raspberry Pi é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes." (Upton, E. and Halfacree, G., 2017, Raspberry Pi - Manual do Usuário). Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
+
+A Fundação Raspberry Pi, responsável pelo seu desenvolvimento, também mantém o foco da placa no meio educacional, apresentando uma plataforma acessível para que cada vez mais pessoas se interessem pelo desenvolvimento softwares.
+
+Especificações:
+
+\begin{itemize}
+\item Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
+\item 1GB RAM
+\item BCM43438 wireless LAN e Bluetooth Low Energy (BLE)
+\item 40-pin extended GPIO
+\item 4 USB 2 ports
+\item 4 Pole stereo output e composite video port
+\item Full size HDMI
+\item CSI camera port para conectar uma câmera Raspberry Pi
+\item DSI display port para conectar um display touchscreen Raspberry Pi
+\item Micro SD port para carregar o sistema operacional e armazenar dados
+\end{itemize}
+
 \subsection{HM-10}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/hm-10}
+\caption{Módulo Bluetooth HM10.}
+\label{Rotulo}
+\end{figure}
+
+\subsection{Arduino Uno}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/arduino}
+\caption{Módulo Bluetooth HM10.}
+\label{Rotulo}
+\end{figure}
 
 \subsection{NEO 6M}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/neo-6m}
+\caption{Módulo NEO u-blox 6 GPS.}
+\label{Rotulo}
+\end{figure}
+
+\textbf{Localização}
+
+Uma característica desse módulo é trabalhar com GPS, fazendo comunicação direta com no mínimo 3 satélites para triangular sua posição com mais precisão. Alguns módulos disponíveis no mercado trabalham com A-GPS, que usam torres de telefonia móvel para conhecer sua posição.
+O uso do GPS trás maior precisão, porém demora mais para estabelecer conexão com satélites. O A-GPS fornece a localização com menor tempo, porém com menor precisão e a um custo mais alto.
+
+\textbf{Comunicação}
+
+O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitter), o que permite fácil comunicação com as placas utilizadas para testes.
+
+\textbf{Preço}
+
+Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
 
 \section{Software}
 
@@ -682,16 +746,6 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 \item Arduino Uno
 \end{enumerate}
 
-Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A ligação deve seguir o diagrama abaixo.
-
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=10cm, center]{images/arduino-hm10}
-\caption{Módulo Bluetooth HM10.}
-\label{Rotulo}
-\end{figure}
-
 \subsection{Software}
 
 \begin{itemize}
@@ -700,28 +754,44 @@ Arduino Uno é utilizado apenas como ponte para configurar o módulo HM-10. A li
 
 \subsection{Configuração}
 
-Conecte o arduino Uno ao computador e compile o código abaixo utilizando a IDE do arduino.
+Para configurar o módulo HM-10 utilizamos o Arduino como ponte. Para realizar tais configurações, foi montado o circuito conforme a figura abaixo.
 
-%\lstinputlisting[style=customc]{codes/arduino-code.ino}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/arduino-hm10}
+\caption{Módulo Bluetooth HM10.}
+\label{Rotulo}
+\end{figure}
 
-Após compilador, utilizando o Serial Monitor da IDE, execute os comandos AT na seguinte ordem:
+Após conectar o arduino ao computador, foi utilizado sua \textit{IDE} para escrever o código, que está no apêndice A. No código do Arduino, foi estabelecido uma comunicação serial com o módulo HM-10 para enviar os comandos AT necessários. Esses comandos são para otimizar o uso da bateria e ativar a função \textit{Beacon} do módulo. A seguir, a descrição dos comandos.
 
-Obs: Quanto menor o tempo de envio, maior a economia de energia.
-
-\begin{enumerate}
-\item AT+RENEW //Coloca nos padrões de fábrica
-\item AT+RESET //Reinicia para aplicar os padrões de fábrica
-\item AT+MARJ0xNNNN //Define o valor Marjor
-\item AT+MINO0xNNNN //Define o valor Minor
-\item AT+NAMEMeuBeacon //Define o nome do Beacon
-\item AT+ADVI5 //Define tempo de envio. 5 = 546.25 millisegundos
-\item AT+ADTY3 //Define como não pareável
-\item AT+IBEA1 //Habilita como Beacon
-\item AT+DELO2 //Configura para apenas emitir sinal
-\item AT+PWRM0 //Habilita auto-sleep para economizar energia
-\item AT+RESET
-\end{enumerate}
-
+\begin{tabular}{|c|c|}
+\hline 
+Código & Descrição \\ 
+\hline 
+AT+RENEW & Coloca nos padrões de fábrica \\ 
+\hline 
+AT+RESET & Reinicia para aplicar os padrões de fábrica \\ 
+\hline 
+AT+MARJ0xNNNN & Define o valor Marjor \\ 
+\hline 
+AT+MINO0xNNNN & Define o valor Minor \\ 
+\hline 
+AT+NAMEMeuBeacon & Define o nome do dispositivo \\ 
+\hline 
+AT+ADVI5 & Define tempo de envio. 5 = 546.25 millisegundos \\ 
+\hline 
+AT+ADTY3 & Define como não pareável \\ 
+\hline 
+AT+IBEA1 & Habilita como Beacon \\ 
+\hline 
+AT+DELO2 & Configura para apenas emitir sinal \\ 
+\hline 
+AT+PWRM0 & Habilita função auto-sleep para economizar energia \\ 
+\hline 
+AT+RESET & Reinicia para aplicar as configurações \\ 
+\hline 
+\end{tabular} 
 
 Após configurado, pode ser ligado em uma bateria 3v para utilização.
 
@@ -776,55 +846,18 @@ em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas pla
 
 \subsubsection{Raspberry Pi 3}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=10cm, center]{images/raspberry-pi}
-\caption{Raspberry 3.}
-\label{Rotulo}
-\end{figure}
-
 Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema e a placa vem com saída HDMI permitindo utilizar telas LCD para fazer os alertas visuais.
-Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações:
-
-\begin{itemize}
-\item Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
-\item 1GB RAM
-\item BCM43438 wireless LAN and Bluetooth Low Energy (BLE) on board
-\item 40-pin extended GPIO
-\item 4 USB 2 ports
-\item 4 Pole stereo output and composite video port
-\item Full size HDMI
-\item CSI camera port for connecting a Raspberry Pi camera
-\item DSI display port for connecting a Raspberry Pi touchscreen display
-\item Micro SD port for loading your operating system and storing data
-\item Upgraded switched Micro USB power source up to 2.5A
-\end{itemize}
+Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações.
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
 
 \subsubsection{Módulo NEO u-blox 6 GPS}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=10cm, center]{images/neo-6m}
-\caption{Módulo NEO u-blox 6 GPS.}
-\label{Rotulo}
-\end{figure}
+
 
 Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível. 
 
-\textbf{Localização}
 
-Uma característica desse módulo é trabalhar com GPS, fazendo comunicação direta com no mínimo 3 satélites para triangular sua posição com mais precisão. Alguns módulos disponíveis no mercado trabalham com A-GPS, que usam torres de telefonia móvel para conhecer sua posição.
-O uso do GPS trás maior precisão, porém demora mais para estabelecer conexão com satélites. O A-GPS fornece a localização com menor tempo, porém com menor precisão e a um custo mais alto.
-
-\textbf{Comunicação}
-
-O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitter), o que permite fácil comunicação com as placas utilizadas para testes.
-
-\textbf{Preço}
-
-Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
 
 
 \subsection{Software}
@@ -1060,7 +1093,5 @@ Quando o motorista chega na parada, ele pressiona um botão para anunciar sua ch
 
 Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
 Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
-
-
 
 \end{document}
