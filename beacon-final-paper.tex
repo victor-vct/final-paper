@@ -383,6 +383,8 @@ Especificações:
 \label{Rotulo}
 \end{figure}
 
+\newpage
+
 \subsection{Arduino Uno}
 
 \begin{figure}[!h]
@@ -519,7 +521,9 @@ ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB
 
 \subsection{Interfaces com Sistema}
 
-\subsubsection{Busca por um ponto próximo}
+\subsubsection{Aplicativo}
+
+\subsubsubsection{Busca por um ponto próximo}
 
 \begin{figure}[!h]
 \centering
@@ -546,7 +550,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsubsection{Busca por um ponto na API}
+\subsubsubsection{Busca por um ponto na API}
 
 \begin{figure}[!h]
 \centering
@@ -573,7 +577,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsubsection{Lista de ônibus disponíveis}
+\subsubsubsection{Lista de ônibus disponíveis}
 
 \begin{figure}[!h]
 \centering
@@ -600,7 +604,7 @@ Grupo\\ \hline
 
 \newpage
 
-\subsubsection{Detalhes do ônibus}
+\subsubsubsection{Detalhes do ônibus}
 
 \begin{figure}[!h]
 \centering
@@ -628,7 +632,7 @@ Número                  & Nome                                  & Descrição  
 
 \newpage
 
-\subsubsection{Detalhes do ônibus}
+\subsubsubsection{Detalhes do ônibus}
 
 \begin{figure}[!h]
 \centering
@@ -648,6 +652,131 @@ Número & Nome                                                                  
 4      & \begin{tabular}[c]{@{}c@{}}Áudio sobre o \\ acompanhamento\end{tabular} & \begin{tabular}[c]{@{}c@{}}Informa ao usuário \\ que está sendo \\ feito o acompanhamento \\ do ônibus\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Ter escolhido acompanhar \\ um ônibus.\\ Função Talkback ativa\end{tabular}                                  & Áudio \\ \hline
 \end{tabular}
 \caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\subsubsection{Módulo do ônibus}
+
+\subsubsubsection{Carregando Informações}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-carregando}
+\caption{Tela do módulo do ônibus quando está carregando informações.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\ 
+\hline 
+\begin{tabular}[c]{@{}c@{}}1\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Mensagem\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Informa que está carregando informações \\do servidor\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Ter iniciado o sistema\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Texto\end{tabular}  \\ 
+\hline 
+\end{tabular} 
+\caption{Descrição dos elementos da tela sobre estar carregando informações.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\subsubsubsection{Aguardando iniciar a rota}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-comecar-rota}
+\caption{Tela do módulo do ônibus aguardando motorista inicar rota.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\
+\hline 
+\begin{tabular}[c]{@{}c@{}}1\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informação para\\ começar rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informar que precisa avisar \\ quando começar a rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}-\end{tabular} & \begin{tabular}[c]{@{}c@{}}Texto\end{tabular} \\ 
+\hline 
+\begin{tabular}[c]{@{}c@{}}2\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Começar rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Começar rotina de envio da posição\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}-\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
+\hline 
+\end{tabular} 
+\caption{Descrição dos elementos da tela sobre começar uma rota.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\subsubsubsection{Realizando uma rota}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-finish-route}
+\caption{Tela do módulo do ônibus quando motorista está fazendo a rota.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\
+\hline 
+\begin{tabular}[c]{@{}c@{}}1\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informação sobre\\termino da rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informar que precisa avisar \\ quando terminar a rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Ter iniciado\\uma rota\end{tabular} & \begin{tabular}[c]{@{}c@{}}Texto\end{tabular} \\ 
+\hline 
+\begin{tabular}[c]{@{}c@{}}2\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Terminar rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Terminar rotina de envio da posição\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Ter iniciado\\uma rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
+\hline 
+\end{tabular} 
+\caption{Descrição dos elementos da tela sobre terminar uma rota.}
+\label{Rótulo}
+\end{table}
+
+\newpage
+
+\subsubsubsection{Aviso para parar no próximo ponto}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-pare}
+\caption{Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}
+\label{Rotulo}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\
+\hline 
+\begin{tabular}[c]{@{}c@{}}1\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Simbolo de alerta\\ para parar\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informar que precisa parar \\ no próximo ponto\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Servidor informar\\ a necessidade\end{tabular} & \begin{tabular}[c]{@{}c@{}}Imagem e Texto\end{tabular} \\ 
+\hline 
+\begin{tabular}[c]{@{}c@{}}2\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informar chegada\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Envia informação que\\ chegou no ponto\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Ter chegado no\\ ponto\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
+\hline 
+\end{tabular} 
+\caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \label{Rótulo}
 \end{table}
 
