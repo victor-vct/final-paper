@@ -1239,6 +1239,52 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 
 \section{Web service}
 
+\subsection{Arquitetura}
+
+Devido o uso do Express.js como intermediário para carregar os \textit{middlewares}, a arquitetura utilizada para o desenvolvimento da aplicação segue o padrão MVC.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_framework_webservice}
+\caption{Diagrama de blocos do webservice.}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[Node] Cuida da parte de escalabilidade e conexão e escalabilidade do servidor com os usuários da aplicação.
+\item[MongoDB] Representa o banco de dados da aplicação, com as collections necessárias para o funcionamento da aplicação.
+\end{description}\\
+
+O Node, está subdividido da seguinte forma:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_node}
+\caption{Diagrama de blocos do Node.}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[App] Conjunto com todas as funções da aplicação.
+\item[Config] Possui os arquivos necessários para realizar as conexões com o servidor, banco de dados e o sistema de notificações.
+\end{description}
+
+Dentro do app é onde se observa a utilização da arquitetura MVC, representada da seguinte forma:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_node_app}
+\caption{Diagrama de blocos do diretório app}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[Models] Possui as regras de negócio da aplicação, com as informações necessárias para a criação das \textit{collections} do MongoDB através do mongoose e os arquivos com as funções de previsão de tempo e de correção de posição.
+\item[Controllers] Possui as funções que utilizam os dados do banco de dados para gerar as informações adequadas aos usuários.
+\item[Routes] Possui os arquivos com as rotas dos \textit{endpoints}, indicando qual arquivo e função dos \textit{controllers} será utilizado para a operação necessária pelo usuário.
+\item[Util] Possui as fórmulas necessárias para o desenvolvimento de certas funções da aplicação. 
+\end{description}
+
 \subsection{Localização do ônibus}
 
 Ter conhecimento da posição do ônibus se faz necessário para realizar a previsão de chegada em um ponto de parada. Neste trabalho, sempre que o \textit{Web Service} recebe as coordenadas geográficas do ônibus, elas são corrigidas para um ponto válido da rota que este está fazendo.
