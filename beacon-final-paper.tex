@@ -519,6 +519,26 @@ ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB
 
 \newpage
 
+\subsection{Descrição Funcional}
+
+\subsubsection{Aplicativo para dispositivo móvel}
+
+Aplicativo que irá interagir com o deficiente visual. Sua função é verificar qual Beacon está mais próximo para que a API possa saber sua localização, podendo listar, via interface gráfica e áudio, para o usuário, quais linhas passam no ponto de parada que ele está.
+
+\subsubsection{API}
+
+Sistema que recebe informações do aplicativo e do módulo do ônibus. Tem como objetivo acessar os dados gravados no banco de dados para que possa prover informações de previsão ao aplicativo. Também é responsável por verificar se o módulo do ônibus deve alertar a presença de um usuário no próximo ponto. Além de calcular a previsão de um ônibus até o ponto de parada selecionado.
+
+\subsubsection{Módulo do ponto de ônibus}
+
+Dispositivo localizado em um determinado ponto de parada de ônibus. Emite constantemente um sinal ID para a identificação do ponto que ele se refere.
+
+\subsubsection{Módulo do ônibus}
+
+Dispositivo instalado no ônibus. Mantém comunicação constante com a API para informar sua geolocalização. Verifica ao mesmo tempo a necessidade de alertar o motorista se existe um deficiente visual aguardando no próximo ponto de parada.
+
+\newpage
+
 \subsection{Interfaces com Sistema}
 
 \subsubsection{Aplicativo}
@@ -779,26 +799,6 @@ Número & Nome                                                                  
 \caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \label{Rótulo}
 \end{table}
-
-\newpage
-
-\subsection{Descrição Funcional}
-
-\subsubsection{Aplicativo para dispositivo móvel}
-
-Aplicativo que irá interagir com o deficiente visual. Sua função é verificar qual Beacon está mais próximo para que a API possa saber sua localização, podendo listar, via interface gráfica e áudio, para o usuário, quais linhas passam no ponto de parada que ele está.
-
-\subsubsection{API}
-
-Sistema que recebe informações do aplicativo e do módulo do ônibus. Tem como objetivo acessar os dados gravados no banco de dados para que possa prover informações de previsão ao aplicativo. Também é responsável por verificar se o módulo do ônibus deve alertar a presença de um usuário no próximo ponto. Além de calcular a previsão de um ônibus até o ponto de parada selecionado.
-
-\subsubsection{Módulo do ponto de ônibus}
-
-Dispositivo localizado em um determinado ponto de parada de ônibus. Emite constantemente um sinal ID para a identificação do ponto que ele se refere.
-
-\subsubsection{Módulo do ônibus}
-
-Dispositivo instalado no ônibus. Mantém comunicação constante com a API para informar sua geolocalização. Verifica ao mesmo tempo a necessidade de alertar o motorista se existe um deficiente visual aguardando no próximo ponto de parada.
 
 \newpage
 
