@@ -523,7 +523,7 @@ ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB
 
 \subsubsection{Aplicativo para dispositivo móvel}
 
-Aplicativo que irá interagir com o deficiente visual. Sua função é verificar qual Beacon está mais próximo para que a API possa saber sua localização, podendo listar, via interface gráfica e áudio, para o usuário, quais linhas passam no ponto de parada que ele está.
+Aplicativo que irá interagir com o deficiente visual. Sua função é verificar qual Beacon está mais próximo para que a API possa saber sua localização, podendo listar, via interface áudio-visual, para o usuário, quais linhas passam no ponto de parada que ele está.
 
 \subsubsection{API}
 
@@ -867,6 +867,23 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 \label{Rótulo}
 \end{table}
 \egroup
+
+\newpage
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=6cm, center]{images/use-case-bus-module.png}
+\caption{Diagrama de caso de uso.}
+\label{Rotulo}
+\end{figure}
+
+\subsubsection{Narrativas: Casos de Uso}
+
+Iniciar uma rota: Este caso de uso acontece quando o motorista inicia sua rota e precisa informar isso ao módulo, para que o dispositivo comece a enviar seus dados de geolocalização para o \textit{web service}.
+
+Terminar uma rota: Este caso de uso acontece quando o motorista termina a rota do ônibus e precisa informar isso ao módulo, para que o dispositivo pare de enviar seus dados de geolocalização para o \textit{web service}.
+
+Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual solicitou o ônibus e o motorista está parado no ponto de ônibus. Quando motorista avisa que chegou, é disparado um alerta para o deficiente visual.
 
 \section{Módulo do Ponto de Ônibus}
 
