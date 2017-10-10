@@ -885,6 +885,83 @@ Terminar uma rota: Este caso de uso acontece quando o motorista termina a rota d
 
 Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual solicitou o ônibus e o motorista está parado no ponto de ônibus. Quando motorista avisa que chegou, é disparado um alerta para o deficiente visual.
 
+\newpage
+
+\subsubsection{Diagramas de apoio para compreensão funcional}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Identificação:} UC003}                                                                                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\textbf{Nome:} Iniciar uma rota}                                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{\textbf{Atores:} Motorista}                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pré-condições:} O motorista precisa ter iniciado o módulo}                                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pós-condições:} -}                                                                                                                                                    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo de eventos}}                                                                                                                                                                       \\ \hline
+\textbf{Ator}                                                                                              & \textbf{Sistema} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1. Usuário confirma o inicio \\da rota\end{tabular} 
+& \begin{tabular}[c]{@{}l@{}}2. Módulo começa a enviar dados\\ de geolocalização\end{tabular} 
+\\ \hline
+ & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
+\end{tabular}
+\caption{Tabela com caso de uso UC003.}
+\label{Rótulo}
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Identificação:} UC004}                                                                                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\textbf{Nome:} Finalizar uma rota}                                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{\textbf{Atores:} Motorista}                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pré-condições:} O motorista precisa ter iniciado uma rota}                                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pós-condições:} -}                                                                                                                                                    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo de eventos}}                                                                                                                                                                       \\ \hline
+\textbf{Ator}                                                                                              & \textbf{Sistema} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1. Motorista confirma o fim \\da rota\end{tabular} 
+& \begin{tabular}[c]{@{}l@{}}2. Módulo para de enviar dados\\ de geolocalização\end{tabular} 
+\\ \hline
+ & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de iniciar envio de dados\end{tabular}  \\ \hline
+\end{tabular}
+\caption{Tabela com caso de uso UC004.}
+\label{Rótulo}
+\end{table}
+\egroup
+
+\newpage
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Identificação:} UC005}                                                                                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\textbf{Nome:} Avisar chegada no ponto}                                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{\textbf{Atores:} Motorista}                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pré-condições:} O motorista precisa ter iniciado uma rota}                                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{\textbf{Pós-condições:} -}                                                                                                                                                    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Fluxo de eventos}}                                                                                                                                                                       \\ \hline
+\textbf{Ator}                                                                                              & \textbf{Sistema} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1. Motorista confirma chegada no \\ponto de ônibus\end{tabular} 
+& \begin{tabular}[c]{@{}l@{}}2. Módulo enviar aviso\\ de chegada\end{tabular} 
+\\ \hline
+ & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
+\end{tabular}
+\caption{Tabela com caso de uso UC005.}
+\label{Rótulo}
+\end{table}
+\egroup
+
+\newpage
+
 \section{Módulo do Ponto de Ônibus}
 
 \subsection{Hardware}
