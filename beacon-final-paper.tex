@@ -321,20 +321,14 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \subsection{HTTP}
 
-O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}, é um protocolo para trafego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviado uma requisição \textit{HTTP} contendo nela um cabeçalho, contendo informações sobre a requisição, e o corpo, contendo a mensagem que quer ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
-No cabeçalho do protocolo contém o campo \textit{Content-Type} que informa qual formato do \textit{MIME} contido no corpo da requisição. 
+O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para trafego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviado uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
+No cabeçalho do protocolo contém o campo \textit{Content-Type} com o tipo de \textit{MIME} contido no corpo da requisição. 
 
 O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios Bell Communications, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. (CCM br.ccm.net, 2017, Formatos e extensões de arquivos - Tipo MIME).
 
 \subsection{Push Notification}
 
-\textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), mas que usa exclusivamente a internet para entregar. Cada plataforma possui seu próprio serviço \textit{Push}. Um bom uso deste serviço, é quando o emissor precisa enviar algo para o destinatário, sem a necessidade do destinatário ter solicitado antes, como ocorre no \textit{HTTP}.
-
-Neste projeto temos duas situações que a tecnologia é conveniente: primeiro, existe a necessidade de avisar o motorista que é necessário, em um dado momento, parar no próximo ponto para um deficiente visual. Segundo, precisamos avisar ao deficiente visual que seu ônibus já chegou e ele pode se dirigir a ele.
-
-Nestes dois cenários precisamos avisar os dispositivos sobre algum evento e não temos uma conexão aberta constantemente como eles. Fazendo o serviço de \textit{Push Notification} ser a melhor escolha.
-
-Uma alternativa ao uso deste serviço são plataforma de \textit{Realtime Database}. Eles funcionam de forma parecida com o protocolo \textit{MQTT}, quando há alguma alteração em algum nó, os \textit{subscribers} são notificados sobre o novo dado.
+\textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é ter a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Push Notification}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
 
 \subsection{Bluetooth Low Energy}
 
