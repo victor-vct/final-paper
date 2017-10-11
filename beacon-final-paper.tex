@@ -32,6 +32,7 @@
 \usepackage{listings} % utilizado para dar highlight em código
 \usepackage[dvipsnames]{xcolor}
 \usepackage[export]{adjustbox}
+\usepackage{float}
 
 % --- 
 \usepackage{hyperref} % criar hyperlinks
@@ -420,9 +421,36 @@ Realizando uma comunicação com protocolo UART (Universal Asynchronous Receiver
 
 \subsubsection{Android}
 
+Existem vários sistemas operacionais voltados para dispositivos móveis, sendo Android o mais popular. O sistema foi desenvolvido pela empresa Android Inc, posteriormente adquirida pela Google Inc. Foi lançado em 2008 e conta com o apoio da Open Handset Alliance (um conjunto de empresas que atuam juntas para o melhoramento dos padrões da telefonia e também do desenvolvimento do sistema Android). 
+Tal sistema é muito acessível e popular. Está disponível para uma enorme variedade de dispositivos. O Android tem como base o sistema operacional Linux, conhecido por ser um sistema flexível, adaptável a várias arquiteturas de processador, seguro e eficiente. Um dos grandes diferenciais do Android e que contribui para sua popularidade, é o fato de que o sistema é compatível com vários hardwares e pode estar disponível em smartphones de diversos fabricantes. (Viva O Android <https://www.vivaoandroid.com.br/android/> (11.10.17)
+
+Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico a seguir mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm, center]{images/smartphone-share-market.jpg}
+\caption{Pesquisa realizada pela IDC.}
+\label{Rotulo}
+\end{figure}
+
 \subsubsection{Android Things}
 
+A comprehensive way to build IoT products with the power of Android, one of the world's most supported operating systems. Now any Android developer can quickly build a smart device using Android APIs and Google services, while staying highly secure with updates direct from Google. (PIEKARSKI, Wayne. Android Developers. Dez 13, 2016. <https://android-developers.googleblog.com/2016/12/announcing-googles-new-internet-of-things-platform-with-weave-and-android-things.html>)
+O Android Things foi criado voltado ao mercado \textit{IoT (Internet of Things)}. Foi criado a partir da versão do Android para \textit{smartphones}, o que trouxe quase todas APIs disponíveis. Utilizando a mesma \textit{IDE} para desenvolvimento, qualquer desenvolvedor Android pode desenvolver soluções \textit{IoT} com os conhecimentos que já possui.
+
+Atualmente o sistema tem suporte para rodar nas seguintes plataformas:
+
+\begin{itemize}
+\item NXP Pico i.MX7D
+\item NXP Pico i.MX6UL
+\item NXP Argon i.MX6UL
+\item NXP SprIoT i.MX6UL
+\item Raspberry Pi 3
+\end{itemize}
+
 \subsubsection{Linguagem de Programação}
+
+A Google adicionou o Kotlin à limitada lista de linguagens de programação suportada para o desenvolvimento Android. Até então, apenas Java e C++ faziam parte dessa lista. Dentre as razões para a escolha do Kotlin, a Google mencionou o fato da linguagem "ser concisa, expressiva e projetada para ser type-safe e null safe" e também o fato de que "vários desenvolvedores Android também consideram que Kotlin torna o desenvolvimento mais ágil e divertido". Outra razão importante é o fato do Kotlin ser uma linguagem que se integra totalmente ao Java e roda na JVM. Além disso, também é possível invocar código em C++/Android já que ela suporta JNI por meio de modificadores de acesso externo no código-fonte. A partir do código-fonte do Kotlin é possível gerar bytecode para a JVM ou código-fonte Javascript. (AVRAM, Abel. InfoQ. Jun 03, 2017. <https://www.infoq.com/br/news/2017/06/android-kotlin>)
 
 \subsection{Backend}
 
