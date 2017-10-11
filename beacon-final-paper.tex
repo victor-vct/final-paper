@@ -310,7 +310,7 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \chapter{Tecnologias Utilizadas}
 
-\section{Protocolos de Comunicação}
+\section{Comunicação}
 
 \begin{figure}[!h]
 \centering
@@ -330,11 +330,10 @@ O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de corr
 
 \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é ter a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Push Notification}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
 
-\subsection{Bluetooth Low Energy}
+\subsection{Beacons}
 
-O \textit{Bluetooth} é uma tecnologia de transmissão dados. Na sua versão 4.0+ ele se tornou \textit{BLE} (ou \textit{Bluetooth Smart}), trazendo a transmissão de dados com baixo consumo de energia.
-
-Os pontos de ônibus não costumam possuir energia elétrica, com isso, surge a necessidade de uma tecnologia que tenha um moderado consumo de eletricidade. Com a necessidade do baixo consumo de energia e o envio constante, o \textit{BLE} em seu modo \textit{Beacons} ativado, se demonstrou ser a melhor alternativa suprindo todas as necessidades do projeto.
+O Beacon é um pequeno dispositivo que utiliza uma tecnologia chamada Bluetooth Low Energy (BLE), que emite um sinal intermitente de ondas de rádio que consegue localizar seu smartphone em um determinado raio.(CARNEIRO, Conrado. Use Mobile. Maio 27, 2016. <http://usemobile.com.br/conheca-beacon/> 
+A grande novidade dos aparelhos beacons, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o bluetooth do smartphone para enviar as mensagens. (SAES, Bruno. Impacta. Dez 09, 2014. <http://www.impacta.com.br/blog/2014/12/09/o-que-sao-beacons-como-mudarao-rotina/> (10.10.17)
 
 \subsection{Realtime Database}
 

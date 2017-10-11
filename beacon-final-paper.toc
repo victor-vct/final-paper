@@ -16,10 +16,10 @@
 \contentsline {section}{\numberline {1.3}Restrições de projeto}{12}{section.1.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Tecnologias Utilizadas}}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Protocolos de Comunicação}{13}{section.2.1}
+\contentsline {section}{\numberline {2.1}Comunicação}{13}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}HTTP}{13}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Push Notification}{13}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Bluetooth Low Energy}{14}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Beacons}{14}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Realtime Database}{14}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Hardware}{15}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Raspberry Pi 3}{15}{subsection.2.2.1}
