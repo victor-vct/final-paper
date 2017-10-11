@@ -84,14 +84,12 @@
 \contentsline {section}{\numberline {3.4}Aplicativo}{49}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Telas}{49}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}IDE}{50}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Linguagem}{50}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Arquitetura}{51}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Áudio Descrição}{52}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Usabilidade}{53}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.3}Arquitetura}{51}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Áudio Descrição}{52}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Usabilidade}{53}{subsection.3.4.5}
 \contentsline {section}{\numberline {3.5}Web service}{54}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Localização do ônibus}{54}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Busca Binária}{54}{subsubsection.3.5.1.1}
-\contentsline {subsection}{\numberline {3.5.2}Previsão de chegada}{55}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Alertar motorista sobre parar}{56}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Alertar usuário que ônibus chegou}{56}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Dificuldades}{56}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.2}Previsão de chegada}{56}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Alertar motorista sobre parar}{57}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Alertar usuário que ônibus chegou}{57}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Dificuldades}{58}{subsection.3.5.5}

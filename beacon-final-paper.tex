@@ -33,6 +33,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[export]{adjustbox}
 \usepackage{float}
+\usepackage{amsmath}
 
 % --- 
 \usepackage{hyperref} % criar hyperlinks
@@ -1136,13 +1137,13 @@ Para obter uma imagem do Sistema Operacional, foi preciso realizar um cadastro n
 
 \textbf{LocationManager}
 
-O LocationManager é um serviço que observa constantemente os dados de geolocalização do dispositivo. Com ele é possível ser notificado sobre as mudanças da posição, podendo configurar ser notificado quando entra em determinada região, a cada tempo determinado ou quando se move por um distância. 
+O LocationManager é um serviço nativo que observa constantemente os dados de geolocalização do dispositivo. Com ele é possível ser notificado sobre as mudanças da posição, podendo configurar ser notificado quando entra em determinada região, a cada tempo determinado ou quando se move por um distância. 
 
 Este serviço abstrai toda lógica de acesso ao hardware e interpretação dos dados. Neste trabalho foi configurado para que ele notifique a geolocalização a cada 10 segundos.
 
 \textbf{Peripheral Driver Library}
 
-Não disponível na versão \textit{Android} para \textit{smartphones}, esta biblioteca oferece suporte no \textit{Android Things} para que possa adicionar sensores e atuadores a placa utilizado, neste caso o \textit{Raspberry Pi 3}. Neste trabalho foi utilizado o \textit{Driver GPS} desta biblioteca para poder configurar o módulo \textit{NEO 6M}. O que possibilita o \textit{LocationManager} obter os dados de geolocalização, já que não existe sensor \textit{GPS} no \textit{Raspberry Pi 3}.
+Não disponível na versão \textit{Android} para \textit{smartphones}, esta biblioteca oferece suporte no \textit{Android Things} para que possa adicionar sensores e atuadores a placa utilizada, neste caso o \textit{Raspberry Pi 3}. Neste trabalho foi utilizado o \textit{Driver GPS} desta biblioteca para poder configurar o módulo \textit{NEO 6M}. O que possibilita o \textit{LocationManager} obter os dados de geolocalização, já que não existe sensor \textit{GPS} no \textit{Raspberry Pi 3}.
 
 \subsubsection{IDE}
 
@@ -1157,27 +1158,25 @@ Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela Int
 \label{Rotulo}
 \end{figure}
 
-Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtecture}. É um padrão que visa um maior desacoplamento das classes e distruibui bem as responsabilidades.
+Para desenvolvimento do software, foi adotado o padrão \textit{Clean Archtecture}. Este padrão foi proposto por Robert Ceil Martin, conhecido como Uncle Bob, em 2012. Este padrão de arquitetura procura focar no domínio da aplicação, fazendo frameworks e drivers ser detalhes de implementação. Seguindo seus princípios, a estrutura de camadas ficou da seguinte forma:
 
 \begin{description}
 
-\item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações comuns, como configurações estáticas da placa a toda a aplicação. Possui também algumas classes e interfaces bases.
+\item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações comuns, como configurações estáticas da placa, a toda a aplicação. Possui também classes e interfaces bases.
 
 \item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em cache ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
 \item[Domain] Esta camada encapsula toda regra de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, é feito por esta camada.
 
-\item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações deles para a camada Domain ou Data para que seja possa exibir os dados.
+\item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações para a camada \textit{Domain} ou \textit{Data} para que possa exibi-los.
  
 \end{description}
 
 \subsubsection{Animações}
 
-Um dos tópicos mais presentes sobre melhorar experiência do usuário em sistemas, são as animações. Elas deixam o uso mais fluído e agradável para o usuário. [pesquisar na literatura e colocar aqui]\\
+Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{Smartphones}, são as animações. Elas deixam o uso mais fluído e agradável para o usuário. [pesquisar na literatura e colocar aqui]\\
 
 O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de smartphones. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.\\
-
-[PESQUISAR MELHOR SOBRE QUALIDADES ALCANÇADAS DE FPS)
 
 \subsubsection{Referências}
 
@@ -1228,11 +1227,6 @@ O \textit{Android Things} provê uma \textit{API} para animações que herdou da
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
 
-\subsection{Linguagem}
-
-O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
-Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
-
 \newpage
 
 \subsection{Arquitetura}
@@ -1273,11 +1267,11 @@ O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de i
 
 É uma boa prática no desenvolvimento de softwares, sempre confirmar se o usuário tem certeza que deseja executar alguma alteração que possa ter algum impacto no sistema ou em alguma funcionalidade, normalmente lançando alertas para garantir que o usuário não clicou sem querer em algum determinado botão, por exemplo. 
 
-Inicialmente foi pensado em usar um \textit{dialog} para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento. Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Adicionar aos favoritos. Botão, para acionar toque duas vezes"}. Esse texto já faz o usuário se assegurar da sua ação, tornando a prática de lançar um alerta ser algo desnecessário, fazendo o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.}
+Inicialmente foi pensado em usar um \textit{dialog}, um pequeno quadrado que surgi acima de todos componentes da tela com uma mensagem, para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento. Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Adicionar aos favoritos. Botão, para acionar toque duas vezes"}. Esse texto já faz o usuário se assegurar da sua ação, tornando a prática de lançar um outro alerta ser algo desnecessário, fazendo o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.}
 
-Com base nessas observações, não foi implementado \textit{dialogs} de confirmação. Deixando a responsabilidade de afirmar as ações do usuário para o \textit{Talkback} fazer. Embora seja uma pequena ação, tem grande impacto na usabilidade do aplicativo por parte do usuário final, que são os deficientes visuais.
+Com base nessas observações, não foi implementado \textit{dialogs} de confirmação. Deixando a responsabilidade de afirmar as ações do usuário para o \textit{Talkback} fazer. Embora seja uma pequena ação, tem grande impacto na usabilidade no quesito facilidade de uso do aplicativo por parte do usuário final, que são os deficientes visuais.
 
-O sistema operacional Android permite que aplicativos implementem variações da tela de acordo com a orientação do dispositivo, retrato ou paisagem. Isso permite que o layout do aplicativo se adapte a nova disposição de espaço.
+Outro ponto observado durante os testes foi a rotação da tela. O sistema operacional Android permite que aplicativos implementem variações da tela de acordo com a orientação do dispositivo, retrato ou paisagem. Isso permite que o layout do aplicativo se adapte a nova disposição de espaço.
 
 Pensando no usuário final, para saber onde está cada elemento, ele precisa deslizar o dedo pela tela para conhecer a localização de cada um. Se ao rotacionar o aparelho, a disposição dos elementos mudar, o usuário precisa verificar novamente onde está cada um.
 
@@ -1296,40 +1290,64 @@ O cálculo de distância é feito a partir da seguinte fórmula:
 
 FORMULA AQUI
 
-Para otimizar a busca pelo ponto mais apto, é feito uma busca binária, que tem complexidade \textit{O(log n)}, o que reduz o tempo de busca caso fosse usar a busca sequencial, que possui complexidade \textit{O(n)}. 
+\textbf{Busca Binária}
 
-\subsubsection{Busca Binária}
-
+\begin{flushright}
 \textit{"Binary search is to algorithms
 what a wheel is to mechanics:
 It is simple, elegant, and immensely important."}
 — Udi Manber, Introduction to Algorithms
+\end{flushright}
 
+Para otimizar a busca pelo ponto mais apto, é realizado uma busca binária. Ela segue o paradigma de dividir para conquistar. Tendo como premissa um \textit{array} de dados ordenados, primeiro observa os extremos do array, para em seguida observar o ponto médio entre eles. Caso um desses pontos seja igual ao valor procurado, assume ele como solução. Caso contrário se observa qual sub \textit{array} é mais apto, início até o centro ou do centro até o fim. O mais apto é submetido a uma nova busca binária. 
+
+A vantagem em se utilizar uma busca binária ao invés de uma busca sequencial pode ser observado pelas suas complexidade. A busca binária possui complexidade $O(\log_2 n)$, enquanto a sequencial possui complexidade $O(n)$
+
+A tabela a seguir mostra o número de vezes que cada busca iria precisar fazer para chegar no ponto mais apto.
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Rota & Número de Pontos & Busca Binária $(O(\log_2 n)$) & Busca Sequencial ($O(n)$) \\ 
+\hline 
+1 & 410 & \simeq 9 & 410 \\ 
+\hline 
+2 & 500 & \simeq 9 & 500 \\ 
+\hline 
+3 & 675 & \simeq 10 & 675 \\ 
+\hline 
+4 & 708 & \simeq 10 & 708 \\ 
+\hline 
+5 & 725 & \simeq 10 & 725 \\ 
+\hline 
+\end{tabular} 
+\\
+
+A implementação da busca ficou da seguinte forma:
 
 Primeiro é calculado a distância entre a localização recebida do ônibus e o primeiro ponto da rota. 
 Em seguida, calculamos a distância entre a localização recebida e o ultimo ponto da rota. Com isso temos a distânciaInicio e distânciaFim. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/distanciainicio-distanciafim.png}
+\includegraphics[width=12cm, center]{images/distanciainicio-distanciafim.png}
 \caption{Representação da busca binária.}
 \label{Rotulo}
 \end{figure}
 
 Um terceiro cálculo é feito, a distância entre a localização recebida e o ponto do meio da rota.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/distanciainicio-distanciafim-distanciomeio.png}
+\includegraphics[width=12cm, center]{images/distanciainicio-distanciafim-distanciomeio.png}
 \caption{Representação da busca binária.}
 \label{Rotulo}
 \end{figure}
 
 O algoritmo então verifica qual metade é mais apta, baseando-se nas distâncias mais curtas. Se distânciaFim é maior que distânciaInicio, é feito uma recursividade assumindo distânciaMeio como fim.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/nova-distancia.png}
+\includegraphics[width=12cm, center]{images/nova-distancia.png}
 \caption{Representação da busca binária.}
 \label{Rotulo}
 \end{figure}
@@ -1340,20 +1358,33 @@ Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, 
 
 Para calcular a previsão de chegada de um ônibus, precisamos saber a ultima localização conhecida dele e o ponto de parada escolhido. Com essas duas informações podemos recuperar todos dados necessários para o cálculo.
 
-Primeiro é recuperado todos os dados da rota que o ônibus está fazendo. Cada rota possui N pontos associados a ela, onde cada um tem a informação de latitude e longitude, e se este é um ponto de parada. Sabendo em qual ponto da rota o ônibus está e qual ponto de parada o usuário se encontra, podemos pegar todos os pontos que estão entre eles e calcular a distância. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm, center]{images/previsao-rota}
+\caption{Representação de uma rota.}
+\label{Rotulo}
+\end{figure}
 
-A partir dela somamos a distância dentre todos esses pontos, com isso dividimos pela velocidade da pista e sabemos quanto tempo aproximado falta para o ônibus chegar na parada.
+Primeiro é recuperado todos os dados da rota que o ônibus está fazendo. Cada rota possui N pontos associados a ela, onde cada um tem a informação de latitude, longitude e se este é um ponto de parada. Sabendo em qual ponto da rota o ônibus está e qual ponto de parada o usuário se encontra, podemos pegar todos os pontos que estão entre eles e calcular a distância com a seguinte fórmula.
 
-FORMULA T = S/V
+\begin{center}
+$t = \dfrac{s}{v}$ 
+\end{center}
 
+A partir disso somamos a distância dentre todos esses pontos, com isso dividimos pela velocidade da pista e sabemos quanto tempo aproximado falta para o ônibus chegar na parada.
 
 \subsection{Alertar motorista sobre parar}
 
 O \textit{Android Things} não suporta serviço de \textit{push notification}. Para enviar mensagens instantâneas ao módulo foi utilizado o \textit{Realtime Database}, do \textit{Firebase}, que permite observar um nó. Sempre que existe uma alteração deste, quem está observando é notificado.
 
-IMAGEM DO FIREBASE AQUI
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm, center]{images/realtime-database}
+\caption{Representação de uma rota.}
+\label{Rotulo}
+\end{figure}
 
-Quando um módulo do ônibus é conectado a internet, ele cria um nó com seu ID na base de dados e um nó filho intitulado \textit{needsstop}, e passa a observá-lo. Quando o valor do nó filho é alterado, o módulo então dispara uma notificação para o motorista sobre a necessidade de parar no próximo ponto de ônibus.
+Quando um módulo do ônibus é conectado a internet, ele cria um nó com seu ID na base de dados e um nó filho intitulado \textit{needs\_to\_stop}, e passa a observá-lo. Quando o valor do nó filho é alterado, o módulo então dispara uma notificação para o motorista sobre a necessidade de parar no próximo ponto de ônibus.
 
 O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como visto na seção \textit{Localização do Ônibus}, é feito uma varredura para descobrir o ponto da rota que o ônibus se encontra. Em seguida também é verificado qual o próximo ponto que ele vai passar. Caso o próximo ponto esteja na lista de requisições de parada, é então alterado o valor do nó filho para que aquele módulo alerte o motorista.
 
