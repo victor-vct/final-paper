@@ -400,20 +400,24 @@ Arduino é uma plataforma de prototipagem desenvolvida em 2005, na Itália. Cone
 
 O Arduino pode ser utilizado para desenvolver objetos interativos independentes,
 ou pode ser conectado a um computador, a uma rede, ou até mesmo à Internet para
-recuperar e enviar dados do Arduino e atuar sobre eles. (MCROBERTS, Michael. Arduíno Básico. Novatec, 2011. Cap. 1, p. 23 )
+recuperar e enviar dados do Arduino e atuar sobre eles. (MCROBERTS, Michael. Arduíno Básico. Novatec, 2011. Cap. 1, p. 23)
+
+\newpage
 
 \subsection{NEO 6M}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/neo-6m}
 \caption{Módulo NEO u-blox 6 GPS.}
 \label{Rotulo}
 \end{figure}
 
-O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio de \textit{GPS (Global Position System)}. A tecnologia GPS funciona através de ondas de rádio que são transmitidas por satélites, onde o aparelho receptor localiza o sinal de pelo quatro deles. Com o sinal recebido, é feito cálculos para obter a localização no globo. 
+O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio de \textit{GPS (Global Position System)}. A tecnologia GPS funciona através de ondas de rádio que são transmitidas por satélites, onde o aparelho receptor localiza o sinal de pelo menos quatro deles. Com o sinal recebido, é feito cálculos para obter a localização no globo. 
 
-Realizando uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter), é possível obter as informações do módulo. 
+Realizando uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter), é possível obter as informações do módulo. Tais informações obtidas seguem a especificação NMEA, que define como os dados serão transmiitidos
+
+FALAR MAIS SOBRE UART E NMEA
 
 \section{Software}
 
@@ -518,9 +522,9 @@ ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB
 \begin{description}
 \item[1. Módulo da parada de ônibus:] Emite informações de identificação da parada.
 
-\item[2. Aplicativo:] Reconhece o ponto de ônibus e solicita informações da API.
+\item[2. Aplicativo:] Reconhece o ponto de ônibus e solicita informações do \textit{Web Service}.
 
-\item[3. API:] Intermediário entre o aplicativo e o módulo do ônibus.
+\item[3. Web Service:] Intermediário entre o aplicativo e o módulo do ônibus.
 
 \item[4. Módulo do Ônibus:] Mantém constante comunicação com o \textit{Web Service} enviando dados de geolocalização. Recebe também informação se deve alertar o motorista sobre deficiente visual na próxima parada.
 \end{description}
@@ -1083,49 +1087,66 @@ Problemas encontrados em adotar como solução:
 
 \textbf{Preço}
 
-Embora tenha um ótimo hardware e uma empresa séria por trás da sua construção, o preço, em 07/2017, que gira em torno de R\$ 600,00, não justifica sua adoção como a melhor solução para o projeto já que existem alternativas com preços melhores e bom desempenho.
+Embora tenha um ótimo hardware e uma empresa séria por trás da sua construção, o preço, em 07/2017, que gira em torno de R\$ 600,00, não justifica sua adoção como a melhor solução para o projeto já que existem alternativas com preços melhores e bom desempenho, como o Raspberry Pi 3.
 \\
 
 \textbf{Ausência de controlador gráfico}
 
-Uma das features do projeto é emitir alertas visuais para o motorista por meio de telas LCDs. A placa Intel Edison nos permite fazer alertas visuais utilizando LEDs e afins. 
+Este projeto foi elaborado pensando em fazer alertas por meio de um display gráfico. A placa Intel Edison nos permite fazer alertas visuais utilizando LEDs ou pequenos displays OLED, o que não satisfaz a exigência do projeto.  
 \\
 
 \textbf{Descontinuidade da placa pela Intel}
 
-em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas placas que fabrica. O Intel Edison foi uma delas.
+em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas placas que fábrica. O Intel Edison foi uma delas.
 
 \subsubsection{Raspberry Pi 3}
 
-Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema e a placa vem com saída HDMI permitindo utilizar telas LCD para fazer os alertas visuais.
+Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema Android Things e a placa vem com saída HDMI que permite utilizar telas LCD para fazer os alertas visuais.
 Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações.
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
 
 \subsubsection{Módulo NEO u-blox 6 GPS}
 
+Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível, que gira em torno de R\$ 60,00 em 08/2017.
 
-
-Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível. 
-
-
-
+FALAR SOBRE DRIVERS NMEA NO ANDROID THINGS
 
 \subsection{Software}
 
-\subsubsection{Sistema Operacional}
+\subsubsection{Android Things}
 
-\textbf{Android Things}
-Em 2016 o Google anunciou o Android Things, uma versão do Android voltada para IoT (Internet of Things). Ele é, atualmente, uma versão do Android Marshmallow reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, e a variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como o recurso LocationManager. \textbf{[Detalhar mais essa parte]}
+Ele é, atualmente, uma versão do Android O reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, além da variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como serviços de geolocalização. 
+
+Para obter uma imagem do Sistema Operacional, foi preciso realizar um cadastro na plataforma \textit{Android Things Console} <https://partner.android.com/things/console/>. Foi necesssário cadastrar um produto, neste caso chamamos de \textit{BeaconBusTracker}, conseguindo acesso ao download da imagem do SO.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm, center]{images/android-things-console}
+\caption{Página principal do Android Things Console com produto criado.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm, center]{images/android-things-console-settings}
+\caption{Página de configurações do produto criado.}
+\label{Rotulo}
+\end{figure}
+
+\textbf{LocationManager}
+
+O LocationManager é um serviço que observa constantemente os dados de geolocalização do dispositivo. Com ele é possível ser notificado sobre as mudanças da posição, podendo configurar ser notificado quando entra em determinada região, a cada tempo determinado ou quando se move por um distância. 
+
+Este serviço abstrai toda lógica de acesso ao hardware e interpretação dos dados. Neste trabalho foi configurado para que ele notifique a geolocalização a cada 10 segundos.
+
+\textbf{Peripheral Driver Library}
+
+Não disponível na versão \textit{Android} para \textit{smartphones}, esta biblioteca oferece suporte no \textit{Android Things} para que possa adicionar sensores e atuadores a placa utilizado, neste caso o \textit{Raspberry Pi 3}. Neste trabalho foi utilizado o \textit{Driver GPS} desta biblioteca para poder configurar o módulo \textit{NEO 6M}. O que possibilita o \textit{LocationManager} obter os dados de geolocalização, já que não existe sensor \textit{GPS} no \textit{Raspberry Pi 3}.
 
 \subsubsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
-
-\subsubsection{Linguagem}
-
-O Google tem duas linguagens de primeiro nível para desenvolvimento Android: Java e Kotlin. Para esse projeto adotamos a linguagem Kotlin, que possui sintaxe muito simplificado em comparação ao Java. Embora Java tenha sido a primeira linguagem oficial para desenvolvimento, Kotlin oferece acesso aos mesmo recursos do sistema.
-Algumas bibliotecas disponíveis, desenvolvidas por terceiros, ainda não migraram para o Kotlin, obrigando a implementar algumas classes em Java. Como Kotlin tem interoperabilidade com Java, não existe nenhum impeditivo de utilizar Kotlin e eventualmente alguma classa Java.
 
 \subsubsection{Arquitetura}
 
