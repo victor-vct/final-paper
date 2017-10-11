@@ -1280,6 +1280,74 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 
 \section{Web service}
 
+\subsection{Arquitetura}
+
+Devido o uso do Express.js como intermediário para carregar os \textit{middlewares}, a arquitetura utilizada para o desenvolvimento da aplicação segue o padrão MVC.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_framework_webservice}
+\caption{Diagrama de blocos do webservice.}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[Node] Cuida da parte de escalabilidade e conexão e escalabilidade do servidor com os usuários da aplicação.
+\item[MongoDB] Representa o banco de dados da aplicação, com as collections necessárias para o funcionamento da aplicação.
+\end{description}\\
+
+O Node, está subdividido da seguinte forma:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_node}
+\caption{Diagrama de blocos do Node.}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[App] Conjunto com todas as funções da aplicação.
+\item[Config] Possui os arquivos necessários para realizar as conexões com o servidor, banco de dados e o sistema de notificações.
+\end{description}
+
+Dentro do app é onde se observa a utilização da arquitetura MVC, representada da seguinte forma:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm, center]{images/brick_diagram_node_app}
+\caption{Diagrama de blocos do diretório app}
+\label{Rotulo}
+\end{figure}
+
+\begin{description}
+\item[Models] Possui as regras de negócio da aplicação, com as informações necessárias para a criação das \textit{collections} do MongoDB através do mongoose e os arquivos com as funções de previsão de tempo e de correção de posição.
+\item[Controllers] Possui as funções que utilizam os dados do banco de dados para gerar as informações adequadas aos usuários.
+\item[Routes] Possui os arquivos com as rotas dos \textit{endpoints}, indicando qual arquivo e função dos \textit{controllers} será utilizado para a operação necessária pelo usuário, seguindo o padrão REST.
+\item[Util] Possui as fórmulas necessárias para o desenvolvimento de certas funções da aplicação. 
+\end{description}
+
+\subsection{REST}
+
+
+Segundo [ALMEIDA, 2016] O padrão REST utiliza um conjunto de operações aplicáveis a todos os recursos de informação utilizando o protocolo HTTP. Suas operações mais utilizadas são DELETE, POST, PUT e GET.
+No padrão REST, cada recurso possui um identificador único, representado, por exemplo no HTTP, pela sua URL de acesso.
+Dentre os princípios do padrão REST, segundo [GOMES, 2009] é importante dar um foco em cinco.
+São eles: 
+\begin{description}
+\item[Dar um identificador a todas as coisas]\\
+Considerando as coisas como sendo os recursos, o principal benefício desse item é a utilização de URIs que identifiquem o necessário, especificando se os recursos que sua aplicação oferece são itens individuais, conjuntos de itens, objetos virtuais e físicos, ou resultados de computação.  
+\item[Vincular as coisas]\\
+Esse princípio faclita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse prinncípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
+\item[Utilizar métodos padronizados]\\
+Aqui entram os verbos HTTP, como GET, PUT, POST e DELETE. Esses verbos representam métodos padrões para que a aplicação web saiba o que deve ser feito com determinada URI. Essa padronização faz com que seu navegador saiba exatamente o que fazer.
+\item[Recursos com múltiplas representações]\\
+Este princípio diz para oferecer formas diversas dos recursos para diferentes finalidades. 	
+\item[Comunicar sem estado]\\
+Manter o estado da comunicação no cliente ou transformá-lo no estado do recurso. Isso faz com que a escalabilidade da aplicação seja um dos focos desse princípio. Outro aspecto desse tópico, é o isolamento do cliente em relação ao servidor, fazendo com que o cliente não fique preso ao mesmo servidor para realizar duas solicitações consecutivas, com isso, ele recebe as informações do servidor sem precisar se preocupar se está ocorrendo alguma troca de disco rígido ou atualização de software no servidor.
+\end{description} 
+
+GOMES, André Faria apud TIKOV, Stefan. InfoQueue. "Uma rápida introdução ao REST". 29 de outubro de 2009. <https://www.infoq.com/br/articles/rest-introduction>(1.10.17)
+
 \subsection{Localização do ônibus}
 
 Ter conhecimento da posição do ônibus se faz necessário para realizar a previsão de chegada em um ponto de parada. Neste trabalho, sempre que o \textit{Web Service} recebe as coordenadas geográficas do ônibus, elas são corrigidas para um ponto válido da rota que este está fazendo.
