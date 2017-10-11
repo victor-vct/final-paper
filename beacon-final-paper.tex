@@ -1,4 +1,4 @@
-\documentclass['
+\documentclass[
 	12pt,				% tamanho da fonte
 	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
@@ -355,7 +355,7 @@ Em vez de solicitações HTTP típicas, o Firebase Realtime Database usa a sincr
 
 "A Raspberry Pi é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes." (Upton, E. and Halfacree, G., 2017, Raspberry Pi - Manual do Usuário). Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
 
-A Fundação Raspberry Pi, responsável pelo seu desenvolvimento, também mantém o foco da placa no meio educacional, apresentando uma plataforma acessível para que cada vez mais pessoas se interessem pelo desenvolvimento softwares.
+A Fundação Raspberry Pi, responsável pelo seu desenvolvimento, também mantém o foco da placa no meio educacional, apresentando uma plataforma acessível para que cada vez mais pessoas se interessem por desenvolvimento de softwares.
 
 Especificações:
 
@@ -377,12 +377,12 @@ Especificações:
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/hm-10}
-\caption{Módulo Bluetooth HM10.}
+\includegraphics[width=5cm, center]{images/hm-10}
+\caption{Módulo Bluetooth HM-10.}
 \label{Rotulo}
 \end{figure}
 
-
+A empresa Jinan Huamao é responsável pelo desenvolvimento do HM-10, um pequeno módulo \textit{Bluetooth} 4.0 BLE baseado no chip CC2540 que trabalha com alimentação de 3.3V. Com ele é possível realizar comunicações utilizando o protocolo \textit{Bluetooth}.
 
 \newpage
 
@@ -395,27 +395,24 @@ Especificações:
 \label{Rotulo}
 \end{figure}
 
+Arduino é uma plataforma de prototipagem desenvolvida em 2005, na Itália. Conectando a placa via USB em um computador, é possível programar o microcontrolador Atmel que ela possui, tendo a possibilidade de controlar dispositivos externos por meio de suas portas \textit{GPIO (General Purpose Input/Output)}.
+
+O Arduino pode ser utilizado para desenvolver objetos interativos independentes,
+ou pode ser conectado a um computador, a uma rede, ou até mesmo à Internet para
+recuperar e enviar dados do Arduino e atuar sobre eles. (MCROBERTS, Michael. Arduíno Básico. Novatec, 2011. Cap. 1, p. 23 )
+
 \subsection{NEO 6M}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/neo-6m}
+\includegraphics[width=5cm, center]{images/neo-6m}
 \caption{Módulo NEO u-blox 6 GPS.}
 \label{Rotulo}
 \end{figure}
 
-\textbf{Localização}
+O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio de \textit{GPS (Global Position System)}. A tecnologia GPS funciona através de ondas de rádio que são transmitidas por satélites, onde o aparelho receptor localiza o sinal de pelo quatro deles. Com o sinal recebido, é feito cálculos para obter a localização no globo. 
 
-Uma característica desse módulo é trabalhar com GPS, fazendo comunicação direta com no mínimo 3 satélites para triangular sua posição com mais precisão. Alguns módulos disponíveis no mercado trabalham com A-GPS, que usam torres de telefonia móvel para conhecer sua posição.
-O uso do GPS trás maior precisão, porém demora mais para estabelecer conexão com satélites. O A-GPS fornece a localização com menor tempo, porém com menor precisão e a um custo mais alto.
-
-\textbf{Comunicação}
-
-O módulo realiza comunicação UART (Universal Asynchronous Receiver/Transmitter), o que permite fácil comunicação com as placas utilizadas para testes.
-
-\textbf{Preço}
-
-Seu preço, em 08/2017, gira em torno de R\$ 60,00 e pode ser encontrado com facilidade na internet para venda. 
+Realizando uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter), é possível obter as informações do módulo. 
 
 \section{Software}
 
