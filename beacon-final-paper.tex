@@ -480,7 +480,7 @@ Apesar de \textit{schemaless}, é possível criar \textit{schemas} para auxiliar
 
 \subsubsection{Express.js}
 
-É um framework para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor.
+É um framework para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor. Além disso, ele gerencia todos os \textit{middlewares}, permitindo o fácil acesso a isso tudo em qualquer arquivo relacionado a aplicação.
 
 
 \subsubsection{Node.js}
@@ -492,6 +492,26 @@ Como no lado do servidor, não existe uma interface gráfica a ser visualizada, 
 O Node.js é uma plataforma extremamente modularizada, com módulos criados por desenvolvedores ativos no mundo todo.
 Para gerenciar esses módulos, ele utiliza o npm, responsável por instalar, atualizar ou remover suas dependências. 
 É o Node.js que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação, na configuração inicial.
+
+
+\subsubsection{REST}
+
+Segundo [ALMEIDA, 2016] O padrão REST utiliza um conjunto de operações aplicáveis a todos os recursos de informação utilizando o protocolo HTTP. Suas operações mais utilizadas são DELETE, POST, PUT e GET.
+No padrão REST, cada recurso possui um identificador único, representado, por exemplo no HTTP, pela sua URL de acesso.
+Dentre os princípios do padrão REST, segundo [GOMES, 2009] é importante dar um foco em cinco.
+São eles: 
+\begin{description}
+\item[Dar um identificador a todas as coisas]
+Considerando as coisas como sendo os recursos, o principal benefício desse item é a utilização de URIs que identifiquem o necessário, especificando se os recursos que sua aplicação oferece são itens individuais, conjuntos de itens, objetos virtuais e físicos, ou resultados de computação.  
+\item[Vincular as coisas]
+Esse princípio faclita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse prinncípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
+\item[Utilizar métodos padronizados]
+Aqui entram os verbos HTTP, como GET, PUT, POST e DELETE. Esses verbos representam métodos padrões para que a aplicação web saiba o que deve ser feito com determinada URI. Essa padronização faz com que seu navegador saiba exatamente o que fazer.
+\item[Recursos com múltiplas representações]
+Este princípio diz para oferecer formas diversas dos recursos para diferentes finalidades. 	
+\item[Comunicar sem estado]
+Manter o estado da comunicação no cliente ou transformá-lo no estado do recurso. Isso faz com que a escalabilidade da aplicação seja um dos focos desse princípio. Outro aspecto desse tópico, é o isolamento do cliente em relação ao servidor, fazendo com que o cliente não fique preso ao mesmo servidor para realizar duas solicitações consecutivas, com isso, ele recebe as informações do servidor sem precisar se preocupar se está ocorrendo alguma troca de disco rígido ou atualização de software no servidor.
+\end{description} 
 
 
 \subsection{Referências}
@@ -506,6 +526,7 @@ ALMEIDA, Flávio. MEAN - Full stack JavaScript para aplicações web com MongoDB
 \href{http://nodebr.com/o-que-e-node-js/}{O que é Node.js?} %ver como fazer a referência de uma página
 %links do push notifications
 
+GOMES, André Faria apud TIKOV, Stefan. InfoQueue. "Uma rápida introdução ao REST". 29 de outubro de 2009. <https://www.infoq.com/br/articles/rest-introduction>(1.10.17)
 
 \chapter{Desenvolvimento}
 
@@ -678,7 +699,7 @@ Número                  & Nome                                  & Descrição  
 7                       & Áudio sobre previsão                  & \begin{tabular}[c]{@{}c@{}}Alerta ao usuário a\\  previsão do ônibus\end{tabular}                                                             & \begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}                      & Áudio                      \\ \hline
 \end{tabular}
 \caption{Descrição dos elementos da tela de detalhes do ônibus.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -704,7 +725,7 @@ Número & Nome                                                                  
 4      & \begin{tabular}[c]{@{}c@{}}Áudio sobre o \\ acompanhamento\end{tabular} & \begin{tabular}[c]{@{}c@{}}Informa ao usuário \\ que está sendo \\ feito o acompanhamento \\ do ônibus\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Ter escolhido acompanhar \\ um ônibus.\\ Função Talkback ativa\end{tabular}                                  & Áudio \\ \hline
 \end{tabular}
 \caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -730,7 +751,7 @@ Número & Nome                                                                  
 \hline 
 \end{tabular} 
 \caption{Descrição dos elementos da tela sobre estar carregando informações.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -763,7 +784,7 @@ Número & Nome                                                                  
 \hline 
 \end{tabular} 
 \caption{Descrição dos elementos da tela sobre começar uma rota.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -796,7 +817,7 @@ Número & Nome                                                                  
 \hline 
 \end{tabular} 
 \caption{Descrição dos elementos da tela sobre terminar uma rota.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -829,7 +850,7 @@ Número & Nome                                                                  
 \hline 
 \end{tabular} 
 \caption{Descrição dos elementos da tela sobre terminar uma rota.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 
 \newpage
@@ -872,7 +893,7 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 \multicolumn{2}{|l|}{Não possui fluxo alternativo}                                                        \\ \hline
 \end{tabular}
 \caption{Tabela com caso de uso UC001.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 \egroup
 
@@ -895,7 +916,7 @@ Solicitar parada do ônibus escolhido: Este caso de uso é uma extensão do caso
 \begin{tabular}[c]{@{}l@{}}3.a 1. Usuário cancela\\  escolha de ponto de ônibus\end{tabular}      & 2. Sistema retorna cancela operação                                                                      \\ \hline
 \end{tabular}
 \caption{Tabela com caso de uso UC002.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 \egroup
 
@@ -939,7 +960,7 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
 \caption{Tabela com caso de uso UC003.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 \egroup
 
@@ -962,7 +983,7 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de iniciar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
 \caption{Tabela com caso de uso UC004.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 \egroup
 
@@ -987,7 +1008,7 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
 \caption{Tabela com caso de uso UC005.}
-\label{Rótulo}
+\label{Rotulo}
 \end{table}
 \egroup
 
@@ -1280,6 +1301,16 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 
 \section{Web service}
 
+\subsection{Provedor de servidor}
+
+%Falar sobre a umbler
+Para tornar a aplicação acessível ao público, torna-se necessário dispor da utilização de um servidor que fique disponível constantemente. \\
+Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy, Umbler e LocaWeb.\\
+Primeiro fator, que fez o serviço da GoDaddy ser excluído da lista, foi a questão de período de teste. A GoDaddy possui um período nulo de teste do serviço. Já a Umbler e LocaWeb fornecem créditos para novos desenvolvedores.\\
+Em seguida, foi observada a disponibilidade de informações sobre como realizar o \textit{deploy} de um servidor em Node.js. Nesse aspecto, a LocaWeb não demonstra com clareza os procedimentos a serem seguidos.\\
+A Umbler acabou sendo selecionada por ser muito intuitiva na hora de selecionar a linguagem da aplicação e qual o banco de dados a ser utilizado, com poucos cliques é possível iniciar um servidor funcional.
+
+
 \subsection{Arquitetura}
 
 Devido o uso do Express.js como intermediário para carregar os \textit{middlewares}, a arquitetura utilizada para o desenvolvimento da aplicação segue o padrão MVC.
@@ -1294,7 +1325,8 @@ Devido o uso do Express.js como intermediário para carregar os \textit{middlewa
 \begin{description}
 \item[Node] Cuida da parte de escalabilidade e conexão e escalabilidade do servidor com os usuários da aplicação.
 \item[MongoDB] Representa o banco de dados da aplicação, com as collections necessárias para o funcionamento da aplicação.
-\end{description}\\
+\end{description}
+
 
 O Node, está subdividido da seguinte forma:
 
@@ -1326,27 +1358,6 @@ Dentro do app é onde se observa a utilização da arquitetura MVC, representada
 \item[Util] Possui as fórmulas necessárias para o desenvolvimento de certas funções da aplicação. 
 \end{description}
 
-\subsection{REST}
-
-
-Segundo [ALMEIDA, 2016] O padrão REST utiliza um conjunto de operações aplicáveis a todos os recursos de informação utilizando o protocolo HTTP. Suas operações mais utilizadas são DELETE, POST, PUT e GET.
-No padrão REST, cada recurso possui um identificador único, representado, por exemplo no HTTP, pela sua URL de acesso.
-Dentre os princípios do padrão REST, segundo [GOMES, 2009] é importante dar um foco em cinco.
-São eles: 
-\begin{description}
-\item[Dar um identificador a todas as coisas]\\
-Considerando as coisas como sendo os recursos, o principal benefício desse item é a utilização de URIs que identifiquem o necessário, especificando se os recursos que sua aplicação oferece são itens individuais, conjuntos de itens, objetos virtuais e físicos, ou resultados de computação.  
-\item[Vincular as coisas]\\
-Esse princípio faclita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse prinncípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
-\item[Utilizar métodos padronizados]\\
-Aqui entram os verbos HTTP, como GET, PUT, POST e DELETE. Esses verbos representam métodos padrões para que a aplicação web saiba o que deve ser feito com determinada URI. Essa padronização faz com que seu navegador saiba exatamente o que fazer.
-\item[Recursos com múltiplas representações]\\
-Este princípio diz para oferecer formas diversas dos recursos para diferentes finalidades. 	
-\item[Comunicar sem estado]\\
-Manter o estado da comunicação no cliente ou transformá-lo no estado do recurso. Isso faz com que a escalabilidade da aplicação seja um dos focos desse princípio. Outro aspecto desse tópico, é o isolamento do cliente em relação ao servidor, fazendo com que o cliente não fique preso ao mesmo servidor para realizar duas solicitações consecutivas, com isso, ele recebe as informações do servidor sem precisar se preocupar se está ocorrendo alguma troca de disco rígido ou atualização de software no servidor.
-\end{description} 
-
-GOMES, André Faria apud TIKOV, Stefan. InfoQueue. "Uma rápida introdução ao REST". 29 de outubro de 2009. <https://www.infoq.com/br/articles/rest-introduction>(1.10.17)
 
 \subsection{Localização do ônibus}
 
@@ -1460,9 +1471,5 @@ O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como 
 
 Quando o motorista chega na parada, ele pressiona um botão para anunciar sua chegada. Quando \textit{Web Service} recebe esse alerta por meio de uma requisição \textit{HTTP}, ele verifica quais usuários estão aguardando aquele ônibus, então é disparado uma \textit{push notification}, por meio do \textit{Firebase}, avisando que o ônibus que ele aguarda está parado.
 
-\subsection{Dificuldades}
-
-Apesar de conter conceitos simples de aprender, devido à grande quantidade de métodos para se realizar os mesmos processos, fica um pouco difícil para assimilar quais os arquivos que devem ser modificados para o funcionamento adequado da aplicação.
-Primeira dificuldade surgiu ao utilizar o mongoose, uma solução baseada em \textit{schemas} para o banco de dados MongoDB que cuida de validações e tipagem de dados, resolvido ao criar arquivos separados para cada \textit{collection} do banco.
 
 \end{document}
