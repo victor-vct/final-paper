@@ -287,6 +287,29 @@ Abstract here.
 
 Isso ajuda os usuários a se programar melhor, possibilitando a pessoa sair em um horário mais oportuno ou deixando ela mais tranquila sabendo que em breve seu ônibus chegará.
 
+\textbf{Tecnologia Assistiva}
+
+\begin{flushright}
+“Para as pessoas sem deficiência a tecnologia torna as coisas mais fáceis.
+Para as pessoas com deficiência, a tecnologia torna as coisas possíveis”.
+(RADABAUGH, 1993) 
+\end{flushright}
+
+Como sugere [Bersh, Rita. 2013], a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
+
+O desenvolvimento de recursos e outros elementos de Tecnologia Assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia. [Portal Saúde. Mar 11, 2014] <http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/509-sas-raiz/dapes/saude-da-pessoa-com-deficiencia/l2-saude-da-pessoa-com-deficiencia/10250-comite-de-ajudas-tecnicas> (11.10.17)
+
+\textbf{Deficiência Visual}
+
+A deficiência visual é definida como a perda total ou parcial, congênita ou adquirida, da visão. O nível de acuidade visual pode variar, o que determina dois grupos de deficiência:
+
+Cegueira – há perda total da visão ou pouquíssima capacidade de enxergar, o que leva a pessoa a necessitar do Sistema Braille como meio de leitura e escrita.
+
+Baixa visão ou visão subnormal – caracteriza-se pelo comprometimento do funcionamento visual dos olhos, mesmo após tratamento ou correção. As pessoas com baixa visão podem ler textos impressos ampliados ou com uso de recursos óticos especiais. [Fundação Dorina] <https://www.fundacaodorina.org.br/a-fundacao/deficiencia-visual/o-que-e-deficiencia/> (11.10.17)
+
+Segundo o Censo Demográfico de 2010, feito pelo IBGE (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
+
+
 \section{Descrição Geral}
 
 Este trabalho visa facilitar a vida de deficientes visuais que utilizam ônibus como meio de transporte. O aplicativo proposto irá possibilitar ao deficiente visual saber quanto tempo falta para seu ônibus chegar, enquanto o sistema se encarrega de avisar o motorista do ônibus qual o próximo ponto onde terá um deficiente visual esperando por aquele ônibus.
@@ -1327,7 +1350,6 @@ Devido o uso do Express.js como intermediário para carregar os \textit{middlewa
 \item[MongoDB] Representa o banco de dados da aplicação, com as collections necessárias para o funcionamento da aplicação.
 \end{description}
 
-
 O Node, está subdividido da seguinte forma:
 
 \begin{figure}[h]
@@ -1357,7 +1379,6 @@ Dentro do app é onde se observa a utilização da arquitetura MVC, representada
 \item[Routes] Possui os arquivos com as rotas dos \textit{endpoints}, indicando qual arquivo e função dos \textit{controllers} será utilizado para a operação necessária pelo usuário, seguindo o padrão REST.
 \item[Util] Possui as fórmulas necessárias para o desenvolvimento de certas funções da aplicação. 
 \end{description}
-
 
 \subsection{Localização do ônibus}
 
@@ -1459,7 +1480,7 @@ O \textit{Android Things} não suporta serviço de \textit{push notification}. P
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/realtime-database}
-\caption{Representação de uma rota.}
+\caption{Painel de controle do Firebase Realtime Database.}
 \label{Rotulo}
 \end{figure}
 
