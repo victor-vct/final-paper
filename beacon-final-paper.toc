@@ -37,59 +37,61 @@
 \contentsline {subsubsection}{\numberline {2.3.2.2}MongoDB}{22}{subsubsection.2.3.2.2}
 \contentsline {subsubsection}{\numberline {2.3.2.3}Express.js}{22}{subsubsection.2.3.2.3}
 \contentsline {subsubsection}{\numberline {2.3.2.4}Node.js}{23}{subsubsection.2.3.2.4}
-\contentsline {subsection}{\numberline {2.3.3}Referências}{23}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.2.5}REST}{23}{subsubsection.2.3.2.5}
+\contentsline {subsection}{\numberline {2.3.3}Referências}{24}{subsection.2.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Desenvolvimento}}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Descrição da Informação}{24}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Visão Geral}{24}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Representação do Fluxo da Informação}{25}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Descrição Funcional}{26}{subsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.3.1}Aplicativo para dispositivo móvel}{26}{subsubsection.3.1.3.1}
-\contentsline {subsubsection}{\numberline {3.1.3.2}API}{26}{subsubsection.3.1.3.2}
-\contentsline {subsubsection}{\numberline {3.1.3.3}Módulo do ponto de ônibus}{26}{subsubsection.3.1.3.3}
-\contentsline {subsubsection}{\numberline {3.1.3.4}Módulo do ônibus}{26}{subsubsection.3.1.3.4}
-\contentsline {subsection}{\numberline {3.1.4}Interfaces com Sistema}{27}{subsection.3.1.4}
-\contentsline {subsubsection}{\numberline {3.1.4.1}Aplicativo}{27}{subsubsection.3.1.4.1}
-\contentsline {paragraph}{\numberline {3.1.4.1.1}Busca por um ponto próximo}{27}{paragraph.3.1.4.1.1}
-\contentsline {paragraph}{\numberline {3.1.4.1.2}Busca por um ponto na API}{28}{paragraph.3.1.4.1.2}
-\contentsline {paragraph}{\numberline {3.1.4.1.3}Lista de ônibus disponíveis}{29}{paragraph.3.1.4.1.3}
-\contentsline {paragraph}{\numberline {3.1.4.1.4}Detalhes do ônibus}{30}{paragraph.3.1.4.1.4}
-\contentsline {paragraph}{\numberline {3.1.4.1.5}Aguardando um ônibus}{31}{paragraph.3.1.4.1.5}
-\contentsline {subsubsection}{\numberline {3.1.4.2}Módulo do ônibus}{32}{subsubsection.3.1.4.2}
-\contentsline {paragraph}{\numberline {3.1.4.2.1}Carregando Informações}{32}{paragraph.3.1.4.2.1}
-\contentsline {paragraph}{\numberline {3.1.4.2.2}Aguardando iniciar a rota}{33}{paragraph.3.1.4.2.2}
-\contentsline {paragraph}{\numberline {3.1.4.2.3}Realizando uma rota}{34}{paragraph.3.1.4.2.3}
-\contentsline {paragraph}{\numberline {3.1.4.2.4}Aviso para parar no próximo ponto}{35}{paragraph.3.1.4.2.4}
-\contentsline {subsection}{\numberline {3.1.5}Casos de Uso}{36}{subsection.3.1.5}
-\contentsline {subsubsection}{\numberline {3.1.5.1}Narrativas: Casos de Uso}{36}{subsubsection.3.1.5.1}
-\contentsline {subsubsection}{\numberline {3.1.5.2}Diagramas de apoio para compreensão funcional}{37}{subsubsection.3.1.5.2}
-\contentsline {subsubsection}{\numberline {3.1.5.3}Narrativas: Casos de Uso}{38}{subsubsection.3.1.5.3}
-\contentsline {subsubsection}{\numberline {3.1.5.4}Diagramas de apoio para compreensão funcional}{39}{subsubsection.3.1.5.4}
-\contentsline {section}{\numberline {3.2}Módulo do Ponto de Ônibus}{41}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{41}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Software}{41}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Configuração}{41}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Referências}{42}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Módulo do Ônibus}{42}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hardware}{42}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Intel Edison}{42}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Raspberry Pi 3}{44}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Módulo NEO u-blox 6 GPS}{44}{subsubsection.3.3.1.3}
-\contentsline {subsection}{\numberline {3.3.2}Software}{44}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Android Things}{44}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}IDE}{47}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Arquitetura}{47}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Animações}{48}{subsubsection.3.3.2.4}
-\contentsline {subsubsection}{\numberline {3.3.2.5}Referências}{48}{subsubsection.3.3.2.5}
-\contentsline {section}{\numberline {3.4}Aplicativo}{49}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Telas}{49}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}IDE}{50}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Arquitetura}{51}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Áudio Descrição}{52}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Usabilidade}{53}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Web service}{54}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Localização do ônibus}{54}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Previsão de chegada}{56}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Alertar motorista sobre parar}{57}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Alertar usuário que ônibus chegou}{57}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Dificuldades}{58}{subsection.3.5.5}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Desenvolvimento}}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Descrição da Informação}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Visão Geral}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Representação do Fluxo da Informação}{26}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Descrição Funcional}{27}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Aplicativo para dispositivo móvel}{27}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.3.2}API}{27}{subsubsection.3.1.3.2}
+\contentsline {subsubsection}{\numberline {3.1.3.3}Módulo do ponto de ônibus}{27}{subsubsection.3.1.3.3}
+\contentsline {subsubsection}{\numberline {3.1.3.4}Módulo do ônibus}{27}{subsubsection.3.1.3.4}
+\contentsline {subsection}{\numberline {3.1.4}Interfaces com Sistema}{28}{subsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.4.1}Aplicativo}{28}{subsubsection.3.1.4.1}
+\contentsline {paragraph}{\numberline {3.1.4.1.1}Busca por um ponto próximo}{28}{paragraph.3.1.4.1.1}
+\contentsline {paragraph}{\numberline {3.1.4.1.2}Busca por um ponto na API}{29}{paragraph.3.1.4.1.2}
+\contentsline {paragraph}{\numberline {3.1.4.1.3}Lista de ônibus disponíveis}{30}{paragraph.3.1.4.1.3}
+\contentsline {paragraph}{\numberline {3.1.4.1.4}Detalhes do ônibus}{31}{paragraph.3.1.4.1.4}
+\contentsline {paragraph}{\numberline {3.1.4.1.5}Aguardando um ônibus}{32}{paragraph.3.1.4.1.5}
+\contentsline {subsubsection}{\numberline {3.1.4.2}Módulo do ônibus}{33}{subsubsection.3.1.4.2}
+\contentsline {paragraph}{\numberline {3.1.4.2.1}Carregando Informações}{33}{paragraph.3.1.4.2.1}
+\contentsline {paragraph}{\numberline {3.1.4.2.2}Aguardando iniciar a rota}{34}{paragraph.3.1.4.2.2}
+\contentsline {paragraph}{\numberline {3.1.4.2.3}Realizando uma rota}{35}{paragraph.3.1.4.2.3}
+\contentsline {paragraph}{\numberline {3.1.4.2.4}Aviso para parar no próximo ponto}{36}{paragraph.3.1.4.2.4}
+\contentsline {subsection}{\numberline {3.1.5}Casos de Uso}{37}{subsection.3.1.5}
+\contentsline {subsubsection}{\numberline {3.1.5.1}Narrativas: Casos de Uso}{37}{subsubsection.3.1.5.1}
+\contentsline {subsubsection}{\numberline {3.1.5.2}Diagramas de apoio para compreensão funcional}{38}{subsubsection.3.1.5.2}
+\contentsline {subsubsection}{\numberline {3.1.5.3}Narrativas: Casos de Uso}{39}{subsubsection.3.1.5.3}
+\contentsline {subsubsection}{\numberline {3.1.5.4}Diagramas de apoio para compreensão funcional}{40}{subsubsection.3.1.5.4}
+\contentsline {section}{\numberline {3.2}Módulo do Ponto de Ônibus}{42}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hardware}{42}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Software}{42}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Configuração}{42}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Referências}{43}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Módulo do Ônibus}{43}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Hardware}{43}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Intel Edison}{43}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Raspberry Pi 3}{45}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Módulo NEO u-blox 6 GPS}{45}{subsubsection.3.3.1.3}
+\contentsline {subsection}{\numberline {3.3.2}Software}{45}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Android Things}{45}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}IDE}{48}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Arquitetura}{48}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Animações}{49}{subsubsection.3.3.2.4}
+\contentsline {subsubsection}{\numberline {3.3.2.5}Referências}{49}{subsubsection.3.3.2.5}
+\contentsline {section}{\numberline {3.4}Aplicativo}{50}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Telas}{50}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}IDE}{51}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Arquitetura}{52}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Áudio Descrição}{53}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Usabilidade}{54}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Web service}{55}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Provedor de servidor}{55}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Arquitetura}{55}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Localização do ônibus}{57}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{60}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{60}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{61}{subsection.3.5.6}

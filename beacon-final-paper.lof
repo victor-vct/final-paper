@@ -5,31 +5,34 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Módulo Bluetooth HM10.}}{18}{figure.2.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Módulo NEO u-blox 6 GPS.}}{19}{figure.2.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Pesquisa realizada pela IDC.}}{20}{figure.2.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Visão geral da comunicação dos componentes.}}{24}{figure.3.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de fluxo de dados.}}{25}{figure.3.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de banco de dados.}}{25}{figure.3.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{27}{figure.3.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{28}{figure.3.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{29}{figure.3.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{30}{figure.3.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{31}{figure.3.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Tela do módulo do ônibus quando está carregando informações.}}{32}{figure.3.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Tela do módulo do ônibus aguardando motorista inicar rota.}}{33}{figure.3.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Tela do módulo do ônibus quando motorista está fazendo a rota.}}{34}{figure.3.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{35}{figure.3.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de caso de uso.}}{36}{figure.3.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de caso de uso.}}{38}{figure.3.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Módulo Bluetooth HM10.}}{41}{figure.3.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Intel Edison.}}{43}{figure.3.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Página principal do Android Things Console com produto criado.}}{45}{figure.3.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Página de configurações do produto criado.}}{46}{figure.3.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{47}{figure.3.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Tela de busca por um ponto de ônibus do aplicativo móvel.}}{49}{figure.3.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Tela com lista de ônibus disponíveis do aplicativo móvel.}}{50}{figure.3.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Tela com detalhes do ônibus do aplicativo móvel.}}{51}{figure.3.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{51}{figure.3.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Representação da busca binária.}}{55}{figure.3.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Representação da busca binária.}}{55}{figure.3.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Representação da busca binária.}}{56}{figure.3.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Representação de uma rota.}}{56}{figure.3.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Representação de uma rota.}}{57}{figure.3.34}
+\contentsline {figure}{\numberline {7}{\ignorespaces Visão geral da comunicação dos componentes.}}{25}{figure.3.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de fluxo de dados.}}{26}{figure.3.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de banco de dados.}}{26}{figure.3.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{28}{figure.3.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{29}{figure.3.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{30}{figure.3.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{31}{figure.3.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{32}{figure.3.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Tela do módulo do ônibus quando está carregando informações.}}{33}{figure.3.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Tela do módulo do ônibus aguardando motorista inicar rota.}}{34}{figure.3.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Tela do módulo do ônibus quando motorista está fazendo a rota.}}{35}{figure.3.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{36}{figure.3.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de caso de uso.}}{37}{figure.3.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de caso de uso.}}{39}{figure.3.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Módulo Bluetooth HM10.}}{42}{figure.3.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Intel Edison.}}{44}{figure.3.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Página principal do Android Things Console com produto criado.}}{46}{figure.3.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Página de configurações do produto criado.}}{47}{figure.3.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{48}{figure.3.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Tela de busca por um ponto de ônibus do aplicativo móvel.}}{50}{figure.3.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Tela com lista de ônibus disponíveis do aplicativo móvel.}}{51}{figure.3.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Tela com detalhes do ônibus do aplicativo móvel.}}{52}{figure.3.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{52}{figure.3.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de blocos do webservice.}}{56}{figure.3.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama de blocos do Node.}}{57}{figure.3.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Diagrama de blocos do diretório app}}{57}{figure.3.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Representação da busca binária.}}{59}{figure.3.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Representação da busca binária.}}{59}{figure.3.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Representação da busca binária.}}{59}{figure.3.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Representação de uma rota.}}{60}{figure.3.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Representação de uma rota.}}{61}{figure.3.37}
