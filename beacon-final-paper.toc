@@ -68,25 +68,25 @@
 \contentsline {subsection}{\numberline {3.2.2}Software}{48}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Configuração}{48}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Referências}{49}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Módulo do Ônibus}{49}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hardware}{49}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Intel Edison}{49}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Raspberry Pi 3}{51}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Módulo NEO u-blox 6 GPS}{51}{subsubsection.3.3.1.3}
-\contentsline {subsection}{\numberline {3.3.2}Software}{51}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Android Things}{51}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}IDE}{53}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Animações}{53}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Referências}{53}{subsubsection.3.3.2.4}
-\contentsline {section}{\numberline {3.4}Aplicativo}{54}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Telas}{54}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}IDE}{55}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Áudio Descrição}{55}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Usabilidade}{55}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Web service}{56}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Provedor de servidor}{56}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Arquitetura}{57}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Localização do ônibus}{59}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{61}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{62}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{63}{subsection.3.5.6}
+\contentsline {section}{\numberline {3.3}Módulo do Ônibus}{50}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Hardware}{50}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Intel Edison}{51}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Raspberry Pi 3}{52}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Módulo NEO u-blox 6 GPS}{52}{subsubsection.3.3.1.3}
+\contentsline {subsection}{\numberline {3.3.2}Software}{52}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Android Things}{52}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}IDE}{54}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Animações}{54}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Referências}{54}{subsubsection.3.3.2.4}
+\contentsline {section}{\numberline {3.4}Aplicativo}{55}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Telas}{55}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}IDE}{56}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Áudio Descrição}{56}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Usabilidade}{56}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Web service}{57}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Provedor de servidor}{57}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Arquitetura}{58}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Localização do ônibus}{60}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{62}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{63}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{64}{subsection.3.5.6}
