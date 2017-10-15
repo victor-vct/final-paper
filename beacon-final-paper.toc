@@ -86,13 +86,13 @@
 \contentsline {section}{\numberline {3.4}Aplicativo}{52}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Telas}{52}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}IDE}{53}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Arquitetura}{54}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Áudio Descrição}{55}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Usabilidade}{56}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Web service}{57}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Provedor de servidor}{57}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Arquitetura}{57}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Localização do ônibus}{59}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{62}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{62}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{63}{subsection.3.5.6}
+\contentsline {subsection}{\numberline {3.4.3}Arquitetura}{53}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Áudio Descrição}{54}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Usabilidade}{54}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Web service}{55}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Provedor de servidor}{55}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Arquitetura}{56}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Localização do ônibus}{58}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{60}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{61}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{62}{subsection.3.5.6}

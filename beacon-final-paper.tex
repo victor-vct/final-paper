@@ -34,6 +34,8 @@
 \usepackage[export]{adjustbox}
 \usepackage{float}
 \usepackage{amsmath}
+\DeclareMathOperator{\atantwo}{atan2}
+\DeclareMathOperator{\arctantwo}{arctan2}
 
 % --- 
 \usepackage{hyperref} % criar hyperlinks
@@ -1258,25 +1260,30 @@ O \textit{Android Things} provê uma \textit{API} para animações que herdou da
 
 \subsection{Telas}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
-\caption{Tela de busca por um ponto de ônibus do aplicativo móvel.}
-\label{Rotulo}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=5cm]{images/beacon_searching_bus_stop}
+  \caption{Busca por um ponto de ônibus}%
+  \label{Rotulo}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=5cm]{images/beacon_list_bus}
+  \caption{Lista de ônibus disponíveis}%
+  \label{Rotulo}
+\end{minipage}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=5cm, center]{images/beacon_list_bus}
-\caption{Tela com lista de ônibus disponíveis do aplicativo móvel.}
-\label{Rotulo}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=5cm, center]{images/beacon_detail_bus}
-\caption{Tela com detalhes do ônibus do aplicativo móvel.}
-\label{Rotulo}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=5cm]{images/beacon_detail_bus}
+  \caption{Detalhes do ônibus}
+  \label{Rotulo}
+\end{minipage}%
 \end{figure}
 
 \newpage
@@ -1284,8 +1291,6 @@ O \textit{Android Things} provê uma \textit{API} para animações que herdou da
 \subsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
-
-\newpage
 
 \subsection{Arquitetura}
 
@@ -1400,9 +1405,19 @@ Ter conhecimento da posição do ônibus se faz necessário para realizar a prev
 
 Quando o \textit{Web Service} recupera as informações da rota do veículo, ele obtém todos os pontos referentes a ela, onde cada um tem informações de latitude, longitude e se este é um ponto de parada. Então é verificado qual ponto está mais próximo a localização recebida, o mais próximo é associado ao ônibus.
 
-O cálculo de distância é feito a partir da seguinte fórmula:
+O cálculo de distância é feito a partir da fórmula \textit{Haversine} :
 
-FORMULA AQUI
+\begin{center}
+
+$ a = \sin^2(\Delta\phi) + \cos\phi1 * \cos\phi2 * \sin^2(\Delta\lambda) $  \\
+$ c = 2 * \atantwo(\sqrt{a},\sqrt{1 - a}) $ \\
+$ d = R * c $ 
+
+\end{center}
+
+Onde: $ \Delta\phi = (latitude2 - latitude1), \phi1 = latitude1, \phi2 = latitude2, \Delta\lambda = longitude1 - longitude2 $ 
+
+Movable Type Scripts. Calculate distance, bearing and more between Latitude/Longitude points. <http://www.movable-type.co.uk/scripts/latlong.html> Acesso em: 14.10.2017
 
 \textbf{Busca Binária}
 
