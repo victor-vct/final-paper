@@ -1,37 +1,37 @@
 \select@language {brazil}
 \contentsline {figure}{\numberline {1}{\ignorespaces Protocolos de comunicação utilizados.}}{15}{figure.2.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Raspberry 3.}}{17}{figure.2.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Módulo Bluetooth HM-10.}}{18}{figure.2.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Arduino Uno.}}{19}{figure.2.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Módulo NEO u-blox 6 GPS.}}{20}{figure.2.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Pesquisa realizada pela IDC.}}{21}{figure.2.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{22}{figure.2.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{24}{figure.2.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Visão geral da comunicação dos componentes.}}{30}{figure.3.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de fluxo de dados.}}{32}{figure.3.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de banco de dados.}}{32}{figure.3.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de caso de uso.}}{33}{figure.3.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de caso de uso.}}{35}{figure.3.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{38}{figure.3.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{39}{figure.3.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{40}{figure.3.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{41}{figure.3.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{42}{figure.3.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Tela do módulo do ônibus quando está carregando informações.}}{43}{figure.3.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Tela do módulo do ônibus aguardando motorista inicar rota.}}{44}{figure.3.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Tela do módulo do ônibus quando motorista está fazendo a rota.}}{45}{figure.3.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{46}{figure.3.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Configurando o módulo Bluetooth HM-10 via Arduino UNO.}}{47}{figure.3.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Intel Edison.}}{49}{figure.3.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Página de configurações do produto criado.}}{51}{figure.3.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Busca por um ponto de ônibus}}{53}{figure.3.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Lista de ônibus disponíveis}}{53}{figure.3.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Detalhes do ônibus}}{53}{figure.3.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de blocos do Web Service.}}{56}{figure.3.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de blocos do Node.}}{57}{figure.3.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama de blocos do diretório app.}}{57}{figure.3.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Representação da busca binária I.}}{59}{figure.3.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Representação da busca binária II.}}{60}{figure.3.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Representação da busca binária III.}}{60}{figure.3.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Representação de uma rota.}}{60}{figure.3.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Painel de controle do Firebase Realtime Database.}}{61}{figure.3.36}
+\contentsline {figure}{\numberline {2}{\ignorespaces Raspberry 3.}}{18}{figure.2.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Módulo Bluetooth HM-10.}}{19}{figure.2.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Arduino Uno.}}{20}{figure.2.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Módulo NEO u-blox 6 GPS.}}{21}{figure.2.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Pesquisa realizada pela IDC.}}{22}{figure.2.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de blocos do aplicativo móvel.}}{23}{figure.2.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de bloco do módulo do ônibus.}}{25}{figure.2.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Visão geral da comunicação dos componentes.}}{31}{figure.3.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de fluxo de dados.}}{33}{figure.3.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de banco de dados.}}{33}{figure.3.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de caso de uso.}}{34}{figure.3.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de caso de uso.}}{36}{figure.3.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{39}{figure.3.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Tela do aplicativo ao buscar por um ponto de ônibus na API.}}{40}{figure.3.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Tela do aplicativo com ônibus disponíveis.}}{41}{figure.3.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Tela do aplicativo com detalhes de um ônibus.}}{42}{figure.3.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela do aplicativo sobre a solicitação de um ônibus.}}{43}{figure.3.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Tela do módulo do ônibus quando está carregando informações.}}{44}{figure.3.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Tela do módulo do ônibus aguardando motorista inicar rota.}}{45}{figure.3.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Tela do módulo do ônibus quando motorista está fazendo a rota.}}{46}{figure.3.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{47}{figure.3.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Configurando o módulo Bluetooth HM-10 via Arduino UNO.}}{48}{figure.3.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Intel Edison.}}{50}{figure.3.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Página de configurações do produto criado.}}{52}{figure.3.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Busca por um ponto de ônibus}}{54}{figure.3.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Lista de ônibus disponíveis}}{54}{figure.3.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Detalhes do ônibus}}{54}{figure.3.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de blocos do Web Service.}}{57}{figure.3.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de blocos do Node.}}{58}{figure.3.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama de blocos do diretório app.}}{58}{figure.3.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Representação da busca binária I.}}{60}{figure.3.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Representação da busca binária II.}}{61}{figure.3.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Representação da busca binária III.}}{61}{figure.3.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Representação de uma rota.}}{61}{figure.3.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Painel de controle do Firebase Realtime Database.}}{62}{figure.3.36}
