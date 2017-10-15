@@ -649,7 +649,11 @@ O uso do Git com GitHub permitiu que neste trabalho mais de um integrante trabal
 
 \chapter{Desenvolvimento}
 
+Esse capítulo visa apresentar os subsistemas, indicando quais as formas de comunicação entre eles e quais funções eles possuem para o correto funcionamento do sistema. Também serão descritos, em maiores detalhes, as ferramentas, arquiteturas e hardwares utilizados para o desenvolvimento do projeto.
+
 \section{Descrição da Informação}
+
+Aqui os subsistemas são apresentados com uma breve descrição sobre eles e uma visão geral de como eles se comunicam.
 
 \subsection{Visão Geral}
 
@@ -682,12 +686,17 @@ Dispositivo instalado no ônibus. Mantém comunicação constante com a API para
 
 \subsection{Representação do Fluxo da Informação}
 
+Aprofundando na parte da comunicação entre os subsitemas, a forma como eles se relacionam e os parâmetros necessários para o funcionamento, seguem a seguinte forma:
+
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/data-flux.png}
+\includegraphics[width=10cm, center]{images/data-flux.jpg}
 \caption{Diagrama de fluxo de dados.}
 \label{Rotulo}
 \end{figure}
+
+
+Para o banco de dados, foi utilizado o seguinte \textit{schema} para a aplicação:
 
 \begin{figure}[!h]
 \centering
@@ -858,6 +867,8 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 \newpage
 
 \subsection{Interfaces com Sistema}
+
+Neste tópico, serão apresentados os \textit{wireframes} criados tanto para o aplicativo, quanto para o módulo do ônibus.
 
 \subsubsection{Aplicativo}
 
