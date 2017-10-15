@@ -344,7 +344,7 @@ O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de corr
 
 \subsection{Push Notification}
 
-Como sugere @online{•,
+Como explica @online{•,
 author = {Eduardo Finzi},
 title = {O que é Push Notification},
 year = {2016},
@@ -354,12 +354,26 @@ OPTdate = {15.10.2017},
 OPTmonth = {Out},
 OPTurldate = {29.02.2016},
 }
- \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é quando existe a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Push Notification}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
+ \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é quando existe a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Cloud Messaging}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
 
 \subsection{Beacons}
 
 O Beacon é um pequeno dispositivo que utiliza uma tecnologia chamada Bluetooth Low Energy (BLE), que emite um sinal intermitente de ondas de rádio que consegue localizar seu smartphone em um determinado raio de cobertura deste sinal.(CARNEIRO, Conrado. Use Mobile. Maio 27, 2016. <http://usemobile.com.br/conheca-beacon/>. 
 A grande novidade desses aparelhos, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o bluetooth do smartphone para enviar as mensagens. (SAES, Bruno. Impacta. Dez 09, 2014. <http://www.impacta.com.br/blog/2014/12/09/o-que-sao-beacons-como-mudarao-rotina/> (10.10.17)
+Como explica Conrado (CARNEIRO, Conrado. iBeacon Blog. Out 10, 2016. <http://ibeacon.blog.br/ibeacon-guia-completo/>), iBeacon é um protocolo de comunicação para dispositivos \textit{Beacons}, lançado pela \textit{Apple} em 2013. 
+
+De acordo com Conrado (CARNEIRO, Conrado. iBeacon Blog. Out 10, 2016. <http://ibeacon.blog.br/ibeacon-guia-completo/>) as informações do protocolo são formadas da seguinte forma:\\
+
+\begin{enumerate}
+
+
+\item Identificador Único Universal (do inglês \textit{Universal Unique Identifier} ou UUID): É a sequencia que identifica cada dispositivo.
+\item Major: Utilizado para criar grupos de \textit{Beacons}. Assim é possível fazer um filtro com todos dipositivos do mesmo grupo.
+\item Minor: Utilizado para criar sub grupos, possibilitando o filtro dentro de grupos (\textit{Major)}.
+\item Frequência de Transmissão: Intervalo que o sinal é transmitido.
+Poder da transmissão: Alcance máximo do sinal.
+
+\end{enumerate}
 
 \subsection{Realtime Database}
 
