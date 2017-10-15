@@ -452,11 +452,18 @@ recuperar e enviar dados do Arduino e atuar sobre eles. (MCROBERTS, Michael. Ard
 \label{Rotulo}
 \end{figure}
 
-O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio do \textit{GPS (Global Position System)}. A tecnologia GPS funciona através de ondas de rádio que são transmitidas por satélites, onde o aparelho receptor localiza o sinal de pelo menos quatro deles. Com o sinal recebido, são feito cálculos para obter a localização do módulo no globo. 
+O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio do \textit{GPS (Global Position System)}. De acordo com (SOUSA, João Paulo Claudino de. Extração e análise de memória volátil em ambientes android: uma abordagem voltada à reconstrução de trajetórias. 2016. xvii, 115 f., il. Dissertação (Mestrado em Engenharia Elétrica)—Universidade de Brasília, Brasília, 2016) a obtenção da localização no globo é dada pela trilateração dos dados recebidos por pelo menos quatro satélites, onde cada um envia um sinal de sincronismo e em seguida sua posição. 
 
-Realizando uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter), é possível obter as informações do módulo. Tais informações obtidas seguem a especificação NMEA, que define como os dados serão transmiitidos
+Para obter os dados do módulo, realiza-se uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter). Tais informações obtidas seguem a especificação NMEA 0183 da (\textit{National Marine Eletronic Association}). No trecho abaixo, Sousa (SOUSA, João Paulo Claudino de. Extração e análise de memória volátil em ambientes android: uma abordagem voltada à reconstrução de trajetórias. 2016. xvii, 115 f., il. Dissertação (Mestrado em Engenharia Elétrica)—Universidade de Brasília, Brasília, 2016), fala do protocolo no Android:
 
-FALAR MAIS SOBRE UART E NMEA
+\begin{citacao}
+O protocolo NMEA é o mecanismo de comunicação padrão entre os receptores GPS e os drivers
+dos dispositivos receptores na arquitetura Android. Desta forma, os programas que fornecem
+soluções de posicionamento precisam decodificar as mensagens NMEA. A ideia do protocolo,
+no que diz respeito a coordenadas de posicionamento, consiste em enviar uma linha de dados,
+codificada em ASCII, que pode conter informações de posição, velocidade, tempo, dentre
+outros elementos processados pelo receptor GPS. 
+\end{citacao}
 
 \section{Software}
 
@@ -1229,12 +1236,6 @@ Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Inte
 Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações.
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
-
-\subsubsection{Módulo NEO u-blox 6 GPS}
-
-Para realizar o rastreamento do ônibus foi adotado o módulo NEO u-blox 6 GPS Modules, devido a compatibilidade com as placas que contém o sistema embarcado e preço acessível, que gira em torno de R\$ 60,00 em 08/2017.
-
-FALAR SOBRE DRIVERS NMEA NO ANDROID THINGS
 
 \subsection{Software}
 
