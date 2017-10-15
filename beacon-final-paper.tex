@@ -27,9 +27,6 @@
 \usepackage[brazilian]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
-
-\usepackage{hyperref} % criar hyperlinks
-\usepackage{listings} % utilizado para dar highlight em código
 \usepackage[dvipsnames]{xcolor}
 \usepackage[export]{adjustbox}
 \usepackage{float}
@@ -630,14 +627,22 @@ GOMES, André Faria apud TIKOV, Stefan. InfoQueue. "Uma rápida introdução ao 
 
 \subsection{Controle de Versão Distribuído}
 
+Segundo Git SCM (Sistema de Controle de Versão do inglês \textit{Source Control Management}):
+
+\begin{citacao}
 O controle de versão é um sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo de forma que possa recuperar versões específicas. [...]
 O método preferido de controle de versão por muitas pessoas é copiar arquivos em outro diretório (talvez um diretório com data e hora, se forem espertos). Esta abordagem é muito comum por ser tão simples, mas é também muito suscetível a erros. É fácil esquecer em qual diretório você está e gravar acidentalmente no arquivo errado ou sobrescrever arquivos sem querer. Para lidar com esse problema, alguns programadores desenvolveram há muito tempo VCSs locais que armazenavam todas as alterações dos arquivos sob controle de revisão.[...]
 Sistemas de Controle de Versão Distribuídos [...] os clientes não apenas fazem cópias das últimas versões dos arquivos: eles são cópias completas do repositório. Assim, se um servidor falha, qualquer um dos repositórios dos clientes pode ser copiado de volta para o servidor para restaurá-lo. (Git SCM <https://git-scm.com/book/pt-br/v1/Primeiros-passos-Sobre-Controle-de-Vers\%C3\%A3o> (12.10.17)
+\end{citacao}
+
+Como explicado no site oficial do Git (Git SCM <https://git-scm.com/book/pt-br/v1/Primeiros-passos-Sobre-Controle-de-Vers\%C3\%A3o> (12.10.17), o uso de um \textit{software} controlador de versões trás para a equipe de desenvolvimento mais segurança ao longo do tempo, possibilitando voltar a estados anteriores do código. Isso facilita caso for necessário encontrar quais alterações foram incluídas que ocasionaram um problemas.
 
 \textbf{Git e GitHub}
 
+\begin{citacao}
 Git é um sistema de controle de versão de arquivos. Através dele se pode desenvolver projetos onde diversas pessoas podem contribuir simultaneamente no mesmo, editando e criando novos arquivos e permitindo que os mesmos possam existir sem o risco de suas alterações serem sobrescritas.[...]
 O Github é um serviço web que oferece diversas funcionalidades extras aplicadas ao git. Resumindo, é possível utilizar gratuitamente o github para hospedar seus projetos pessoais. Além disso, quase todos os projetos/frameworks/bibliotecas sobre desenvolvimento open source estão no github, o que permite acompanhá-los através de novas versões, contribuir informando bugs ou até mesmo enviando código e correções. (SCHMITZ, Daniel. Tableless. Out 07, 2015. <https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/>) (12.10.17)
+\end{citacao}
 
 O uso do Git com GitHub permitiu que neste trabalho mais de um integrante trabalhasse no código sem a necessidade de estar próximo do outro. Ao realizar uma alteração ela é adicionada ao histórico de alterações do Git e enviada ao GitHub, onde ficava disponível para o outro integrante puxar e integrar com suas alterações.
 
