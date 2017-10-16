@@ -19,7 +19,7 @@
 \usepackage{multicol}			% multiplas colunas no texto 
 \usepackage{booktabs}
 \usepackage{tabularx}
-
+\usepackage{natbib, bibentry}
 % ---
 
 % ---
@@ -285,7 +285,7 @@ Abstract here.
 
 Segundo o Censo Demográfico de 2010, feito pelo IBGE (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
 
-A Fundação Dorina [Fundação Dorina] <https://www.fundacaodorina.org.br/a-fundacao/deficiencia-visual/o-que-e-deficiencia/> (11.10.17) mostra os níveis de deficiência visual:
+A Fundação Dorina \citep{Dorina2017} mostra os níveis de deficiência visual:
 
 \begin{citacao}
 A deficiência visual é definida como a perda total ou parcial, congênita ou adquirida, da visão. O nível de acuidade visual pode variar, o que determina dois grupos de deficiência:
@@ -297,7 +297,7 @@ Baixa visão ou visão subnormal: caracteriza-se pelo comprometimento do funcion
 
 Como sugere Bersh (2013, p. 2), a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
 
-O desenvolvimento de recursos e outros elementos de Tecnologia Assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia. [Portal Saúde. Mar 11, 2014] <http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/509-sas-raiz/dapes/saude-da-pessoa-com-deficiencia/l2-saude-da-pessoa-com-deficiencia/10250-comite-de-ajudas-tecnicas> (11.10.17)
+O desenvolvimento de recursos e outros elementos de Tecnologia Assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia. \citep{PortalSaude2014}
 
 	Dentre os elementos da tecnologia assistiva pode-se utilizar smartphones, que tem se tornado cada vez mais presentes na vida das pessoas. Uma pesquisa realizada pelo FGV-SP em 2016 [MEIRELLES, 2016] demonstrou que o número de aparelhos chegou a 168 milhões só no Brasil. Com sua facilidade de acesso, surgem inúmeras soluções que resolvem problemas do dia-a-dia dos usuários.
 
@@ -344,29 +344,20 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para trafego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
 O cabeçalho do protocolo contém o campo \textit{Content-Type} com o tipo de \textit{MIME} contido no corpo da requisição. 
 
-O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. (CCM br.ccm.net, 2017, Formatos e extensões de arquivos - Tipo MIME).
+O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. \citep{CCM2017}
 
 \subsection{Push Notification}
 
-Como explica @online{•,
-author = {Eduardo Finzi},
-title = {O que é Push Notification},
-year = {2016},
-url = {http://blog.cedrotech.com/o-que-e-push-notification/},
-OPTorganization = {Cedro Technologies},
-OPTdate = {15.10.2017},
-OPTmonth = {Out},
-OPTurldate = {29.02.2016},
-}
+Como explica \citep{Finzi2016}
  \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é quando existe a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Cloud Messaging}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
 
 \subsection{Beacons}
 
-O \textit{Beacon} é um pequeno dispositivo que utiliza uma tecnologia chamada \textit{Bluetooth Low Energy} (BLE), que emite um sinal intermitente de ondas de rádio que consegue localizar seu smartphone em um determinado raio de cobertura deste sinal.(CARNEIRO, Conrado. Use Mobile. Maio 27, 2016. <http://usemobile.com.br/conheca-beacon/>. 
-A grande novidade desses aparelhos, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o \textit{bluetooth} do \textit{smartphone} para enviar as mensagens. (SAES, Bruno. Impacta. Dez 09, 2014. <http://www.impacta.com.br/blog/2014/12/09/o-que-sao-beacons-como-mudarao-rotina/> (10.10.17)
-Como explica Conrado (CARNEIRO, Conrado. iBeacon Blog. Out 10, 2016. <http://ibeacon.blog.br/ibeacon-guia-completo/>), \textit{iBeacon} é um protocolo de comunicação para dispositivos \textit{Beacons}, lançado pela \textit{Apple} em 2013. 
+O \textit{Beacon} é um pequeno dispositivo que utiliza uma tecnologia chamada \textit{Bluetooth Low Energy} (BLE), que emite um sinal intermitente de ondas de rádio que consegue localizar seu smartphone em um determinado raio de cobertura deste sinal. \citep{CarneiroMaio}. 
+A grande novidade desses aparelhos, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o \textit{bluetooth} do \textit{smartphone} para enviar as mensagens. \citep{Saes2014}
+Como explica \citep{CarneiroOutubro}, \textit{iBeacon} é um protocolo de comunicação para dispositivos \textit{Beacons}, lançado pela \textit{Apple} em 2013. 
 
-De acordo com Conrado (CARNEIRO, Conrado. iBeacon Blog. Out 10, 2016. <http://ibeacon.blog.br/ibeacon-guia-completo/>) as informações do protocolo são formadas da seguinte forma:\\
+De acordo com \citep{CarneiroOutubro} as informações do protocolo são formadas da seguinte forma:\\
 
 \begin{enumerate}
 
@@ -382,7 +373,7 @@ Poder da transmissão: Alcance máximo do sinal.
 \subsection{Realtime Database}
 
 O \textit{Firebase Realtime Database} é um banco de dados hospedado na nuvem. Os dados são armazenados no formato JSON e sincronizados em tempo real com todos os clientes conectados.
-Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos. (Firebase. <https://firebase.google.com/docs/database/?hl=pt-br>) (10.10.17)
+Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos. \citep{Firebase}
 
 \newpage
 
@@ -397,7 +388,7 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 \label{Rotulo}
 \end{figure}
 
-Segundo Upton, "A \textit{Raspberry Pi} é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes." (Upton, E.; Halfacree, G., 2017, Raspberry Pi - Manual do Usuário). Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
+Segundo Upton \citep{Upton2017}, "A \textit{Raspberry Pi} é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes.". Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
 
 A \textit{Fundação Raspberry Pi}, responsável pelo seu desenvolvimento, também mantém o foco da placa no meio educacional, apresentando uma plataforma acessível para que cada vez mais pessoas se interessem por desenvolvimento de softwares.
 
@@ -441,9 +432,7 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (h
 
 \textit{Arduino} é uma plataforma de prototipagem desenvolvida em 2005, na Itália. Conectando a placa via USB em um computador, é possível programar o microcontrolador Atmel que ela possui, tendo a possibilidade de controlar dispositivos externos por meio de suas portas \textit{GPIO (General Purpose Input/Output)}.
 
-O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos independentes,
-ou pode ser conectado a um computador, a uma rede, ou até mesmo à Internet para
-recuperar e enviar dados do \textit{Arduino} e atuar sobre eles. (MCROBERTS, Michael. Arduíno Básico. Novatec, 2011. Cap. 1, p. 23)
+O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos independentes, ou pode ser conectado a um computador, a uma rede, ou até mesmo à Internet para recuperar e enviar dados do \textit{Arduino} e atuar sobre eles. \citep{mcroberts2011}
 
 \newpage
 
@@ -1154,7 +1143,7 @@ Número & Nome                                                                  
 \subsection{Software}
 
 \begin{itemize}
-\item Arduino IDE 1.8.3 ou superior. 
+\item Arduino IDE 1.8.3 ou superior, encontrado em <https://www.arduino.cc/en/main/software>. 
 \end{itemize}
 
 \subsection{Configuração}
@@ -1270,7 +1259,7 @@ Embora tenha um hardware com especificações superiores ao Intel Edison, não h
 
 Ele é, atualmente, uma versão do Android O reduzida. Sua escolha foi devido a facilidade de embarcar em placas como o Raspberry Pi e Intel Edison, além da variedade de recursos que já estão disponíveis no SO que facilitam o desenvolvimento do módulo, como serviços de geolocalização. 
 
-Para obter uma imagem do Sistema Operacional, foi preciso realizar um cadastro na plataforma \textit{Android Things Console} <https://partner.android.com/things/console/>. Foi necesssário cadastrar um produto, neste caso chamamos de \textit{BeaconBusTracker}, conseguindo acesso ao download da imagem do SO.
+Para obter uma imagem do Sistema Operacional, foi preciso realizar um cadastro na plataforma \textit{Android Things Console}, encontrado no link <https://partner.android.com/things/console/>. Foi necesssário cadastrar um produto, neste caso chamamos de \textit{BeaconBusTracker}, conseguindo acesso ao download da imagem do SO.
 
 \begin{figure}[H]
 \centering
@@ -2437,5 +2426,8 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 \egroup
 
 \end{apendicesenv}
+
+\bibliographystyle{abbrv}
+\bibliography{beacon-final-paper}
 
 \end{document}
