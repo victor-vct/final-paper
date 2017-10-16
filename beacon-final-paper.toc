@@ -89,10 +89,11 @@
 \contentsline {subsection}{\numberline {3.5.4}Previsão de chegada}{64}{subsection.3.5.4}
 \contentsline {subsection}{\numberline {3.5.5}Alertar motorista sobre parar}{65}{subsection.3.5.5}
 \contentsline {subsection}{\numberline {3.5.6}Alertar usuário que ônibus chegou}{66}{subsection.3.5.6}
+\vspace {\cftbeforechapterskip }
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{67}{section*.14}
+\contentsline {part}{\uppercase {Ap\^endices}}{67}{section*.15}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
@@ -101,3 +102,5 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
 \contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Testes de aceitação}}{70}{appendix.B}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Refer\^encias}{83}{section*.32}

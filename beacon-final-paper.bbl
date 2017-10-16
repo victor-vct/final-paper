@@ -1,0 +1,66 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[CARNEIRO 2016]{CarneiroMaio}
+\abntrefinfo{CARNEIRO}{CARNEIRO}{2016a}
+{CARNEIRO, C. \emph{Beacon: o que {\'e} e quais suas utiliza{\c{c}}{\~o}es mais
+  inusitadas}. 2016.
+Dispon{\'\i}vel em: \url{http://usemobile.com.br/conheca-beacon/}.}
+
+\bibitem[CARNEIRO 2016]{CarneiroOutubro}
+\abntrefinfo{CARNEIRO}{CARNEIRO}{2016b}
+{CARNEIRO, C. \emph{iBeacon – Tudo que voc{\^e} precisa saber}. 2016.
+Dispon{\'\i}vel em: \url{http://ibeacon.blog.br/ibeacon-guia-completo/}.}
+
+\bibitem[CCM 2017]{CCM2017}
+\abntrefinfo{CCM}{CCM}{2017}
+{CCM. \emph{Formatos e extens{\~o}es de arquivos - Tipo MIME}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://br.ccm.net/contents/649-formatos-e-extensoes-de-arquivos-tipo-mime}.}
+
+\bibitem[Developers 2017]{Firebase}
+\abntrefinfo{Developers}{DEVELOPERS}{2017}
+{DEVELOPERS, G. \emph{Firebase Realtime Database}. 2017.
+Dispon{\'\i}vel em: \url{https://firebase.google.com/docs/database/?hl=pt-br}.}
+
+\bibitem[Dorina 2017]{Dorina2017}
+\abntrefinfo{Dorina}{DORINA}{2017}
+{DORINA, F. \emph{O que {\'e} defici{\^e}ncia}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.fundacaodorina.org.br/a-fundacao/deficiencia-visual/o-que-e-deficiencia/}.}
+
+\bibitem[Finzi 2016]{Finzi2016}
+\abntrefinfo{Finzi}{FINZI}{2016}
+{FINZI, E. \emph{O que {\'e} Push Notification}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://blog.cedrotech.com/o-que-e-push-notification/}.}
+
+\bibitem[McRoberts 2011]{mcroberts2011}
+\abntrefinfo{McRoberts}{MCROBERTS}{2011}
+{MCROBERTS, M. Arduino b{\'a}sico.
+\emph{S{\~a}o Paulo: Novatec}, 2011.}
+
+\bibitem[SAES 2014]{Saes2014}
+\abntrefinfo{SAES}{SAES}{2014}
+{SAES, B. \emph{O que s{\~a}o Beacons e como eles mudar{\~a}o a sua rotina?}
+  2014.
+Dispon{\'\i}vel em:
+  \url{http://www.impacta.com.br/blog/2014/12/09/o-que-sao-beacons-como-mudarao-rotina/}.}
+
+\bibitem[Sa{\'u}de 2014]{PortalSaude2014}
+\abntrefinfo{Sa{\'u}de}{SA{\'U}DE}{2014}
+{SA{\'U}DE, P. 2014.
+Dispon{\'\i}vel em:
+  \url{http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/509-sas-raiz/dapes/saude-da-pessoa-com-deficiencia/l2-saude-da-pessoa-com-deficiencia/10250-comite-de-ajudas-tecnicas}.}
+
+\bibitem[Upton e Halfacree 2017]{Upton2017}
+\abntrefinfo{Upton e Halfacree}{UPTON; HALFACREE}{2017}
+{UPTON, E.; HALFACREE, G. \emph{Raspberry Pi -- Manual do Usu{\'a}rio}.
+[S.l.], 2017. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=xD41DwAAQBAJ}.}
+
+\end{thebibliography}
