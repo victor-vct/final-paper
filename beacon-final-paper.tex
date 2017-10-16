@@ -18,6 +18,7 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{multicol}			% multiplas colunas no texto 
 \usepackage{booktabs}
+\usepackage{tabularx}
 
 % ---
 
@@ -27,7 +28,7 @@
 \usepackage[brazilian]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
-\usepackage[dvipsnames]{xcolor}
+\usepackage[dvipsnames,table]{xcolor}
 \usepackage[export]{adjustbox}
 \usepackage{float}
 \usepackage{amsmath}
@@ -111,6 +112,8 @@
 
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
+\definecolor{bluesky}{RGB}{0,191,255}
+\definecolor{red}{RGB}{255,99,71}
 
 % informações do PDF
 \makeatletter
@@ -1551,5 +1554,888 @@ O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como 
 \subsection{Alertar usuário que ônibus chegou}
 
 Quando o motorista chega na parada, ele pressiona um botão para anunciar sua chegada. Quando \textit{Web Service} recebe esse alerta por meio de uma requisição \textit{HTTP}, ele verifica quais usuários estão aguardando aquele ônibus, então é disparado uma \textit{push notification}, por meio do \textit{Firebase}, avisando que o ônibus que ele aguarda está parado.
+
+\begin{apendicesenv}
+\partapendices
+
+\chapter{Diagrama de Classes}
+
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90, width=12cm, center]{images/app-class-diagram}
+\caption{Representação da busca binária I.}
+\label{Rotulo}
+\end{figure}
+
+\chapter{Testes de aceitação}
+
+Os testes de aceitação visam fazer um conjunto de testes isolados uns dos outros para garantir a qualidade e as funcionalidades do aplicativo.
+
+Cada teste está organizado na seguinte estrutura:
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} x.x.x & \textbf{Título:}  & \textbf{Nível do teste} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:}} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:} Sucesso/Falha} \\ 
+\hline 
+\end{tabularx} 
+
+\end{table}
+\egroup
+
+\begin{itemize}
+
+\item \textbf{ID:} Identificador único para um teste.
+\item \textbf{Título: }Texto breve que identifica o que será testado.
+\item \textbf{Nível do teste:} Identifica se o teste é crítico para o sistema.
+\item \textbf{Descrição:} Texto explicando com mais detalhes o que será testado.
+\item \textbf{Necessário para:} Cliente que fará uso da funcionalidade.
+\item \textbf{Nota de teste:} Observações a serem feitas antes de realizar o teste.
+\item \textbf{Etapas:} Passo a passo para reprodução do teste.
+\item \textbf{Resultado:} Apresenta o resultado do teste realizado.
+
+\end{itemize}
+
+\newpage
+
+\subsection*{Nível de teste}
+
+Os sistemas possuem diversas funcionalidades e pré-requisitos para funcionar corretamente. Cada uma tem seu grau de importância para o sistema, que dependendo deste grau, pode afetar totalmente ou parcialmente seu uso caso esteja com algum problema na implementação. Por isso, é de extrema importância identificar o quanto um teste pode impactar no sistema, para quando falhar, gerar um alerta de mau funcionamento.
+
+Os níveis dos testes, indicados no canto superior direito da tabela de cada teste, servem para alertar o quão importante o teste significa para o correto funcionamento do sistema que a funcionalidade pertence, podendo apresentar dois níveis: “Crítico” ou “Atenção”.
+
+Crítico: Representa uma funcionalidade de extrema importância para o correto funcionamento do sistema. Caso este teste falhe, o sistema não terá o comportamento necessário para funcionar como o usuário deseja. Sua indicação apresenta um fundo vermelho. 
+
+Atenção: Representa uma funcionalidade importante para o sistema. Caso o teste falhe, não afetará o funcionamento do sistema. Pode impactar em performance ou usabilidade reduzida, mas não em valores entregues ao usuário. Sua indicação apresenta um fundo azul.
+
+\newpage
+
+\subsection*{Módulo do ponto de ônibus (Beacon)}
+
+\subsubsection*{Emissão de sinal}
+
+\bgroup
+\def\arraystretch{1.5}
+
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 1.1.1 & \textbf{Título:} Emissão de ID único
+ & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o módulo está emitindo um sinal com id único de acordo com padrões estabelecidos.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Aplicativo} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O sinal emitido é de acordo com a tecnologia \textit{Bluetooth BLE} (4.+).
+O canal utilizado para a emissão do ID é o “id1” de acordo com as especificações dos \textit{Beacons}.
+O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valor do conjunto dos números Naturais.
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=3\hsize}X|}{\textbf{Etapas:} 
+
+
+1. Ativar o módulo 
+
+
+2. Receber o sinal
+
+
+3. Verificar se o canal "id1" está de acordo com o padrão
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:} } \\ 
+\hline 
+\end{tabularx} 
+
+\end{table}
+
+\egroup
+
+\newpage
+
+\subsection*{Módulo do ônibus}
+
+\subsubsection*{Geolocalização}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 2.1.1 & \textbf{Título:} Emissão de geolocalização & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o módulo está enviando a geolocalização do veículo
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} \textit{Web service}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O envio dos dados deve estar de acordo com a notação JSON. Deve ser enviado em determinados intervalos de tempo, conforme definido no \textit{web service}.} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ativar o módulo
+
+2. Verificar se o \textit{Web Service} está recebendo a geolocalização
+
+3. Verificar se os dados recebidos estão chegando de acordo com o tempo definido
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:} } \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Interação com motorista}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 2.2.1 & \textbf{Título:} Emissão de alerta de parada & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o módulo está recebendo notificações de alerta e notificando ao motorista sobre a necessidade de parada no próximo ponto} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Módulo de ônibus} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O envio do alerta se faz por meio do serviço do \textit{Firebase Realtime Database}.} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ativar o módulo
+
+2. Alterar a variável no \textit{Firebase Realtime Database} de alerta de parada
+
+3. Verificar se houve a emissão do alerta de parada
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsection*{Aplicativo Mobile}
+
+\subsubsection*{Instalação}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.1.1 & \textbf{Título:} Instalação realizada com sucesso
+ & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo foi instalado com sucesso} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}  A versão do Android instalada deve ser no mínimo a versão Jelly Beans (v4.1).
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Instale a aplicação no dispositivo
+
+2. Navegue até a lista de aplicativos
+
+3. Verifique se o aplicativo \textit{Beacon} está listado.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.1.2 & \textbf{Título:} Talkback ativo & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o talkback está ativo} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Navegue pela tela passando pelos ícones disponíveis
+
+2. Verifique se está sendo emitido a áudio descrição dos ícones.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Tela}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.2.1 & \textbf{Título:}  Áudio descrições
+ & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:}  Este teste irá verificar se o talkback está conseguindo ler os componentes da tela no aplicativo
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} A navegação pelos componentes visuais deve ser de acordo com as regras de navegação do Talkback.
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Abra o aplicativo
+
+2. Navegue pelos componentes visuais.
+
+3. Verifique se está sendo emitido a áudio descrição dos componentes.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.2.2 & \textbf{Título:} Orientação da tela & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo funciona corretamente ao rotacionar a tela.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Para melhorar usabilidade, a mudança de layout ao rotacionar é bloqueada.} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Segure o dispositivo na posição \textit{portrait}.
+
+2. Abra o aplicativo.
+
+3. Gire o dispositivo para posição \textit{landscape}.
+
+4. Verifique se o aplicativo não rotacionou a tela.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Geolocalização}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.3.1 & \textbf{Título:} Reconhecimento do ponto de ônibus & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo está reconhecendo o ID emitido pelo módulo do ponto ônibus
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} \textit{Web Service}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O reconhecimento do ID deve seguir as especificações do módulo do ponto de ônibus.
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o \textit{bluetooth} do dispositivo mobile
+
+2. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido
+
+3. Visualizar a tela de \textit{loading}
+
+4. Aguardar carregar lista com ônibus
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Ônibus disponíveis}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.4.1 & \textbf{Título:} Listagem de ônibus disponíveis
+ & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo está carregando corretamente os ônibus disponíveis para um determinado ponto de ônibus} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O reconhecimento do ID deve seguir as especificações do módulo do ponto de ônibus.
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o \textit{bluetooth} do dispositivo mobile.
+
+2. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
+
+3. Visualizar a tela de \textit{loading}.
+
+4. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.4.2 & \textbf{Título:} Detalhes dos ônibus disponíveis
+ & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo está exibindo os detalhes corretamente dos ônibus disponíveis.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} O reconhecimento do ID deve seguir as especificações do módulo do ponto de ônibus.
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o bluetooth do dispositivo mobile.
+
+2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+3. Visualizar a tela de loading.
+
+4. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
+
+5. Selecionar um ônibus na lista.
+
+6. Verificar se as informações estão de acordo com a lista.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.4.3 & \textbf{Título:} Requisitar um dos ônibus disponíveis & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo está realizando a requisição de um ônibus disponível.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Este teste não aborda a validação no \textit{web service}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o \textit{bluetooth} do dispositivo \textit{mobile}.
+
+2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+3. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
+
+4. Selecionar um ônibus na lista.
+
+5. Clicar no botão “Solicitar Ônibus”.
+
+6. Aguardar mensagem de solicitação realizada com sucesso.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.4.4 & \textbf{Título:} Cancelar a requisição de um dos ônibus disponíveis  & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo está realizando o cancelamento da requisição de um ônibus disponível.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Este teste não aborda a validação no web service} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o bluetooth do dispositivo mobile.
+
+2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+3. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
+
+4. Selecionar um ônibus na lista.
+
+5. Clicar no botão “Solicitar Ônibus”.
+
+6. Aguardar mensagem de solicitação realizada com sucesso.
+
+7. Na tela de requisição bem sucedida, clicar no botão “Cancelar”.
+
+8. Aguardar mensagem de sucesso.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Rede}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.5.1 & \textbf{Título:} Alerta sobre ausência de conexão & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo identifica o estado da conexão com a rede. Caso esteja desligado, deve alertar o usuário
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Abrir o aplicativo Beacon
+
+2. Visualizar um dialog com alerta sobre ausência de conexão.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} & \textbf{Título:} Alerta sobre \textit{bluetooth} desligado & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo identifica o estado do \textit{Bluetooth}. Caso esteja desligado, deve alertar o usuário
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Desligar o \textit{Bluetooth} do dispositivo \textit{mobile}
+
+2. Abrir o aplicativo Beacon 
+
+3. Visualizar um dialog com alerta sobre o \textit{Bluetooth} desligado
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Acessibilidade}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.5.1 & \textbf{Título:} Alerta sonoro sobre busca do ponto de ônibus & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo emite um aviso sonoro indicando ter encontrado um ponto de ônibus.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o bluetooth do dispositivo mobile
+
+2. Deixar o alto falante do dispositivo mobile ligado
+
+3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+4. Verificar se foi emitido um aviso sonoro indicando qual ponto de ônibus foi encontrado. 
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.5.2 & \textbf{Título:} Alerta sonoro sobre quantidade de ônibus disponíveis & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo emite um aviso sonoro indicando o número de ônibus disponíveis.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o bluetooth do dispositivo mobile
+2. Deixar o alto falante do dispositivo mobile ligado
+3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+4. Verificar se foi emitido um aviso sonoro indicando qual ponto de ônibus foi encontrado. 
+5. Verificar se foi emitido um aviso sonoro indicando o número de ônibus disponíveis.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} & \textbf{Título:} Alerta sonoro sobre detalhes de um ônibus disponível & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo emite um aviso sonoro indicando os detalhes de um ônibus disponível.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o bluetooth do dispositivo mobile
+
+2. Deixar o alto falante do dispositivo mobile ligado
+
+3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+4. Selecionar um ônibus disponível.
+
+5. Na tela de detalhes, verificar se foi emitido aviso sonoro sobre os detalhes do ônibus e sua previsão de chegada.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.5.4 & \textbf{Título:} Alerta sonoro “Requisitando”
+ & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo emite um aviso sonoro indicando estar realizando a requisição de um ônibus.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o \textit{Bluetooth} do dispositivo \textit{mobile}.
+
+2. Deixar o alto falante do dispositivo mobile ligado.
+
+3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+4. Selecionar um ônibus disponível.
+
+5. Na tela de detalhes, clicar em “Solicitar Ônibus”.
+
+6. Verificar se foi emitido o aviso sonoro alertando estar requisitando um ônibus
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 3.5.5 & \textbf{Título:} Alerta sonoro sobre sucesso da requisição & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o aplicativo emite um aviso sonoro indicando ter tido sucesso para fazer requisição.
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Usuário} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Ligar o \textit{Bluetooth} do dispositivo \textit{mobile}.
+
+2. Deixar o alto falante do dispositivo mobile ligado.
+
+3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+
+4. Selecionar um ônibus disponível.
+
+5. Na tela de detalhes, clicar em “Solicitar Ônibus”.
+
+6. Aguardar emitir sinal sonoro sobre o status “Requisitando”.
+
+7. Verificar se foi emitido sinal sonoro sobre sucesso da requisição.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsection*{Web Service}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 4.1.1 & \textbf{Título:} Teste de listagem de ônibus & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Este teste irá verificar se o \textit{web service} consegue obter a lista com os ônibus próximos
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Aplicativo} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Esse teste verificará se o \textit{web service} obtém a lista de ônibus que passarão pela parada correspondente
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Enviar o ID da parada.
+
+2. Buscar os ônibus que possuem o mesmo ID da parada.
+
+3. Verificar as informações enviadas para o aplicativo.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 4.1.2 & \textbf{Título:} Teste de resposta de previsão de chegada & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Esse teste verificará o tempo demorado para calcular a previsão de chegada
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Aplicativo} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Deve ser calculado com antecedência o tempo de chegada entre a ultima posição conhecida do ônibus e a posição de um ponto de ônibus para comparar os resultados do teste.} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Enviar o ID do ônibus escolhido
+
+2. Verificar se a previsão de chegada é igual a calculada antes de iniciar o teste.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\subsubsection*{Requisições}
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 4.2.1
+& \textbf{Título:} Teste de cadastro de requisição de acompanhamento & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Esse teste verificará a funcionalidade de cadastro de requisição do ônibus escolhido pelo usuário
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Aplicativo} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}
+} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Enviar os IDs da parada e do ônibus escolhido pelo usuário.
+
+2. Gerar um ID de requisição de acompanhamento para o usuário.
+
+3. Verificar o ID de requisição de acompanhamento no aplicativo.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 4.2.2 & \textbf{Título:} Teste de cancelamento de requisição de acompanhamento
+ & \textbf{Atenção} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Esse teste verificará a funcionalidade de cancelamento de requisição do ônibus escolhido pelo usuário} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Aplicativo} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:} Este teste não é crítico pois não compromete na performance do sistema.} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Cancelar a requisição de acompanhamento do ônibus
+
+2. Enviar o ID de requisição de acompanhamento
+
+3. Remover a requisição referente ao ID recebido
+
+4. Verificar a confirmação de cancelamento
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[H]
+
+\begin{tabularx}{\textwidth}{|l|>{\hsize=2\hsize}X|c|}
+\hline 
+\textbf{ID:} 4.2.3 & \textbf{Título:} Teste de notificação de parada & \textbf{Crítico} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Descrição:} Esse teste verificará o envio de avisos ao módulo do ônibus sobre a existência de passageiros na próxima parada
+} \\ 
+\hline  
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Necessário para:} Módulo do ônibus} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Nota de teste:}} \\ 
+\hline 
+\multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
+
+1. Enviar uma requisição para acompanhamento de veículo
+
+2. Verificar se o \textit{Web Service} alterou o parâmetro corretamente no \textit{Firebase Realtime Database}, conforme documentação.
+} \\ 
+\hline 
+\multicolumn{3}{|X|}{\textbf{Resultado:}} \\ 
+\hline 
+\end{tabularx} 
+\end{table}
+\egroup
+
+\end{apendicesenv}
 
 \end{document}
