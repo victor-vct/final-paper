@@ -62,7 +62,7 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Git}{GIT}{2016}
 {GIT. \emph{Primeiros passos sobre controle de vers{\~a}o}. 2016.
 Dispon{\'\i}vel em:
-  \url{https://git-scm.com/book/pt-br/v1/Primeiros-passos-Sobre-Controle-de-Vers\\%C3\\%A3o}.}
+  \url{https://git-scm.com/book/pt-br/v1/Primeiros-passos-Sobre-Controle-de-Vers\%C3\%A3o}.}
 
 \bibitem[GOMES André Faria apud~TIKOV 2009]{Gomes2009}
 \abntrefinfo{GOMES André Faria apud~TIKOV}{GOMES ANDRé FARIA
@@ -83,6 +83,11 @@ Dispon{\'\i}vel em:
 {KEWERSON, H. \emph{Por que Kotlin foi criado?} 2017.
 Dispon{\'\i}vel em:
   \url{http://blog.triadworks.com.br/por-que-o-kotlin-existe}.}
+
+\bibitem[LECHETA 2015]{Lecheta2015}
+\abntrefinfo{LECHETA}{LECHETA}{2015}
+{LECHETA, R. \emph{Google Android}. [S.l.: s.n.], 2015.
+ISBN 9788575224403.}
 
 \bibitem[McRoberts 2011]{mcroberts2011}
 \abntrefinfo{McRoberts}{MCROBERTS}{2011}
