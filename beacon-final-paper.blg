@@ -1,16 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: beacon-final-paper.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: beacon-final-paper.aux
 The style file: abntex2-alf.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: beacon-final-paper.bib
 Warning--entry type for "Dorina2017" isn't style-file defined
@@ -29,54 +18,29 @@ Warning--entry type for "Saes2014" isn't style-file defined
 --line 62 of file beacon-final-paper.bib
 Warning--entry type for "Firebase" isn't style-file defined
 --line 72 of file beacon-final-paper.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--entry type for "Android" isn't style-file defined
+--line 88 of file beacon-final-paper.bib
+Warning--entry type for "Piekarski2016" isn't style-file defined
+--line 111 of file beacon-final-paper.bib
+Warning--entry type for "Avram2017" isn't style-file defined
+--line 118 of file beacon-final-paper.bib
+Warning--entry type for "Kewerson2017" isn't style-file defined
+--line 127 of file beacon-final-paper.bib
+Warning--entry type for "Gomes2009" isn't style-file defined
+--line 162 of file beacon-final-paper.bib
+Warning--entry type for "Git2016" isn't style-file defined
+--line 172 of file beacon-final-paper.bib
+Warning--entry type for "Schmitz2015" isn't style-file defined
+--line 179 of file beacon-final-paper.bib
+Warning--entry type for "Meirelles2016" isn't style-file defined
+--line 194 of file beacon-final-paper.bib
+Warning--entry type for "Gomes2015" isn't style-file defined
+--line 210 of file beacon-final-paper.bib
+Warning--entry type for "Vieira2015" isn't style-file defined
+--line 216 of file beacon-final-paper.bib
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 11 entries,
-            6714 wiz_defined-function locations,
-            1256 strings with 10830 characters,
-and the built_in function-call counts, 19580 in all, are:
-= -- 2641
-> -- 167
-< -- 676
-+ -- 780
-- -- 55
-* -- 1077
-:= -- 2413
-add.period$ -- 38
-call.type$ -- 11
-change.case$ -- 68
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 2278
-empty$ -- 591
-format.name$ -- 254
-if$ -- 3642
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 169
-newline$ -- 58
-num.names$ -- 50
-pop$ -- 242
-preamble$ -- 1
-purify$ -- 34
-quote$ -- 0
-skip$ -- 2422
-stack$ -- 1
-substring$ -- 898
-swap$ -- 765
-text.length$ -- 9
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 71
-width$ -- 0
-write$ -- 148
-(There were 8 warnings)
+(There were 18 warnings)
