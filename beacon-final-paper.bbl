@@ -5,6 +5,25 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[ALMEIDA 2016]{Almeida2016}
+\abntrefinfo{ALMEIDA}{ALMEIDA}{2016}
+{ALMEIDA, F. \emph{MEAN - Full stack JavaScript para aplicações web com
+  MongoDB, Express, Angular e Node}. [S.l.: s.n.], 2016.
+ISBN 9788555190469.}
+
+\bibitem[Android 2017]{Android}
+\abntrefinfo{Android}{ANDROID}{2017}
+{ANDROID, V. o. \emph{O QUE {\'E} ANDROID}. 2017.
+Dispon{\'\i}vel em: \url{https://www.vivaoandroid.com.br/android/}.}
+
+\bibitem[AVRAM Abel traduzido por~MALARA 2017]{Avram2017}
+\abntrefinfo{AVRAM Abel traduzido por~MALARA}{AVRAM ABEL TRADUZIDO
+  POR~MALARA}{2017}
+{AVRAM ABEL TRADUZIDO POR~MALARA, R. \emph{Kotlin agora {\'e} uma linguagem
+  oficial no Android}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.infoq.com/br/news/2017/06/android-kotlin}.}
+
 \bibitem[CARNEIRO 2016]{CarneiroMaio}
 \abntrefinfo{CARNEIRO}{CARNEIRO}{2016a}
 {CARNEIRO, C. \emph{Beacon: o que {\'e} e quais suas utiliza{\c{c}}{\~o}es mais
@@ -39,10 +58,49 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://blog.cedrotech.com/o-que-e-push-notification/}.}
 
+\bibitem[Git 2016]{Git2016}
+\abntrefinfo{Git}{GIT}{2016}
+{GIT. \emph{Primeiros passos sobre controle de vers{\~a}o}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://git-scm.com/book/pt-br/v1/Primeiros-passos-Sobre-Controle-de-Vers\\%C3\\%A3o}.}
+
+\bibitem[GOMES André Faria apud~TIKOV 2009]{Gomes2009}
+\abntrefinfo{GOMES André Faria apud~TIKOV}{GOMES ANDRé FARIA
+  APUD~TIKOV}{2009}
+{GOMES ANDRé FARIA APUD~TIKOV, S. \emph{Uma r{\'a}pida introdução ao REST}.
+  2009.
+Dispon{\'\i}vel em: \url{https://www.infoq.com/br/articles/rest-introduction}.}
+
+\bibitem[GOMES 2015]{Gomes2015}
+\abntrefinfo{GOMES}{GOMES}{2015}
+{GOMES, H.~S. \emph{Moovit avisa em que parada usuário de transporte público
+  deve descer}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://g1.globo.com/tecnologia/tem-um-aplicativo/noticia/2015/04/moovit-avisa-em-que-parada-usuario-de-transporte-publico-deve-descer.html}.}
+
+\bibitem[KEWERSON 2017]{Kewerson2017}
+\abntrefinfo{KEWERSON}{KEWERSON}{2017}
+{KEWERSON, H. \emph{Por que Kotlin foi criado?} 2017.
+Dispon{\'\i}vel em:
+  \url{http://blog.triadworks.com.br/por-que-o-kotlin-existe}.}
+
 \bibitem[McRoberts 2011]{mcroberts2011}
 \abntrefinfo{McRoberts}{MCROBERTS}{2011}
 {MCROBERTS, M. Arduino b{\'a}sico.
 \emph{S{\~a}o Paulo: Novatec}, 2011.}
+
+\bibitem[MEIRELLES 2016]{Meirelles2016}
+\abntrefinfo{MEIRELLES}{MEIRELLES}{2016}
+{MEIRELLES, F.~S. \emph{Pesquisa Anual do uso de TI-2016}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://eaesp.fgvsp.br/sites/eaesp.fgvsp.br/files/pesti2016gvciappt.pdf}.}
+
+\bibitem[PIEKARSKI 2016]{Piekarski2016}
+\abntrefinfo{PIEKARSKI}{PIEKARSKI}{2016}
+{PIEKARSKI, W. \emph{Announcing updates to Google’s Internet of Things
+  platform: Android Things and Weave}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://android-developers.googleblog.com/2016/12/announcing-googles-new-internet-of-things-platform-with-weave-and-android-things.html}.}
 
 \bibitem[SAES 2014]{Saes2014}
 \abntrefinfo{SAES}{SAES}{2014}
@@ -57,10 +115,38 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/secretarias/509-sas-raiz/dapes/saude-da-pessoa-com-deficiencia/l2-saude-da-pessoa-com-deficiencia/10250-comite-de-ajudas-tecnicas}.}
 
+\bibitem[SCHMITZ 2015]{Schmitz2015}
+\abntrefinfo{SCHMITZ}{SCHMITZ}{2015}
+{SCHMITZ, D. \emph{Tudo que você queria saber sobre Git e GitHub, mas tinha
+  vergonha de perguntar}. 2015.
+Dispon{\'\i}vel em:
+  \url{https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/}.}
+
+\bibitem[Scripts 2017]{movablescripts}
+\abntrefinfo{Scripts}{SCRIPTS}{2017}
+{SCRIPTS, M.~T. \emph{Calculate distance, bearing and more between
+  Latitude/Longitude points}.
+[S.l.], 2017. Dispon{\'\i}vel em:
+  \url{http://www.movable-type.co.uk/scripts/latlong.html}.}
+
+\bibitem[Sousa 2017]{sousa2017extraccao}
+\abntrefinfo{Sousa}{SOUSA}{2017}
+{SOUSA, J. P. C.~d. Extra{\c{c}}{\~a}o e an{\'a}lise de mem{\'o}ria vol{\'a}til
+  em ambientes android: uma abordagem voltada {\`a} reconstru{\c{c}}{\~a}o de
+  trajet{\'o}rias.
+2017.}
+
 \bibitem[Upton e Halfacree 2017]{Upton2017}
 \abntrefinfo{Upton e Halfacree}{UPTON; HALFACREE}{2017}
 {UPTON, E.; HALFACREE, G. \emph{Raspberry Pi -- Manual do Usu{\'a}rio}.
 [S.l.], 2017. Dispon{\'\i}vel em:
   \url{https://books.google.com.br/books?id=xD41DwAAQBAJ}.}
+
+\bibitem[VIEIRA 2015]{Vieira2015}
+\abntrefinfo{VIEIRA}{VIEIRA}{2015}
+{VIEIRA, L. \emph{CittaMobi calcula em tempo real quanto seu ônibus vai
+  demorar a chegar}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://www.techtudo.com.br/tudo-sobre/cittamobi.html}.}
 
 \end{thebibliography}
