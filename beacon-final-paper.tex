@@ -709,7 +709,16 @@ Aprofundando na parte da comunicação entre os subsistemas, a forma como eles s
 \end{figure}
 
 
-Para o banco de dados, foi utilizado o seguinte \textit{schema} para a aplicação:
+Para o banco de dados, foi utilizado o mongoose para criar o \textit{schema} utilizado no projeto. Cada entidade representa uma \textit{collection} com seus respectivos atributos necessários para a criação dos \textit{documents}. Os tipos de dados para o MongoDB são:
+
+\begin{description}
+\item[\textit{ObjectId}] Representam um \textit{document} único dentro de uma \textit{collection};
+\item[\textit{Number}] Engloba os dados numéricos inteiros e reais, sem distinção entre eles;
+\item[\textit{Date}] Armazena um dado do tipo data, com o dia, mês e ano, hora, minutos e segundos;
+\item[\textit{String}] Recebe cadeias de caracteres.
+\end{description}
+
+A seguir apresenta-se o diagrama de relacionamento entre as \textit{collections} criadas.
 
 \begin{figure}[!h]
 \centering
