@@ -26,6 +26,8 @@ Warning--entry type for "Avram2017" isn't style-file defined
 --line 118 of file beacon-final-paper.bib
 Warning--entry type for "Kewerson2017" isn't style-file defined
 --line 127 of file beacon-final-paper.bib
+Warning--entry type for "Node2016" isn't style-file defined
+--line 156 of file beacon-final-paper.bib
 Warning--entry type for "Gomes2009" isn't style-file defined
 --line 162 of file beacon-final-paper.bib
 Warning--entry type for "Git2016" isn't style-file defined
@@ -38,9 +40,29 @@ Warning--entry type for "Gomes2015" isn't style-file defined
 --line 210 of file beacon-final-paper.bib
 Warning--entry type for "Vieira2015" isn't style-file defined
 --line 216 of file beacon-final-paper.bib
+Warning--entry type for "androidthings" isn't style-file defined
+--line 277 of file beacon-final-paper.bib
+Warning--entry type for "ibge" isn't style-file defined
+--line 302 of file beacon-final-paper.bib
+Warning--entry type for "idc" isn't style-file defined
+--line 308 of file beacon-final-paper.bib
+Warning--entry type for "raspimage" isn't style-file defined
+--line 320 of file beacon-final-paper.bib
+Warning--entry type for "hm10image" isn't style-file defined
+--line 326 of file beacon-final-paper.bib
+Warning--entry type for "arduinounoimage" isn't style-file defined
+--line 332 of file beacon-final-paper.bib
+Warning--entry type for "neo6mimage" isn't style-file defined
+--line 338 of file beacon-final-paper.bib
+Warning--entry type for "edisonimage" isn't style-file defined
+--line 344 of file beacon-final-paper.bib
+Warning--entry type for "bersch2013" isn't style-file defined
+--line 350 of file beacon-final-paper.bib
+Warning--campo year vazio ou faltando em arduinounoimage
+Warning--campo year vazio ou faltando em hm10image
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 18 warnings)
+(There were 30 warnings)
