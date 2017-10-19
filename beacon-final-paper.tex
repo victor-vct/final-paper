@@ -248,7 +248,7 @@ Agradecimentos aqui
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
  
-Com o objetivo de auxiliar a locomoção dos deficientes visuais no perímetro urbano, foi desenvolvido um sistema de previsão de chegada de ônibus, visto que o cenário atual não apresenta soluções práticas para o público-alvo. Foram feitos um aplicativo em Android, uma aplicação \textit{Web} em Node, além de módulos para as paradas e para os ônibus. O módulo do ponto de ônibus informa ao aplicativo sobre a localização do usuário. O aplicativo permite que o usuário escolha a linha mais adequada para ele, enviando um aviso ao módulo do ônibus quando necessário. A aplicação realiza os cálculos de tempo e distância, baseados nos dados da base de dados, além de gerar a lista de linhas de ônibus que passam pelo ponto de ônibus em que o usuário se encontra.
+Segundo o IBGE, 3,6\% da população brasileira possui alguma deficiência visual. Deficiência esta, que dificulta a execução de diversas atividades cotidianas, como, por exemplo, a locomoção no perímetro urbano usando transporte público. Com o objetivo de auxiliar a locomoção desses deficientes foi desenvolvido um sistema de escolha de linha e de previsão de chegada de ônibus, visto que o cenário atual não apresenta soluções práticas para esse público-alvo. Para compor o sistema proposto foram desenvolvidos: um aplicativo para smartphone baseados em Android; uma aplicação Web (API); além de módulos de hardware/software para as paradas e para os ônibus. A acessibilidade do aplicativo foi projetada detalhadamente, sendo implementado o feedback auditivo e por vibração, além da detecção automática do ponto onde o deficiente se localiza.  A aplicação gera a lista de linhas de ônibus que passam pelo respectivo ponto, realizando os cálculos de distância e tempo, avisando ao usuário o tempo estimado de espera. O módulo do ônibus envia, em tempo real, a localização atual do ônibus e também avisa ao motorista que há um deficiente visual aguardando no próximo ponto.  Por fim, após a implementação do sistema proposto, incluindo o desenvolvimento dos protótipos dos módulos do ponto e do ônibus, foram realizados testes para verificar se as funcionalidades definidas em projeto foram atendidas adequadamente. 
 
  \textbf{Palavras-chave}: Acessibilidade, deficientes visuais, smartphone, transporte público, aplicativo mobile.
 \end{resumo}
@@ -256,8 +256,8 @@ Com o objetivo de auxiliar a locomoção dos deficientes visuais no perímetro u
 \begin{resumo}[Abstract] 
 \begin{otherlanguage*}{english}
 
-
-
+According to the IBGE, 3,6\% of Brazil's population have some kind of visual impairment. This deficiency, hinder the execution of various everyday activities, like, for example, the usage of public transportation in the urban perimeter. With the objective to help the visual impaired to move around, it was developed a system to choose a bus line and give the bus arrival prediction, as the actual scene doesn't show practical solutions for the target audience. To compose the suggested system, it was developed: an application for Android based smartphones; a Web application (API); and hardware/software modules for the bus stops and the buses. The application accessibility was designed in detail, being implemented
+a feedback by audio and by vibration, besides the automatic detection of the bus stop where the visual impaired is. The application generates a list of the bus lines that go through that bus stop, doing the distance and arrival forecast calculations, notifying the user the estimated waiting time. The bus module sends, in real time, the bus actual location and warns the user that there is a visual impaired waiting in the next bus stop. Lastly, after the implementation of the system proposed, including the bus and bus stop modules prototypes development, were made some tests to see if the defined functionalities answer accordingly.
 \vspace{\onelineskip} 
 \noindent \textbf{Keywords}: Acessibility, visually impaired, smartphone, public transportation, mobile application. 
 \end{otherlanguage*} 
@@ -274,11 +274,6 @@ Com o objetivo de auxiliar a locomoção dos deficientes visuais no perímetro u
 \listoffigures
 \EndNoToc
 
-\begin{siglas} 
-\item[CUFSA] Centro Universitário Fundação Santo André
-\end{siglas}
-\EndNoToc
-
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
@@ -288,7 +283,7 @@ Com o objetivo de auxiliar a locomoção dos deficientes visuais no perímetro u
 
 \section{Referências do Sistema}
 
-Segundo o Censo Demográfico de 2010, feito pelo IBGE (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
+Segundo o Censo Demográfico de 2010, feito pelo \citecustom{ibge} (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
 
 A Fundação Dorina, \citecustom{Dorina2017}, descreve os níveis de deficiência visual da seguinte forma:
 
@@ -300,7 +295,7 @@ Cegueira: há perda total da visão ou pouquíssima capacidade de enxergar, o qu
 Baixa visão ou visão subnormal: caracteriza-se pelo comprometimento do funcionamento visual dos olhos, mesmo após tratamento ou correção. As pessoas com baixa visão podem ler textos impressos ampliados ou com uso de recursos óticos especiais.
 \end{citacao}
 
-Como sugere Bersh (2013, p. 2), a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
+Como sugere \citecustom{bersch2013}, a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
 
 O desenvolvimento de recursos e outros elementos de Tecnologia Assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia. \citecustom{PortalSaude2014}
 
@@ -320,7 +315,7 @@ O Android possui a ferramenta Talkback, para auxiliar no uso de qualquer aplicat
 
 Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes já disponíveis, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
 
-Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS.
+Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS. 
 
 Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, nosso aplicativo sabe em qual ponto o cego está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
 
@@ -335,6 +330,8 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \chapter{Tecnologias Utilizadas}
 
+Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro subsistemas, sendo eles o módulo do ônibus, o \textit{beacon}, o \textit{Web Service} e o aplicativo. Os métodos de comunicação e as tecnologias empregadas nelas estão exemplificadas na figura 1. 
+
 \begin{figure}[H]
 \centering
 \caption{Tecnologias utilizadas.}
@@ -346,7 +343,7 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \subsection{HTTP}
 
-O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para trafego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
+O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para tráfego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
 O cabeçalho do protocolo contém o campo \textit{Content-Type} com o tipo de \textit{MIME} contido no corpo da requisição. 
 
 O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. \citecustom{CCM2017}
@@ -366,8 +363,8 @@ De acordo com \citecustom{CarneiroOutubro} as informações do protocolo são fo
 
 \begin{enumerate}
 
-\item Identificador Único Universal (do inglês \textit{Universal Unique Identifier} ou UUID): É a sequencia que identifica cada dispositivo.
-\item Major: Utilizado para criar grupos de \textit{Beacons}. Assim é possível fazer um filtro com todos dipositivos do mesmo grupo.
+\item Identificador Único Universal (do inglês \textit{Universal Unique Identifier} ou UUID): É a sequência que identifica cada dispositivo.
+\item Major: Utilizado para criar grupos de \textit{Beacons}. Assim é possível fazer um filtro com todos dispositivos do mesmo grupo.
 \item Minor: Utilizado para criar sub grupos, possibilitando o filtro dentro de grupos (\textit{Major)}.
 \item Frequência de Transmissão: Intervalo que o sinal é transmitido.
 Poder da transmissão: Alcance máximo do sinal.
@@ -388,7 +385,7 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10cm, center]{images/raspberry-pi}
-\caption{Raspberry 3.}
+\caption{Raspberry Pi 3. Fonte: \citecustom{raspimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -417,7 +414,7 @@ Especificações:
 \begin{figure}[!h]
 \centering
 \includegraphics[width=5cm, center]{images/hm-10}
-\caption{Módulo Bluetooth HM-10.}
+\caption{Módulo Bluetooth HM-10. Fonte: \citecustom{hm10image}}
 \label{Rotulo}
 \end{figure}
 
@@ -430,7 +427,7 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (h
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10cm, center]{images/arduino}
-\caption{Arduino Uno.}
+\caption{Arduino Uno. Fonte: \citecustom{arduinounoimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -445,11 +442,11 @@ O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos indep
 \begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/neo-6m}
-\caption{Módulo NEO u-blox 6 GPS.}
+\caption{Módulo NEO u-blox 6 GPS. Fonte: \citecustom{neo6mimage}}
 \label{Rotulo}
 \end{figure}
 
-O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio do \textit{GPS (Global Position System)}. De acordo com (SOUSA, João Paulo Claudino de. Extração e análise de memória volátil em ambientes android: uma abordagem voltada à reconstrução de trajetórias. 2016. xvii, 115 f., il. Dissertação (Mestrado em Engenharia Elétrica)—Universidade de Brasília, Brasília, 2016) a obtenção da localização no globo é dada pela trilateração dos dados recebidos por pelo menos quatro satélites, onde cada um envia um sinal de sincronismo e em seguida sua posição. 
+O NEO U-BLOX 6 é um módulo que permite obter a geolocalização por meio do \textit{GPS (Global Position System)}. De acordo com \citecustom{sousa2017extraccao} a obtenção da localização no globo é dada pela trilateração dos dados recebidos por pelo menos quatro satélites, onde cada um envia um sinal de sincronismo e em seguida sua posição. 
 
 Para obter os dados do módulo, realiza-se uma comunicação com protocolo UART (Universal Asynchronous Receiver/Transmitter). Tais informações obtidas seguem a especificação NMEA 0183 da (\textit{National Marine Eletronic Association}). No trecho abaixo, \citecustom{sousa2017extraccao}, fala do protocolo no Android:
 
@@ -469,14 +466,15 @@ outros elementos processados pelo receptor GPS.
 \subsubsection{Android}
 
 Existem vários sistemas operacionais voltados para dispositivos móveis, sendo Android o mais popular. O sistema foi desenvolvido pela empresa Android Inc, posteriormente adquirida pela Google Inc. Foi lançado em 2008 e conta com o apoio da \textit{Open Handset Alliance} (um conjunto de empresas que atuam juntas para o melhoramento dos padrões da telefonia e também do desenvolvimento do sistema Android). 
+
 Tal sistema é muito acessível e popular. Está disponível para uma enorme variedade de dispositivos. O Android tem como base o sistema operacional Linux, conhecido por ser um sistema flexível, adaptável a várias arquiteturas de processador, seguro e eficiente. Um dos grandes diferenciais do Android e que contribui para sua popularidade, é o fato de que o sistema é compatível com vários hardwares e pode estar disponível em \textit{smartphones} de diversos fabricantes. \citecustom{Android}
 
-Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico a seguir mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
+Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, \citecustom{idc}, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico a seguir mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/smartphone-share-market.jpg}
-\caption{Pesquisa realizada pela IDC.}
+\caption{Pesquisa realizada pela IDC. Fonte: \citecustom{idc}}
 \label{Rotulo}
 \end{figure}
 
@@ -512,6 +510,7 @@ Para desenvolvimento do aplicativo para Android, foi adotado o padrão \textit{C
 \subsubsection{Android Things}
 
 O Android Things foi criado voltado ao mercado \textit{IoT (Internet of Things)} e a partir da versão do Android para \textit{smartphones}, o que possibilitou o suporte a maioria das APIs disponíveis. Utilizando a mesma \textit{IDE} para desenvolvimento, qualquer desenvolvedor Android pode desenvolver soluções \textit{IoT} com os conhecimentos que já possui.
+\citecustom{androidthings}
 
 \begin{citacao}
 \textit{A comprehensive way to build IoT products with the power of Android, one of the world's most supported operating systems. Now any Android developer can quickly build a smart device using Android APIs and Google services, while staying highly secure with updates direct from Google.} \citecustom{Piekarski2016}
@@ -566,12 +565,14 @@ Para o desenvolvimento do \textit{Web Service} foi escolhido um conjunto de tecn
 \subsubsubsection{JavaScript}
 
 JavaScript é uma linguagem de programação \textit{client-side}, utilizada para manipular os comportamentos de uma página, controlando o HTML e o CSS. Outra característica é o fato de ser uma linguagem orientada à eventos.
+
 Para explicar melhor o que são eventos, é importante citar que uma página HTML utiliza tags para representar seus elementos, podendo conter menus, botões e formulários, entre outros, em seu corpo. Cada elemento possui alguns atributos, sendo alguns desses chamados atributos de eventos, como por exemplo o \textit{onClick} que realiza alguma função caso o elemento referente seja clicado pelo usuário.
+
 Para especificar as ações que devem ser tomadas quando um evento é acionado, pode-se utilizar o JavaScript. Com o decorrer do tempo, foram desenvolvidas algumas modificações na linguagem JavaScript para possibilitar a utilização do mesmo no \textit{server-side}, possibilitando o desenvolvimento de um \textit{Web Service}. 
 
+Foram escolhidas, como ferramentas, o MongoDB, o Node.js e o Express.js, utilizando o \citecustom{Almeida2016} como referência teórica e prática para conhecer essas tecnologias.
 
 \subsubsection{MongoDB}
-
 
 É um banco de dados não relacional com uma escalabilidade muito boa. Ele utiliza conceitos de \textit{collections} e \textit{documents} em sua construção. 
 
@@ -582,15 +583,10 @@ Outro item importante sobre o MongoDB é o fato de ser \textit{schemaless}, torn
 Apesar de \textit{schemaless}, é possível criar \textit{schemas} para auxiliar no desenvolvimento. Ao utilizar o mongoose, ferramenta desenvolvida em cima do MongoDB para trabalhar nele como se estivesse utilizando um banco relacional, é possível definir de antemão, quais os atributos que devem existir em cada \textit{collection} necessária para a aplicação.
 
 
-\subsubsection{Express.js}
-
-É um \textit{framework} para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor.
-
-
 \subsubsection{Node.js}
 
 Plataforma principal para o funcionamento da aplicação, construída sobre o motor Javascript V8 do Google Chrome.
-O Node.js foi desenvolvido para construir aplicações \textit{web} escaláveis de forma assíncrona, cuidando de várias conexões de maneira concorrente. Ele consegue isso através da utilização de \textit{callbacks}. 
+O Node.js foi desenvolvido para construir aplicações \textit{web} escaláveis de forma assíncrona, cuidando de várias conexões de maneira concorrente. Ele consegue isso através da utilização de \textit{callbacks}. \citecustom{Node2016}
 
 Sempre que ocorre um evento, é disparado um \textit{callback} que dirá o que deve ser realizado pela aplicação. Esse processo é feito para todas as funções presentes na aplicação e sempre que houver um evento sendo disparado.
 
@@ -599,6 +595,11 @@ Como no lado do servidor, não existe uma interface gráfica a ser visualizada, 
 O Node.js é uma plataforma extremamente modularizada, com módulos criados por desenvolvedores ativos no mundo todo. Para gerenciar esses módulos, ele utiliza o npm, responsável por instalar, atualizar ou remover suas dependências. 
 
 É o Node.js que realiza a conexão com servidores e diz quais bancos de dados serão utilizados pela aplicação, na configuração inicial.
+
+
+\subsubsection{Express.js}
+
+É um \textit{framework} para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor.
 
 
 \subsubsection{REST}
@@ -1226,7 +1227,7 @@ Após configurado, o módulo pode ser ligado em uma bateria 3,3v para utilizaç�
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/intel-edison-arduino-kit}
-\caption{Intel Edison.}
+\caption{Intel Edison. Fonte: \citecustom{edisonimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -1364,7 +1365,7 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 %Falar sobre a umbler
 Para tornar a aplicação acessível ao público, torna-se necessário dispor da utilização de um servidor que fique disponível constantemente. \\
 
-Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy, Umbler e LocaWeb.\\
+Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy (https://br.godaddy.com/), Umbler (https://www.umbler.com/) e LocaWeb (https://www.locaweb.com.br).\\
 
 Primeiro fator, que fez o serviço da GoDaddy ser excluído da lista, foi a questão de período de teste. A GoDaddy possui um período nulo de teste do serviço. Já a Umbler e LocaWeb fornecem créditos para novos desenvolvedores.\\
 
@@ -1540,6 +1541,8 @@ O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como 
 Quando o motorista chega na parada, ele pressiona um botão para anunciar sua chegada. Quando \textit{Web Service} recebe esse alerta por meio de uma requisição \textit{HTTP}, ele verifica quais usuários estão aguardando aquele ônibus, então é disparado uma \textit{push notification}, por meio do \textit{Firebase}, avisando que o ônibus que ele aguarda está parado.
 
 \postextual
+
+\bibliography{beacon-final-paper}
 
 \begin{apendicesenv}
 \partapendices
@@ -2428,6 +2431,6 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 \end{apendicesenv}
 
-\bibliography{beacon-final-paper}
+
 
 \end{document}

@@ -16,6 +16,12 @@ ISBN 9788555190469.}
 {ANDROID, V. o. \emph{O QUE {\'E} ANDROID}. 2017.
 Dispon{\'\i}vel em: \url{https://www.vivaoandroid.com.br/android/}.}
 
+\bibitem[Arduino]{arduinounoimage}
+\abntrefinfo{Arduino}{ARDUINO}{}
+{ARDUINO. \emph{Arduino Uno Rev3}.
+Dispon{\'\i}vel em:
+  \url{https://store-cdn.arduino.cc/usa/catalog/product/cache/1/image/1800x/ea1ef423b933d797cfca49bc5855eef6/A/0/A000066\_front\_2.jpg}.}
+
 \bibitem[AVRAM Abel traduzido por~MALARA 2017]{Avram2017}
 \abntrefinfo{AVRAM Abel traduzido por~MALARA}{AVRAM ABEL TRADUZIDO
   POR~MALARA}{2017}
@@ -23,6 +29,12 @@ Dispon{\'\i}vel em: \url{https://www.vivaoandroid.com.br/android/}.}
   oficial no Android}. 2017.
 Dispon{\'\i}vel em:
   \url{https://www.infoq.com/br/news/2017/06/android-kotlin}.}
+
+\bibitem[BERSCH 2013]{bersch2013}
+\abntrefinfo{BERSCH}{BERSCH}{2013}
+{BERSCH, R. \emph{Introdução à tecnologia assistiva}. 2013.
+Dispon{\'\i}vel em:
+  \url{http://www.assistiva.com.br/Introducao\_Tecnologia\_Assistiva.pdf}.}
 
 \bibitem[CARNEIRO 2016]{CarneiroMaio}
 \abntrefinfo{CARNEIRO}{CARNEIRO}{2016a}
@@ -40,6 +52,12 @@ Dispon{\'\i}vel em: \url{http://ibeacon.blog.br/ibeacon-guia-completo/}.}
 {CCM. \emph{Formatos e extens{\~o}es de arquivos - Tipo MIME}. 2017.
 Dispon{\'\i}vel em:
   \url{http://br.ccm.net/contents/649-formatos-e-extensoes-de-arquivos-tipo-mime}.}
+
+\bibitem[Developer 2014]{edisonimage}
+\abntrefinfo{Developer}{DEVELOPER}{2014}
+{DEVELOPER, A. \emph{Intel Edison}. 2014.
+Dispon{\'\i}vel em:
+  \url{https://developer.android.com/things/images/intel-edison-arduino-kit.png}.}
 
 \bibitem[Developers 2017]{Firebase}
 \abntrefinfo{Developers}{DEVELOPERS}{2017}
@@ -78,6 +96,24 @@ Dispon{\'\i}vel em: \url{https://www.infoq.com/br/articles/rest-introduction}.}
 Dispon{\'\i}vel em:
   \url{http://g1.globo.com/tecnologia/tem-um-aplicativo/noticia/2015/04/moovit-avisa-em-que-parada-usuario-de-transporte-publico-deve-descer.html}.}
 
+\bibitem[IBGE 2010]{ibge}
+\abntrefinfo{IBGE}{IBGE}{2010}
+{IBGE. \emph{Características Gerais, Religião, Deficiência}. 2010.
+Dispon{\'\i}vel em:
+  \url{ftp://ftp.ibge.gov.br/Censos/Censo\_Demografico\_2010/Caracteristicas\_Gerais\_Religiao\_Deficiencia/xls/Brasil\_xls.zip}.}
+
+\bibitem[IDC 2017]{idc}
+\abntrefinfo{IDC}{IDC}{2017}
+{IDC. \emph{Smartphone OS Market Share, 2017 Q1}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.idc.com/promo/smartphone-market-share/os}.}
+
+\bibitem[Instructables 2015]{neo6mimage}
+\abntrefinfo{Instructables}{INSTRUCTABLES}{2015}
+{INSTRUCTABLES. \emph{Raspberry Pi \& the Neo 6M GPS}. 2015.
+Dispon{\'\i}vel em:
+  \url{https://cdn.instructables.com/FKL/Q62O/ICJLZ1YR/FKLQ62OICJLZ1YR.MEDIUM.jpg}.}
+
 \bibitem[KEWERSON 2017]{Kewerson2017}
 \abntrefinfo{KEWERSON}{KEWERSON}{2017}
 {KEWERSON, H. \emph{Por que Kotlin foi criado?} 2017.
@@ -103,6 +139,17 @@ ISBN 9788575224403.}
 {MEIRELLES, F.~S. \emph{Pesquisa Anual do uso de TI-2016}. 2016.
 Dispon{\'\i}vel em:
   \url{http://eaesp.fgvsp.br/sites/eaesp.fgvsp.br/files/pesti2016gvciappt.pdf}.}
+
+\bibitem[ML]{hm10image}
+\abntrefinfo{ML}{ML}{}
+{ML. \emph{HM-10 Bluetooth}.
+Dispon{\'\i}vel em:
+  \url{https://http2.mlstatic.com/D\_Q\_NP\_155905-MLB25125191174\_102016-Q.jpg}.}
+
+\bibitem[NodeBR 2016]{Node2016}
+\abntrefinfo{NodeBR}{NODEBR}{2016}
+{NODEBR. \emph{O que {\'e} Node.js}. 2016.
+Dispon{\'\i}vel em: \url{http://nodebr.com/o-que-e-node-js/}.}
 
 \bibitem[PIEKARSKI 2016]{Piekarski2016}
 \abntrefinfo{PIEKARSKI}{PIEKARSKI}{2016}
@@ -138,12 +185,23 @@ Dispon{\'\i}vel em:
 [S.l.], 2017. Dispon{\'\i}vel em:
   \url{http://www.movable-type.co.uk/scripts/latlong.html}.}
 
+\bibitem[Shopify 2016]{raspimage}
+\abntrefinfo{Shopify}{SHOPIFY}{2016}
+{SHOPIFY. \emph{Raspberry Pi 3 imagem}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://cdn.shopify.com/s/files/1/0174/1800/products/Raspberry\_Pi\_3\_2\_of\_4\_2fe9737c-ff10-4b05-97fa-66e956393b9c\_1024x1024.JPG?v=1456565788}.}
+
 \bibitem[Sousa 2017]{sousa2017extraccao}
 \abntrefinfo{Sousa}{SOUSA}{2017}
 {SOUSA, J. P. C.~d. Extra{\c{c}}{\~a}o e an{\'a}lise de mem{\'o}ria vol{\'a}til
   em ambientes android: uma abordagem voltada {\`a} reconstru{\c{c}}{\~a}o de
   trajet{\'o}rias.
 2017.}
+
+\bibitem[Things 2015]{androidthings}
+\abntrefinfo{Things}{THINGS}{2015}
+{THINGS, A. \emph{The ease and power of Android}. 2015.
+Dispon{\'\i}vel em: \url{https://developer.android.com/things/index.html}.}
 
 \bibitem[Upton e Halfacree 2017]{Upton2017}
 \abntrefinfo{Upton e Halfacree}{UPTON; HALFACREE}{2017}
