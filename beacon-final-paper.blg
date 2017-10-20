@@ -58,6 +58,8 @@ Warning--entry type for "edisonimage" isn't style-file defined
 --line 344 of file beacon-final-paper.bib
 Warning--entry type for "bersch2013" isn't style-file defined
 --line 350 of file beacon-final-paper.bib
+Warning--entry type for "beacon" isn't style-file defined
+--line 356 of file beacon-final-paper.bib
 Warning--campo year vazio ou faltando em arduinounoimage
 Warning--campo year vazio ou faltando em hm10image
 +---------------------------------------------------------+
@@ -65,4 +67,4 @@ Warning--campo year vazio ou faltando em hm10image
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 30 warnings)
+(There were 31 warnings)

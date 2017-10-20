@@ -315,7 +315,7 @@ O Android possui a ferramenta Talkback, para auxiliar no uso de qualquer aplicat
 
 Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes já disponíveis, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
 
-Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS. 
+Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS. \citecustom{beacon}.
 
 Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, nosso aplicativo sabe em qual ponto o cego está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
 
@@ -1548,6 +1548,16 @@ O responsável por alterar o valor do nó filho é o \textit{Web Service}. Como 
 \subsection{Alertar usuário que ônibus chegou}
 
 Quando o motorista chega na parada, ele pressiona um botão para anunciar sua chegada. Quando \textit{Web Service} recebe esse alerta por meio de uma requisição \textit{HTTP}, ele verifica quais usuários estão aguardando aquele ônibus, então é disparado uma \textit{push notification}, por meio do \textit{Firebase}, avisando que o ônibus que ele aguarda está parado.
+
+\chapter{Considerações Finais}
+
+Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de quem as usa. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até o ônibus desejado demorará para chegar na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário arrumar sua posição inicial num mapa para uma informação mais precisa com o que o usuário precisa. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo algum defeito.
+
+Para suprir essa necessidade, foi desenvolvido um aplicativo nativo em Android completamente integrado com o Talkback, uma aplicação Web em Node, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o.
+
+<inserir dados sobre os testes realizados>
+
+Apesar de ser funcional, existem pontos a ser explorados. O sistema, do jeito que se encontra, não analisa o sentido em que o ônibus está indo. Durante a etapa de testes, foi observado um comportamento relacionado a utilização da busca binária que abriu espaço para a implementação de um tipo diferente de lógica para correção da posição do ônibus em relação à sua rota. <ver se existem mais pontos a serem citados aqui>
 
 \postextual
 
