@@ -258,6 +258,7 @@ Segundo o IBGE, 3,6\% da população brasileira possui alguma deficiência visua
 
 According to the IBGE, 3,6\% of Brazil's population have some kind of visual impairment. This deficiency, hinder the execution of various everyday activities, like, for example, the usage of public transportation in the urban perimeter. With the objective to help the visual impaired to move around, it was developed a system to choose a bus line and give the bus arrival prediction, as the actual scene doesn't show practical solutions for the target audience. To compose the suggested system, it was developed: an application for Android based smartphones; a Web application (API); and hardware/software modules for the bus stops and the buses. The application accessibility was designed in detail, being implemented
 a feedback by audio and by vibration, besides the automatic detection of the bus stop where the visual impaired is. The application generates a list of the bus lines that go through that bus stop, doing the distance and arrival forecast calculations, notifying the user the estimated waiting time. The bus module sends, in real time, the bus actual location and warns the user that there is a visual impaired waiting in the next bus stop. Lastly, after the implementation of the system proposed, including the bus and bus stop modules prototypes development, were made some tests to see if the defined functionalities answer accordingly.
+
 \vspace{\onelineskip} 
 \noindent \textbf{Keywords}: Acessibility, visually impaired, smartphone, public transportation, mobile application. 
 \end{otherlanguage*} 
@@ -1435,7 +1436,7 @@ Ter conhecimento da posição do ônibus se faz necessário para realizar a prev
 
 Quando o \textit{Web Service} recupera as informações da rota do veículo, ele obtém todos os pontos referentes a ela, onde cada um tem informações de latitude, longitude e se este é um ponto de parada. Então é verificado qual ponto está mais próximo a localização recebida, o mais próximo é associado ao ônibus.
 
-O cálculo de distância é feito a partir da fórmula \textit{Haversine}, ecnontrado em \citecustom{movablescripts} :
+O cálculo de distância é feito a partir da fórmula \textit{Haversine}, encontrado em \citecustom{movablescripts} :
 
 \begin{center}
 
@@ -1447,6 +1448,8 @@ $ d = R * c $
 
 Onde: $ \Delta\phi = (latitude2 - latitude1), \phi1 = latitude1, \phi2 = latitude2, \Delta\lambda = longitude1 - longitude2 $ 
 
+Foi observado que seria gasto muito processamento nessa parte. Uma tentativa de diminuir isso, foi o uso de um algoritmo de busca binária.
+
 \textbf{Busca Binária}
 
 \begin{flushright}
@@ -1456,7 +1459,7 @@ It is simple, elegant, and immensely important."}
 — Udi Manber, Introduction to Algorithms
 \end{flushright}
 
-Para otimizar a busca pelo ponto mais apto, é realizado uma busca binária. Ela segue o paradigma de dividir para conquistar. Tendo como premissa um \textit{array} de dados ordenados, primeiro observa os extremos do array, para em seguida observar o ponto médio entre eles. Caso um desses pontos seja igual ao valor procurado, assume ele como solução. Caso contrário se observa qual sub \textit{array} é mais apto, início até o centro ou do centro até o fim. O mais apto é submetido a uma nova busca binária. 
+Para otimizar a busca pelo ponto mais apto, foi estudado a busca binária. Ela segue o paradigma de dividir para conquistar. Tendo como premissa um \textit{array} de dados ordenados, primeiro observa os extremos do array, para em seguida observar o ponto médio entre eles. Caso um desses pontos seja igual ao valor procurado, assume ele como solução. Caso contrário se observa qual sub \textit{array} é mais apto, início até o centro ou do centro até o fim. O mais apto é submetido a uma nova busca binária. 
 
 A vantagem em se utilizar uma busca binária ao invés de uma busca sequencial pode ser observado pelas suas complexidades. A busca binária possui complexidade $O(\log_2 n)$, enquanto a sequencial possui complexidade $O(n)$
 
@@ -1510,6 +1513,21 @@ O algoritmo então verifica qual metade é mais apta, baseando-se nas distância
 \end{figure}
 
 Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, então o ponto mais próximo assume o posto de mais apto e é associado ao ônibus.
+
+\textbf{Resultados}
+
+Após realizar testes foi comprovado que embora existe a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a figura 36.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm, center]{images/busca-binaria-problema}
+\caption{Representação do problema da busca binária.}
+\label{binary-search-problem}
+\end{figure}
+
+Como pode se observar na figura 36, o ponto mais próximo em relação a posição recebida é o número 5. Quando se inicia a busca binária, o ponto número 4 é considerado o centro, tornando o sub \textit{array} distânciaInicio até distânciaMeio ser o mais apto para se realizar uma busca interna, fazendo o ponto número 5 ser desconsiderado.
+
+Embora a busca binária demonstre ser mais eficiente que a busca sequencial, a implementação neste problema, tendo como heurística a menor distância, demonstrou não ser suficiente para diminuir o processamento e encontrar a melhor solução.
 
 \subsection{Previsão de chegada}
 
