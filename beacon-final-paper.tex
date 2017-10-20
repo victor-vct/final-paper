@@ -702,31 +702,31 @@ Dispositivo instalado no ônibus. Mantém comunicação constante com a API para
 
 Aprofundando na parte da comunicação entre os subsistemas, a forma como eles se relacionam e os parâmetros necessários para o funcionamento, seguem a seguinte forma:
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/data-flux.jpg}
+\includegraphics[width=15cm, center]{images/data-flux.jpg}
 \caption{Diagrama de fluxo de dados.}
 \label{Rotulo}
 \end{figure}
 
+\newpage
 
-Para o banco de dados, foi utilizado o mongoose para criar o \textit{schema} utilizado no projeto. Cada entidade representa uma \textit{collection} com seus respectivos atributos necessários para a criação dos \textit{documents}. Os tipos de dados para o MongoDB são:
+Para armazenar todas informações necessárias no sistema, foi utilizado o \textit{schema} conforme a figura 11:
 
-\begin{description}
-\item[\textit{ObjectId}] Representam um \textit{document} único dentro de uma \textit{collection};
-\item[\textit{Number}] Engloba os dados numéricos inteiros e reais, sem distinção entre eles;
-\item[\textit{Date}] Armazena um dado do tipo data, com o dia, mês e ano, hora, minutos e segundos;
-\item[\textit{String}] Recebe cadeias de caracteres.
-\end{description}
-
-A seguir apresenta-se o diagrama de relacionamento entre as \textit{collections} criadas.
-
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/database-api.png}
+\includegraphics[width=15cm, center]{images/database-api.png}
 \caption{Diagrama de banco de dados.}
 \label{Rotulo}
 \end{figure}
+
+\noindent \textbf{busModule:} Contém as informações de todos módulos dos ônibus.\\
+\textbf{busLine:} Contém os registros das linhas de ônibus disponíveis.\\
+\textbf{route:} Contém o registro da rota que uma linha de ônibus faz. Nela é possível armazenar o terminal de origem e terminal de destino.\\
+\textbf{busTerminal:} Contém os registros de todos terminais de ônibus.\\
+\textbf{routePoint:} Cada registro em \textit{route} é associado a N registros em \textit{routePoint}, onde cada \textit{routePoint} representa um ponto geográfico da rota.\\
+\textbf{busStop:} Contém todos registros de pontos de parada que existem. \\
+\textbf{userRequire:} Contém todos registros de requisições de parada. Quando um usuário solicitar um ônibus, sua solicitação é armazenada nesta \textit{collection}.\\
 
 \newpage
 
@@ -1569,13 +1569,11 @@ Quando o motorista chega na parada, ele pressiona um botão para anunciar sua ch
 
 \chapter{Considerações Finais}
 
-Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de quem as usa. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até o ônibus desejado demorará para chegar na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário arrumar sua posição inicial num mapa para uma informação mais precisa com o que o usuário precisa. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo algum defeito.
+Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de quem as usa. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até o ônibus desejado demorará para chegar na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário arrumar sua posição inicial num mapa para uma informação mais precisa com o que o usuário necessita. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo alguma dificuldade de uso.
 
-Para suprir essa necessidade, foi desenvolvido um aplicativo nativo em Android completamente integrado com o Talkback, uma aplicação Web em Node, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o.
+Neste trabalho foi possível desenvolver um aplicativo nativo em Android adaptado com o Talkback e com feedback descritivo das telas por meio de áudio, uma aplicação Web em Node, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de obter uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o. O sistema se comportou como esperado, provendo facilidades de uso na hora de escolher o ônibus, provando ser uma boa solução para facilitar o uso deste transporte público.
 
-<inserir dados sobre os testes realizados>
-
-Apesar de ser funcional, existem pontos a ser explorados. O sistema, do jeito que se encontra, não analisa o sentido em que o ônibus está indo. Durante a etapa de testes, foi observado um comportamento relacionado a utilização da busca binária que abriu espaço para a implementação de um tipo diferente de lógica para correção da posição do ônibus em relação à sua rota. <ver se existem mais pontos a serem citados aqui>
+Apesar de ser funcional, existem pontos a serem melhorados. O foco deste trabalho foi em explorar uma solução para facilitar a forma como deficientes visuais utilizam os ônibus, não dando foco na construção de um sistema de previsão de horários mais preciso. Isso gerou alguns trabalhos para serem explorados nesse sistema, como alterar a linha quando termina uma rota caso seja necessário, e melhorar a tratativa de velocidade do ônibus para considerar velocidades médias de um trecho para deixar a previsão mais precisa. Outro ponto interessante seria a implementação de uma interface gráfica para controlar os registros que existem no banco de dados da aplicação Web, afim de facilitar seu uso.
 
 \postextual
 
