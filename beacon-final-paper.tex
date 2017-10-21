@@ -126,10 +126,10 @@
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
 		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
+    	linkcolor=black,          	% color of internal links
     	citecolor=black,        		% color of links to bibliography
     	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
+		urlcolor=black,
 		bookmarksdepth=4
 }
 \makeatother
@@ -183,7 +183,7 @@
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
-% \pretextual
+\pretextual
 \begin{figure}[h]
 \centering % este comando é usado para centralizar a figura
 \includegraphics[width=4.5cm, height=2cm]{images/logo-fsa.jpg}\\
@@ -270,10 +270,12 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 % ---
 \tableofcontents*
 % ---
-\newpage
 % ---
-\listoffigures
 \EndNoToc
+
+\newpage
+
+\listoffigures\thispagestyle{empty} \newpage
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
@@ -281,8 +283,6 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 \textual
 
 \chapter{Introdução}
-
-\section{Referências do Sistema}
 
 Segundo o Censo Demográfico de 2010, feito pelo \citecustom{ibge} (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
 
@@ -331,13 +331,13 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \chapter{Tecnologias Utilizadas}
 
-Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro subsistemas, sendo eles o módulo do ônibus, o \textit{beacon}, o \textit{Web Service} e o aplicativo. Os métodos de comunicação e as tecnologias empregadas nelas estão exemplificadas na figura 1. 
+Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro subsistemas, sendo eles o módulo do ônibus, o \textit{beacon}, o \textit{Web Service} e o aplicativo. Os métodos de comunicação e as tecnologias empregadas nelas estão exemplificadas na Figura 1. 
 
 \begin{figure}[H]
 \centering
 \caption{Tecnologias utilizadas.}
 \includegraphics[width=10cm, center]{images/tech}
-\label{Rotulo}
+\label{tecnolgias}
 \end{figure}
 
 \section{Comunicação}
@@ -459,6 +459,8 @@ no que diz respeito a coordenadas de posicionamento, consiste em enviar uma linh
 codificada em ASCII, que pode conter informações de posição, velocidade, tempo, dentre
 outros elementos processados pelo receptor GPS. 
 \end{citacao}
+
+\newpage
 
 \section{Software}
 
@@ -899,7 +901,7 @@ Neste tópico, serão apresentados os \textit{wireframes} criados tanto para o a
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=5cm, center]{images/tela-1-buscando-beacon.PNG}
+\includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
 \caption{Tela do aplicativo ao buscar por um ponto de ônibus próximo.}
 \label{Rotulo}
 \end{figure}
@@ -926,7 +928,7 @@ Grupo\\ \hline
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=5cm, center]{images/tela-2-buscando-ponto.PNG}
+\includegraphics[width=5cm, center]{images/beacon_searching_list_bus}
 \caption{Tela do aplicativo ao buscar por um ponto de ônibus na API.}
 \label{Rotulo}
 \end{figure}
@@ -953,7 +955,7 @@ Grupo\\ \hline
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=5cm, center]{images/tela-3-lista-de-onibus.PNG}
+\includegraphics[width=5cm, center]{images/beacon-list-bus}
 \caption{Tela do aplicativo com ônibus disponíveis.}
 \label{Rotulo}
 \end{figure}
@@ -980,7 +982,7 @@ Grupo\\ \hline
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=5cm, center]{images/tela-4-informacoes-do-onibus.PNG}
+\includegraphics[width=5cm, center]{images/beacon-detail-bus}
 \caption{Tela do aplicativo com detalhes de um ônibus.}
 \label{Rotulo}
 \end{figure}
@@ -1008,7 +1010,7 @@ Número                  & Nome                                  & Descrição  
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=5cm, center]{images/tela-5-acompanhamento-do-onibus.PNG}
+\includegraphics[width=5cm, center]{images/beacon_waiting_bus}
 \caption{Tela do aplicativo sobre a solicitação de um ônibus.}
 \label{Rotulo}
 \end{figure}
@@ -1036,7 +1038,7 @@ Número & Nome                                                                  
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/busmodule-carregando}
+\includegraphics[width=15cm, center]{images/bus-tracker-loading}
 \caption{Tela do módulo do ônibus quando está carregando informações.}
 \label{Rotulo}
 \end{figure}
@@ -1060,7 +1062,7 @@ Número & Nome                                                                  
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/busmodule-comecar-rota}
+\includegraphics[width=15cm, center]{images/bus-tracker-waiting-start-route}
 \caption{Tela do módulo do ônibus aguardando motorista iniciar rota.}
 \label{Rotulo}
 \end{figure}
@@ -1093,7 +1095,7 @@ Número & Nome                                                                  
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/busmodule-finish-route}
+\includegraphics[width=15cm, center]{images/bus-tracker-in-route}
 \caption{Tela do módulo do ônibus quando motorista está fazendo a rota.}
 \label{Rotulo}
 \end{figure}
@@ -1126,7 +1128,7 @@ Número & Nome                                                                  
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/busmodule-pare}
+\includegraphics[width=15cm, center]{images/bus-tracker-needs-to-stop}
 \caption{Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}
 \label{Rotulo}
 \end{figure}
@@ -1311,36 +1313,6 @@ O \textit{Android Things} provê uma \textit{API} para animações que herdou da
 
 \section{Aplicativo}
 
-\subsection{Telas}
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=5cm]{images/beacon_searching_bus_stop}
-  \caption{Busca por um ponto de ônibus}%
-  \label{Rotulo}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=5cm]{images/beacon_list_bus}
-  \caption{Lista de ônibus disponíveis}%
-  \label{Rotulo}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=5cm]{images/beacon_detail_bus}
-  \caption{Detalhes do ônibus}
-  \label{Rotulo}
-\end{minipage}%
-\end{figure}
-
-\newpage
-
 \subsection{IDE}
 
 Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
@@ -1436,7 +1408,7 @@ Ter conhecimento da posição do ônibus se faz necessário para realizar a prev
 
 Quando o \textit{Web Service} recupera as informações da rota do veículo, ele obtém todos os pontos referentes a ela, onde cada um tem informações de latitude, longitude e se este é um ponto de parada. Então é verificado qual ponto está mais próximo a localização recebida, o mais próximo é associado ao ônibus.
 
-O cálculo de distância é feito a partir da fórmula \textit{Haversine}, encontrado em \citecustom{movablescripts} :
+O cálculo de distância é feito a partir da fórmula \textit{Haversine}, encontrado em \citecustom{movablescripts}.
 
 \begin{center}
 
@@ -1588,6 +1560,78 @@ Apesar de ser funcional, existem pontos a serem melhorados. O foco deste trabalh
 \centering
 \includegraphics[angle=90, width=12cm, center]{images/app-class-diagram}
 \caption{Representação da busca binária I.}
+\label{Rotulo}
+\end{figure}
+
+\chapter{Wireframes}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-1-buscando-beacon.PNG}
+\caption{Wireframe da tela do aplicativo ao buscar por um ponto de ônibus próximo.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-2-buscando-ponto.PNG}
+\caption{Wireframe da tela do aplicativo ao buscar por um ponto de ônibus na API.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-3-lista-de-onibus.PNG}
+\caption{Wireframe da tela do aplicativo com ônibus disponíveis.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-4-informacoes-do-onibus.PNG}
+\caption{Wireframe da tela do aplicativo com detalhes de um ônibus.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm, center]{images/tela-5-acompanhamento-do-onibus.PNG}
+\caption{Wireframe da tela do aplicativo sobre a solicitação de um ônibus.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-carregando}
+\caption{Wireframe da tela do módulo do ônibus quando está carregando informações.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-comecar-rota}
+\caption{Wireframe da tela do módulo do ônibus aguardando motorista iniciar rota.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-finish-route}
+\caption{Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-finish-route}
+\caption{Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}
+\label{Rotulo}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm, center]{images/busmodule-pare}
+\caption{Wireframe da tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}
 \label{Rotulo}
 \end{figure}
 
