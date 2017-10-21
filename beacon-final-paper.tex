@@ -312,7 +312,7 @@ Este trabalho visa facilitar a vida de deficientes visuais que utilizam ônibus 
 
 Sistemas operacionais de smartphone, como Android e iOS, possuem ferramentas nativas que adaptam o uso de aplicativos para pessoas com deficiências, possibilitando a utilização do aparelho sem grandes dificuldades, mas, nem sempre, criam boas experiências de uso. 
 
-O Android possui a ferramenta Talkback, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita o Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudios descrições mais detalhadas sobre o significado de uma tela.
+O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita o Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudios descrições mais detalhadas sobre o significado de uma tela.
 
 Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes já disponíveis, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
 
@@ -335,8 +335,8 @@ Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro s
 
 \begin{figure}[H]
 \centering
-\caption{Tecnologias utilizadas.}
 \includegraphics[width=10cm, center]{images/tech}
+\caption{Tecnologias utilizadas.}
 \label{tecnolgias}
 \end{figure}
 
@@ -386,7 +386,8 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10cm, center]{images/raspberry-pi}
-\caption{Raspberry Pi 3. Fonte: \citecustom{raspimage}}
+\caption{Raspberry Pi 3}
+\fonte{\citeauthor{raspimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -415,7 +416,8 @@ Especificações:
 \begin{figure}[!h]
 \centering
 \includegraphics[width=5cm, center]{images/hm-10}
-\caption{Módulo Bluetooth HM-10. Fonte: \citecustom{hm10image}}
+\caption{Módulo Bluetooth HM-10}
+\fonte{\citeauthor{hm10image}}
 \label{Rotulo}
 \end{figure}
 
@@ -428,7 +430,8 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (h
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10cm, center]{images/arduino}
-\caption{Arduino Uno. Fonte: \citecustom{arduinounoimage}}
+\caption{Arduino Uno}
+\fonte{\citeauthor{arduinounoimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -443,7 +446,8 @@ O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos indep
 \begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/neo-6m}
-\caption{Módulo NEO u-blox 6 GPS. Fonte: \citecustom{neo6mimage}}
+\caption{Módulo NEO u-blox 6 GPS}
+\fonte{\citeauthor{neo6mimage}}
 \label{Rotulo}
 \end{figure}
 
@@ -477,7 +481,8 @@ Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/smartphone-share-market.jpg}
-\caption{Pesquisa realizada pela IDC. Fonte: \citecustom{idc}}
+\caption{Pesquisa realizada pela IDC}
+\fonte{\citeauthor{idc}}
 \label{Rotulo}
 \end{figure}
 
@@ -753,7 +758,8 @@ Solicitar parada do ônibus escolhido: este caso de uso é uma extensão do caso
 
 \bgroup
 \def\arraystretch{1.5}
-\begin{table}[!h]
+\begin{table}[H]
+\caption{Tabela com caso de uso UC001.}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -769,14 +775,14 @@ Solicitar parada do ônibus escolhido: este caso de uso é uma extensão do caso
 \multicolumn{2}{|c|}{\textbf{Fluxo alternativo}}                                                          \\ \hline
 \multicolumn{2}{|l|}{Não possui fluxo alternativo}                                                        \\ \hline
 \end{tabular}
-\caption{Tabela com caso de uso UC001.}
 \label{Rotulo}
 \end{table}
 \egroup
 
 \bgroup
 \def\arraystretch{1.5}
-\begin{table}[!h]
+\begin{table}[H]
+\caption{Tabela com caso de uso UC002.}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -792,7 +798,6 @@ Solicitar parada do ônibus escolhido: este caso de uso é uma extensão do caso
 \begin{tabular}[c]{@{}l@{}}1.a 1. Usuário cancela \\ solicitação de parada\end{tabular}           & 2. Sistema retorna cancela operação                                                                      \\ \hline
 \begin{tabular}[c]{@{}l@{}}3.a 1. Usuário cancela\\  escolha de ponto de ônibus\end{tabular}      & 2. Sistema retorna cancela operação                                                                      \\ \hline
 \end{tabular}
-\caption{Tabela com caso de uso UC002.}
 \label{Rotulo}
 \end{table}
 \egroup
@@ -820,7 +825,8 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 
 \bgroup
 \def\arraystretch{1.5}
-\begin{table}[!h]
+\begin{table}[H]
+\caption{Tabela com caso de uso UC003.}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -836,14 +842,14 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 \\ \hline
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
-\caption{Tabela com caso de uso UC003.}
 \label{Rotulo}
 \end{table}
 \egroup
 
 \bgroup
 \def\arraystretch{1.5}
-\begin{table}[!h]
+\begin{table}[H]
+\caption{Tabela com caso de uso UC004.}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -859,7 +865,6 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 \\ \hline
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de iniciar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
-\caption{Tabela com caso de uso UC004.}
 \label{Rotulo}
 \end{table}
 \egroup
@@ -868,7 +873,8 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 
 \bgroup
 \def\arraystretch{1.5}
-\begin{table}[!h]
+\begin{table}[H]
+\caption{Tabela com caso de uso UC005.}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -884,7 +890,6 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 \\ \hline
  & \begin{tabular}[c]{@{}l@{}}3. Sistema exibe tela com opção \\de parar envio de dados\end{tabular}  \\ \hline
 \end{tabular}
-\caption{Tabela com caso de uso UC005.}
 \label{Rotulo}
 \end{table}
 \egroup
@@ -907,6 +912,7 @@ Neste tópico, serão apresentados os \textit{wireframes} criados tanto para o a
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus próximo.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
 \hline
@@ -918,7 +924,6 @@ Grupo\\ \hline
 1 & \begin{tabular}[c]{@{}c@{}}Símbolo da busca \\ do ponto de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que o aplicativo \\ está procurando um \\ ponto de ônibus\end{tabular}                  & -                     & Imagem e texto \\ \hline
 2 & Áudio sobre busca & \begin{tabular}[c]{@{}c@{}}Indica ao usuário que \\ está sendo feito uma \\ busca por algum \\ ponto próximo\end{tabular} & Função Talkback ativa & Áudio\\ \hline
 \end{tabular}
-\caption{Descrição dos elementos da tela de busca por ponto de ônibus próximo.}
 \label{Rotulo}
 \end{table}
 
@@ -934,6 +939,7 @@ Grupo\\ \hline
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
 \hline
@@ -945,7 +951,6 @@ Grupo\\ \hline
 1 & \begin{tabular}[c]{@{}c@{}}Símbolo da busca \\ das linhas de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que o \\ aplicativo \\ procura as\\linhas de ônibus\end{tabular} & \begin{tabular}[c]{@{}c@{}}O sistema deve ter\\detectado um ponto\\de ônibus\end{tabular} & Imagem e texto \\ \hline
 2 & Áudio sobre busca & \begin{tabular}[c]{@{}c@{}}Indica ao usuário\\ que está sendo \\feito uma busca\\ dos ônibus disponíveis\end{tabular} & Função Talkback ativa & Áudio\\ \hline
 \end{tabular}
-\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \label{Rotulo}
 \end{table}
 
@@ -961,6 +966,7 @@ Grupo\\ \hline
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
 \hline
@@ -972,7 +978,6 @@ Grupo\\ \hline
 1 & Lista de linhas & \begin{tabular}[c]{@{}c@{}}Lista de linhas\\ que o usuário\\ pode escolher\end{tabular} & \begin{tabular}[c]{@{}c@{}}Ter recebido uma\\ lista da API\end{tabular} & Botão \\ \hline
 2 & \begin{tabular}[c]{@{}c@{}}Áudio sobre escolha\\ de um item\end{tabular} & \begin{tabular}[c]{@{}c@{}}Indica que a lista\\ de ônibus já está\\ disponível\end{tabular} & Função Talkback ativa & Áudio\\ \hline
 \end{tabular}
-\caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \label{Rotulo}
 \end{table}
 
@@ -988,6 +993,7 @@ Grupo\\ \hline
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela de detalhes do ônibus.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
 \hline
@@ -1000,7 +1006,6 @@ Número                  & Nome                                  & Descrição  
 \multicolumn{1}{|c|}{6} & \multicolumn{1}{c|}{Solicitar ônibus} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Solicita que o ônibus\\  pare no seu\\  ponto e acionar o \\ acompanhamento dele\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}} & \multicolumn{1}{c|}{Botão} \\ \hline
 7                       & Áudio sobre previsão                  & \begin{tabular}[c]{@{}c@{}}Alerta ao usuário a\\  previsão do ônibus\end{tabular}                                                             & \begin{tabular}[c]{@{}c@{}}Receber previsão \\ da API\end{tabular}                      & Áudio                      \\ \hline
 \end{tabular}
-\caption{Descrição dos elementos da tela de detalhes do ônibus.}
 \label{Rotulo}
 \end{table}
 
@@ -1016,6 +1021,7 @@ Número                  & Nome                                  & Descrição  
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -1026,7 +1032,6 @@ Número & Nome                                                                  
 3      & Cancelar                                                                & \begin{tabular}[c]{@{}c@{}}Cancela o acompanhamento \\ do ônibus e solicita \\ que não pare mais no ponto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Ter selecionado botão\\  Solicitar ônibus\end{tabular}                                                       & Botão \\ \hline
 4      & \begin{tabular}[c]{@{}c@{}}Áudio sobre o \\ acompanhamento\end{tabular} & \begin{tabular}[c]{@{}c@{}}Informa ao usuário \\ que está sendo \\ feito o acompanhamento \\ do ônibus\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Ter escolhido acompanhar \\ um ônibus.\\ Função Talkback ativa\end{tabular}                                  & Áudio \\ \hline
 \end{tabular}
-\caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
 \label{Rotulo}
 \end{table}
 
@@ -1044,6 +1049,7 @@ Número & Nome                                                                  
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela sobre estar carregando informações.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -1052,7 +1058,6 @@ Número & Nome                                                                  
 \begin{tabular}[c]{@{}c@{}}1\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Mensagem\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Informa que está carregando informações \\do servidor\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Ter iniciado o sistema\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Texto\end{tabular}  \\ 
 \hline 
 \end{tabular} 
-\caption{Descrição dos elementos da tela sobre estar carregando informações.}
 \label{Rotulo}
 \end{table}
 
@@ -1068,6 +1073,7 @@ Número & Nome                                                                  
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela sobre começar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -1085,7 +1091,6 @@ Número & Nome                                                                  
 & \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
 \hline 
 \end{tabular} 
-\caption{Descrição dos elementos da tela sobre começar uma rota.}
 \label{Rotulo}
 \end{table}
 
@@ -1101,6 +1106,7 @@ Número & Nome                                                                  
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -1118,7 +1124,6 @@ Número & Nome                                                                  
 & \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
 \hline 
 \end{tabular} 
-\caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \label{Rotulo}
 \end{table}
 
@@ -1134,6 +1139,7 @@ Número & Nome                                                                  
 \end{figure}
 
 \begin{table}[!h]
+\caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -1151,7 +1157,6 @@ Número & Nome                                                                  
 & \begin{tabular}[c]{@{}c@{}}Botão\end{tabular} \\ 
 \hline 
 \end{tabular} 
-\caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \label{Rotulo}
 \end{table}
 
@@ -1239,7 +1244,8 @@ Após configurado, o módulo pode ser ligado em uma bateria 3,3v para utilizaç�
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/intel-edison-arduino-kit}
-\caption{Intel Edison. Fonte: \citecustom{edisonimage}}
+\caption{Intel Edison}
+\fonte{\citeauthor{edisonimage}}
 \label{Rotulo}
 \end{figure}
 

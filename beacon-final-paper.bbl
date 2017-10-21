@@ -125,6 +125,12 @@ Dispon{\'\i}vel em:
 {LECHETA, R. \emph{Google Android}. [S.l.: s.n.], 2015.
 ISBN 9788575224403.}
 
+\bibitem[LLC 2017]{talkback}
+\abntrefinfo{LLC}{LLC}{2017}
+{LLC, G. \emph{Google Talkback}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=pt-BR}.}
+
 \bibitem[MARTIN 2012]{martin2012clean}
 \abntrefinfo{MARTIN}{MARTIN}{2012}
 {MARTIN, R.~C. \emph{Clean Architecture}. [S.l.]: Prentice Hall, 2012.}
@@ -150,6 +156,12 @@ Dispon{\'\i}vel em:
 \abntrefinfo{NODEBR}{NODEBR}{2016}
 {NODEBR. \emph{O que {\'e} Node.js}. 2016.
 Dispon{\'\i}vel em: \url{http://nodebr.com/o-que-e-node-js/}.}
+
+\bibitem[Pi 2017]{raspimage}
+\abntrefinfo{Pi}{PI}{2017}
+{PI, R. \emph{Raspberry Pi 3 imagem}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-3-462x322.jpg}.}
 
 \bibitem[PIEKARSKI 2016]{Piekarski2016}
 \abntrefinfo{PIEKARSKI}{PIEKARSKI}{2016}
@@ -184,12 +196,6 @@ Dispon{\'\i}vel em:
   Latitude/Longitude points}.
 [S.l.], 2017. Dispon{\'\i}vel em:
   \url{http://www.movable-type.co.uk/scripts/latlong.html}.}
-
-\bibitem[Shopify 2016]{raspimage}
-\abntrefinfo{Shopify}{SHOPIFY}{2016}
-{SHOPIFY. \emph{Raspberry Pi 3 imagem}. 2016.
-Dispon{\'\i}vel em:
-  \url{https://cdn.shopify.com/s/files/1/0174/1800/products/Raspberry\_Pi\_3\_2\_of\_4\_2fe9737c-ff10-4b05-97fa-66e956393b9c\_1024x1024.JPG?v=1456565788}.}
 
 \bibitem[Sousa 2017]{sousa2017extraccao}
 \abntrefinfo{Sousa}{SOUSA}{2017}

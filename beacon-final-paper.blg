@@ -57,20 +57,22 @@ Warning--entry type for "ibge" isn't style-file defined
 --line 302 of file beacon-final-paper.bib
 Warning--entry type for "idc" isn't style-file defined
 --line 308 of file beacon-final-paper.bib
+Warning--entry type for "talkback" isn't style-file defined
+--line 314 of file beacon-final-paper.bib
 Warning--entry type for "raspimage" isn't style-file defined
 --line 320 of file beacon-final-paper.bib
 Warning--entry type for "hm10image" isn't style-file defined
 --line 326 of file beacon-final-paper.bib
 Warning--entry type for "arduinounoimage" isn't style-file defined
---line 332 of file beacon-final-paper.bib
+--line 331 of file beacon-final-paper.bib
 Warning--entry type for "neo6mimage" isn't style-file defined
---line 338 of file beacon-final-paper.bib
+--line 336 of file beacon-final-paper.bib
 Warning--entry type for "edisonimage" isn't style-file defined
---line 344 of file beacon-final-paper.bib
+--line 342 of file beacon-final-paper.bib
 Warning--entry type for "bersch2013" isn't style-file defined
---line 350 of file beacon-final-paper.bib
+--line 348 of file beacon-final-paper.bib
 Warning--entry type for "beacon" isn't style-file defined
---line 356 of file beacon-final-paper.bib
+--line 354 of file beacon-final-paper.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -82,45 +84,45 @@ Warning--campo year vazio ou faltando em hm10image
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 37 entries,
+You've used 38 entries,
             6714 wiz_defined-function locations,
-            1383 strings with 14663 characters,
-and the built_in function-call counts, 67769 in all, are:
-= -- 8969
-> -- 557
-< -- 2424
-+ -- 2659
-- -- 185
-* -- 3720
-:= -- 8174
-add.period$ -- 138
-call.type$ -- 37
-change.case$ -- 225
-chr.to.int$ -- 36
-cite$ -- 38
-duplicate$ -- 8178
-empty$ -- 2054
-format.name$ -- 852
-if$ -- 12527
+            1387 strings with 14726 characters,
+and the built_in function-call counts, 68844 in all, are:
+= -- 9090
+> -- 572
+< -- 2450
++ -- 2690
+- -- 190
+* -- 3781
+:= -- 8314
+add.period$ -- 142
+call.type$ -- 38
+change.case$ -- 231
+chr.to.int$ -- 37
+cite$ -- 39
+duplicate$ -- 8280
+empty$ -- 2111
+format.name$ -- 875
+if$ -- 12747
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 588
-newline$ -- 187
-num.names$ -- 180
-pop$ -- 815
+missing$ -- 604
+newline$ -- 192
+num.names$ -- 185
+pop$ -- 829
 preamble$ -- 1
-purify$ -- 112
+purify$ -- 115
 quote$ -- 0
-skip$ -- 8482
+skip$ -- 8599
 stack$ -- 1
-substring$ -- 3082
-swap$ -- 2755
-text.length$ -- 31
+substring$ -- 3126
+swap$ -- 2790
+text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 247
+while$ -- 254
 width$ -- 0
-write$ -- 512
-(There were 31 warnings)
+write$ -- 526
+(There were 32 warnings)

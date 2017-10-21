@@ -1,15 +1,3 @@
-\backcite {raspimage}{{9}{(document)}{Doc-Start}}
-\backcite {raspimage}{{9}{(document)}{Doc-Start}}
-\backcite {hm10image}{{9}{(document)}{Doc-Start}}
-\backcite {hm10image}{{9}{(document)}{Doc-Start}}
-\backcite {arduinounoimage}{{9}{(document)}{Doc-Start}}
-\backcite {arduinounoimage}{{9}{(document)}{Doc-Start}}
-\backcite {neo6mimage}{{9}{(document)}{Doc-Start}}
-\backcite {neo6mimage}{{9}{(document)}{Doc-Start}}
-\backcite {idc}{{9}{(document)}{Doc-Start}}
-\backcite {idc}{{9}{(document)}{Doc-Start}}
-\backcite {edisonimage}{{9}{(document)}{Doc-Start}}
-\backcite {edisonimage}{{9}{(document)}{Doc-Start}}
 \backcite {ibge}{{11}{1}{chapter.1}}
 \backcite {ibge}{{11}{1}{chapter.1}}
 \backcite {Dorina2017}{{11}{1}{chapter.1}}
@@ -24,6 +12,8 @@
 \backcite {Vieira2015}{{12}{1}{chapter.1}}
 \backcite {Gomes2015}{{12}{1}{chapter.1}}
 \backcite {Gomes2015}{{12}{1}{chapter.1}}
+\backcite {talkback}{{12}{1.1}{section.1.1}}
+\backcite {talkback}{{12}{1.1}{section.1.1}}
 \backcite {beacon}{{13}{1.1}{section.1.1}}
 \backcite {beacon}{{13}{1.1}{section.1.1}}
 \backcite {CCM2017}{{15}{2.1.1}{subsection.2.1.1}}
@@ -41,16 +31,12 @@
 \backcite {Firebase}{{16}{2.1.4}{subsection.2.1.4}}
 \backcite {Firebase}{{16}{2.1.4}{subsection.2.1.4}}
 \backcite {raspimage}{{17}{2}{figure.2.2}}
-\backcite {raspimage}{{17}{2}{figure.2.2}}
 \backcite {Upton2017}{{17}{2.2.1}{figure.2.2}}
 \backcite {Upton2017}{{17}{2.2.1}{figure.2.2}}
 \backcite {hm10image}{{18}{3}{figure.2.3}}
-\backcite {hm10image}{{18}{3}{figure.2.3}}
-\backcite {arduinounoimage}{{19}{4}{figure.2.4}}
 \backcite {arduinounoimage}{{19}{4}{figure.2.4}}
 \backcite {mcroberts2011}{{19}{2.2.3}{figure.2.4}}
 \backcite {mcroberts2011}{{19}{2.2.3}{figure.2.4}}
-\backcite {neo6mimage}{{20}{5}{figure.2.5}}
 \backcite {neo6mimage}{{20}{5}{figure.2.5}}
 \backcite {sousa2017extraccao}{{20}{2.2.4}{figure.2.5}}
 \backcite {sousa2017extraccao}{{20}{2.2.4}{figure.2.5}}
@@ -60,7 +46,6 @@
 \backcite {Android}{{21}{2.3.1.1}{subsubsection.2.3.1.1}}
 \backcite {idc}{{21}{2.3.1.1}{subsubsection.2.3.1.1}}
 \backcite {idc}{{21}{2.3.1.1}{subsubsection.2.3.1.1}}
-\backcite {idc}{{22}{6}{figure.2.6}}
 \backcite {idc}{{22}{6}{figure.2.6}}
 \backcite {martin2012clean}{{23}{2.3.1.1}{figure.2.7}}
 \backcite {martin2012clean}{{23}{2.3.1.1}{figure.2.7}}
@@ -86,7 +71,6 @@
 \backcite {Git2016}{{29}{2.3.3}{subsection.2.3.3}}
 \backcite {Schmitz2015}{{30}{2.3.3}{subsection.2.3.3}}
 \backcite {Schmitz2015}{{30}{2.3.3}{subsection.2.3.3}}
-\backcite {edisonimage}{{52}{25}{figure.3.25}}
 \backcite {edisonimage}{{52}{25}{figure.3.25}}
 \backcite {Lecheta2015}{{55}{3.3.2.3}{subsubsection.3.3.2.3}}
 \backcite {Lecheta2015}{{55}{3.3.2.3}{subsubsection.3.3.2.3}}
