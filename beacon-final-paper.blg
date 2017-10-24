@@ -53,15 +53,17 @@ Warning--entry type for "raspimage" isn't style-file defined
 Warning--entry type for "hm10image" isn't style-file defined
 --line 326 of file beacon-final-paper.bib
 Warning--entry type for "arduinounoimage" isn't style-file defined
---line 331 of file beacon-final-paper.bib
+--line 332 of file beacon-final-paper.bib
 Warning--entry type for "neo6mimage" isn't style-file defined
---line 336 of file beacon-final-paper.bib
+--line 338 of file beacon-final-paper.bib
 Warning--entry type for "edisonimage" isn't style-file defined
---line 342 of file beacon-final-paper.bib
+--line 344 of file beacon-final-paper.bib
 Warning--entry type for "bersch2013" isn't style-file defined
---line 348 of file beacon-final-paper.bib
+--line 350 of file beacon-final-paper.bib
 Warning--entry type for "beacon" isn't style-file defined
---line 354 of file beacon-final-paper.bib
+--line 356 of file beacon-final-paper.bib
+Warning--entry type for "solid" isn't style-file defined
+--line 362 of file beacon-final-paper.bib
 Warning--campo year vazio ou faltando em arduinounoimage
 Warning--campo year vazio ou faltando em hm10image
 +---------------------------------------------------------+
@@ -69,4 +71,4 @@ Warning--campo year vazio ou faltando em hm10image
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 32 warnings)
+(There were 33 warnings)
