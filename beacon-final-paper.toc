@@ -94,12 +94,12 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Diagrama de Classes}}{69}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Diagrama de Classes}}{68}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Wireframes}}{70}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Wireframes}}{71}{appendix.B}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Testes de aceitação}}{75}{appendix.C}
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Testes de aceitação}}{76}{appendix.C}
