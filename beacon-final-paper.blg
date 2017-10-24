@@ -65,10 +65,9 @@ Warning--entry type for "beacon" isn't style-file defined
 Warning--entry type for "solid" isn't style-file defined
 --line 362 of file beacon-final-paper.bib
 Warning--campo year vazio ou faltando em arduinounoimage
-Warning--campo year vazio ou faltando em hm10image
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 33 warnings)
+(There were 32 warnings)
