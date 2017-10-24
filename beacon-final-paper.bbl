@@ -47,6 +47,13 @@ Dispon{\'\i}vel em: \url{http://usemobile.com.br/conheca-beacon/}.}
 {CARNEIRO, C. \emph{iBeacon – Tudo que voc{\^e} precisa saber}. 2016.
 Dispon{\'\i}vel em: \url{http://ibeacon.blog.br/ibeacon-guia-completo/}.}
 
+\bibitem[CASTILHO 2013]{solid}
+\abntrefinfo{CASTILHO}{CASTILHO}{2013}
+{CASTILHO, R. \emph{Princípios SOLID: Princípio da Responsabilidade Única
+  (SRP)}. 2013.
+Dispon{\'\i}vel em:
+  \url{https://robsoncastilho.com.br/2013/02/06/principios-solid-principio-da-responsabilidade-unica-srp/}.}
+
 \bibitem[CCM 2017]{CCM2017}
 \abntrefinfo{CCM}{CCM}{2017}
 {CCM. \emph{Formatos e extens{\~o}es de arquivos - Tipo MIME}. 2017.

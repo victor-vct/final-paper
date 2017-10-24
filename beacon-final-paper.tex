@@ -314,13 +314,13 @@ Este trabalho visa facilitar a vida de deficientes visuais que utilizam ônibus 
 
 Sistemas operacionais de smartphone, como Android e iOS, possuem ferramentas nativas que adaptam o uso de aplicativos para pessoas com deficiências, possibilitando a utilização do aparelho sem grandes dificuldades, mas, nem sempre, criam boas experiências de uso. 
 
-O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita o Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudios descrições mais detalhadas sobre o significado de uma tela.
+O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita ao Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudio descrições mais detalhadas sobre o significado de uma tela.
 
-Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes já disponíveis, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
+Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
 
 Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS. \citecustom{beacon}.
 
-Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, nosso aplicativo sabe em qual ponto o cego está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
+Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, se detecta automaticamente em qual ponto o deficiente visual está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
 
 \section{Restrições de projeto}
 
@@ -333,20 +333,20 @@ Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e
 
 \chapter{Tecnologias Utilizadas}
 
-Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro subsistemas, sendo eles o módulo do ônibus, o \textit{beacon}, o \textit{Web Service} e o aplicativo. Os métodos de comunicação e as tecnologias empregadas nelas estão exemplificadas na Figura 1. 
+Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro subsistemas, sendo eles o módulo do ônibus, o \textit{beacon}, o \textit{Web Service} e o aplicativo. Os métodos de comunicação e as tecnologias empregadas nelas estão ilustrados na Figura \ref{tecnologias}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/tech}
 \caption{Tecnologias utilizadas.}
-\label{tecnolgias}
+\label{tecnologias}
 \end{figure}
 
 \section{Comunicação}
 
 \subsection{HTTP}
 
-O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para tráfego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja enviar algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou {CONNECT, cada uma para que o servidor saiba a intenção do cliente e saiba lidar com o corpo da mensagem.
+O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para tráfego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja transmitir algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou CONNECT, e cada tipo defiine uma determinada ação solicitada pelo cliente ao servidor.
 O cabeçalho do protocolo contém o campo \textit{Content-Type} com o tipo de \textit{MIME} contido no corpo da requisição. 
 
 O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. \citecustom{CCM2017}
@@ -359,7 +359,7 @@ Como explica \citecustom{Finzi2016}
 \subsection{Beacons}
 
 O \textit{Beacon} é um pequeno dispositivo que utiliza uma tecnologia chamada \textit{Bluetooth Low Energy} (BLE), que emite um sinal intermitente de ondas de rádio que consegue localizar seu smartphone em um determinado raio de cobertura deste sinal. \citecustom{CarneiroMaio}. 
-A grande novidade desses aparelhos, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o \textit{bluetooth} do \textit{smartphone} para enviar as mensagens. \citecustom{Saes2014}
+A grande novidade desses aparelhos, além do custo acessível, é que eles podem ser instalados em paredes, produtos ou vitrines, permitindo a comunicação entre empresa e público por meio da localização e sem a necessidade de acesso à internet, já que utiliza o \textit{bluetooth} do \textit{smartphone} para enviar as mensagens \citecustom{Saes2014}.
 Como explica \citecustom{CarneiroOutubro}, \textit{iBeacon} é um protocolo de comunicação para dispositivos \textit{Beacons}, lançado pela \textit{Apple} em 2013. 
 
 De acordo com \citecustom{CarneiroOutubro} as informações do protocolo são formadas da seguinte forma:
@@ -379,7 +379,6 @@ Poder da transmissão: Alcance máximo do sinal.
 O \textit{Firebase Realtime Database} é um banco de dados hospedado na nuvem. Os dados são armazenados no formato JSON e sincronizados em tempo real com todos os clientes conectados.
 Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos. \citecustom{Firebase}
 
-\newpage
 
 \section{Hardware}
 
@@ -431,7 +430,7 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (h
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=10cm, center]{images/arduino}
+\includegraphics[width=7cm, center]{images/arduino}
 \caption{Arduino Uno}
 \fonte{\citeauthor{arduinounoimage}}
 \label{Rotulo}
@@ -478,14 +477,14 @@ Existem vários sistemas operacionais voltados para dispositivos móveis, sendo 
 
 Tal sistema é muito acessível e popular. Está disponível para uma enorme variedade de dispositivos. O Android tem como base o sistema operacional Linux, conhecido por ser um sistema flexível, adaptável a várias arquiteturas de processador, seguro e eficiente. Um dos grandes diferenciais do Android e que contribui para sua popularidade, é o fato de que o sistema é compatível com vários hardwares e pode estar disponível em \textit{smartphones} de diversos fabricantes. \citecustom{Android}
 
-Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, \citecustom{idc}, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico a seguir mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
+Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, \citecustom{idc}, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico da Figura \ref{idc} mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/smartphone-share-market.jpg}
 \caption{Pesquisa realizada pela IDC}
 \fonte{\citeauthor{idc}}
-\label{Rotulo}
+\label{idc}
 \end{figure}
 
 \newpage
@@ -505,7 +504,7 @@ Para desenvolvimento do aplicativo para Android, foi adotado o padrão \textit{C
 
 \item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações comuns, como configurações estáticas da placa a toda a aplicação. Possui também algumas classes e interfaces bases.
 
-\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
+\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}, \citecustom{solid}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
 \item[Service] Provê serviços para qualquer camada. No caso do aplicativo, a implementação do serviço de voz fica neste pacote e é injeta pelo pacote de Injeção de Dependências.
 
@@ -564,7 +563,7 @@ Para desenvolvimento do aplicativo para \textit{Android Things}, também foi ado
 \subsubsection{Linguagem de Programação}
 
 Segundo \citecustom{Avram2017}, a Google suportava as linguagens de programação Java e C++ para desenvolvimento de aplicativos Android. Em 2017, foi acrescentado suporte a linguagem Kotlin, por "ser concisa, expressiva e projetada para ser \textit{type-safe} e \textit{null safe}".
-Para este trabalho, dentre as três linguagens disponíveis, foi escolhido o Kotlin por demonstrar jser uma linguagem de sintaxe mais simplificada e trabalhar bem, caso necessário, com Java, como cita \citecustom{Kewerson2017}: "Como consequência das boas decisões dos designers da linguagem, temos uma linguagem concisa com a possibilidade de interoperar código Kotlin com Java e Java com Kotlin".
+Para este trabalho, dentre as três linguagens disponíveis, foi escolhido o Kotlin por demonstrar ser uma linguagem de sintaxe mais simplificada e trabalhar bem, caso necessário, com Java, como cita \citecustom{Kewerson2017}: "Como consequência das boas decisões dos designers da linguagem, temos uma linguagem concisa com a possibilidade de interoperar código Kotlin com Java e Java com Kotlin".
 
 \subsection{Backend}
 
@@ -609,7 +608,7 @@ O Node.js é uma plataforma extremamente modularizada, com módulos criados por 
 
 \subsubsection{Express.js}
 
-É um \textit{framework} para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC, no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor.
+É um \textit{framework} para Node.js que ajuda na organização de sua aplicação, caso use a arquitetura MVC (\textit{Model View Control}), no lado do servidor. Uma de suas funções é a de facilitar a criação e manutenção de rotas, realizando uma configuração inicial com os caminhos para os \textit{controllers}, \textit{models} e \textit{views} utilizados pela sua aplicação, além de informar os dados de inicialização do servidor.
 
 
 \subsubsection{REST}
@@ -630,7 +629,7 @@ Considerando as coisas como sendo os recursos, o principal benefício desse item
 
 \item[Vincular as coisas]
 
-Esse princípio faclita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse princípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
+Esse princípio facilita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse princípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
 
 \item[Utilizar métodos padronizados]
 
@@ -705,7 +704,7 @@ Sistema que recebe informações do aplicativo e do módulo do ônibus. Tem como
 
 Dispositivo instalado no ônibus. Mantém comunicação constante com a API para informar sua geolocalização. Verifica ao mesmo tempo a necessidade de alertar o motorista se existe um deficiente visual aguardando no próximo ponto de parada.
 
-\newpage
+
 
 \subsection{Representação do Fluxo da Informação}
 
@@ -713,20 +712,20 @@ Aprofundando na parte da comunicação entre os subsistemas, a forma como eles s
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm, center]{images/data-flux.jpg}
+\includegraphics[width=11cm, center]{images/data-flux.jpg}
 \caption{Diagrama de fluxo de dados.}
 \label{Rotulo}
 \end{figure}
 
 \newpage
 
-Para armazenar todas informações necessárias no sistema, foi utilizado o \textit{schema} conforme a figura 11:
+Para armazenar todas informações necessárias no sistema, foi utilizado o \textit{schema} conforme a Figura \ref{bancodedados}:
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/database-api.png}
 \caption{Diagrama de banco de dados.}
-\label{Rotulo}
+\label{bancodedados}
 \end{figure}
 
 \noindent \textbf{busModule:} Contém as informações de todos módulos dos ônibus.\\
@@ -1115,7 +1114,7 @@ Número & Nome                                                                  
 Número & Nome                                                                    & Descrição                                                                                                              & Requisitos                                                                                                                              & Grupo \\
 \hline 
 \begin{tabular}[c]{@{}c@{}}1\end{tabular} 
-& \begin{tabular}[c]{@{}c@{}}Informação sobre\\termino da rota\end{tabular} 
+& \begin{tabular}[c]{@{}c@{}}Informação sobre\\término da rota\end{tabular} 
 & \begin{tabular}[c]{@{}c@{}}Informar que precisa avisar \\ quando terminar a rota\end{tabular} 
 & \begin{tabular}[c]{@{}c@{}}Ter iniciado\\uma rota\end{tabular} & \begin{tabular}[c]{@{}c@{}}Texto\end{tabular} \\ 
 \hline 
@@ -1181,13 +1180,13 @@ Número & Nome                                                                  
 
 \subsection{Configuração}
 
-Para configurar o módulo HM-10 utilizamos o Arduino como ponte. Para realizar tais configurações, foi montado o circuito conforme a figura abaixo.
+Para configurar o módulo HM-10 utilizamos o Arduino como ponte. Para realizar tais configurações, foi montado o circuito conforme a Figura \ref{beacon}.
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10cm, center]{images/arduino-hm10}
 \caption{Configurando o módulo \textit{Bluetooth} HM-10 via Arduino UNO.}
-\label{Rotulo}
+\label{beacon}
 \end{figure}
 
 Após conectar o Arduino ao computador, foi utilizado sua \textit{IDE} para escrever o código, que está no apêndice A. No código do Arduino, foi estabelecido uma comunicação serial com o módulo HM-10 para enviar os comandos AT necessários. Esses comandos são para otimizar o uso da bateria e ativar a função \textit{Beacon} do módulo. A seguir, a descrição dos comandos.
@@ -1303,7 +1302,7 @@ Este serviço abstrai toda lógica de acesso ao hardware e interpretação dos d
 
 \textbf{Peripheral Driver Library}
 
-Não disponível na versão \textit{Android} para \textit{smartphones}, esta biblioteca oferece suporte no \textit{Android Things} para que possa adicionar sensores e atuadores a placa utilizada, neste caso o \textit{Raspberry Pi 3}. Neste trabalho foi utilizado o \textit{Driver GPS} desta biblioteca para poder configurar o módulo \textit{NEO 6M}. O que possibilita o \textit{LocationManager} obter os dados de geolocalização, já que não existe sensor \textit{GPS} no \textit{Raspberry Pi 3}.
+Não disponível na versão \textit{Android} para \textit{smartphones}, esta biblioteca oferece suporte ao \textit{Android Things} para que possa adicionar sensores e atuadores a placa utilizada, neste caso o \textit{Raspberry Pi 3}. Neste trabalho foi utilizado o \textit{Driver GPS} desta biblioteca para poder configurar o módulo \textit{NEO 6M}. O que possibilita o \textit{LocationManager} obter os dados de geolocalização, já que não existe sensor \textit{GPS} no \textit{Raspberry Pi 3}.
 
 \subsubsection{IDE}
 
@@ -1323,7 +1322,7 @@ O \textit{Android Things} provê uma \textit{API} para animações que herdou da
 
 \subsection{IDE}
 
-Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e tida pelo Google como ferramenta oficial de desenvolvimento para aplicativos Android.
+Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela IntelliJ e descrita pelo Google como a ferramenta oficial de desenvolvimento para aplicativos Android.
 
 \subsection{Áudio Descrição}
 
@@ -1353,7 +1352,7 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 \subsection{Provedor de servidor}
 
 %Falar sobre a umbler
-Para tornar a aplicação acessível ao público, torna-se necessário dispor da utilização de um servidor que fique disponível constantemente. \\
+Para tornar a aplicação acessível ao público, torna-se necessário que o servidor fique disponível constantemente, mantendo a API sempre ativa. 
 
 Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy (https://br.godaddy.com/), Umbler (https://www.umbler.com/) e LocaWeb (https://www.locaweb.com.br).\\
 
@@ -1370,7 +1369,7 @@ Devido o uso do Express.js como intermediário para carregar os \textit{middlewa
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=10cm, center]{images/brick_diagram_framework_webservice}
+\includegraphics[width=5cm, center]{images/brick_diagram_framework_webservice}
 \caption{Diagrama de blocos do Web Service.}
 \label{Rotulo}
 \end{figure}
@@ -1384,7 +1383,7 @@ O Node está subdividido da seguinte forma:
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=10cm, center]{images/brick_diagram_node}
+\includegraphics[width=5cm, center]{images/brick_diagram_node}
 \caption{Diagrama de blocos do Node.}
 \label{Rotulo}
 \end{figure}
@@ -1394,13 +1393,13 @@ O Node está subdividido da seguinte forma:
 \item[Config] Possui os arquivos necessários para realizar as conexões com o servidor, banco de dados e o sistema de notificações.
 \end{description}
 
-Dentro do app é onde se observa a utilização da arquitetura MVC, representada da seguinte forma:
+Dentro do app é onde se observa a utilização da arquitetura MVC, ilustrada na Figura \ref{nodeapp}, representada da seguinte forma:
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm, center]{images/brick_diagram_node_app}
 \caption{Diagrama de blocos do diretório app.}
-\label{Rotulo}
+\label{nodeapp}
 \end{figure}
 
 \begin{description}
@@ -1496,7 +1495,7 @@ Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, 
 
 \textbf{Resultados}
 
-Após realizar testes foi comprovado que embora existe a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a figura 36.
+Após realizar testes foi comprovado que embora exista a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a figura 36.
 
 \begin{figure}[H]
 \centering
@@ -1549,11 +1548,11 @@ Quando o motorista chega na parada, ele pressiona um botão para anunciar sua ch
 
 \chapter{Considerações Finais}
 
-Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de quem as usa. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até o ônibus desejado demorará para chegar na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário arrumar sua posição inicial num mapa para uma informação mais precisa com o que o usuário necessita. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo alguma dificuldade de uso.
+Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de seus usuários. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até que o ônibus chegue na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário que o usuário ajuste manualmente a sua posição inicial num mapa de modo a melhorar a precisão de sua localização. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo alguma dificuldade de uso.
 
-Neste trabalho foi possível desenvolver um aplicativo nativo em Android adaptado com o Talkback e com feedback descritivo das telas por meio de áudio, uma aplicação Web em Node, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de obter uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o. O sistema se comportou como esperado, provendo facilidades de uso na hora de escolher o ônibus, provando ser uma boa solução para facilitar o uso deste transporte público.
+Neste trabalho foi possível desenvolver um aplicativo nativo em Android, adaptado com o Talkback e com feedback descritivo das telas por meio de áudio, uma aplicação Web implementando a API do sistema, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de obter uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o. O sistema se comportou como esperado, provendo facilidades de uso na hora de escolher o ônibus, demonstrando ser uma boa solução para facilitar o uso deste transporte público.
 
-Apesar de ser funcional, existem pontos a serem melhorados. O foco deste trabalho foi em explorar uma solução para facilitar a forma como deficientes visuais utilizam os ônibus, não dando foco na construção de um sistema de previsão de horários mais preciso. Isso gerou alguns trabalhos para serem explorados nesse sistema, como alterar a linha quando termina uma rota caso seja necessário, e melhorar a tratativa de velocidade do ônibus para considerar velocidades médias de um trecho para deixar a previsão mais precisa. Outro ponto interessante seria a implementação de uma interface gráfica para controlar os registros que existem no banco de dados da aplicação Web, afim de facilitar seu uso.
+O objetivo principal deste trabalho foi desenvolver uma solução para facilitar a forma como deficientes visuais utilizam os ônibus, sem o foco de elaborar um sistema de previsão de horários mais preciso. Isso gerou a possibilidade de diversos aprimoramentos futuros que podem ser adicionados a este sistema, como: alterar a linha quando termina uma rota; melhorar a tratativa de velocidade do ônibus para considerar velocidades médias de um trecho possibilitando uma previsão de chegada mais precisa; e a implementação de uma interface gráfica para controlar os registros que existem no banco de dados da aplicação Web, a fim de facilitar seu uso.
 
 \postextual
 
