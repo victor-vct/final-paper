@@ -87,6 +87,56 @@
 % ---
 
 % ---
+% Formato da capa de acordo com padrão FSA
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+{\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS}
+    
+    \vspace*{1cm}
+    
+{\ABNTEXchapterfont\large\imprimirautor}
+
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo
+  \end{minipage}%
+}%
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  Orientador:\\Prof. Dr. Marcos Forte
+  \end{minipage}%
+  \vspace*{\fill}
+}%
+
+\vspace*{\fill}
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+\makeatother
+% ---
+
+% ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{Sistema de acompanhamento de transporte público para deficientes visuais }
@@ -199,7 +249,8 @@
 % (o * indica que haverá a ficha bibliográfica)
 % ---
 \imprimirfolhaderosto
-% ---
+
+%---
 
 % ----------------------------------------------------------
 %Início da folha de aprovação 
@@ -272,6 +323,9 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 \end{otherlanguage*} 
 \end{resumo} 
 
+
+\listoffigures\thispagestyle{empty} \newpage
+
 \BeginNoToc
 % ---
 % inserir o sumario
@@ -282,8 +336,6 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 \EndNoToc
 
 \newpage
-
-\listoffigures\thispagestyle{empty} \newpage
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
