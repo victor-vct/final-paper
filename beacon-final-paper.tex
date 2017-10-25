@@ -92,9 +92,6 @@
 
 \renewcommand{\folhaderostocontent}{
 \begin{center}
-{\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS}
-    
-    \vspace*{1cm}
     
 {\ABNTEXchapterfont\large\imprimirautor}
 
@@ -234,7 +231,7 @@
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
 \pretextual
-\begin{figure}[h]
+\begin{figure}H]
 \centering % este comando é usado para centralizar a figura
 \includegraphics[width=4.5cm, height=2cm]{images/logo-fsa.jpg}\\
 \end{figure}
@@ -324,7 +321,7 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 \end{resumo} 
 
 
-\listoffigures\thispagestyle{empty} \newpage
+\listoffigures*\thispagestyle{empty} \newpage
 
 \BeginNoToc
 % ---
@@ -444,7 +441,7 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 
 \subsection{Raspberry Pi 3}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/raspberry-pi}
 \caption{Raspberry Pi 3}
@@ -474,7 +471,7 @@ Especificações:
 
 \subsection{HM-10}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/hm-10}
 \caption{Módulo Bluetooth HM-10}
@@ -484,11 +481,9 @@ Especificações:
 
 A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (http://www.jnhuamao.cn/bluetooth.asp), um pequeno módulo \textit{Bluetooth} 4.0 BLE baseado no chip CC2540 que trabalha com alimentação de 3.3V. Com ele é possível realizar comunicações utilizando o protocolo \textit{Bluetooth}.
 
-\newpage
-
 \subsection{Arduino Uno}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=7cm, center]{images/arduino}
 \caption{Arduino Uno}
@@ -541,40 +536,11 @@ Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm, center]{images/smartphone-share-market.jpg}
+\includegraphics[width=11cm, center]{images/smartphone-share-market.jpg}
 \caption{Pesquisa realizada pela IDC}
 \fonte{\citeauthor{idc}}
 \label{idc}
 \end{figure}
-
-\newpage
-
-\textbf{Arquitetura utilizada}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=10cm, center]{images/brick_diagram_beacon}
-\caption{Diagrama de blocos do aplicativo móvel.}
-\label{Rotulo}
-\end{figure}
-
-Para desenvolvimento do aplicativo para Android, foi adotado o padrão \textit{Clean Architecture}. Este padrão foi proposto por Robert Ceil Martin, conhecido como Uncle Bob, em \citecustom{martin2012clean}, e foca no domínio da aplicação, fazendo \textit{frameworks} e \textit{drivers} ser detalhes de implementação. Seguindo seus princípios, a estrutura de camadas ficou da seguinte forma:
-
-\begin{description}
-
-\item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações comuns, como configurações estáticas da placa a toda a aplicação. Possui também algumas classes e interfaces bases.
-
-\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}, \citecustom{solid}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
-
-\item[Service] Provê serviços para qualquer camada. No caso do aplicativo, a implementação do serviço de voz fica neste pacote e é injeta pelo pacote de Injeção de Dependências.
-
-\item[Domain] Esta camada encapsula toda regra de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, é feito por esta camada.
-
-\item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações deles para a camada \textit{Domain} ou Data para que seja possa exibir os dados.
-
-\item[DI] Este projeto utiliza o padrão de arquitetura \textit{Injeção de Dependências}. Esta camada provê todas dependências, fazendo a implementação mais limpas nas outras classes, já que não precisam saber como instânciar uma classe, apenas usam.
- 
-\end{description}
 
 \subsubsection{Android Things}
 
@@ -595,28 +561,30 @@ Atualmente o sistema tem suporte para rodar nas seguintes plataformas:
 \item Raspberry Pi 3
 \end{itemize}
 
-\newpage
-
 \textbf{Arquitetura utilizada}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=10cm, center]{images/brick_diagram_bus_tracker}
-\caption{Diagrama de bloco do módulo do ônibus.}
+\includegraphics[width=10cm, center]{images/brick_diagram_beacon}
+\caption{Diagrama de blocos do aplicativo móvel.}
 \label{Rotulo}
 \end{figure}
 
-Para desenvolvimento do aplicativo para \textit{Android Things}, também foi adotado o padrão \textit{Clean Architecture}. 
+Para desenvolvimento das aplicações que rodam nos sistemas operacionais Android, foi adotado o padrão \textit{Clean Architecture}. Este padrão foi proposto por Robert Ceil Martin (conhecido como Uncle Bob) em \citecustom{martin2012clean}, e foca no domínio da aplicação, fazendo \textit{frameworks} e \textit{drivers} serem detalhes de implementação. Seguindo seus princípios, a estrutura de camadas ficou da seguinte forma:
 
 \begin{description}
 
-\item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações comuns, como configurações estáticas da placa, a toda a aplicação. Possui também classes e interfaces bases.
+\item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações que são comuns para toda a aplicação, como informações estáticas e algumas classes e interfaces bases.
 
-\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em cache ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
+\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}, \citecustom{solid}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e, a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
-\item[Domain] Esta camada encapsula toda regra de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, é feito por esta camada.
+\item[Service] Provê serviços para qualquer camada. No caso do aplicativo para \textit{smartphone}, a implementação do serviço de voz fica implementada neste pacote. Esta camada não existe no \textit{Android Things}, por não possuir serviços característicos da mesma. 
 
-\item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo, é feito aqui. Quando é necessário procurar dados para exibir ao usuário, é feito solicitações para a camada \textit{Domain} ou \textit{Data} para que possa exibi-los.
+\item[Domain] Esta camada encapsula todas as regras de negócios da aplicação. Toda vez que é necessário realizar processamentos em dados para satisfazer funcionalidades, são feitos por esta camada.
+
+\item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo é feito aqui. Quando é necessário procurar dados para exibir ao usuário, são feitas solicitações deles para a camada \textit{Domain} ou \textit{Data} para que seja possível exibir os dados.
+
+\item[DI] Esta camada utiliza o padrão de arquitetura Injeção de Dependências. Esta camada provê todas as dependências, fazendo a implementação mais limpa nas outras classes, já que não precisam saber como instânciar uma classe.
  
 \end{description}
 
@@ -739,7 +707,7 @@ Aqui os subsistemas são apresentados com uma breve descrição sobre eles e uma
 
 \subsection{Visão Geral}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/relations_system.jpg}
 \caption{Visão geral da comunicação dos componentes.}
@@ -800,7 +768,7 @@ Para armazenar todas informações necessárias no sistema, foi utilizado o \tex
 
 \subsection{Casos de Uso}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm, center]{images/use-case-diagram.png}
 \caption{Diagrama de caso de uso.}
@@ -865,7 +833,7 @@ Solicitar parada do ônibus escolhido: este caso de uso é uma extensão do caso
 
 \newpage
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm, center]{images/use-case-bus-module.png}
 \caption{Diagrama de caso de uso.}
@@ -959,20 +927,20 @@ Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual s
 
 \subsection{Interfaces com Sistema}
 
-Neste tópico, serão apresentados os \textit{wireframes} criados tanto para o aplicativo, quanto para o módulo do ônibus.
+Neste tópico, serão apresentados as telas criadas tanto para o aplicativo, quanto para o módulo do ônibus.
 
 \subsubsection{Aplicativo}
 
 \subsubsubsection{Busca por um ponto próximo}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_searching_bus_stop}
 \caption{Tela do aplicativo ao buscar por um ponto de ônibus próximo.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela de busca por ponto de ônibus próximo.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
@@ -992,14 +960,14 @@ Grupo\\ \hline
 
 \subsubsubsection{Busca por um ponto na API}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_searching_list_bus}
 \caption{Tela do aplicativo ao buscar por um ponto de ônibus na API.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
@@ -1019,14 +987,14 @@ Grupo\\ \hline
 
 \subsubsubsection{Lista de ônibus disponíveis}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/beacon-list-bus}
 \caption{Tela do aplicativo com ônibus disponíveis.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela de busca por ponto de ônibus na API.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
@@ -1046,14 +1014,14 @@ Grupo\\ \hline
 
 \subsubsubsection{Detalhes do ônibus}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/beacon-detail-bus}
 \caption{Tela do aplicativo com detalhes de um ônibus.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela de detalhes do ônibus.}
 \centering
 \begin{tabular}{@{}|c|c|c|c|c|@{}}
@@ -1074,14 +1042,14 @@ Número                  & Nome                                  & Descrição  
 
 \subsubsubsection{Aguardando um ônibus}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/beacon_waiting_bus}
 \caption{Tela do aplicativo sobre a solicitação de um ônibus.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela sobre a solicitação de um ônibus.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -1102,14 +1070,14 @@ Número & Nome                                                                  
 
 \subsubsubsection{Carregando Informações}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/bus-tracker-loading}
 \caption{Tela do módulo do ônibus quando está carregando informações.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela sobre estar carregando informações.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -1126,14 +1094,14 @@ Número & Nome                                                                  
 
 \subsubsubsection{Aguardando iniciar a rota}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/bus-tracker-waiting-start-route}
 \caption{Tela do módulo do ônibus aguardando motorista iniciar rota.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela sobre começar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -1159,14 +1127,14 @@ Número & Nome                                                                  
 
 \subsubsubsection{Realizando uma rota}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/bus-tracker-in-route}
 \caption{Tela do módulo do ônibus quando motorista está fazendo a rota.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -1192,14 +1160,14 @@ Número & Nome                                                                  
 
 \subsubsubsection{Aviso para parar no próximo ponto}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=15cm, center]{images/bus-tracker-needs-to-stop}
 \caption{Tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}
 \label{Rotulo}
 \end{figure}
 
-\begin{table}[!h]
+\begin{table}[H]
 \caption{Descrição dos elementos da tela sobre terminar uma rota.}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -1242,7 +1210,7 @@ Número & Nome                                                                  
 
 Para configurar o módulo HM-10 utilizamos o Arduino como ponte. Para realizar tais configurações, foi montado o circuito conforme a Figura \ref{beacon}.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/arduino-hm10}
 \caption{Configurando o módulo \textit{Bluetooth} HM-10 via Arduino UNO.}
@@ -1289,7 +1257,7 @@ Após configurado, o módulo pode ser ligado em uma bateria 3,3v para utilizaç�
 
 \begin{itemize}
 \item Raspberry Pi 3
-\item Tela LCD 7" (em breve)
+\item Tela LCD 7" \textit{Touch Screen}
 \item NEO u-blox 6 GPS Modules
 \end{itemize}
 
@@ -1376,8 +1344,6 @@ Como cita \citecustom{Lecheta2015}, "Animações dão um acabamento profissional
 
 O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de \textit{smartphones}. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.\\
 
-\newpage
-
 \section{Aplicativo}
 
 \subsection{IDE}
@@ -1427,7 +1393,7 @@ A Umbler acabou sendo selecionada por ser muito intuitiva na hora de selecionar 
 
 Devido o uso do Express.js como intermediário para carregar os \textit{middlewares}, a arquitetura utilizada para o desenvolvimento da aplicação segue o padrão MVC.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/brick_diagram_framework_webservice}
 \caption{Diagrama de blocos do Web Service.}
@@ -1441,7 +1407,7 @@ Devido o uso do Express.js como intermediário para carregar os \textit{middlewa
 
 O Node está subdividido da seguinte forma:
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/brick_diagram_node}
 \caption{Diagrama de blocos do Node.}
@@ -1455,7 +1421,7 @@ O Node está subdividido da seguinte forma:
 
 Dentro do app é onde se observa a utilização da arquitetura MVC, ilustrada na Figura \ref{nodeapp}, representada da seguinte forma:
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/brick_diagram_node_app}
 \caption{Diagrama de blocos do diretório app.}
@@ -1646,70 +1612,70 @@ O objetivo principal deste trabalho foi desenvolver uma solução para facilitar
 
 \chapter{Wireframes}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/tela-1-buscando-beacon.PNG}
 \caption{Wireframe da tela do aplicativo ao buscar por um ponto de ônibus próximo.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/tela-2-buscando-ponto.PNG}
 \caption{Wireframe da tela do aplicativo ao buscar por um ponto de ônibus na API.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/tela-3-lista-de-onibus.PNG}
 \caption{Wireframe da tela do aplicativo com ônibus disponíveis.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/tela-4-informacoes-do-onibus.PNG}
 \caption{Wireframe da tela do aplicativo com detalhes de um ônibus.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm, center]{images/tela-5-acompanhamento-do-onibus.PNG}
 \caption{Wireframe da tela do aplicativo sobre a solicitação de um ônibus.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/busmodule-carregando}
 \caption{Wireframe da tela do módulo do ônibus quando está carregando informações.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/busmodule-comecar-rota}
 \caption{Wireframe da tela do módulo do ônibus aguardando motorista iniciar rota.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/busmodule-finish-route}
 \caption{Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/busmodule-finish-route}
 \caption{Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}
 \label{Rotulo}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm, center]{images/busmodule-pare}
 \caption{Wireframe da tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}
