@@ -231,7 +231,7 @@
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
 \pretextual
-\begin{figure}H]
+\begin{figure}[H]
 \centering % este comando é usado para centralizar a figura
 \includegraphics[width=4.5cm, height=2cm]{images/logo-fsa.jpg}\\
 \end{figure}
@@ -252,44 +252,44 @@
 % ----------------------------------------------------------
 %Início da folha de aprovação 
 % ----------------------------------------------------------
-\begin{folhadeaprovacao} 
-\begin{center} 
-{\ABNTEXchapterfont\large\textsc{\imprimirautor}}
-\\
-\vspace{1cm}
-{\ABNTEXchapterfont\Large\bfseries\imprimirtitulo} 
-\end{center} 
-\vspace{1cm} 
-\hspace{.45\textwidth} 
-\begin{minipage}{.5\textwidth} 
-\imprimirpreambulo 
-\end{minipage} 
-\vspace{1cm} 
-\\Trabalho aprovado. \imprimirlocal, \imprimirdata: 
+%\begin{folhadeaprovacao} 
+%\begin{center} 
+%{\ABNTEXchapterfont\large\textsc{\imprimirautor}}
+%\\
+%\vspace{1cm}
+%{\ABNTEXchapterfont\Large\bfseries\imprimirtitulo} 
+%\end{center} 
+%\vspace{1cm} 
+%\hspace{.45\textwidth} 
+%\begin{minipage}{.5\textwidth} 
+%\imprimirpreambulo 
+%\end{minipage} 
+%\vspace{1cm} 
+%\\Trabalho aprovado. \imprimirlocal, \imprimirdata: 
 
 %Assinaturas 
 
-\assinatura{\imprimirorientador \\CUFSA} 
-\assinatura{Nome 1\\ CUFSA} 
-\assinatura{Nome 2 \\ CUFSA} 
+%\assinatura{\imprimirorientador \\CUFSA} 
+%\assinatura{Nome 1\\ CUFSA} 
+%\assinatura{Nome 2 \\ CUFSA} 
 
-\begin{center} 
-\vfill 
-{\large\imprimirlocal} 
-\par 
-{\large\imprimirdata} 
-\end{center} 
-\end{folhadeaprovacao} 
+%\begin{center} 
+%\vfill 
+%{\large\imprimirlocal} 
+%\par 
+%{\large\imprimirdata} 
+%\end{center} 
+%\end{folhadeaprovacao} 
 % ----------------------------------------------------------
 %Fim da folha de aprovação 
 % ----------------------------------------------------------
 
 \begin{agradecimentos} 
-Ao nosso orientador Marcos Forte, pela paciência e suporte prestado durante o desenvolvimento deste projeto.
+Ao nosso orientador Prof. Dr. Marcos Forte, pela paciência e suporte prestado durante o desenvolvimento deste projeto.
 
 Ao Instituto de Cegos Padre Chico, pela hospitalidade demonstrada em nossa visita.
 
-Ao Metractive, pois sem eles não teríamos tido a ideia inicial que nos levou à ideia deste trabalho.
+Ao Metractive, pelo incentivo e apoio ao uso de tecnologias.
 
 Ao Raul Bertolo e à Caroline Grava pelo apoio proporcionado.
 
@@ -1293,7 +1293,7 @@ Embora tenha um ótimo hardware e uma empresa séria por trás da sua construç�
 
 \textbf{Ausência de controlador gráfico}
 
-Este projeto foi elaborado pensando em fazer alertas por meio de um display gráfico. A placa Intel Edison nos permite fazer alertas visuais utilizando LEDs ou pequenos \textit{displays} OLED, o que não satisfaz a exigência do projeto.  
+Este projeto foi elaborado pensando em fazer alertas por meio de um \textit{display} gráfico. A placa Intel Edison nos permite fazer alertas visuais utilizando LEDs ou pequenos \textit{displays} OLED, o que não satisfaz a exigência do projeto.  
 \\
 
 \textbf{Descontinuidade da placa pela Intel}
@@ -1302,8 +1302,8 @@ Em 07/2017, a Intel anunciou a descontinuidade do desenvolvimento de algumas pla
 
 \subsubsection{Raspberry Pi 3}
 
-Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. Foi fácil a instalação do sistema Android Things e a placa vem com saída HDMI que permite utilizar telas LCD para fazer os alertas visuais.
-Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison. Seu hardware contém boas especificações.
+Testes realizados no Raspberry Pi 3 demonstraram ser uma boa alternativa ao Intel Edison. A instalação do sistema Android Things foi realizada sem dificuldade e a placa vem com saída HDMI e \textit{display port} que permite utilizar telas LCD para fazer os alertas visuais.
+Seu preço, em 08/2017, gira em torno de R\$ 150,00, 1/4 do preço do Intel Edison Seu hardware contém boas especificações.
 
 Embora tenha um hardware com especificações superiores ao Intel Edison, não houve ganho de desempenho ao rodar o sistema, devido a ausência de algoritmos complexos no sistema. Assim, a grande vantagem de se utilizar o Raspberry Pi 3 ao invés do Intel Edison, é seu baixo custo e recurso de chip gráfico.
 
@@ -1340,9 +1340,9 @@ Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela Int
 
 Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{Smartphones}, são as animações. Elas deixam o uso mais fluído e agradável para o usuário. 
 
-Como cita \citecustom{Lecheta2015}, "Animações dão um acabamento profissional ao aplicativo, e costumam enriquecer a experiência do usuário.". Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{smartphones}, são as animações, pois deixam o uso mais fluído e agradável para o usuário. \\
+Como cita \citecustom{Lecheta2015}, "Animações dão um acabamento profissional ao aplicativo, e costumam enriquecer a experiência do usuário.". Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{smartphones}, são as animações, pois deixam o uso mais fluído e agradável para o usuário.
 
-O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de \textit{smartphones}. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.\\
+O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de \textit{smartphones}. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.
 
 \section{Aplicativo}
 
@@ -1380,11 +1380,11 @@ Como este trabalho desenvolve um aplicativo com poucos elementos na tela para si
 %Falar sobre a umbler
 Para tornar a aplicação acessível ao público, torna-se necessário que o servidor fique disponível constantemente, mantendo a API sempre ativa. 
 
-Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy (https://br.godaddy.com/), Umbler (https://www.umbler.com/) e LocaWeb (https://www.locaweb.com.br).\\
+Foram pesquisados três provedores de servidores, analisando qual deles apresentava melhores condições para realização do \textit{deploy} da aplicação. Foram eles a GoDaddy (https://br.godaddy.com/), Umbler (https://www.umbler.com/) e LocaWeb (https://www.locaweb.com.br).
 
-Primeiro fator, que fez o serviço da GoDaddy ser excluído da lista, foi a questão de período de teste. A GoDaddy possui um período nulo de teste do serviço. Já a Umbler e LocaWeb fornecem créditos para novos desenvolvedores.\\
+Primeiro fator, que fez o serviço da GoDaddy ser excluído da lista, foi a questão de período de teste. A GoDaddy possui um período nulo de teste do serviço. Já a Umbler e LocaWeb fornecem créditos para novos desenvolvedores.
 
-Em seguida, foi observada a disponibilidade de informações sobre como realizar o \textit{deploy} de um servidor em Node.js. Nesse aspecto, a LocaWeb não demonstra com clareza os procedimentos a serem seguidos.\\
+Em seguida, foi observada a disponibilidade de informações sobre como realizar o \textit{deploy} de um servidor em Node.js. Nesse aspecto, a LocaWeb não demonstra com clareza os procedimentos a serem seguidos.
 
 A Umbler acabou sendo selecionada por ser muito intuitiva na hora de selecionar a linguagem da aplicação e qual o banco de dados a ser utilizado, com poucos cliques é possível iniciar um servidor funcional.
 
