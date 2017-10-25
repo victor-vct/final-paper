@@ -83,6 +83,13 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://blog.cedrotech.com/o-que-e-push-notification/}.}
 
+\bibitem[Giang 2016]{hm10image}
+\abntrefinfo{Giang}{GIANG}{2016}
+{GIANG, H. \emph{How to Communicate Module Bluetooth HM-10 (4.0) With Android
+  Smartphone and MCU}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://www.instructables.com/id/How-to-Communicate-Module-Bluetooth-HM-10-40-With-/}.}
+
 \bibitem[GIT 2016]{Git2016}
 \abntrefinfo{GIT}{GIT}{2016}
 {GIT. \emph{Primeiros passos sobre controle de vers{\~a}o}. 2016.
@@ -153,22 +160,10 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://eaesp.fgvsp.br/sites/eaesp.fgvsp.br/files/pesti2016gvciappt.pdf}.}
 
-\bibitem[ML]{hm10image}
-\abntrefinfo{ML}{ML}{}
-{ML. \emph{HM-10 Bluetooth}.
-Dispon{\'\i}vel em:
-  \url{https://http2.mlstatic.com/D\_Q\_NP\_155905-MLB25125191174\_102016-Q.jpg}.}
-
 \bibitem[NODEBR 2016]{Node2016}
 \abntrefinfo{NODEBR}{NODEBR}{2016}
 {NODEBR. \emph{O que {\'e} Node.js}. 2016.
 Dispon{\'\i}vel em: \url{http://nodebr.com/o-que-e-node-js/}.}
-
-\bibitem[Pi 2017]{raspimage}
-\abntrefinfo{Pi}{PI}{2017}
-{PI, R. \emph{Raspberry Pi 3 imagem}. 2017.
-Dispon{\'\i}vel em:
-  \url{https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-3-462x322.jpg}.}
 
 \bibitem[PIEKARSKI 2016]{Piekarski2016}
 \abntrefinfo{PIEKARSKI}{PIEKARSKI}{2016}
@@ -176,6 +171,12 @@ Dispon{\'\i}vel em:
   platform: Android Things and Weave}. 2016.
 Dispon{\'\i}vel em:
   \url{https://android-developers.googleblog.com/2016/12/announcing-googles-new-internet-of-things-platform-with-weave-and-android-things.html}.}
+
+\bibitem[RaspberryPi 2017]{raspimage}
+\abntrefinfo{RaspberryPi}{RASPBERRYPI}{2017}
+{RASPBERRYPI. \emph{Raspberry Pi 3 imagem}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-3-462x322.jpg}.}
 
 \bibitem[SAES 2014]{Saes2014}
 \abntrefinfo{SAES}{SAES}{2014}

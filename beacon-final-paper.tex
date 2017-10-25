@@ -237,7 +237,15 @@
 % ----------------------------------------------------------
 
 \begin{agradecimentos} 
-Agradecimentos aqui
+Ao nosso orientador Marcos Forte, pela paciência e suporte prestado durante o desenvolvimento deste projeto.
+
+Ao Instituto de Cegos Padre Chico, pela hospitalidade demonstrada em nossa visita.
+
+Ao Metractive, pois sem eles não teríamos tido a ideia inicial que nos levou à ideia deste trabalho.
+
+Ao Raul Bertolo e à Caroline Grava pelo apoio proporcionado.
+
+Às nossas famílias e amigos, pela compreensão e apoio durante esse ano.
 \end{agradecimentos} 
 
 % ---
@@ -318,9 +326,9 @@ O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no u
 
 Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
 
-Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os Beacons. Beacon é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um Beacon, o aplicativo pode informar sua localização com maior precisão que um GPS. \citecustom{beacon}.
+Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os \textit{Beacons}. \textit{Beacon} é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um \textit{Beacon}, o aplicativo pode informar sua localização com maior precisão que um GPS. \citecustom{beacon}.
 
-Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do Beacon instalado no ponto, se detecta automaticamente em qual ponto o deficiente visual está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
+Dessa forma quando um deficiente visual chegar no ponto, ele abre o aplicativo e, com uso do \textit{Beacon} instalado no ponto, se detecta automaticamente em qual ponto o deficiente visual está. Sabendo isso, o app lista quais ônibus passam ali. Após o deficiente visual escolher um dos ônibus, o aplicativo vai notificar em intervalos pré-definidos quanto tempo falta para o ônibus chegar, em contrapartida o sistema irá alertar o motorista quando ele estiver próximo ao ponto em que existe um deficiente visual esperando por ele.
 
 \section{Restrições de projeto}
 
@@ -1209,7 +1217,7 @@ AT+ADVI5 & Define tempo de envio. 5 = 546.25 millisegundos \\
 \hline 
 AT+ADTY3 & Define como não pareável \\ 
 \hline 
-AT+IBEA1 & Habilita como Beacon \\ 
+AT+IBEA1 & Habilita como \textit{Beacon} \\ 
 \hline 
 AT+DELO2 & Configura para apenas emitir sinal \\ 
 \hline 
@@ -1495,7 +1503,7 @@ Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, 
 
 \textbf{Resultados}
 
-Após realizar testes foi comprovado que embora exista a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a figura 36.
+Após realizar testes foi comprovado que embora exista a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a Figura \ref{binary-search-problem}.
 
 \begin{figure}[H]
 \centering
@@ -1504,7 +1512,7 @@ Após realizar testes foi comprovado que embora exista a melhora em diminuir dra
 \label{binary-search-problem}
 \end{figure}
 
-Como pode se observar na figura 36, o ponto mais próximo em relação a posição recebida é o número 5. Quando se inicia a busca binária, o ponto número 4 é considerado o centro, tornando o sub \textit{array} distânciaInicio até distânciaMeio ser o mais apto para se realizar uma busca interna, fazendo o ponto número 5 ser desconsiderado.
+Como pode se observar na Figura \ref{binary-search-problem}, o ponto mais próximo em relação a posição recebida é o número 5. Quando se inicia a busca binária, o ponto número 4 é considerado o centro, tornando o sub \textit{array} distânciaInicio até distânciaMeio ser o mais apto para se realizar uma busca interna, fazendo o ponto número 5 ser desconsiderado.
 
 Embora a busca binária demonstre ser mais eficiente que a busca sequencial, a implementação neste problema, tendo como heurística a menor distância, demonstrou não ser suficiente para diminuir o processamento e encontrar a melhor solução.
 
@@ -1698,7 +1706,7 @@ Atenção: Representa uma funcionalidade importante para o sistema. Caso o teste
 
 \newpage
 
-\subsection*{Módulo do ponto de ônibus (Beacon)}
+\subsection*{Módulo do ponto de ônibus (\textit{Beacon})}
 
 \subsubsection*{Emissão de sinal}
 
@@ -2028,7 +2036,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 1. Ligar o bluetooth do dispositivo mobile.
 
-2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+2. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 3. Visualizar a tela de loading.
 
@@ -2065,7 +2073,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 1. Ligar o \textit{bluetooth} do dispositivo \textit{mobile}.
 
-2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+2. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 3. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
 
@@ -2102,7 +2110,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 1. Ligar o bluetooth do dispositivo mobile.
 
-2. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+2. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 3. Aguardar carregar lista com ônibus disponíveis para aquele ID módulo de ponto de ônibus.
 
@@ -2142,7 +2150,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 \hline 
 \multicolumn{3}{|>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax}X|}{\textbf{Etapas:}
 
-1. Abrir o aplicativo Beacon
+1. Abrir o aplicativo \textit{Beacon}
 
 2. Visualizar um dialog com alerta sobre ausência de conexão.
 } \\ 
@@ -2172,7 +2180,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 1. Desligar o \textit{Bluetooth} do dispositivo \textit{mobile}
 
-2. Abrir o aplicativo Beacon 
+2. Abrir o aplicativo \textit{Beacon} 
 
 3. Visualizar um dialog com alerta sobre o \textit{Bluetooth} desligado
 } \\ 
@@ -2206,7 +2214,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 2. Deixar o alto falante do dispositivo mobile ligado
 
-3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+3. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 4. Verificar se foi emitido um aviso sonoro indicando qual ponto de ônibus foi encontrado. 
 } \\ 
@@ -2238,7 +2246,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 2. Deixar o alto falante do dispositivo mobile ligado
 
-3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+3. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 4. Verificar se foi emitido um aviso sonoro indicando qual ponto de ônibus foi encontrado. 
 
@@ -2272,7 +2280,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 2. Deixar o alto falante do dispositivo mobile ligado
 
-3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+3. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 4. Selecionar um ônibus disponível.
 
@@ -2307,7 +2315,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 2. Deixar o alto falante do dispositivo mobile ligado.
 
-3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+3. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 4. Selecionar um ônibus disponível.
 
@@ -2343,7 +2351,7 @@ O padrão estabelecido para o ID emitido é 655xxxx, sendo ‘x’ qualquer valo
 
 2. Deixar o alto falante do dispositivo mobile ligado.
 
-3. Abrir o aplicativo Beacon próximo a um módulo de ponto de ônibus válido.
+3. Abrir o aplicativo \textit{Beacon} próximo a um módulo de ponto de ônibus válido.
 
 4. Selecionar um ônibus disponível.
 
