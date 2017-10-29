@@ -85,20 +85,20 @@
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Considerações Finais}}{60}{chapter.4}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{61}{section*.12}
+\contentsline {chapter}{Refer\^encias}{62}{section*.12}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{64}{section*.13}
+\contentsline {part}{\uppercase {Ap\^endices}}{65}{section*.13}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Diagrama de Classes}}{65}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Diagrama de Classes}}{66}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Wireframes}}{68}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Wireframes}}{69}{appendix.B}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Testes de aceitação}}{73}{appendix.C}
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Testes de aceitação}}{74}{appendix.C}

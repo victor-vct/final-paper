@@ -304,7 +304,7 @@ Ao Raul Bertolo e à Caroline Grava pelo apoio proporcionado.
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
  
-Segundo o IBGE, 3,6\% da população brasileira possui alguma deficiência visual. Deficiência esta, que dificulta a execução de diversas atividades cotidianas, como, por exemplo, a locomoção no perímetro urbano usando transporte público. Com o objetivo de auxiliar a locomoção desses deficientes foi desenvolvido um sistema de escolha de linha e de previsão de chegada de ônibus, visto que o cenário atual não apresenta soluções práticas para esse público-alvo. Para compor o sistema proposto foram desenvolvidos: um aplicativo para smartphone baseados em Android; uma aplicação Web (API); além de módulos de hardware/software para as paradas e para os ônibus. A acessibilidade do aplicativo foi projetada detalhadamente, sendo implementado o feedback auditivo e por vibração, além da detecção automática do ponto onde o deficiente se localiza.  A aplicação gera a lista de linhas de ônibus que passam pelo respectivo ponto, realizando os cálculos de distância e tempo, avisando ao usuário o tempo estimado de espera. O módulo do ônibus envia, em tempo real, a localização atual do ônibus e também avisa ao motorista que há um deficiente visual aguardando no próximo ponto.  Por fim, após a implementação do sistema proposto, incluindo o desenvolvimento dos protótipos dos módulos do ponto e do ônibus, foram realizados testes para verificar se as funcionalidades definidas em projeto foram atendidas adequadamente. 
+Segundo dados do censo do IBGE de 2010, 3,6\% da população brasileira possui alguma deficiência visual. Deficiência esta que dificulta a execução de diversas atividades cotidianas, como, por exemplo, a locomoção no perímetro urbano usando transporte público. Com o objetivo de auxiliar a locomoção dessas pessoas com deficiência visual foi desenvolvido um sistema de escolha de linha e de previsão de chegada de ônibus, visto que o cenário atual não apresenta soluções práticas para esse público-alvo. Para compor o sistema proposto foram desenvolvidos: um aplicativo para smartphone baseados em Android; uma aplicação Web (API); além de módulos de hardware/software para as paradas e para os ônibus. A acessibilidade do aplicativo foi projetada detalhadamente, sendo implementado o feedback auditivo e por vibração, além da detecção automática do ponto onde o deficiente se localiza.  A aplicação gera a lista de linhas de ônibus que passam pelo respectivo ponto, realizando os cálculos de distância e tempo, avisando ao usuário o tempo estimado de espera. O módulo do ônibus envia, em tempo real, a localização atual do ônibus e também avisa ao motorista que há um deficiente visual aguardando no próximo ponto.  Por fim, após a implementação do sistema proposto, incluindo o desenvolvimento dos protótipos dos módulos do ponto e do ônibus, foram realizados testes para verificar se as funcionalidades definidas em projeto foram atendidas adequadamente. 
 
  \textbf{Palavras-chave}: Acessibilidade, deficientes visuais, smartphone, transporte público, aplicativo mobile.
 \end{resumo}
@@ -341,9 +341,9 @@ a feedback by audio and by vibration, besides the automatic detection of the bus
 
 \chapter{Introdução}
 
-Segundo o Censo Demográfico de 2010, feito pelo \citecustom{ibge} (Instituto Brasileiro de Geografia e Estatística), no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira. Dentre essas pessoas, pouco mais de 500 mil pessoas não conseguem de modo algum enxergar e 6 milhões tem grande dificuldade.
+Segundo o Censo Demográfico de 2010, realizado pelo IBGE - Instituto Brasileiro de Geografia e Estatística \citecustom{ibge}, no Brasil, existe mais de 6,5 milhões de pessoas com alguma deficiência visual, representando cerca de 3,6\% da população brasileira, sendo 500 mil pessoas declaradamente cegas (que não enxergam de modo algum) e seis milhões com grande dificuldade na visão.
 
-A Fundação Dorina, \citecustom{Dorina2017}, descreve os níveis de deficiência visual da seguinte forma:
+A Fundação Dorina Nowill para cegos, \citecustom{Dorina2017}, descreve os níveis de deficiência visual da seguinte forma:
 
 \begin{citacao}
 A deficiência visual é definida como a perda total ou parcial, congênita ou adquirida, da visão. O nível de acuidade visual pode variar, o que determina dois grupos de deficiência:
@@ -353,9 +353,9 @@ Cegueira: há perda total da visão ou pouquíssima capacidade de enxergar, o qu
 Baixa visão ou visão subnormal: caracteriza-se pelo comprometimento do funcionamento visual dos olhos, mesmo após tratamento ou correção. As pessoas com baixa visão podem ler textos impressos ampliados ou com uso de recursos óticos especiais.
 \end{citacao}
 
-Como sugere \citecustom{bersch2013}, a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
+Como sugere Bersch \citecustom{bersch2013}, a tecnologia assistiva tem como objetivo dar maior independência para pessoas com alguma deficiência, aumentando a qualidade de vida através da realização de tarefas desejadas que antes tinham um grau de dificuldade ou eram impossibilitadas de fazer.
 
-O desenvolvimento de recursos e outros elementos de Tecnologia Assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia. \citecustom{PortalSaude2014}
+O desenvolvimento de recursos e outros elementos de tecnologia assistiva tem propiciado a valorização, integração e inclusão da pessoa com deficiência, promovendo seus direitos humanos. Por essa razão, o tema tem assumido um espaço importante nas ações desenvolvidas pela Secretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência e demais órgãos federais, como o Ministério da Saúde, Ministério da Educação e Ministério de Ciência e Tecnologia \citecustom{PortalSaude2014}.
 
 	Dentre os elementos da tecnologia assistiva pode-se utilizar smartphones, que tem se tornado cada vez mais presentes na vida das pessoas. Uma pesquisa realizada pelo FGV-SP em 2016, \citecustom{Meirelles2016}, demonstrou que o número de aparelhos chegou a 168 milhões só no Brasil. Com sua facilidade de acesso, surgem inúmeras soluções que resolvem problemas do dia-a-dia dos usuários.
 
@@ -365,15 +365,15 @@ Isso ajuda os usuários a se programar melhor, possibilitando a pessoa sair em u
 
 \section{Descrição Geral}
 
-A fim de conhecer melhor sobre as dificuldades que os deficientes visuais encontram para se locomover pelo perímetro urbano utilizando o transporte público, foi realizada uma visita técnica ao Instituto de Cegos Padre Chico, (http://www.padrechico.org.br/). Durante a visita, notamos que os principais pontos levantados por eles foram o medo de ficar com o smartphone em mãos e a vergonha de ter de parar todos os ônibus para saber qual a linha que o veículo atende.
+Com o objetivo de conhecer de perto as dificuldades que as pessoas com deficiência visual encontram para se locomover pelo perímetro urbano utilizando o transporte público, foi realizada uma visita técnica ao Instituto de Cegos Padre Chico \citecustom{institutopadrechico}. Durante a visita, foi notado que os principais pontos levantados por eles foram o medo de ficar com o smartphone em mãos e a vergonha de ter de parar todos os ônibus para saber qual a linha que o veículo atende.
 
-Este trabalho visa facilitar a vida de deficientes visuais que utilizam ônibus como meio de transporte. O aplicativo proposto irá possibilitar ao deficiente visual saber quanto tempo falta para seu ônibus chegar, enquanto o sistema se encarrega de avisar o motorista do ônibus qual o próximo ponto onde terá um deficiente visual esperando por aquele ônibus.
+Este trabalho visa facilitar a vida de pessoas com deficiência visual que utilizam ônibus como meio de transporte. O aplicativo proposto irá possibilitar ao deficiente visual saber quanto tempo falta para seu ônibus chegar, enquanto o sistema se encarrega de avisar o motorista do ônibus qual o próximo ponto onde terá um deficiente visual esperando por aquele ônibus.
 
 Sistemas operacionais de smartphone, como Android e iOS, possuem ferramentas nativas que adaptam o uso de aplicativos para pessoas com deficiências, possibilitando a utilização do aparelho sem grandes dificuldades, mas, nem sempre, criam boas experiências de uso. 
 
-O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita ao Talkback ler a tela com maiores detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer áudio descrições mais detalhadas sobre o significado de uma tela.
+O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita ao Talkback ler a tela com mais detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer audiodescrições mais detalhadas sobre o significado de uma tela.
 
-Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a deficientes, não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de deficientes visuais é uma grande tarefa a ser cumprida.
+Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a pessoas com deficiência visual não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de pessoas com deficiência visual é uma grande tarefa a ser cumprida.
 
 Por isso é necessário adicionar outras tecnologias que facilitem o uso do app, neste caso, os \textit{Beacons}. \textit{Beacon} é um dispositivo que utiliza Bluetooth 4.0 (que tem baixo consumo de energia). Se existe um smartphone próximo a um \textit{Beacon}, o aplicativo pode informar sua localização com maior precisão que um GPS. \citecustom{beacon}.
 
@@ -403,10 +403,10 @@ Para o desenvolvimento do projeto, foi elaborado um sistema dividido em quatro s
 
 \subsection{HTTP}
 
-O Protocolo de transferência de hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para tráfego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja transmitir algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou CONNECT, e cada tipo defiine uma determinada ação solicitada pelo cliente ao servidor.
+O Protocolo de Transferência de Hipertexto (do inglês \textit{Hypertext Transfer Protocol}), é um protocolo para tráfego de informações pela internet entre cliente e servidor. Sempre que o cliente deseja transmitir algo para o servidor, é enviada uma requisição \textit{HTTP} contendo nela um cabeçalho, com informações sobre a requisição, e o corpo, contendo uma mensagem a ser entregue. Uma requisição \textit{HTTP} pode ser do tipo GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS, ou CONNECT, e cada tipo defiine uma determinada ação solicitada pelo cliente ao servidor.
 O cabeçalho do protocolo contém o campo \textit{Content-Type} com o tipo de \textit{MIME} contido no corpo da requisição. 
 
-O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto, etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP. \citecustom{CCM2017}
+O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de correio de Internet multifunções) é um padrão proposto pelos laboratórios \textit{Bell Communications}, em 1991, para aumentar a possibilidade de inserir documentos (imagens, sons, texto etc.) em uma mensagem. Desde então, o tipo MIME é usado para formatar tanto documentos anexos em uma mensagem quanto os transferidos pelo protocolo HTTP \citecustom{CCM2017}.
 
 \subsection{Push Notification}
 
@@ -434,7 +434,7 @@ Poder da transmissão: Alcance máximo do sinal.
 \subsection{Realtime Database}
 
 O \textit{Firebase Realtime Database} é um banco de dados hospedado na nuvem. Os dados são armazenados no formato JSON e sincronizados em tempo real com todos os clientes conectados.
-Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos. \citecustom{Firebase}
+Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos \citecustom{Firebase}.
 
 
 \section{Hardware}
@@ -449,7 +449,7 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 \label{Rotulo}
 \end{figure}
 
-Segundo Upton \citecustom{Upton2017}, "A \textit{Raspberry Pi} é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes.". Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
+Segundo Upton \citecustom{Upton2017}, "a \textit{Raspberry Pi} é uma máquina completa, com considerável poder de processamento, em uma placa de circuito impresso menor do que um cartão de crédito. Com ela você pode ter resultados impressionantes". Esta pequena placa permite ter um computador em um pequeno espaço, contando com conectividades como \textit{Bluetooth} e \textit{WiFi}, é uma excelente opção para projetos que necessitam de mais poder de processamento em um pequeno espaço. 
 
 A \textit{Fundação Raspberry Pi}, responsável pelo seu desenvolvimento, também mantém o foco da placa no meio educacional, apresentando uma plataforma acessível para que cada vez mais pessoas se interessem por desenvolvimento de softwares.
 
@@ -479,7 +479,7 @@ Especificações:
 \label{Rotulo}
 \end{figure}
 
-A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (http://www.jnhuamao.cn/bluetooth.asp), um pequeno módulo \textit{Bluetooth} 4.0 BLE baseado no chip CC2540 que trabalha com alimentação de 3.3V. Com ele é possível realizar comunicações utilizando o protocolo \textit{Bluetooth}.
+A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 \citecustom{jinanhuamao}, um pequeno módulo \textit{Bluetooth} 4.0 BLE baseado no chip CC2540 que trabalha com alimentação de 3.3V. Com ele é possível realizar comunicações utilizando o protocolo \textit{Bluetooth}.
 
 \subsection{Arduino Uno}
 
@@ -493,7 +493,7 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 (h
 
 \textit{Arduino} é uma plataforma de prototipagem desenvolvida em 2005, na Itália. Conectando a placa via USB em um computador, é possível programar o microcontrolador Atmel que ela possui, tendo a possibilidade de controlar dispositivos externos por meio de suas portas \textit{GPIO (General Purpose Input/Output)}.
 
-O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos independentes, ou pode ser conectado a um computador, a uma rede, ou até mesmo à Internet para recuperar e enviar dados do \textit{Arduino} e atuar sobre eles. \citecustom{mcroberts2011}
+O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos independentes, ou pode ser conectado a um computador, a uma rede, ou até mesmo à internet para recuperar e enviar dados do \textit{Arduino} e atuar sobre eles \citecustom{mcroberts2011}.
 
 \newpage
 
@@ -532,7 +532,7 @@ Existem vários sistemas operacionais voltados para dispositivos móveis, sendo 
 
 Tal sistema é muito acessível e popular. Está disponível para uma enorme variedade de dispositivos. O Android tem como base o sistema operacional Linux, conhecido por ser um sistema flexível, adaptável a várias arquiteturas de processador, seguro e eficiente. Um dos grandes diferenciais do Android e que contribui para sua popularidade, é o fato de que o sistema é compatível com vários hardwares e pode estar disponível em \textit{smartphones} de diversos fabricantes. \citecustom{Android}
 
-Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017, \citecustom{idc}, o Android se mostra um sistema consolidado no mercado, tendo participação de 85\% do mercado. O gráfico da Figura \ref{idc} mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
+Segundo uma pesquisa feita pela IDC (\textit{International Data Corporation}) no primeiro quadrimestre de 2017 \citecustom{idc}, o Android se mostra um sistema consolidado no meio que atua, tendo participação de 85\% do mercado. O gráfico da Figura \ref{idc} mostra que desde 2014 é o sistema operacional mais utilizado em dispositivos móveis.
 
 \begin{figure}[H]
 \centering
@@ -576,7 +576,7 @@ Para desenvolvimento das aplicações que rodam nos sistemas operacionais Androi
 
 \item[Core] Não contém nenhuma lógica de negócio. Esta camada provê informações que são comuns para toda a aplicação, como informações estáticas e algumas classes e interfaces bases.
 
-\item[Data] Responsável por prover dados para toda aplicação. Ela adota o Padrão de Arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID}, \citecustom{solid}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e, a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
+\item[Data] Responsável por prover dados para toda aplicação. Ela adota o padrão de arquitetura \textit{Repository}, tendo uma interface de acesso aos dados. Uma grande vantagem em utilizar essa camada com esse padrão de arquitetura, é o respeito a responsabilidade única, um dos princípios do \textit{SOLID} \citecustom{solid}. Ela encapsula toda lógica de busca de dados, assim, caso uma classe precise de algum dado específico, ela solicita através da interface de comunicação e, a classe que implementa a interface, cuida de toda lógica de busca de dado, seja um dado armazenado localmente, em \textit{cache} ou em um servidor remoto. Tudo fica transparente para a classe que solicitou o dado.
 
 \item[Service] Provê serviços para qualquer camada. No caso do aplicativo para \textit{smartphone}, a implementação do serviço de voz fica implementada neste pacote. Esta camada não existe no \textit{Android Things}, por não possuir serviços característicos da mesma. 
 
@@ -584,7 +584,7 @@ Para desenvolvimento das aplicações que rodam nos sistemas operacionais Androi
 
 \item[Presentation] Responsável por toda interface gráfica. Toda lógica de criação de telas e interceptação de interações do usuário com o aplicativo é feito aqui. Quando é necessário procurar dados para exibir ao usuário, são feitas solicitações deles para a camada \textit{Domain} ou \textit{Data} para que seja possível exibir os dados.
 
-\item[DI] Esta camada utiliza o padrão de arquitetura Injeção de Dependências. Esta camada provê todas as dependências, fazendo a implementação mais limpa nas outras classes, já que não precisam saber como instânciar uma classe.
+\item[DI] Esta camada utiliza o padrão de arquitetura \textit{Injeção de Dependências}. Esta camada provê todas as dependências, fazendo a implementação mais limpa nas outras classes, já que não precisam saber como instânciar uma classe.
  
 \end{description}
 
@@ -622,12 +622,11 @@ Apesar de \textit{schemaless}, é possível criar \textit{schemas} para auxiliar
 
 \subsubsection{Node.js}
 
-Plataforma principal para o funcionamento da aplicação, construída sobre o motor Javascript V8 do Google Chrome.
-O Node.js foi desenvolvido para construir aplicações \textit{web} escaláveis de forma assíncrona, cuidando de várias conexões de maneira concorrente. Ele consegue isso através da utilização de \textit{callbacks}. \citecustom{Node2016}
+Plataforma principal para o funcionamento da aplicação, construída sobre o motor Javascript V8 do Google Chrome, o Node.js foi desenvolvido para construir aplicações \textit{web} escaláveis de forma assíncrona, cuidando de várias conexões de maneira concorrente. Ele consegue isso através da utilização de \textit{callbacks} \citecustom{Node2016}.
 
 Sempre que ocorre um evento, é disparado um \textit{callback} que dirá o que deve ser realizado pela aplicação. Esse processo é feito para todas as funções presentes na aplicação e sempre que houver um evento sendo disparado.
 
-Como no lado do servidor, não existe uma interface gráfica a ser visualizada, os eventos nesse caso são dados de I/O, como algum parâmetro usado em uma busca no banco de dados, a resposta para aquele parâmetro, entre outros casos.
+Como no lado do servidor não existe uma interface gráfica a ser visualizada, os eventos nesse caso são dados de I/O, como algum parâmetro usado em uma busca no banco de dados, a resposta para aquele parâmetro, entre outros casos.
 
 O Node.js é uma plataforma extremamente modularizada, com módulos criados por desenvolvedores ativos no mundo todo. Para gerenciar esses módulos, ele utiliza o npm, responsável por instalar, atualizar ou remover suas dependências. 
 
@@ -641,7 +640,7 @@ O Node.js é uma plataforma extremamente modularizada, com módulos criados por 
 
 \subsubsection{REST}
 
-Segundo \citecustom{Almeida2016} o padrão REST utiliza um conjunto de operações aplicáveis a todos os recursos de informação utilizando o protocolo HTTP. Suas operações mais utilizadas são DELETE, POST, PUT e GET.
+Segundo \citecustom{Almeida2016}, o padrão REST utiliza um conjunto de operações aplicáveis a todos os recursos de informação utilizando o protocolo HTTP. Suas operações mais utilizadas são DELETE, POST, PUT e GET.
 
 No padrão REST, cada recurso possui um identificador único, representado, por exemplo no HTTP, pela sua URL de acesso.
 
@@ -653,23 +652,23 @@ São eles:
 
 \item[Dar um identificador a todas as coisas]
 
-Considerando as coisas como sendo os recursos, o principal benefício desse item é a utilização de URIs que identifiquem o necessário, especificando se os recursos que sua aplicação oferece são itens individuais, conjuntos de itens, objetos virtuais e físicos, ou resultados de computação.  
+ \- Considerando as coisas como sendo os recursos, o principal benefício desse item é a utilização de URIs que identifiquem o necessário, especificando se os recursos que sua aplicação oferece são itens individuais, conjuntos de itens, objetos virtuais e físicos, ou resultados de computação.  
 
 \item[Vincular as coisas]
 
-Esse princípio facilita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse princípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
+ \- Esse princípio facilita a utilização de serviços externos em sua aplicação. A vinculação, nesse caso, é feita através de links para que o servidor saiba aonde estão alocados os recursos necessários. Esse princípio é extremamente útil para o desenvolvimento de aplicações dinâmicas.
 
 \item[Utilizar métodos padronizados]
 
-Aqui entram os verbos HTTP, como GET, PUT, POST e DELETE. Esses verbos representam métodos padrões para que a aplicação \textit{web} saiba o que deve ser feito com determinada URI. Essa padronização faz com que seu navegador saiba exatamente o que fazer.
+ \- Aqui entram os verbos HTTP, como GET, PUT, POST e DELETE. Esses verbos representam métodos padrões para que a aplicação \textit{web} saiba o que deve ser feito com determinada URI. Essa padronização faz com que seu navegador saiba exatamente o que fazer.
 
 \item[Recursos com múltiplas representações]
 
-Este princípio diz para oferecer formas diversas dos recursos para diferentes finalidades. 	
+ \- Este princípio diz para oferecer formas diversas dos recursos para diferentes finalidades. 	
 
 \item[Comunicar sem estado]
 
-Manter o estado da comunicação no cliente ou transformá-lo no estado do recurso. Isso faz com que a escalabilidade da aplicação seja um dos focos desse princípio. Outro aspecto desse tópico, é o isolamento do cliente em relação ao servidor, fazendo com que o cliente não fique preso ao mesmo servidor para realizar duas solicitações consecutivas, com isso, ele recebe as informações do servidor sem precisar se preocupar se está ocorrendo alguma troca de disco rígido ou atualização de software no servidor.
+ \- Manter o estado da comunicação no cliente ou transformá-lo no estado do recurso. Isso faz com que a escalabilidade da aplicação seja um dos focos desse princípio. Outro aspecto desse tópico, é o isolamento do cliente em relação ao servidor, fazendo com que o cliente não fique preso ao mesmo servidor para realizar duas solicitações consecutivas, com isso, ele recebe as informações do servidor sem precisar se preocupar se está ocorrendo alguma troca de disco rígido ou atualização de software no servidor.
 
 \end{description} 
 
@@ -699,7 +698,7 @@ O uso do Git com GitHub permitiu que neste trabalho mais de um integrante trabal
 
 \chapter{Desenvolvimento}
 
-Esse capítulo visa apresentar os subsistemas, indicando quais as formas de comunicação entre eles e quais funções eles possuem para o correto funcionamento do sistema. Também serão descritos, em maiores detalhes, as ferramentas, arquiteturas e hardwares utilizados para o desenvolvimento do projeto.
+Esse capítulo visa apresentar os subsistemas, indicando quais as formas de comunicação entre eles e quais funções eles possuem para o correto funcionamento do sistema. Também serão descritos, em mais detalhes, as ferramentas, arquiteturas e hardwares utilizados para o desenvolvimento do projeto.
 
 \section{Descrição da Informação}
 
@@ -1340,7 +1339,7 @@ Foi escolhido o Android Studio como IDE do projeto. Ela é desenvolvida pela Int
 
 Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{Smartphones}, são as animações. Elas deixam o uso mais fluído e agradável para o usuário. 
 
-Como cita \citecustom{Lecheta2015}, "Animações dão um acabamento profissional ao aplicativo, e costumam enriquecer a experiência do usuário.". Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{smartphones}, são as animações, pois deixam o uso mais fluído e agradável para o usuário.
+Como cita \citecustom{Lecheta2015}, "animações dão um acabamento profissional ao aplicativo, e costumam enriquecer a experiência do usuário". Um dos tópicos mais presentes sobre melhorar experiência do usuário em \textit{smartphones}, são as animações, pois deixam o uso mais fluído e agradável para o usuário.
 
 O \textit{Android Things} provê uma \textit{API} para animações que herdou da versão do \textit{Android} de \textit{smartphones}. Ela foi utilizada para melhorar a experiência de uso dos motoristas com o módulo, porém, foi observado uma baixa qualidade nas animações. O que fez ter o efeito contrário, pois passa a impressão de ser um sistema de baixo desempenho.
 
@@ -1364,13 +1363,13 @@ O uso de uma camada de DI (Injeção de Dependências) facilitou o processo de i
 
 Inicialmente foi pensado em usar um \textit{dialog}, um pequeno quadrado que surge acima de todos componentes da tela com uma mensagem, para que o usuário confirme a ação de adicionar um ônibus como favorito, na tela de confirmação de acompanhamento. Ao testar a aplicação funcionando com \textit{Talkback}, foi observado que o sistema descreve o botão com o seguinte texto: \textit{"Adicionar aos favoritos. Botão, para acionar toque duas vezes"}. Esse texto já faz o usuário se assegurar da sua ação, tornando a prática de lançar um outro alerta ser algo desnecessário, fazendo o usuário ter um trabalho a mais de deslizar o dedo pela tela para encontrar os botões de \textit{OK} e cancelar do \textit{dialog.}
 
-Com base nessas observações, não foi implementado \textit{dialogs} de confirmação. Deixando a responsabilidade de afirmar as ações do usuário para o \textit{Talkback} fazer. Embora seja uma pequena ação, tem grande impacto na usabilidade no quesito facilidade de uso do aplicativo por parte do usuário final, que são os deficientes visuais.
+Com base nessas observações, não foi implementado \textit{dialogs} de confirmação. Deixando a responsabilidade de afirmar as ações do usuário para o \textit{Talkback} fazer. Embora seja uma pequena ação, tem grande impacto na usabilidade no quesito facilidade de uso do aplicativo por parte do usuário final, que são pessoas com deficiência visual.
 
 Outro ponto observado durante os testes foi a rotação da tela. O sistema operacional Android permite que aplicativos implementem variações da tela de acordo com a orientação do dispositivo, retrato ou paisagem. Isso permite que o layout do aplicativo se adapte a nova disposição de espaço.
 
 Pensando no usuário final, para saber onde está cada elemento, ele precisa deslizar o dedo pela tela para conhecer a localização de cada um. Se ao rotacionar o aparelho, a disposição dos elementos mudar, o usuário precisa verificar novamente onde está cada um.
 
-Como este trabalho desenvolve um aplicativo com poucos elementos na tela para simplificar o uso por deficientes visuais, foi bloqueado a mudança de tela ao rotacionar o aparelho. Isso garante um melhor conforto ao usar o aplicativo.
+Como este trabalho desenvolve um aplicativo com poucos elementos na tela para simplificar o uso por pessoas com deficiência visual, foi bloqueado a mudança de tela ao rotacionar o aparelho. Isso garante um melhor conforto ao usar o aplicativo.
 
 
 \section{Web service}
@@ -1466,7 +1465,7 @@ It is simple, elegant, and immensely important."}
 
 Para otimizar a busca pelo ponto mais apto, foi estudado a busca binária. Ela segue o paradigma de dividir para conquistar. Tendo como premissa um \textit{array} de dados ordenados, primeiro observa os extremos do array, para em seguida observar o ponto médio entre eles. Caso um desses pontos seja igual ao valor procurado, assume ele como solução. Caso contrário se observa qual sub \textit{array} é mais apto, início até o centro ou do centro até o fim. O mais apto é submetido a uma nova busca binária. 
 
-A vantagem em se utilizar uma busca binária ao invés de uma busca sequencial pode ser observado pelas suas complexidades. A busca binária possui complexidade $O(\log_2 n)$, enquanto a sequencial possui complexidade $O(n)$
+A vantagem em se utilizar uma busca binária ao invés de uma busca sequencial pode ser observado pelas suas complexidades. A busca binária possui complexidade $O(\log_2 n)$, enquanto a sequencial possui complexidade $O(n)$.
 
 A tabela a seguir mostra o número de vezes que cada busca iria precisar fazer para chegar no ponto mais apto.
 
@@ -1521,7 +1520,7 @@ Fazendo isso sucessivamente, chega uma hora que não é mais possível dividir, 
 
 \textbf{Resultados}
 
-Após realizar testes foi comprovado que embora exista a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a Figura \ref{binary-search-problem}.
+Após realizar testes, foi comprovado que embora exista a melhora em diminuir drasticamente o processamento, foi encontrado o problema do ponto correto estar em um sub \textit{array} que não é considerado o mais apto, como ilustra a Figura \ref{binary-search-problem}.
 
 \begin{figure}[H]
 \centering
@@ -1574,11 +1573,11 @@ Quando o motorista chega na parada, ele pressiona um botão para anunciar sua ch
 
 \chapter{Considerações Finais}
 
-Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de seus usuários. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o dos deficientes visuais. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até que o ônibus chegue na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário que o usuário ajuste manualmente a sua posição inicial num mapa de modo a melhorar a precisão de sua localização. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo alguma dificuldade de uso.
+Com os avanços tecnológicos, surgem diversas ferramentas que facilitam a vida de seus usuários. Porém, nem sempre essas ferramentas alcançam a todos, sendo de difícil manuseio para determinados grupos, como, por exemplo, o de pessoas com deficiência visual. Os aplicativos de monitoramento de transportes públicos, que indicam uma previsão de quanto tempo até que o ônibus chegue na parada em que o usuário se encontra é um desses casos. Começando com o fato de ser necessário que o usuário ajuste manualmente a sua posição inicial num mapa de modo a melhorar a precisão de sua localização. Esse passo dificulta muito a utilização do aplicativo para um usuário deficiente visual. Mesmo os aplicativos que possuem uma integração com algum tipo de tecnologia assistiva, como o Talkback da Google, acabam possuindo alguma dificuldade de uso.
 
 Neste trabalho foi possível desenvolver um aplicativo nativo em Android, adaptado com o Talkback e com feedback descritivo das telas por meio de áudio, uma aplicação Web implementando a API do sistema, além dos protótipos dos módulos do ponto de ônibus e dos ônibus. O módulo do ponto envia um sinal constante com o ID do ponto, com isso, o aplicativo pede para a aplicação Web uma lista com os ônibus que estão em circulação e que passam por aquele ponto, além de obter uma previsão para sua chegada. Após o usuário confirmar qual ônibus ele deseja esperar, é criada uma requisição que analisa as informações, alimentadas pelo módulo do ônibus, para disparar um aviso ao módulo do ônibus dizendo que é preciso parar na próxima parada por existir um deficiente visual esperando-o. O sistema se comportou como esperado, provendo facilidades de uso na hora de escolher o ônibus, demonstrando ser uma boa solução para facilitar o uso deste transporte público.
 
-O objetivo principal deste trabalho foi desenvolver uma solução para facilitar a forma como deficientes visuais utilizam os ônibus, sem o foco de elaborar um sistema de previsão de horários mais preciso. Isso gerou a possibilidade de diversos aprimoramentos futuros que podem ser adicionados a este sistema, como: alterar a linha quando termina uma rota; melhorar a tratativa de velocidade do ônibus para considerar velocidades médias de um trecho possibilitando uma previsão de chegada mais precisa; e a implementação de uma interface gráfica para controlar os registros que existem no banco de dados da aplicação Web, a fim de facilitar seu uso.
+O objetivo principal deste trabalho foi desenvolver uma solução para facilitar a forma como pessoas com deficiência visual utilizam os ônibus, sem o foco de elaborar um sistema de previsão de horários mais preciso. Isso gerou a possibilidade de diversos aprimoramentos futuros que podem ser adicionados a este sistema, como: alterar a linha quando termina uma rota; melhorar a tratativa de velocidade do ônibus para considerar velocidades médias de um trecho possibilitando uma previsão de chegada mais precisa; e a implementação de uma interface gráfica para controlar os registros que existem no banco de dados da aplicação Web, a fim de facilitar seu uso.
 
 \postextual
 

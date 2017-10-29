@@ -33,16 +33,16 @@
 \contentsline {figure}{\numberline {32}{\ignorespaces Representação do problema da busca binária.}}{56}{figure.3.32}
 \contentsline {figure}{\numberline {33}{\ignorespaces Representação de uma rota.}}{57}{figure.3.33}
 \contentsline {figure}{\numberline {34}{\ignorespaces Painel de controle do Firebase Realtime Database.}}{58}{figure.3.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama de classes da camada de dados.}}{65}{figure.A.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Diagrama de classes da camada de domínio.}}{66}{figure.A.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Diagrama de classes da camada de apresentação.}}{67}{figure.A.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Wireframe da tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{68}{figure.B.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Wireframe da tela do aplicativo ao buscar por um ponto de ônibus na API.}}{68}{figure.B.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Wireframe da tela do aplicativo com ônibus disponíveis.}}{69}{figure.B.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Wireframe da tela do aplicativo com detalhes de um ônibus.}}{69}{figure.B.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Wireframe da tela do aplicativo sobre a solicitação de um ônibus.}}{70}{figure.B.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces Wireframe da tela do módulo do ônibus quando está carregando informações.}}{70}{figure.B.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Wireframe da tela do módulo do ônibus aguardando motorista iniciar rota.}}{71}{figure.B.44}
-\contentsline {figure}{\numberline {45}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}}{71}{figure.B.45}
-\contentsline {figure}{\numberline {46}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}}{71}{figure.B.46}
-\contentsline {figure}{\numberline {47}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{72}{figure.B.47}
+\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama de classes da camada de dados.}}{66}{figure.A.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Diagrama de classes da camada de domínio.}}{67}{figure.A.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Diagrama de classes da camada de apresentação.}}{68}{figure.A.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Wireframe da tela do aplicativo ao buscar por um ponto de ônibus próximo.}}{69}{figure.B.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Wireframe da tela do aplicativo ao buscar por um ponto de ônibus na API.}}{69}{figure.B.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Wireframe da tela do aplicativo com ônibus disponíveis.}}{70}{figure.B.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Wireframe da tela do aplicativo com detalhes de um ônibus.}}{70}{figure.B.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Wireframe da tela do aplicativo sobre a solicitação de um ônibus.}}{71}{figure.B.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces Wireframe da tela do módulo do ônibus quando está carregando informações.}}{71}{figure.B.43}
+\contentsline {figure}{\numberline {44}{\ignorespaces Wireframe da tela do módulo do ônibus aguardando motorista iniciar rota.}}{72}{figure.B.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}}{72}{figure.B.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista está fazendo a rota.}}{72}{figure.B.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces Wireframe da tela do módulo do ônibus quando motorista precisar parar no próximo ponto.}}{73}{figure.B.47}

@@ -52,29 +52,33 @@ Warning--entry type for "Gomes2015" isn't style-file defined
 Warning--entry type for "Vieira2015" isn't style-file defined
 --line 216 of file beacon-final-paper.bib
 Warning--entry type for "androidthings" isn't style-file defined
---line 277 of file beacon-final-paper.bib
+--line 274 of file beacon-final-paper.bib
 Warning--entry type for "ibge" isn't style-file defined
---line 302 of file beacon-final-paper.bib
+--line 299 of file beacon-final-paper.bib
 Warning--entry type for "idc" isn't style-file defined
---line 308 of file beacon-final-paper.bib
+--line 305 of file beacon-final-paper.bib
 Warning--entry type for "talkback" isn't style-file defined
---line 314 of file beacon-final-paper.bib
+--line 311 of file beacon-final-paper.bib
 Warning--entry type for "raspimage" isn't style-file defined
---line 320 of file beacon-final-paper.bib
+--line 317 of file beacon-final-paper.bib
 Warning--entry type for "hm10image" isn't style-file defined
---line 326 of file beacon-final-paper.bib
+--line 323 of file beacon-final-paper.bib
 Warning--entry type for "arduinounoimage" isn't style-file defined
---line 332 of file beacon-final-paper.bib
+--line 329 of file beacon-final-paper.bib
 Warning--entry type for "neo6mimage" isn't style-file defined
---line 338 of file beacon-final-paper.bib
+--line 335 of file beacon-final-paper.bib
 Warning--entry type for "edisonimage" isn't style-file defined
---line 344 of file beacon-final-paper.bib
+--line 341 of file beacon-final-paper.bib
 Warning--entry type for "bersch2013" isn't style-file defined
---line 350 of file beacon-final-paper.bib
+--line 347 of file beacon-final-paper.bib
 Warning--entry type for "beacon" isn't style-file defined
---line 356 of file beacon-final-paper.bib
+--line 353 of file beacon-final-paper.bib
 Warning--entry type for "solid" isn't style-file defined
---line 362 of file beacon-final-paper.bib
+--line 359 of file beacon-final-paper.bib
+Warning--entry type for "institutopadrechico" isn't style-file defined
+--line 365 of file beacon-final-paper.bib
+Warning--entry type for "jinanhuamao" isn't style-file defined
+--line 371 of file beacon-final-paper.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -85,45 +89,45 @@ Warning--campo year vazio ou faltando em arduinounoimage
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 39 entries,
+You've used 41 entries,
             6714 wiz_defined-function locations,
-            1391 strings with 14991 characters,
-and the built_in function-call counts, 71640 in all, are:
-= -- 9481
-> -- 587
-< -- 2564
-+ -- 2809
-- -- 195
-* -- 3936
-:= -- 8637
-add.period$ -- 147
-call.type$ -- 39
-change.case$ -- 237
-chr.to.int$ -- 38
-cite$ -- 39
-duplicate$ -- 8648
-empty$ -- 2174
-format.name$ -- 898
-if$ -- 13241
+            1399 strings with 15133 characters,
+and the built_in function-call counts, 73539 in all, are:
+= -- 9761
+> -- 542
+< -- 2631
++ -- 2861
+- -- 180
+* -- 4023
+:= -- 8737
+add.period$ -- 155
+call.type$ -- 41
+change.case$ -- 244
+chr.to.int$ -- 40
+cite$ -- 41
+duplicate$ -- 8897
+empty$ -- 2328
+format.name$ -- 829
+if$ -- 13714
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 621
-newline$ -- 197
-num.names$ -- 190
-pop$ -- 848
+missing$ -- 653
+newline$ -- 207
+num.names$ -- 175
+pop$ -- 895
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 124
 quote$ -- 0
-skip$ -- 8972
+skip$ -- 9232
 stack$ -- 1
-substring$ -- 3269
-swap$ -- 2915
-text.length$ -- 33
+substring$ -- 3370
+swap$ -- 3000
+text.length$ -- 35
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 262
+while$ -- 251
 width$ -- 0
-write$ -- 541
-(There were 32 warnings)
+write$ -- 569
+(There were 34 warnings)

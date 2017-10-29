@@ -11,6 +11,11 @@
   MongoDB, Express, Angular e Node}. [S.l.: s.n.], 2016.
 ISBN 9788555190469.}
 
+\bibitem[Android Things 2015]{androidthings}
+\abntrefinfo{Android Things}{ANDROID THINGS}{2015}
+{ANDROID THINGS. \emph{The ease and power of Android}. 2015.
+Dispon{\'\i}vel em: \url{https://developer.android.com/things/index.html}.}
+
 \bibitem[ANDROID 2017]{Android}
 \abntrefinfo{ANDROID}{ANDROID}{2017}
 {ANDROID, V. o. \emph{O QUE {\'E} ANDROID}. 2017.
@@ -110,6 +115,12 @@ Dispon{\'\i}vel em: \url{https://www.infoq.com/br/articles/rest-introduction}.}
 Dispon{\'\i}vel em:
   \url{http://g1.globo.com/tecnologia/tem-um-aplicativo/noticia/2015/04/moovit-avisa-em-que-parada-usuario-de-transporte-publico-deve-descer.html}.}
 
+\bibitem[Google LLC 2017]{talkback}
+\abntrefinfo{Google LLC}{GOOGLE LLC}{2017}
+{GOOGLE LLC. \emph{Google Talkback}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=pt-BR}.}
+
 \bibitem[IBGE 2010]{ibge}
 \abntrefinfo{IBGE}{IBGE}{2010}
 {IBGE. \emph{Características Gerais, Religião, Deficiência}. 2010.
@@ -122,11 +133,21 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.idc.com/promo/smartphone-market-share/os}.}
 
+\bibitem[Instituto Padre Chico 2017]{institutopadrechico}
+\abntrefinfo{Instituto Padre Chico}{INSTITUTO PADRE CHICO}{2017}
+{INSTITUTO PADRE CHICO. \emph{Home}. 2017.
+Dispon{\'\i}vel em: \url{http://www.padrechico.org.br/}.}
+
 \bibitem[Instructables 2015]{neo6mimage}
 \abntrefinfo{Instructables}{INSTRUCTABLES}{2015}
 {INSTRUCTABLES. \emph{Raspberry Pi \& the Neo 6M GPS}. 2015.
 Dispon{\'\i}vel em:
   \url{https://cdn.instructables.com/FKL/Q62O/ICJLZ1YR/FKLQ62OICJLZ1YR.MEDIUM.jpg}.}
+
+\bibitem[Jinan Huamao 2017]{jinanhuamao}
+\abntrefinfo{Jinan Huamao}{JINAN HUAMAO}{2017}
+{JINAN HUAMAO. \emph{Bluetooth}. 2017.
+Dispon{\'\i}vel em: \url{http://www.jnhuamao.cn/bluetooth.asp}.}
 
 \bibitem[KEWERSON 2017]{Kewerson2017}
 \abntrefinfo{KEWERSON}{KEWERSON}{2017}
@@ -138,12 +159,6 @@ Dispon{\'\i}vel em:
 \abntrefinfo{LECHETA}{LECHETA}{2015}
 {LECHETA, R. \emph{Google Android}. [S.l.: s.n.], 2015.
 ISBN 9788575224403.}
-
-\bibitem[LLC 2017]{talkback}
-\abntrefinfo{LLC}{LLC}{2017}
-{LLC, G. \emph{Google Talkback}. 2017.
-Dispon{\'\i}vel em:
-  \url{https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=pt-BR}.}
 
 \bibitem[MARTIN 2012]{martin2012clean}
 \abntrefinfo{MARTIN}{MARTIN}{2012}
@@ -172,9 +187,9 @@ Dispon{\'\i}vel em: \url{http://nodebr.com/o-que-e-node-js/}.}
 Dispon{\'\i}vel em:
   \url{https://android-developers.googleblog.com/2016/12/announcing-googles-new-internet-of-things-platform-with-weave-and-android-things.html}.}
 
-\bibitem[RaspberryPi 2017]{raspimage}
-\abntrefinfo{RaspberryPi}{RASPBERRYPI}{2017}
-{RASPBERRYPI. \emph{Raspberry Pi 3 imagem}. 2017.
+\bibitem[Raspberry Pi 2017]{raspimage}
+\abntrefinfo{Raspberry Pi}{RASPBERRY PI}{2017}
+{RASPBERRY PI. \emph{Raspberry Pi 3 imagem}. 2017.
 Dispon{\'\i}vel em:
   \url{https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-3-462x322.jpg}.}
 
@@ -218,11 +233,6 @@ Dispon{\'\i}vel em:
   iBeacons}. 2014.
 Dispon{\'\i}vel em:
   \url{https://brasil.uxdesign.cc/tudo-o-que-voc\%C3\%AA-precisa-saber-para-come\%C3\%A7ar-a-brincar-com-ibeacons-fdf5847e640b}.}
-
-\bibitem[Things 2015]{androidthings}
-\abntrefinfo{Things}{THINGS}{2015}
-{THINGS, A. \emph{The ease and power of Android}. 2015.
-Dispon{\'\i}vel em: \url{https://developer.android.com/things/index.html}.}
 
 \bibitem[UPTON e Halfacree 2017]{Upton2017}
 \abntrefinfo{UPTON e Halfacree}{UPTON; HALFACREE}{2017}
