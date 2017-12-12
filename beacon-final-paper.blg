@@ -79,6 +79,8 @@ Warning--entry type for "institutopadrechico" isn't style-file defined
 --line 365 of file beacon-final-paper.bib
 Warning--entry type for "jinanhuamao" isn't style-file defined
 --line 371 of file beacon-final-paper.bib
+Warning--entry type for "voiceover" isn't style-file defined
+--line 377 of file beacon-final-paper.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -89,45 +91,45 @@ Warning--campo year vazio ou faltando em arduinounoimage
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 41 entries,
+You've used 42 entries,
             6714 wiz_defined-function locations,
-            1399 strings with 15133 characters,
-and the built_in function-call counts, 73539 in all, are:
-= -- 9761
+            1403 strings with 15228 characters,
+and the built_in function-call counts, 75040 in all, are:
+= -- 9965
 > -- 542
-< -- 2631
-+ -- 2861
+< -- 2685
++ -- 2915
 - -- 180
-* -- 4023
-:= -- 8737
-add.period$ -- 155
-call.type$ -- 41
-change.case$ -- 244
-chr.to.int$ -- 40
-cite$ -- 41
-duplicate$ -- 8897
-empty$ -- 2328
+* -- 4102
+:= -- 8891
+add.period$ -- 159
+call.type$ -- 42
+change.case$ -- 249
+chr.to.int$ -- 41
+cite$ -- 42
+duplicate$ -- 9083
+empty$ -- 2393
 format.name$ -- 829
-if$ -- 13714
+if$ -- 14016
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 653
-newline$ -- 207
+missing$ -- 669
+newline$ -- 212
 num.names$ -- 175
-pop$ -- 895
+pop$ -- 917
 preamble$ -- 1
-purify$ -- 124
+purify$ -- 127
 quote$ -- 0
-skip$ -- 9232
+skip$ -- 9425
 stack$ -- 1
-substring$ -- 3370
-swap$ -- 3000
-text.length$ -- 35
+substring$ -- 3442
+swap$ -- 3063
+text.length$ -- 36
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 251
+while$ -- 253
 width$ -- 0
-write$ -- 569
-(There were 34 warnings)
+write$ -- 583
+(There were 35 warnings)
