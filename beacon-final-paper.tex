@@ -371,7 +371,9 @@ Este trabalho visa facilitar a vida de pessoas com deficiência visual que utili
 
 Sistemas operacionais de smartphone, como Android e iOS, possuem ferramentas nativas que adaptam o uso de aplicativos para pessoas com deficiências, possibilitando a utilização do aparelho sem grandes dificuldades, mas, nem sempre, criam boas experiências de uso. 
 
-O Android possui a ferramenta Talkback \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita ao Talkback ler a tela com mais detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer audiodescrições mais detalhadas sobre o significado de uma tela.
+O Android possui a ferramenta \textit{Talkback} \citecustom{talkback}, para auxiliar no uso de qualquer aplicativo. Ao desenvolver uma solução para o sistema, é possível colocar tags específicas em cada elemento da tela da sua aplicação. Isso possibilita ao Talkback ler a tela com mais detalhes para o deficiente visual ou utilizar a função de áudio dele para fazer audiodescrições mais detalhadas sobre o significado de uma tela. Já o iOS possui o \textit{VoiceOver} \citecustom{voiceover}, que contém funcionalidades semelhantes aos do \textit{Talkback}.
+
+Em ambos os casos, o deficiente visual só necessita da ajuda de um terceiro para ativar a ferramenta de acessibilidade respectiva, dando total autonomia para o deficiente visual utilizar o aparelho.
 
 Fazer aplicativos que funcionem em conjunto com essas tecnologias voltadas a pessoas com deficiência visual não é um trabalho difícil, mas criar boas experiências de uso que facilitem a vida de pessoas com deficiência visual é uma grande tarefa a ser cumprida.
 
@@ -412,6 +414,7 @@ O tipo MIME (\textit{Multipurpose Internet Mail Extensions} - Extensões de corr
 
 Como explica \citecustom{Finzi2016}
  \textit{Push Notification} é um serviço de entrega de mensagens, parecido com \textit{SMS} (\textit{Shot Message Service}), que utiliza a internet para isso. Um caso comum do uso de \textit{push notifications} é quando existe a necessidade de notificar um ou mais usuários de um aplicativo sobre algo, não sendo necessário que a aplicação esteja aberta. Alguns serviços são especializados na entrega de mensagens desse tipo, como o \textit{Firebase Cloud Messaging}, que provê um \textit{SDK} para que o desenvolvedor implemente o serviço de recebimento destas mensagens na sua aplicação para quando for preciso enviar uma mensagem, faça apenas requisições \textit{HTTP} para o serviço e ele se encarregue de entregar a mensagem para os dispositivos disponíveis.
+ 
 
 \subsection{Beacons}
 
@@ -431,7 +434,7 @@ Poder da transmissão: Alcance máximo do sinal.
 
 \end{enumerate}
 
-\subsection{Realtime Database}
+\subsection{Firebase Realtime Database}
 
 O \textit{Firebase Realtime Database} é um banco de dados hospedado na nuvem. Os dados são armazenados no formato JSON e sincronizados em tempo real com todos os clientes conectados.
 Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} usa a sincronização de dados. Sempre que os dados são alterados, todos os dispositivos conectados recebem essa atualização em milissegundos \citecustom{Firebase}.
@@ -439,7 +442,7 @@ Em vez de solicitações HTTP típicas, o \textit{Firebase Realtime Database} us
 
 \section{Hardware}
 
-\subsection{Raspberry Pi 3}
+\subsection{Raspberry Pi 3 (Módulo do ônibus)}
 
 \begin{figure}[H]
 \centering
@@ -469,7 +472,7 @@ Especificações:
 \end{itemize}
 
 
-\subsection{HM-10}
+\subsection{HM-10 (Beacon)}
 
 \begin{figure}[H]
 \centering
@@ -481,7 +484,7 @@ Especificações:
 
 A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 \citecustom{jinanhuamao}, um pequeno módulo \textit{Bluetooth} 4.0 BLE baseado no chip CC2540 que trabalha com alimentação de 3.3V. Com ele é possível realizar comunicações utilizando o protocolo \textit{Bluetooth}.
 
-\subsection{Arduino Uno}
+\subsection{Arduino Uno (Beacon)}
 
 \begin{figure}[H]
 \centering
@@ -495,9 +498,11 @@ A empresa \textit{Jinan Huamao} é responsável pelo desenvolvimento do HM-10 \c
 
 O \textit{Arduino} pode ser utilizado para desenvolver objetos interativos independentes, ou pode ser conectado a um computador, a uma rede, ou até mesmo à internet para recuperar e enviar dados do \textit{Arduino} e atuar sobre eles \citecustom{mcroberts2011}.
 
+Foi utilizado apenas para a configuração inicial do \textit{Beacon}.
+
 \newpage
 
-\subsection{NEO 6M}
+\subsection{NEO 6M (Módulo do ônibus)}
 
 \begin{figure}[H]
 \centering
@@ -845,7 +850,7 @@ Iniciar uma rota: Este caso de uso acontece quando o motorista inicia sua rota e
 
 Terminar uma rota: Este caso de uso acontece quando o motorista termina a rota do ônibus e precisa informar isso ao módulo, para que o dispositivo pare de enviar seus dados de geolocalização para o \textit{Web Service}.
 
-Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual solicitou o ônibus e o motorista está parado no ponto de ônibus. Quando motorista avisa que chegou, é disparado um alerta para o deficiente visual.
+Avisar chegada no ponto: Este caso de uso acontece quando um deficiente visual solicitou o ônibus e o motorista está parado no ponto de ônibus. Quando motorista avisa que chegou, é disparado um alerta para o deficiente visual. Este aviso é ativado através de um botão no módulo do ônibus, para uma maior precisão e agilidade no processo, eliminando a necessidade de corrigir a posição do ônibus para disparar o aviso ao deficiente visual.
 
 \newpage
 
