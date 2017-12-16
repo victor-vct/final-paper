@@ -1,16 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: beacon-final-paper.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: beacon-final-paper.aux
 The style file: abntex2-alf.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: beacon-final-paper.bib
 Warning--entry type for "Dorina2017" isn't style-file defined
@@ -83,55 +72,10 @@ Warning--entry type for "jinanhuamao" isn't style-file defined
 --line 377 of file beacon-final-paper.bib
 Warning--entry type for "voiceover" isn't style-file defined
 --line 383 of file beacon-final-paper.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--campo year vazio ou faltando em arduinounoimage
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 43 entries,
-            6714 wiz_defined-function locations,
-            1407 strings with 15358 characters,
-and the built_in function-call counts, 77092 in all, are:
-= -- 10256
-> -- 542
-< -- 2768
-+ -- 2998
-- -- 180
-* -- 4210
-:= -- 9103
-add.period$ -- 163
-call.type$ -- 43
-change.case$ -- 254
-chr.to.int$ -- 42
-cite$ -- 43
-duplicate$ -- 9356
-empty$ -- 2458
-format.name$ -- 829
-if$ -- 14405
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 685
-newline$ -- 217
-num.names$ -- 175
-pop$ -- 940
-preamble$ -- 1
-purify$ -- 130
-quote$ -- 0
-skip$ -- 9704
-stack$ -- 1
-substring$ -- 3543
-swap$ -- 3155
-text.length$ -- 37
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 1
-while$ -- 255
-width$ -- 0
-write$ -- 597
 (There were 36 warnings)
